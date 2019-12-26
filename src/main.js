@@ -23,7 +23,7 @@ const firebaseApp = firebase.initializeApp(firebaseConfig)
 Vue.use(FlamelinkPlugin, {
     firebaseApp,
     env: 'production',
-    locale: 'fr', // fr, en-US, he
+    locale: 'en-US', // fr, en-US, he
     dbType: 'cf'
 })
 // console.log({firebaseConfig});

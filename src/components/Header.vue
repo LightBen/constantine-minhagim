@@ -5,7 +5,7 @@
             <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded drawer-toggle" id="mainMenuBtn">menu</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Torah Sheli" @click="$router.push({ name: 'Home' })">home</button>
             <span class="mdc-top-app-bar__title">
-                <router-link to="/">Torah Sheli</router-link>
+                <router-link to="/">CM</router-link>
             </span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">

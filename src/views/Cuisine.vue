@@ -11,7 +11,7 @@
                                 <div class="card-title mdc-typography mdc-typography--headline6">{{ recipe.title }}</div>
                                 <div class="card-author">{{ recipe.author }}</div>
                                 <div class="card-desc">{{ recipe.description }}</div>
-                                <div class="imageMain" v-for="path in recipe.imageMain.path">{{ path }}</div>
+                                <!-- <div class="imageMain" v-for="path in recipe.imageMain.path">{{ path }}</div> -->
                             </figcaption>
                         </figure>
                     </div>
@@ -39,7 +39,7 @@
         },
         created() {
             this.$flamelinkApp.content.get({
-                    schemaKey: 'cuisine',
+                    schemaKey: 'recipes',
                     fields: ['title', 'author', 'description', 'imageMain']
                 })
                 .then(recipes => {

@@ -14,16 +14,10 @@ export default new Router({
       alias: '/'
     },
     {
-      path: "/about",
+      path: "/a-propos",
       name: "About",
       component: () =>
         import("./views/About.vue")
-    },
-    {
-      path: "/torah",
-      name: "Torah",
-      component: () =>
-        import("./views/Torah.vue")
     },
     {
       path: "/minhag",
@@ -42,6 +36,12 @@ export default new Router({
       name: "Cuisine",
       component: () =>
         import("./views/Cuisine.vue")
+    },
+    {
+      path: "/fiches-a-imprimer",
+      name: "Printouts",
+      component: () =>
+        import("./views/Printouts.vue")
     },
     {
       path: '/404-not-found',

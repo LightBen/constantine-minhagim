@@ -32,9 +32,9 @@
         .section-content {
             // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
             // font-size: calc(30px + 20 * ((100vw - 320px) / 1680));
+            --titleSpacing: 1.5vw;
             top: -15px;
             h1 {
-                --titleSpacing: 3.5vw;
                 line-height: 1; text-align: center;
                 span { display: block; }
                 :first-child { font-size: 5vw; font-weight: 500; letter-spacing: var(--titleSpacing); padding-left: var(--titleSpacing); padding-bottom: 10px; }
@@ -42,7 +42,7 @@
             }
             .welcome-sections {
                 display: grid; grid-gap: var(--spacing);
-                grid-template-columns: repeat(auto-fill, minmax(calc(50% - var(--spacing)), 1fr)); max-width: 64vw; margin-left: 4vw;
+                grid-template-columns: repeat(auto-fill, minmax(calc(50% - var(--spacing)), 1fr)); max-width: 50.4vw; margin-left: var(--titleSpacing);
                 @media (min-width: $md) {
                     grid-template-columns: repeat(auto-fill, minmax(calc(25% - var(--spacing)), 1fr));
                 }

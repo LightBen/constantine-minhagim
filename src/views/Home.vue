@@ -10,7 +10,7 @@
                 <router-link :to="{ name: 'Minhag' }" class="minhag">Minhag</router-link>
                 <router-link :to="{ name: 'Hazanout' }" class="hazanout">'Hazanout</router-link>
                 <router-link :to="{ name: 'Cuisine' }" class="cuisine">Cuisine</router-link>
-                <router-link :to="{ name: 'Fiches' }" class="printouts">Fiches</router-link>
+                <router-link :to="{ name: 'Printouts' }" class="printouts">Fiches</router-link>
                 <router-link :to="{ name: 'Home' }" class="drive">Drive</router-link>
             </div>
         </div>
@@ -42,18 +42,18 @@
 export default {
     name: 'home',
     components: {},
-    created() {
-        this.$flamelinkApp.content.get({
-            schemaKey: 'general',
-            entryId: 'aXPyDwZ20JsSYROQtoc7'
-        })
-        .then(siteTitleEl => {
-            // this.pageTitle = homeData.title;
-            document.getElementById('siteTitle').innerText = siteTitleEl.content;
-            // console.log(siteTitleEl)
-        })
-        .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
-    }
+    // created() {
+    //     this.$flamelinkApp.content.get({
+    //         schemaKey: 'general',
+    //         entryId: 'aXPyDwZ20JsSYROQtoc7'
+    //     })
+    //     .then(siteTitleEl => {
+    //         // this.pageTitle = homeData.title;
+    //         document.getElementById('siteTitle').innerText = siteTitleEl.content;
+    //         // console.log(siteTitleEl)
+    //     })
+    //     .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
+    // }
 }
 
     // created() {

@@ -6,25 +6,25 @@
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
                 <span class="mdc-list-item__text">Home</span>
             </router-link>
-            <router-link class="mdc-list-item" to="/about">
-                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
-                <span class="mdc-list-item__text">À savoir</span>
-            </router-link>
-            <router-link class="mdc-list-item" to="/">
-                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">menu_book</i>
-                <span class="mdc-list-item__text">Fiches à imprimer</span>
-            </router-link>
-            <router-link class="mdc-list-item" to="/about">
-                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">credit_card</i>
-                <span class="mdc-list-item__text">Dons</span>
-            </router-link>
             <router-link class="mdc-list-item" to="/">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">description</i>
                 <span class="mdc-list-item__text">À propos</span>
             </router-link>
-            <router-link class="mdc-list-item" to="/about">
-                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
-                <span class="mdc-list-item__text">Contact</span>
+            <router-link class="mdc-list-item" to="/a-propos">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">credit_card</i>
+                <span class="mdc-list-item__text">Dons</span>
+            </router-link>
+            <router-link class="mdc-list-item" to="/">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
+                <span class="mdc-list-item__text">Articles</span>
+            </router-link>
+            <router-link class="mdc-list-item" to="/">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
+                <span class="mdc-list-item__text">Equipe et Rabbins</span>
+            </router-link>
+            <router-link class="mdc-list-item" to="/">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
+                <span class="mdc-list-item__text">English</span>
             </router-link>
         </nav>
     </div>
