@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $sm) {
+  .container {
+    max-width: calc(var(--sm) - (var(--spacing) * 2));
+  }
+}
+
+@media (min-width: $md) {
+  .container {
+    max-width: calc(var(--md) - (var(--spacing) * 2));
+  }
+}
+
+@media (min-width: $lg) {
+  .container {
+    max-width: calc(var(--lg) - (var(--spacing) * 2));
+  }
+}
+
+@media (min-width: $xl) {
+  .container {
+    max-width: calc(var(--xl) - (var(--spacing) * 2));
+  }
+}
