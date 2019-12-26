@@ -43,9 +43,9 @@
                         </button>
                         <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" @click="$router.push({ name: 'Printouts' })">
                             <span class="mdc-tab__content">
-                                <span class="mdc-tab__icon" aria-hidden="true"><svg class="icon-perso">
-                                    <use xlink:href="#icon-book" href="#icon-food-tray" />
-                                </svg></span>
+                                <span class="mdc-tab__icon" aria-hidden="true">
+                                    <i class="material-icons" aria-hidden="true">assignment</i>
+                                </span>
                                 <span class="mdc-tab__text-label">Fiches</span>
                             </span>
                             <span class="mdc-tab-indicator mdc-tab-indicator--active">
@@ -61,6 +61,8 @@
 </footer>
 </template>
 
+<style src="./footer.scss" lang="scss" scoped></style>
+
 <script>
 export default {
     name: 'Footer',
@@ -71,5 +73,3 @@ export default {
     }
 }
 </script>
-
-<style src="./footer.scss" lang="scss" scoped></style>

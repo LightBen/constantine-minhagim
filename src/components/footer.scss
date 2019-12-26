@@ -17,7 +17,7 @@ footer {
             .mdc-tab:not(.mdc-tab--stacked) .mdc-tab__icon + .mdc-tab__text-label { padding-left: 0; }
             .mdc-tab__icon { 
                 display: block; margin-bottom: 5px; 
-                img, svg { color: #fff;; }
+                img, svg, i { color: #fff;; }
             }
             .mdc-tab__content { display: block; }
             .mdc-tab__text-label { color: #fff; }

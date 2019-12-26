@@ -6,12 +6,14 @@
                 <div class="recipes">
                     <div class="recipe card" v-for="recipe in recipes">
                         <figure class="card-content" tabindex="0">
-                            <div class="card-img" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div>
+                            <!-- <div class="card-img" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div> -->
+                            <!-- <div class="card-img" :style="{ 'background-image': 'url(' + recipe.mainImage.path.path + ')' }"></div> -->
+                            <div class="card-img"></div>
                             <figcaption class="card-text">
                                 <div class="card-title mdc-typography mdc-typography--headline6">{{ recipe.title }}</div>
                                 <div class="card-author">{{ recipe.author }}</div>
                                 <div class="card-desc">{{ recipe.description }}</div>
-                                <!-- <div class="imageMain" v-for="path in recipe.imageMain.path">{{ path }}</div> -->
+                                <div class="imageMain"></div>
                             </figcaption>
                         </figure>
                     </div>
@@ -27,6 +29,9 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: var(--spacing);
     .recipe {
+        .card-img {
+            background-image: url(../assets/img/makroud.jpg);
+        }
     }
 }
 </style>
@@ -40,7 +45,7 @@
         created() {
             this.$flamelinkApp.content.get({
                     schemaKey: 'recipes',
-                    fields: ['title', 'author', 'description', 'imageMain']
+                    fields: ['title', 'author', 'description', 'mainImage']
                 })
                 .then(recipes => {
                     this.recipes = recipes;

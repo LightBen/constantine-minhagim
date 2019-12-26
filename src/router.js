@@ -8,16 +8,10 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/index.html",
+      path: "/",
       name: "Home",
       component: () => import("./views/Home.vue"),
       alias: '/'
-    },
-    {
-      path: "/a-propos",
-      name: "About",
-      component: () =>
-        import("./views/About.vue")
     },
     {
       path: "/minhag",
@@ -42,6 +36,36 @@ export default new Router({
       name: "Printouts",
       component: () =>
         import("./views/Printouts.vue")
+    },
+    {
+      path: "/a-propos",
+      name: "About",
+      component: () =>
+        import("./views/pages/About.vue")
+    },
+    {
+      path: "/dons",
+      name: "Donations",
+      component: () =>
+        import("./views/pages/Donations.vue")
+    },
+    {
+      path: "/articles",
+      name: "Articles",
+      component: () =>
+        import("./views/pages/Articles.vue")
+    },
+    {
+      path: "/equipe-rabbins",
+      name: "Team",
+      component: () =>
+        import("./views/pages/Team.vue")
+    },
+    {
+      path: "/a-propos",
+      name: "English",
+      component: () =>
+        import("./views/pages/English.vue")
     },
     {
       path: '/404-not-found',
