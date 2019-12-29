@@ -1,19 +1,27 @@
 <template>
-<div id="english">
-    <div class="container">
-        <h1 id="page-title"></h1>
-        <div id="page-content"></div>
+    <div class="page-mix">
+        <slot name="page-content">
+            <div class="container">
+                <h1 id="page-title"></h1>
+                <div id="page-content"></div>
+            </div>
+        </slot>
     </div>
-</div>
 </template>
+
+<style lang="scss">
+    #page {
+        
+    }
+</style>
 
 <script>
 export default {
-    name: "English",
+    name: 'PageMix',
     created() {
         this.$flamelinkApp.content.get({
             schemaKey: 'pages',
-            entryId: 'JCRJHKAJiBAu49wYynl0'
+            entryId: this.entryId
         })
         .then(pageContent => {
             document.getElementById('page-title').innerText = pageContent.title;
@@ -21,6 +29,5 @@ export default {
         })
         .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
     }
-
 };
 </script>

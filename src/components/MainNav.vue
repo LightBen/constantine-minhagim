@@ -18,9 +18,11 @@
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">description</i>
                 <span class="mdc-list-item__text">Articles</span>
             </router-link>
-            <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Team' }">
-                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">group</i>
-                <span class="mdc-list-item__text">Equipe et Rabbins</span>
+            <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Rabbanim' }">
+                <svg class="icon-perso">
+                    <use xlink:href="#icon-star-david" href="#icon-star-david" />
+                </svg>
+                <span class="mdc-list-item__text">Rabbins</span>
             </router-link>
             <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'English' }">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
@@ -65,9 +67,10 @@ export default {
             height: 60px;
             padding-left: var(--spacing);
 
-            i {
+            i, svg {
                 margin-right: var(--spacing);
                 color: var(--txtColor);
+                fill: var(--txtColor);
             }
 
             span {

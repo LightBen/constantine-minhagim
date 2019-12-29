@@ -5,7 +5,7 @@
 
 *, *:before, *:after { box-sizing: border-box; }
 html { font-family: 'Raleway', 'Roboto', 'Open Sans', sans-serif; }
-body { margin: 0; color: var(--txtColor); background-color: var(--bgColor); }
+body { margin: 0; color: var(--txtColor); background-color: var(--bgColor); font-size: var(--font-size); font-weight: var(--font-weight); line-height: var(--line-height); }
 #app { height: 100vh; }
 
 /* Order */
@@ -125,14 +125,32 @@ main {
             > :first-child { padding-top: var(--headerHeight); }
             > :last-child { padding-bottom: var(--footerHeight); }
             > .container { min-height: calc(100vh - (var(--headerHeight) + var(--footerHeight))); }
-            &:after {
-                content: '© LightWolf Studios';
-                text-align: center;
-                display: block;
-                width: 100%;
-                padding: var(--spacing);
-                background-color: rgba(#fff, 1);
-            }
+            // &:after {
+            //     content: '© LightWolf Studios';
+            //     text-align: center;
+            //     display: block;
+            //     width: 100%;
+            //     padding: var(--spacing);
+            //     background-color: rgba(#fff, 1);
+            // }
         }
     }
+}
+
+#maintenance {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background-color: var(--mdc-theme-primary);
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    padding: 30px;
+    text-align: center;
 }

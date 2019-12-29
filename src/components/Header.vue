@@ -40,5 +40,5 @@ export default {
             console.log(document.getElementById('modalLang'))
         }
     }
-}
+};
 </script>

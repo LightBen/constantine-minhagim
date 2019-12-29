@@ -38,13 +38,15 @@ export default new Router({
         import("./views/Printouts.vue")
     },
     {
-      path: "/a-propos",
+      path: "/about",
       name: "About",
-      component: () =>
-        import("./views/pages/About.vue")
+      component: () => import("./views/pages/About.vue"),
+      meta: {
+        entryId: 'EJPLGthI0WMQ0tlrqPsA'
+      }
     },
     {
-      path: "/dons",
+      path: "/donate",
       name: "Donations",
       component: () =>
         import("./views/pages/Donations.vue")
@@ -56,13 +58,13 @@ export default new Router({
         import("./views/pages/Articles.vue")
     },
     {
-      path: "/equipe-rabbins",
-      name: "Team",
+      path: "/rabbanim",
+      name: "Rabbanim",
       component: () =>
-        import("./views/pages/Team.vue")
+        import("./views/pages/Rabbanim.vue")
     },
     {
-      path: "/a-propos",
+      path: "/english",
       name: "English",
       component: () =>
         import("./views/pages/English.vue")

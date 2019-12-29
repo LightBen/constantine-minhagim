@@ -7,6 +7,9 @@ import firebase from "firebase/app"
 import "firebase/firestore"
 import FlamelinkPlugin from "./plugins/flamelink";
 
+import PageMix from '@/components/PageMix.vue'
+Vue.component('page-mix', PageMix);
+
 const firebaseConfig = {
     apiKey: process.env.VUE_APP_FLAMELINK_API_KEY,
     authDomain: process.env.VUE_APP_FLAMELINK_AUTH_DOMAIN,

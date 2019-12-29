@@ -1,21 +1,28 @@
 <template>
 <div id="app">
-    <div class="site-container">
-        <Header />
-        <main>
-            <div class="page-container">
-                <transition name="fade">
-                    <router-view />
-                </transition>
-                <!-- <FooterStatic /> -->
-            </div>
-        </main>
-        <Footer />
-    </div>
-    <div class="overlay drawer-toggle"></div>
-    <MainNav />
-    <fabBtn />
-    <Icons />
+    <!-- <template v-if="!isProduction"> -->
+        <div class="site-container">
+            <Header />
+            <main>
+                <div class="page-container">
+                    <transition name="fade">
+                        <router-view />
+                    </transition>
+                    <!-- <FooterStatic /> -->
+                </div>
+            </main>
+            <Footer />
+        </div>
+        <div class="overlay drawer-toggle"></div>
+        <MainNav />
+        <fabBtn />
+        <Icons />
+    <!-- </template>
+    <template v-else>
+        <div id="maintenance">
+            <div id="maintenance-content">Constantine Minhagim<br>revient bientôt !</div>
+        </div>
+    </template> -->
 </div>
 </template>
 
@@ -37,6 +44,11 @@ export default {
         MainNav,
         fabBtn,
         Icons
+    },
+    data () {
+        return {
+            isProduction: process.env.NODE_ENV === 'production'
+        }
     },
     created() {
         const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';

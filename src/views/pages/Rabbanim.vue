@@ -1,5 +1,5 @@
 <template>
-<div id="english">
+<div id="rabbanim">
     <div class="container">
         <h1 id="page-title"></h1>
         <div id="page-content"></div>
@@ -9,11 +9,11 @@
 
 <script>
 export default {
-    name: "English",
+    name: "Rabbanim",
     created() {
         this.$flamelinkApp.content.get({
             schemaKey: 'pages',
-            entryId: 'JCRJHKAJiBAu49wYynl0'
+            entryId: 'l2daIjO7N1UNOfyh04KN'
         })
         .then(pageContent => {
             document.getElementById('page-title').innerText = pageContent.title;

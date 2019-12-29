@@ -24,6 +24,7 @@ $xl: 1920px;
     --transitionTime: .2s;
     --transitionTime2: .5s;
     --transitionEase: ease-in-out;
+    --transitionAll: all var(--transitionTime) var(--transitionEase);
 
     --primaryColor: #1e88e5;
     --primaryColorRgb: 30, 136, 229;
@@ -31,6 +32,10 @@ $xl: 1920px;
     --txtColor: #333;
     --bgColor2: #fff;
     --txtColor2: #333;
+
+    --font-size: 20px;
+    --font-weight: 400;
+    --line-height: 32px;
 
     // --headerHeight: 60px;
     // --footerHeight: 70px;

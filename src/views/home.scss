@@ -4,8 +4,7 @@
     .section-full {
         --heightAdjustment: 100px;
         width: 100vw;
-        height: calc(100vh + var(--heightAdjustment));
-        padding-bottom: var(--heightAdjustment);
+        height: 100vh;
         position: relative;
         padding-left: var(--spacing);
         padding-right: var(--spacing);
