@@ -10,7 +10,7 @@
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
                 <span class="mdc-list-item__text">À propos</span>
             </router-link>
-            <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Donations' }">
+            <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Donate' }">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">credit_card</i>
                 <span class="mdc-list-item__text">Dons</span>
             </router-link>

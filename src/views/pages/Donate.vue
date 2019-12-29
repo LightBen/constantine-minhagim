@@ -1,10 +1,10 @@
 <template>
-    <page-mix id="rabbanim"></page-mix>
+    <page-mix id="donate"></page-mix>
 </template>
 
 <script>
 
 export default {
-    name: "Rabbanim"
+    name: "Donate"
 };
 </script>

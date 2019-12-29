@@ -7,7 +7,7 @@
                     <div class="recipe card" v-for="recipe in recipes">
                         <figure class="card-content" tabindex="0">
                             <!-- <div class="card-img" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div> -->
-                            <div class="card-img" :style="{ 'background-image': 'url(' + recipe.mainImage.file + ')' }"></div>
+                            <div class="card-img" :style="{ 'background-image': 'url(' + recipe.mainImage[0].file + ')' }"></div>
                             <div class="card-img"></div>
                             <figcaption class="card-text">
                                 <div class="card-title mdc-typography mdc-typography--headline6">{{ recipe.title }}</div>

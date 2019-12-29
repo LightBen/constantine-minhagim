@@ -1,7 +1,5 @@
 <template>
-    <div id="about">
-        <page-mix></page-mix>
-    </div>
+    <page-mix id="about"></page-mix>
 </template>
 
 <script>

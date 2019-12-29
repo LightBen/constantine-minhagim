@@ -1,5 +1,5 @@
 <template>
-    <div id="printouts">
+    <div id="page-hazanout">
         <slot name="page-content">
             <div class="container">
                 <h1 id="page-title"></h1>
@@ -10,18 +10,18 @@
 </template>
 
 <style lang="scss">
-    #printouts {
+    #page {
         
     }
 </style>
 
 <script>
 export default {
-    name: 'Printouts',
+    name: 'PageHazanout',
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
-                schemaKey: 'pages',
+                schemaKey: 'hazanout',
                 entryId: this.$route.meta.entryId
             })
             .then(pageContent => {
