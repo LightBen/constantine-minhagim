@@ -9,6 +9,8 @@ import FlamelinkPlugin from "./plugins/flamelink";
 
 import PageMix from '@/components/PageMix.vue'
 Vue.component('page-mix', PageMix);
+import PageMinhagim from '@/components/PageMinhagim.vue'
+Vue.component('page-minhagim', PageMinhagim);
 
 const firebaseConfig = {
     apiKey: process.env.VUE_APP_FLAMELINK_API_KEY,

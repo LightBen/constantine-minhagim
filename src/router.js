@@ -77,6 +77,22 @@ export default new Router({
       }
     },
     {
+      path: "/prononciation",
+      name: "Prononciation",
+      component: () => import("./views/minhagim/Prononciation.vue"),
+      meta: {
+        entryId: 't4V63U2aex3a310rs3du'
+      }
+    },
+    {
+      path: "/mizrahim-yalkout-yossef",
+      name: "MizrahimYalkoutYossef",
+      component: () => import("./views/minhagim/MizrahimYalkoutYossef.vue"),
+      meta: {
+        entryId: 'hxJik707EDdzdRTDJKCa'
+      }
+    },
+    {
       path: "/english",
       name: "English",
       component: () => import("./views/pages/English.vue"),
