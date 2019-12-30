@@ -16,7 +16,15 @@ export default new Router({
     {
       path: "/minhag",
       name: "Minhag",
-      component: () => import("./views/Minhag.vue")
+      component: () => import("./views/Minhag.vue"),
+      children: [
+      {
+        path: '/:url',
+        name: 'MinhagChild',
+        component: () => import("./components/PageMinhag.vue"),
+        props: true
+      }
+      ]
     },
     {
       path: "/hazanout",
