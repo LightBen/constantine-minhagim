@@ -22,11 +22,17 @@ export default {
         pageTitle: '',
         pageContent: ''
     },
+    props: {
+        entryId
+    },
+    mounted() {
+        this.getContent();
+    },
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
                 schemaKey: 'minhag',
-                entryId: this.$route.meta.entryId
+                entryId: this.entryId
             })
             .then(pageContent => {
                 this.pageTitle = pageContent.title;
