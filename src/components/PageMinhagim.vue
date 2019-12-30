@@ -2,8 +2,8 @@
     <div class="minhagim-page">
         <slot name="page-content">
             <div class="container">
-                <h1 id="page-title"></h1>
-                <div id="page-content"></div>
+                <h1 id="page-title" v-html="pageTitle"></h1>
+                <div id="page-content" v-html="pageContent"></div>
             </div>
         </slot>
     </div>
@@ -18,6 +18,10 @@
 <script>
 export default {
     name: 'PageMinhagim',
+    data: {
+        pageTitle: '',
+        pageContent: ''
+    },
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
@@ -25,8 +29,8 @@ export default {
                 entryId: this.$route.meta.entryId
             })
             .then(pageContent => {
-                document.getElementById('page-title').innerText = pageContent.title;
-                document.getElementById('page-content').innerHTML = pageContent.content;
+                this.pageTitle = pageContent.title;
+                this.pageContent = pageContent.content;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }
