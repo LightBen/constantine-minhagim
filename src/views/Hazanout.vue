@@ -4,7 +4,7 @@
             <h1>Hazanout</h1>
             <div class="lorem" id="cuisineContent">
                 <div class="articles-hazanout">
-                    <div class="article-hazanout card" v-for="article in articles">
+                    <div class="article-hazanout card" v-for="(article, key) in articles" :key="key">
                         <figure class="card-content" tabindex="0">
                             <div class="card-img" :style="{ 'background-image': 'url(' + article.mainImage[0].file + ')' }"></div>
                             <div class="card-img"></div>

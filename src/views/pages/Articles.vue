@@ -4,7 +4,7 @@
             <h1>Articles</h1>
             <div class="lorem" id="cuisineContent">
                 <div class="articles">
-                    <div class="article card" v-for="article in articles">
+                    <div class="article card" v-for="(article, key) in articles" :key="key">
                         <figure class="card-content" tabindex="0">
                             <!-- <div class="card-img" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div> -->
                             <!-- <div class="card-img" :style="{ 'background-image': 'url(' + article.mainImage.path.path + ')' }"></div> -->

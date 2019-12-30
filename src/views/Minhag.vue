@@ -4,7 +4,7 @@
             <h1>Minhagei Halakha</h1>
             <div class="lorem" id="minhagContent">
                 <div class="articles-minhag">
-                    <router-link class="article-minhag card" v-for="article in articles" :to="{ path: '/minhag/' + article.url, params: {entryId: article.entryId } }">
+                    <router-link class="article-minhag card" v-for="(article, key) in articles" :key="key" :to="{ name: 'minhag-url', params: {entryId: key, minhag_url: key} }">
                         <figure class="card-content" tabindex="0">
                             <div class="card-img"></div>
                             <figcaption class="card-text">
@@ -44,7 +44,7 @@
             this.$flamelinkApp.content.get({
                     schemaKey: 'minhag',
                     fields: ['title', 'url', 'author', 'description', 'mainImage'],
-                    populate: ['mainImage']
+                    populate: ['mainImage'],
                 })
                 .then(articles => {
                     this.articles = articles;
