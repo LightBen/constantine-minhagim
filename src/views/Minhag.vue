@@ -4,7 +4,7 @@
             <h1>Minhagei Halakha</h1>
             <div class="lorem" id="minhagContent">
                 <div class="articles-minhag">
-                    <router-link class="article-minhag card" v-for="article in articles" :to="article.url">
+                    <router-link class="article-minhag card" v-for="article in articles" :to="{ path: '/minhag/' + article.url, params: {entryId: article.entryId } }">
                         <figure class="card-content" tabindex="0">
                             <div class="card-img"></div>
                             <figcaption class="card-text">
