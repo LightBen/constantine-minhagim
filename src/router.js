@@ -47,6 +47,17 @@ export default new Router({
     props: true
   },
   {
+    path: "/articles",
+    name: "Articles",
+    component: () => import("./views/Articles.vue")
+  },
+  {
+    path: '/articles/:articles_url',
+    name: 'articles-url',
+    component: () => import("./components/PageArticles.vue"),
+    props: true
+  },
+  {
     path: "/fiches-a-imprimer",
     name: "Printouts",
     component: () => import("./views/Printouts.vue"),
@@ -68,14 +79,6 @@ export default new Router({
     component: () => import("./views/pages/Donate.vue"),
     meta: {
       entryId: 'Wq67TbsRbgWtNjkZdE6T'
-    }
-  },
-  {
-    path: "/articles",
-    name: "Articles",
-    component: () => import("./views/pages/Articles.vue"),
-    meta: {
-      entryId: 'EJPLGthI0WMQ0tlrqPsA'
     }
   },
   {
