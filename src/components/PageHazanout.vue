@@ -9,24 +9,29 @@
     </div>
 </template>
 
-<style lang="scss">
-    #page {
-        
-    }
-</style>
-
 <script>
 export default {
     name: 'PageHazanout',
-    data: {
-        pageTitle: '',
-        pageContent: ''
+    data() {
+        return {
+            dataEntryId:'',
+            pageTitle: '',
+            pageContent: ''
+        }
+    },
+    props: ['entryId'],
+    mounted() {
+        this.dataEntryId = this.entryId;
+        if (!this.dataEntryId) {
+            this.dataEntryId = this.$route.params.minhag_url
+        }
+        this.getContent();
     },
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
                 schemaKey: 'hazanout',
-                entryId: this.$route.meta.entryId
+                entryId: this.dataEntryId
             })
             .then(pageContent => {
                 this.pageTitle = pageContent.title;
@@ -34,9 +39,6 @@ export default {
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }
-    },
-    created() {
-        setTimeout(this.getContent, 100)
     }
 };
 </script>

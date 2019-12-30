@@ -68,6 +68,17 @@ footer       { z-index: 8; }
 .container { padding: 0 var(--spacing); }
 h1 { margin: 0; padding: var(--spacing) 0; }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: var(--spacing);
+    .grid-element {
+        .card-img {
+            background-image: url('./assets/img/makroud.jpg');
+        }
+    }
+}
+
 figure { margin: 0; }
 figcaption { padding: 0; }
 
