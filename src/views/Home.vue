@@ -42,6 +42,12 @@
 export default {
     name: 'home',
     components: {},
+    beforeCreate: function() {
+        document.body.classList.add('is-homepage');
+    },
+    beforeDestroy: function() {
+        document.body.classList.remove('is-homepage');
+    }
     // created() {
     //     this.$flamelinkApp.content.get({
     //         schemaKey: 'general',

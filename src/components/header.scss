@@ -1,7 +1,14 @@
 header {
     top: 0;
-    background-color: rgba(var(--primaryColorRgb), 0.9);
+    background-color: var(--primaryColor);
     transition: all var(--transitionTime) var(--transitionEase);
+
+    svg { 
+        &, * {
+            color: #fff; fill: #fff; 
+        }
+    }
+    .st0, .st1 { fill: #fff; }
 
     .mdc-top-app-bar__title { 
         padding-left: 10px; 
@@ -16,9 +23,16 @@ header {
             display: inline-block;
         }
     }
+
+    .mdc-top-app-bar__title {
+        display: none;
+        @media (min-width: $sm) {
+            display: block;
+        }
+    }
 }
 .dark {
     header {
-        background-color: rgba(#333, 0.9);
+        background-color: #222;
     }
 }

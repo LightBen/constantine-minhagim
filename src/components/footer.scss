@@ -1,5 +1,8 @@
 footer {
 
+    opacity: 1;
+    visibility: visible;
+
     #footerTabs {
         position: fixed;
         left: 0;
@@ -29,6 +32,8 @@ footer {
 
 .dark {
     footer {
-        background-color: rgba(#333, 0.9);
+        #footerTabs {
+            background-color: #222;
+        }
     }
 }

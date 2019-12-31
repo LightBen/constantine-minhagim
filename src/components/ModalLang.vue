@@ -11,10 +11,10 @@
                 <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Change language">language</button>
                 <div class="language-label">עברית</div>
             </div>
-            <div class="language" @click="toggleLocale('en-US')">
+            <!-- <div class="language" @click="toggleLocale('en-US')">
                 <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Change language">language</button>
                 <div class="language-label">English</div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

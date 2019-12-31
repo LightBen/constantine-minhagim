@@ -21,11 +21,14 @@
         }
     }
     #welcome {
-        display: flex; align-items: center; justify-content: center; padding-top: 0 !important; text-transform: uppercase;
+        display: flex; align-items: center; justify-content: center; padding-top: var(--headerHeight); padding-bottom: 0 !important; text-transform: uppercase;
         &.full-img {
-            background-image: url(../assets/img/jlm-bg-1-lg.jpg);
+            background-image: url(../assets/img/constantine-bridge-sm.jpg);
+            @media (min-width: $sm) {
+                background-image: url(../assets/img/constantine-bridge-lg.jpg);
+            }
             &:after {
-                background-color: rgba(30, 136, 229, 0.7);
+                background-color: rgba(30, 136, 229, 0.45);
             }
         }
         .section-content {
@@ -36,14 +39,14 @@
             h1 {
                 line-height: 1; text-align: center;
                 span { display: block; }
-                :first-child { font-size: 5vw; font-weight: 500; letter-spacing: var(--titleSpacing); padding-left: var(--titleSpacing); padding-bottom: 10px; }
+                :first-child { font-size: 5.5vw; font-weight: 500; letter-spacing: var(--titleSpacing); padding-left: var(--titleSpacing); padding-bottom: 10px; }
                 :last-child { font-size: 10vw; font-weight: 700; }
             }
             .welcome-sections {
-                display: grid; grid-gap: var(--spacing);
-                grid-template-columns: repeat(auto-fill, minmax(calc(50% - var(--spacing)), 1fr)); max-width: 50.4vw; margin-left: var(--titleSpacing);
+                display: grid; grid-gap: var(--spacing); padding: 0 1.7vw;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
                 @media (min-width: $md) {
-                    grid-template-columns: repeat(auto-fill, minmax(calc(25% - var(--spacing)), 1fr));
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
                 }
                 > * {
                     padding: var(--spacing) 5px; text-align: center; color: #fff; text-decoration: none; font-weight: 600; border: 2px solid #fff;
@@ -69,5 +72,15 @@
                     }
             }
         }
+    }
+}
+
+.is-homepage {
+    header {
+        background-color: var(--primaryColorTrans);
+    }
+    footer {
+        opacity: 0;
+        visibility: hidden;
     }
 }

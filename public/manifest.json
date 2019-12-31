@@ -1,6 +1,6 @@
 {
-  "name": "constantine-minhagim",
-  "short_name": "constantine-minhagim",
+  "name": "Constantine Minhagim",
+  "short_name": "Constantine Minhagim",
   "icons": [
     {
       "src": "/img/icons/icon-16x16.png",
@@ -51,6 +51,12 @@
       "src": "/img/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/img/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
     }
   ],
   "start_url": "/",

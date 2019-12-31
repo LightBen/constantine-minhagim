@@ -20,7 +20,7 @@
                         <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" @click="$router.push({ name: 'Hazanout' })">
                             <span class="mdc-tab__content">
                                 <span class="mdc-tab__icon" aria-hidden="true"><svg class="icon-perso">
-                                    <use xlink:href="#icon-book" href="#icon-music" />
+                                    <use xlink:href="#icon-music" href="#icon-music" />
                                 </svg></span>
                                 <span class="mdc-tab__text-label">'Hazanout</span>
                             </span>
@@ -32,7 +32,7 @@
                         <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" @click="$router.push({ name: 'Cuisine' })">
                             <span class="mdc-tab__content">
                                 <span class="mdc-tab__icon" aria-hidden="true"><svg class="icon-perso">
-                                    <use xlink:href="#icon-book" href="#icon-food-tray" />
+                                    <use xlink:href="#icon-food-tray" href="#icon-food-tray" />
                                 </svg></span>
                                 <span class="mdc-tab__text-label">Cuisine</span>
                             </span>

@@ -12,7 +12,7 @@ export default {
             //
         }
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -37,6 +37,12 @@ export default {
 .dark {
     #mainMenuFab {
         background-color: var(--bgColor2);
+    }
+}
+
+.is-homepage {
+    #mainMenuFab {
+        bottom: var(--spacing);
     }
 }
 </style>

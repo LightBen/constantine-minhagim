@@ -60,3 +60,28 @@ export default {
 </script>
 
 <style src="./app.scss" lang="scss"></style>
+<style lang="scss">
+    .page-title-container { 
+        background-image: linear-gradient(to bottom, rgba(var(--primaryColorTransRgb), 1) 70px, rgba(var(--primaryColorTransRgb), 0.67) 100%), url(./assets/img/thumbnail-articles.jpg);
+    }
+    div[id*="minhag"] .page-title-container { background-image: linear-gradient(to bottom, rgba(var(--primaryColorTransRgb), 1) 70px, rgba(var(--primaryColorTransRgb), 0.67) 100%), url('./assets/img/thumbnail-minhag.jpg'); }
+    div[id*="hazanout"] .page-title-container { background-image: linear-gradient(to bottom, rgba(var(--primaryColorTransRgb), 1) 70px, rgba(var(--primaryColorTransRgb), 0.67) 100%), url('./assets/img/thumbnail-hazanout.jpg'); }
+    #div[id*="cuisine"] .page-title-container { background-image: linear-gradient(to bottom, rgba(var(--primaryColorTransRgb), 1) 70px, rgba(var(--primaryColorTransRgb), 0.67) 100%), url('./assets/img/thumbnail-cuisine.jpg'); }
+    #div[id*="articles"] .page-title-container { background-image: linear-gradient(to bottom, rgba(var(--primaryColorTransRgb), 1) 70px, rgba(var(--primaryColorTransRgb), 0.67) 100%), url('./assets/img/thumbnail-articles.jpg'); }
+
+    .dark {
+        .page-title-container { 
+            background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url(./assets/img/thumbnail-articles.jpg);
+        }
+        div[id*="minhag"] .page-title-container { background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url('./assets/img/thumbnail-minhag.jpg'); }
+        div[id*="hazanout"] .page-title-container { background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url('./assets/img/thumbnail-hazanout.jpg'); }
+        div[id*="cuisine"] .page-title-container { background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url('./assets/img/thumbnail-cuisine.jpg'); }
+        div[id*="articles"] .page-title-container { background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url('./assets/img/thumbnail-articles.jpg'); }
+    }
+
+    .card-img { background-image: url('./assets/img/thumbnail-articles.jpg'); }
+    #minhag .card-img { background-image: url('./assets/img/thumbnail-minhag.jpg'); }
+    #hazanout .card-img { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
+    #cuisine .card-img { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
+    #articles .card-img { background-image: url('./assets/img/thumbnail-articles.jpg'); }
+</style>

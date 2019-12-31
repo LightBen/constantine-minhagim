@@ -1,5 +1,5 @@
 <template>
-    <div class="page-mix">
+    <div id="page-articles">
         <slot name="page-content">
             <div class="page-title-container">
                 <div class="container">
@@ -13,30 +13,36 @@
     </div>
 </template>
 
-<style lang="scss">
-    #page {
-        
-    }
-</style>
-
 <script>
 export default {
-    name: 'PageMix',
+    name: 'PageArticles',
+    data() {
+        return {
+            dataEntryId:'',
+            pageTitle: '',
+            pageContent: ''
+        }
+    },
+    props: ['entryId'],
+    mounted() {
+        this.dataEntryId = this.entryId;
+        if (!this.dataEntryId) {
+            this.dataEntryId = this.$route.params.articles_url
+        }
+        this.getContent();
+    },
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
-                schemaKey: 'pages',
-                entryId: this.$route.meta.entryId
+                schemaKey: 'articles',
+                entryId: this.dataEntryId
             })
             .then(pageContent => {
-                document.getElementById('page-title').innerText = pageContent.title;
-                document.getElementById('page-content').innerHTML = pageContent.content;
+                this.pageTitle = pageContent.title;
+                this.pageContent = pageContent.content;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }
-    },
-    created() {
-        setTimeout(this.getContent, 100)
     }
 };
 </script>

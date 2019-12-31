@@ -1,13 +1,13 @@
 <template>
-    <div id="cuisine">
+    <div id="articles">
         <div class="page-title-container">
             <div class="container">
-                <h1 id="page-title">Cuisine</h1>
+                <h1 id="page-title">Articles</h1>
             </div>
         </div>
         <div class="container">
-            <div id="cuisineContent" class="grid-container">
-                <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'cuisine-url', params: {entryId: key, cuisine_url: key} }">
+            <div id="articlesContent" class="grid-container">
+                <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'articles-url', params: {entryId: key, articles_url: key} }">
                     <figure class="card-content" tabindex="0">
                         <div class="card-img"></div>
                         <figcaption class="card-text">
@@ -28,13 +28,13 @@
 
 <script>
     export default {
-        name: "Cuisine",
+        name: "articles",
         data() {
             return { elements: [] }
         },
         created() {
             this.$flamelinkApp.content.get({
-                schemaKey: 'cuisine',
+                schemaKey: 'articles',
                 fields: ['title', 'url', 'author', 'description', 'mainImage'],
                 populate: ['mainImage'],
             })

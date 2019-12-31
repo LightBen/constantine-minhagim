@@ -1,7 +1,11 @@
 <template>
     <div id="minhag">
+        <div class="page-title-container">
+            <div class="container">
+                <h1 id="page-title">Minhag</h1>
+            </div>
+        </div>
         <div class="container">
-            <h1>Minhagei Halakha</h1>
             <div id="minhagContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'minhag-url', params: {entryId: key, minhag_url: key} }">
                     <figure class="card-content" tabindex="0">
@@ -9,7 +13,7 @@
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
                             <div class="card-author">{{ element.author }}</div>
-                            <div class="card-desc">{{ element.description }}</div>
+                            <!-- <div class="card-desc">{{ element.description }}</div> -->
                             <div class="imageMain"></div>
                         </figcaption>
                     </figure>

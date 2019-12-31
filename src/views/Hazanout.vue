@@ -1,7 +1,11 @@
 <template>
     <div id="hazanout">
+        <div class="page-title-container">
+            <div class="container">
+                <h1 id="page-title">'Hazanout</h1>
+            </div>
+        </div>
         <div class="container">
-            <h1>Hazanout</h1>
             <div id="hazanoutContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'hazanout-url', params: {entryId: key, hazanout_url: key} }">
                     <figure class="card-content" tabindex="0">
@@ -9,7 +13,7 @@
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
                             <div class="card-author">{{ element.author }}</div>
-                            <div class="card-desc">{{ element.description }}</div>
+                            <!-- <div class="card-desc">{{ element.description }}</div> -->
                             <div class="imageMain"></div>
                         </figcaption>
                     </figure>

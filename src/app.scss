@@ -1,23 +1,19 @@
 @import "~material-components-web/material-components-web";
+
+@import "@/assets/style/_global";
+@import "@/assets/style/_cards";
+@import "@/assets/style/_page";
 @import "@/assets/style/bootstrap-snippets";
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,900&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,900&display=swap');
 
-*, *:before, *:after { box-sizing: border-box; }
-html { font-family: 'Raleway', 'Roboto', 'Open Sans', sans-serif; }
-body { margin: 0; color: var(--txtColor); background-color: var(--bgColor); font-size: var(--font-size); font-weight: var(--font-weight); line-height: var(--line-height); }
-#app { height: 100vh; }
 
-/* Order */
-#mainMenuFab { z-index: 10; }
-header       { z-index: 8 !important; }
-footer       { z-index: 8; }
-#mainNav     { z-index: 5; }
-.overlay     { z-index: 3; }
-/* END Order */
 
-.fade-enter-active, .fade-leave-active { transition: opacity .5s ease; }
-.fade-enter, .fade-leave, .fade-leave-to, .fade-leave-active { opacity: 0; }
+.st0 { fill: #0B7EC2; }
+.st1 { fill: #0DB3E7; }
+
+
 
 @keyframes fabAppear {
     0%   { opacity: 0; transform: scale(0); }
@@ -56,75 +52,7 @@ footer       { z-index: 8; }
     }
 }
 
-.site-container { display: flex; flex-direction: column; align-items: stretch; min-height: 100%; color: var(--txtColor); background-color: var(--bgColor); transition: color var(--transitionTime) var(--transitionEase), background-color var(--transitionTime) var(--transitionEase); }
 
-.overlay { position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; visibility: hidden; opacity: 0; transition: opacity var(--transitionTime) var(--transitionEase); background-color: rgba(#000, .33) }
-.drawer-opened .overlay { opacity: 1; visibility: visible; }
-
-.icon-perso {
-    height: 24px; width: 24px;
-  }
-
-.container { padding: 0 var(--spacing); }
-h1 { margin: 0; padding: var(--spacing) 0; }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-gap: var(--spacing);
-    .grid-element {
-        .card-img {
-            background-image: url('./assets/img/makroud.jpg');
-        }
-    }
-}
-
-figure { margin: 0; }
-figcaption { padding: 0; }
-
-.card {
-    cursor: pointer; position: relative; overflow: hidden;
-    .card-img {
-        position: relative; background: rgba(#fff, 0.5) no-repeat center/cover; min-height: 200px; transition: all 0.35s;
-        @media (min-width: $md) {
-            min-height: 300px;
-        }
-        &:after {
-            content: ""; position: absolute; background-color: rgba(#000, 0.5); opacity: 0; transition: all 0.35s; width: 100%; height: 100%; left: 0; top: 0;
-        }
-    }
-    .card-text {
-        padding: calc(var(--spacing) / 2);
-        width: 100%;
-        transform: translate3d(0,100%,0);
-        transition: all 0.35s;
-        background-color: rgba(#fff, 1);
-        position: absolute;
-        bottom: 0;
-
-        .card-author {
-            font-size: 14px; font-style: italic;
-        }
-
-        .card-desc {
-            transition: all 0.35s; position: absolute; opacity: 0; color: #fff; bottom: 250%; width: 100%; left: 0; padding: calc(var(--spacing) / 2);
-        }
-    }
-    &:hover {
-        .card-img {
-            filter: blur(1px); transform: scale(1.05);
-            &:after {
-                opacity: 1;
-            }
-        }
-        .card-text {
-            transform: translate3d(0,0,0);
-        }
-        .card-desc {
-            bottom: 100%; opacity: 1;
-        }
-    }
-}
 
 main {
     position: relative; flex: 1; display: flex; align-items: stretch;

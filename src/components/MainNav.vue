@@ -56,7 +56,7 @@ export default {
     transition: all var(--transitionTime) var(--transitionEase);
     height: calc(100vh - var(--headerHeight));
     border: none;
-    background: linear-gradient(to bottom, rgba(#fff, 1), rgba(#fff, 0.7)), url(../assets/img/jlm-bg-1-sm.jpg) no-repeat center/cover;
+    background: linear-gradient(to bottom, rgba(var(--primaryColorTransRgb), 1), rgba(var(--primaryColorTransRgb), 0.67)), url(../assets/img/jlm-bg-1-sm.jpg) no-repeat center/cover;
 
     .mdc-list {
         padding: 0;
@@ -69,13 +69,13 @@ export default {
 
             i, svg {
                 margin-right: var(--spacing);
-                color: var(--txtColor);
-                fill: var(--txtColor);
+                color: #fff;
+                fill: #fff;
             }
 
             span {
                 line-height: 1;
-                color: var(--txtColor);
+                color: #fff;
             }
         }
     }

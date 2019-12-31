@@ -1,8 +1,12 @@
 <template>
     <div id="page-hazanout">
         <slot name="page-content">
+            <div class="page-title-container">
+                <div class="container">
+                    <h1 id="page-title" v-html="pageTitle"></h1>
+                </div>
+            </div>
             <div class="container">
-                <h1 id="page-title" v-html="pageTitle"></h1>
                 <div id="page-content" v-html="pageContent"></div>
             </div>
         </slot>
