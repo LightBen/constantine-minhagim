@@ -3,14 +3,14 @@
     <div class="modal-overlay" @click="closeModalLang()"></div>
     <div class="modal">
         <div id="languages-choice">
-            <div class="language" @click="toggleLocale('fr')">
+            <div class="language lang-toggle">
                 <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Change language">language</button>
-                <div class="language-label">Français</div>
+                <div class="language-label">Français / עברית</div>
             </div>
-            <div class="language" @click="toggleLocale('he')">
+            <!-- <div class="language lang-toggle">
                 <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Change language">language</button>
                 <div class="language-label">עברית</div>
-            </div>
+            </div> -->
             <!-- <div class="language" @click="toggleLocale('en-US')">
                 <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Change language">language</button>
                 <div class="language-label">English</div>
@@ -82,32 +82,7 @@ export default {
     methods: {
         closeModalLang() {
             document.getElementById('modalLang').classList.remove('modal-show')
-        },
-        toggleLocale(lang) {
-            // First, remove existing language class
-            document.body.classList.forEach(item => {
-                if (/^lang/.test(item)) {
-                    document.body.classList.remove(item);
-                }
-                document.body.classList.remove("rtl");
-            })
-            // Then add the current language class
-            document.body.classList.add('lang-' + lang)
-            if (lang === "he") {
-                document.body.classList.add("rtl");
-                document.documentElement.dir = "rtl"
-            } else {
-                document.body.classList.remove("rtl");
-                document.documentElement.dir = "ltr"
-            }
-            // Change the HTML lang attribute
-            document.documentElement.lang = lang
-            // Finally set the locale
-            this.$flamelinkApp.settings.setLocale(lang)
-                .then(locale => console.log(`Your locale is set as "${locale}"`))
-                .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
-            document.getElementById('modalLang').classList.remove('modal-show')
         }
     }
-}
+};
 </script>

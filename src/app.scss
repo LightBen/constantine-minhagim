@@ -8,6 +8,9 @@
 // @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,900&display=swap');
 
+html[lang="he"] {
+    direction: rtl;
+}
 
 
 .st0 { fill: #0B7EC2; }
@@ -41,7 +44,7 @@
 #mainMenuBtn, #mainMenuFab > span { transition: all .2s ease-in-out; }
 .drawer-opened {
     #mainNav {
-        left: 0;
+        margin-inline-start: 0;
         opacity: 1;
         display: block;
     }
@@ -63,7 +66,7 @@ main {
             transition: all var(--transitionTime) var(--transitionEase);
             > :first-child { padding-top: var(--headerHeight); }
             > :last-child { padding-bottom: var(--footerHeight); }
-            > .container { min-height: calc(100vh - (var(--headerHeight) + var(--footerHeight))); }
+            // > .container { min-height: calc(100vh - (var(--headerHeight) + var(--footerHeight))); }
             // &:after {
             //     content: '© LightWolf Studios';
             //     text-align: center;
@@ -80,7 +83,7 @@ main {
     display: flex;
     position: fixed;
     top: 0;
-    left: 0;
+    margin-inline-start: 0;
     width: 100vw;
     height: 100vh;
     align-items: center;
@@ -92,4 +95,16 @@ main {
     font-weight: 600;
     padding: 30px;
     text-align: center;
+}
+
+iframe, .google-drive {
+    width: 100%;
+    height: 500px;
+    max-height: calc(100vh - 200px);
+}
+.google-drive-folder {
+    
+}
+.google-drive-file {
+
 }

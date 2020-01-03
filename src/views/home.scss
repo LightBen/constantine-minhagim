@@ -6,8 +6,8 @@
         width: 100vw;
         height: 100vh;
         position: relative;
-        padding-left: var(--spacing);
-        padding-right: var(--spacing);
+        padding-inline-start: var(--spacing);
+        padding-inline-end: var(--spacing);
         &.full-img {
             background: no-repeat center/cover fixed; color: #fff;
             transition: all var(--transitionTime) var(--transitionEase);
@@ -39,7 +39,7 @@
             h1 {
                 line-height: 1; text-align: center;
                 span { display: block; }
-                :first-child { font-size: 5.5vw; font-weight: 500; letter-spacing: var(--titleSpacing); padding-left: var(--titleSpacing); padding-bottom: 10px; }
+                :first-child { font-size: 5.5vw; font-weight: 500; letter-spacing: var(--titleSpacing); padding-inline-start: var(--titleSpacing); padding-bottom: 10px; }
                 :last-child { font-size: 10vw; font-weight: 700; }
             }
             .welcome-sections {

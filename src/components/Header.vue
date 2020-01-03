@@ -16,7 +16,7 @@
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Search">search</button> -->
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Contact">email</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded theme-toggle" aria-label="Change Light Mode">wb_sunny</button>
-            <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Change language" @click="displayModalLang()">language</button>
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle" aria-label="Change language">language</button>
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Choose language">g_translate</button> -->
         </section>
     </div>
@@ -41,7 +41,7 @@ export default {
     methods: {
         displayModalLang() {
             document.getElementById('modalLang').classList.add('modal-show');
-            console.log(document.getElementById('modalLang'))
+            // console.log(document.getElementById('modalLang'))
         }
     }
 };

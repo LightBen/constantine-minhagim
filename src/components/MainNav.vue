@@ -50,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 #mainNav {
     display: block;
-    left: -260px;
+    margin-inline-start: -260px;
     top: var(--headerHeight);
     opacity: 0;
     transition: all var(--transitionTime) var(--transitionEase);
@@ -65,10 +65,10 @@ export default {
             margin: 0;
             border-radius: 0;
             height: 60px;
-            padding-left: var(--spacing);
+            padding-inline-start: var(--spacing);
 
             i, svg {
-                margin-right: var(--spacing);
+                margin-inline-end: var(--spacing);
                 color: #fff;
                 fill: #fff;
             }

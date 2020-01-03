@@ -28,7 +28,7 @@ const firebaseApp = firebase.initializeApp(firebaseConfig)
 Vue.use(FlamelinkPlugin, {
     firebaseApp,
     env: 'production',
-    locale: 'en-US', // fr, en-US, he
+    locale: 'fr', // fr, en-US, he
     dbType: 'cf'
 })
 // console.log({firebaseConfig});
@@ -65,12 +65,119 @@ root.style.setProperty('--headerHeight', headerHeight + "px");
 root.style.setProperty('--footerHeight', footerHeight + "px");
 /* END Custom properties */
 
-/* Theme switch */
+
+
+/* SUPER TOGGLE */
+const superToggle = function(element, class0, class1) {
+    element.classList.toggle(class0);
+    element.classList.toggle(class1);
+  }
+/* End SUPER TOGGLE */
+
+
+
+/* THEME */
+
+// Init check
 const themeToggle = document.querySelector('.theme-toggle');
+if (document.documentElement.getAttribute('data-theme') != 'dark') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    bodyEl.classList.add('light');
+} else if (document.documentElement.getAttribute('data-theme') == 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    bodyEl.classList.add('dark');
+}
+
+// Switch + set local storage
 themeToggle.addEventListener('click', (event) => {
-    bodyEl.classList.toggle('dark');
+    superToggle(bodyEl,'dark', 'light');
+    if (document.documentElement.getAttribute('data-theme') == 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    } else if (document.documentElement.getAttribute('data-theme') == 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
 })
-/* END Theme switch */
+
+// future check
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        bodyEl.classList.add('dark');
+    }
+}
+/* END THEME */
+
+
+
+/* LANG CHECK */
+
+// Init check
+const langToggle = document.querySelector('.lang-toggle');
+if (document.documentElement.getAttribute('lang') != 'he') {
+    document.documentElement.setAttribute('lang', 'fr');
+    // Finally set the locale
+    Vue.flamelinkApp.settings.setLocale('fr')
+    // .then(locale => {
+    //     console.log(`Your locale is set as FR`)
+    // })
+    .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+
+} else if (document.documentElement.getAttribute('lang') == 'he') {
+    document.documentElement.setAttribute('lang', 'he');
+    Vue.flamelinkApp.settings.setLocale('HE')
+    // .then(locale => {
+    //     console.log(`Your locale is set as HE`)
+    // })
+    .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+}
+
+// Switch + set local storage
+langToggle.addEventListener('click', (event) => {
+    if (document.documentElement.getAttribute('lang') == 'he') {
+        document.documentElement.setAttribute('lang', 'fr');
+        localStorage.setItem('lang', 'fr');
+        Vue.flamelinkApp.settings.setLocale('fr')
+        // .then(locale => {
+        //     console.log(`Your locale is set as FR`)
+        // })
+        .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+    } else if (document.documentElement.getAttribute('lang') == 'fr') {
+        document.documentElement.setAttribute('lang', 'he');
+        localStorage.setItem('lang', 'he');
+        Vue.flamelinkApp.settings.setLocale('he')
+        // .then(locale => {
+        //     console.log(`Your locale is set as HE`)
+        // })
+        .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+    }
+    // document.getElementById('modalLang').classList.remove('modal-show')
+})
+
+// future check
+const currentLang = localStorage.getItem('lang') ? localStorage.getItem('lang') : null;
+
+if (currentLang) {
+    document.documentElement.setAttribute('lang', currentLang);
+
+    if (currentLang === 'he') {
+        document.documentElement.setAttribute('lang', 'he');
+        Vue.flamelinkApp.settings.setLocale('he')
+        // .then(locale => {
+        //     console.log(`Your locale is set as HE`)
+        // })
+        .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+    }
+}
+/* END LANG CHECK */
+
+
+
 
 /* Scroll appear/disappear bars */
 let prevScrollpos = window.pageYOffset;
