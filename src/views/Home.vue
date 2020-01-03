@@ -3,8 +3,8 @@
     <section class="section-full full-img" id="welcome">
         <div class="section-content">
             <h1>
-                <span id="siteTitle1">Constantine</span>
-                <span id="siteTitle2">Minhagim</span>
+                <span id="siteTitle1" v-html="siteTitle1"></span>
+                <span id="siteTitle2" v-html="siteTitle2"></span>
             </h1>
             <div class="welcome-sections">
                 <router-link :to="{ name: 'Minhag' }" class="minhag">Minhag</router-link>
@@ -41,7 +41,37 @@
 <script>
 export default {
     name: 'home',
+    data() {
+        return {
+            siteTitle1: '',
+            siteTitle2: ''
+        }
+    },
     components: {},
+    mounted() {
+        this.getContent();
+    },
+    methods: {
+        getContent() {
+            this.$flamelinkApp.content.get({
+                schemaKey: 'general',
+                entryId: 'hWHhdCrUx34iDIsPZokP',
+            })
+            .then(pageTitle1 => {
+                this.siteTitle1 = pageTitle1.title;
+            })
+            .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
+            
+            this.$flamelinkApp.content.get({
+                schemaKey: 'general',
+                entryId: 'crXGbshLALxsrrmX0APz'
+            })
+            .then(pageTitle2 => {
+                this.siteTitle2 = pageTitle2.title;
+            })
+            .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
+        }
+    },
     beforeCreate: function() {
         document.body.classList.add('is-homepage');
     },
@@ -60,7 +90,7 @@ export default {
     //     })
     //     .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
     // }
-}
+};
 
     // created() {
     //     this.$flamelinkApp.content.subscribe({

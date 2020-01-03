@@ -8,9 +8,6 @@
 // @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,900&display=swap');
 
-html[lang="he"] {
-    direction: rtl;
-}
 
 
 .st0 { fill: #0B7EC2; }
@@ -44,7 +41,7 @@ html[lang="he"] {
 #mainMenuBtn, #mainMenuFab > span { transition: all .2s ease-in-out; }
 .drawer-opened {
     #mainNav {
-        margin-inline-start: 0;
+        left: 0;
         opacity: 1;
         display: block;
     }
@@ -107,4 +104,22 @@ iframe, .google-drive {
 }
 .google-drive-file {
 
+}
+
+
+/* RTL */
+html[lang="he"] {
+    direction: rtl;
+    .material-icons {
+        direction: rtl;
+    }
+    .mdc-list-item__graphic {
+        margin-right: 0;
+    }
+    .drawer-opened {
+        #mainNav {
+            left: auto;
+            right: 0;
+        }
+    }
 }

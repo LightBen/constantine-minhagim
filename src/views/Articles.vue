@@ -40,7 +40,7 @@
             })
             .then(elements => {
                 this.elements = elements;
-                console.log('All the elements:', elements);
+                // console.log('All the elements:', elements);
             })
         }
     };

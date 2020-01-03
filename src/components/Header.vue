@@ -9,7 +9,7 @@
                 </svg>
             </button>
             <span class="mdc-top-app-bar__title">
-                <router-link to="/">Constantine Minhagim</router-link>
+                <router-link to="/" v-html="siteTitle"></router-link>
             </span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
@@ -20,29 +20,41 @@
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Choose language">g_translate</button> -->
         </section>
     </div>
-    <ModalLang />
+    <!-- <ModalLang /> -->
 </header>
 </template>
 
 <style src="./header.scss" lang="scss" scoped></style>
 
 <script>
-import ModalLang from "@/components/ModalLang";
+// import ModalLang from "@/components/ModalLang";
 export default {
     name: 'Header',
-    components: {
-        ModalLang
-    },
+    components: {},
     data() {
         return {
-            //
+            siteTitle: '',
         }
     },
+    components: {},
+    mounted() {
+        this.getContent();
+    },
     methods: {
-        displayModalLang() {
-            document.getElementById('modalLang').classList.add('modal-show');
-            // console.log(document.getElementById('modalLang'))
+        getContent() {
+            this.$flamelinkApp.content.get({
+                schemaKey: 'general',
+                entryId: '56Mopx0dRrhGql4KrFQX',
+            })
+            .then(siteTitle => {
+                this.siteTitle = siteTitle.title;
+            })
+            .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }
-    }
+        // displayModalLang() {
+        //     document.getElementById('modalLang').classList.add('modal-show');
+        //     // console.log(document.getElementById('modalLang'))
+        // }
+    },
 };
 </script>

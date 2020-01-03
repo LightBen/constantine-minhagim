@@ -45,12 +45,10 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-
-<style lang="scss" scoped>
+<style lang="scss">
 #mainNav {
     display: block;
-    margin-inline-start: -260px;
+    left: -260px;
     top: var(--headerHeight);
     opacity: 0;
     transition: all var(--transitionTime) var(--transitionEase);
@@ -78,6 +76,13 @@ export default {
                 color: #fff;
             }
         }
+    }
+}
+
+html[lang="he"] {
+    #mainNav {
+        left: auto;
+        right: -260px;
     }
 }
 

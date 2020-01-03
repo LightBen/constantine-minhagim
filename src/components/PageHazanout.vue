@@ -27,7 +27,7 @@ export default {
     mounted() {
         this.dataEntryId = this.entryId;
         if (!this.dataEntryId) {
-            this.dataEntryId = this.$route.params.minhag_url
+            this.dataEntryId = this.$route.params.hazanout_url
         }
         this.getContent();
     },

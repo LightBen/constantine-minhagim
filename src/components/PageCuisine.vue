@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name: 'PageMinhag',
+    name: 'PageCuisine',
     data() {
         return {
             dataEntryId:'',
@@ -27,7 +27,7 @@ export default {
     mounted() {
         this.dataEntryId = this.entryId;
         if (!this.dataEntryId) {
-            this.dataEntryId = this.$route.params.minhag_url
+            this.dataEntryId = this.$route.params.cuisine_url
         }
         this.getContent();
     },
