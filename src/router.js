@@ -58,7 +58,7 @@ export default new Router({
     props: true
   },
   {
-    path: "/fiches-a-imprimer",
+    path: "/print",
     name: "Printouts",
     component: () => import("./views/Printouts.vue"),
     meta: {

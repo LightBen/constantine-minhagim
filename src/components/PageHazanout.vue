@@ -18,7 +18,7 @@ export default {
     name: 'PageHazanout',
     data() {
         return {
-            dataEntryId:'',
+            dataEntryId: '',
             pageTitle: '',
             pageContent: ''
         }

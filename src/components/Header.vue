@@ -33,15 +33,15 @@ export default {
     components: {},
     data() {
         return {
-            siteTitle: '',
+            siteTitle: ''
         }
     },
     components: {},
     mounted() {
-        this.getContent();
+        this.getSiteTitle();
     },
     methods: {
-        getContent() {
+        getSiteTitle() {
             this.$flamelinkApp.content.get({
                 schemaKey: 'general',
                 entryId: '56Mopx0dRrhGql4KrFQX',

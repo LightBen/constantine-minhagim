@@ -55,14 +55,14 @@
 
 
 main {
-    position: relative; flex: 1; display: flex; align-items: stretch;
+    position: relative; flex: 1; display: flex; align-items: stretch; padding-bottom: var(--footerHeight);
     .page-container { 
         flex: 1; position: relative;
-        > div:first-child { 
-            position: absolute; width: 100%; min-height: 100%; top: 0; left: 0; padding: 0; color: var(--txtColor); background-color: var(--bgColor); 
-            transition: all var(--transitionTime) var(--transitionEase);
-            > :first-child { padding-top: var(--headerHeight); }
-            > :last-child { padding-bottom: var(--footerHeight); }
+        // > div:first-child { 
+        //     position: absolute; width: 100%; min-height: 100%; top: 0; left: 0; padding: 0; color: var(--txtColor); background-color: var(--bgColor); 
+        //     transition: all var(--transitionTime) var(--transitionEase);
+        //     > :first-child { padding-top: var(--headerHeight); }
+        //     > :last-child { padding-bottom: var(--footerHeight); }
             // > .container { min-height: calc(100vh - (var(--headerHeight) + var(--footerHeight))); }
             // &:after {
             //     content: '© LightWolf Studios';
@@ -72,7 +72,7 @@ main {
             //     padding: var(--spacing);
             //     background-color: rgba(#fff, 1);
             // }
-        }
+        // }
     }
 }
 
@@ -98,12 +98,27 @@ iframe, .google-drive {
     width: 100%;
     height: 500px;
     max-height: calc(100vh - 200px);
+    background-color: #fff;
 }
 .google-drive-folder {
     
 }
 .google-drive-file {
 
+}
+.dark {
+    iframe, .google-drive {
+        // background-color: #000;
+        .flip-list-view .flip-entry:hover {
+            background-color: #333;
+        }
+        .flip-list-view .flip-entry-title {
+            color: #fff;
+        }
+        .flip-list-view .flip-entry-last-modified {
+            color: #fff;
+        }
+    }
 }
 
 
