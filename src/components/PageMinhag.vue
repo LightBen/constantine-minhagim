@@ -18,7 +18,7 @@ export default {
     name: 'PageMinhag',
     data() {
         return {
-            dataEntryId:'',
+            dataEntryId: '',
             pageTitle: '',
             pageContent: ''
         }

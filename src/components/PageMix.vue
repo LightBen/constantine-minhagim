@@ -13,18 +13,12 @@
     </div>
 </template>
 
-<style lang="scss">
-    #page {
-        
-    }
-</style>
-
 <script>
 export default {
     name: 'PageMix',
-     data() {
+    data() {
         return {
-            dataEntryId:'',
+            dataEntryId: '',
             pageTitle: '',
             pageContent: ''
         }

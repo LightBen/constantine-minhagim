@@ -32,14 +32,14 @@
         data() {
             return { elements: [] }
         },
+        mounted() {
+             this.$root.$on('langChanged', this.getContent);
+        },
         created() {
             this.getContent()
         },
-        mounted(){
-             this.$root.$on('langChanged', this.getContent);
-         },
-         methods:{
-            getContent(){
+        methods: {
+            getContent() {
                 this.$flamelinkApp.content.get({
                 schemaKey: 'minhag',
                 fields: ['title', 'url', 'author', 'description', 'mainImage'],
@@ -51,6 +51,6 @@
             })
 
             }
-         }
+        }
     };
 </script>
