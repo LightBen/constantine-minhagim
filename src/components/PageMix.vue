@@ -22,21 +22,33 @@
 <script>
 export default {
     name: 'PageMix',
+     data() {
+        return {
+            dataEntryId:'',
+            pageTitle: '',
+            pageContent: ''
+        }
+    },
+    mounted() {
+        this.dataEntryId = this.entryId;
+        if (!this.dataEntryId) {
+            this.dataEntryId = this.$route.meta.entryId
+        }
+        this.getContent();
+        this.$root.$on('langChanged', this.getContent);
+    },
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
                 schemaKey: 'pages',
-                entryId: this.$route.meta.entryId
+                entryId: this.dataEntryId
             })
             .then(pageContent => {
-                document.getElementById('page-title').innerText = pageContent.title;
-                document.getElementById('page-content').innerHTML = pageContent.content;
+                this.pageTitle = pageContent.title;
+                this.pageContent = pageContent.content;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }
-    },
-    created() {
-        setTimeout(this.getContent, 100)
     }
 };
 </script>

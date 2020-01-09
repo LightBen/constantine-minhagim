@@ -32,24 +32,18 @@ export default {
     components: {},
     mounted() {
         this.getContent();
+        this.$root.$on('langChanged', this.getContent);
     },
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
                 schemaKey: 'general',
-                entryId: 'hWHhdCrUx34iDIsPZokP',
             })
-            .then(pageTitle1 => {
-                this.siteTitle1 = pageTitle1.title;
-            })
-            .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
-            
-            this.$flamelinkApp.content.get({
-                schemaKey: 'general',
-                entryId: 'crXGbshLALxsrrmX0APz'
-            })
-            .then(pageTitle2 => {
-                this.siteTitle2 = pageTitle2.title;
+            .then(data => {
+                console.log('data: ', data);;
+                this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
+                this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
+                this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }

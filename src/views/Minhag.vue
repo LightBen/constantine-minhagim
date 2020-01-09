@@ -33,7 +33,14 @@
             return { elements: [] }
         },
         created() {
-            this.$flamelinkApp.content.get({
+            this.getContent()
+        },
+        mounted(){
+             this.$root.$on('langChanged', this.getContent);
+         },
+         methods:{
+            getContent(){
+                this.$flamelinkApp.content.get({
                 schemaKey: 'minhag',
                 fields: ['title', 'url', 'author', 'description', 'mainImage'],
                 populate: ['mainImage'],
@@ -42,6 +49,8 @@
                 this.elements = elements;
                 // console.log('All the elements:', elements);
             })
-        }
+
+            }
+         }
     };
 </script>

@@ -55,7 +55,7 @@ export default {
         const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
           return new MDCRipple(el);
         });
-    }
+    },
 };
 </script>
 

@@ -16,7 +16,7 @@
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Search">search</button> -->
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Contact">email</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded theme-toggle" aria-label="Change Light Mode">wb_sunny</button>
-            <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle" aria-label="Change language">language</button>
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle" aria-label="Change language" @click="changeLang">language</button>
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Choose language">g_translate</button> -->
         </section>
     </div>
@@ -33,11 +33,12 @@ export default {
     components: {},
     data() {
         return {
-            siteTitle: ''
+            siteTitle: '',
+            lang: ''
         }
     },
-    components: {},
     mounted() {
+        this.lang = localStorage.getItem('lang') || 'fr';
         this.getSiteTitle();
     },
     methods: {
@@ -50,6 +51,17 @@ export default {
                 this.siteTitle = siteTitle.title;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
+        },
+        changeLang(){
+            this.lang = this.lang === 'fr' ? 'he' : 'fr';
+            localStorage.setItem('lang', this.lang);
+            this.$flamelinkApp.settings.setLocale(this.lang)
+                .then(locale => {
+                    document.documentElement.setAttribute('lang', locale);
+                    this.getSiteTitle();
+                    this.$root.$emit('langChanged', locale);
+                })
+                .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
         }
         // displayModalLang() {
         //     document.getElementById('modalLang').classList.add('modal-show');

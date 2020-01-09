@@ -30,6 +30,7 @@ export default {
             this.dataEntryId = this.$route.params.minhag_url
         }
         this.getContent();
+        this.$root.$on('langChanged', this.getContent);
     },
     methods: {
         getContent() {
