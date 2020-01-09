@@ -137,4 +137,13 @@ html[lang="he"] {
             right: 0;
         }
     }
+    #home #welcome .section-content h1 :first-child {
+        font-size: 10vw;
+        padding-inline-start: 0;
+        padding-inline-end: var(--titleSpacing);
+        line-height: 0.3;
+    }
+    #home #welcome .section-content h1 :last-child {
+        font-size: 18vw;
+    }
 }
