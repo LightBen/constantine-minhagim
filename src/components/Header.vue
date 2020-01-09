@@ -39,6 +39,7 @@ export default {
     },
     mounted() {
         this.lang = localStorage.getItem('lang') || 'fr';
+        this.getLang();
         this.getSiteTitle();
     },
     methods: {
@@ -52,9 +53,7 @@ export default {
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         },
-        changeLang(){
-            this.lang = this.lang === 'fr' ? 'he' : 'fr';
-            localStorage.setItem('lang', this.lang);
+        getLang() {
             this.$flamelinkApp.settings.setLocale(this.lang)
                 .then(locale => {
                     document.documentElement.setAttribute('lang', locale);
@@ -62,6 +61,11 @@ export default {
                     this.$root.$emit('langChanged', locale);
                 })
                 .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+        },
+        changeLang() {
+            this.lang = this.lang === 'fr' ? 'he' : 'fr';
+            localStorage.setItem('lang', this.lang);
+            this.getLang();
         }
         // displayModalLang() {
         //     document.getElementById('modalLang').classList.add('modal-show');
