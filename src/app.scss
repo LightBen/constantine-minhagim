@@ -99,6 +99,7 @@ iframe, .google-drive {
     height: 500px;
     max-height: calc(100vh - 200px);
     background-color: #fff;
+    border: 1px solid var(--txtColor);
 }
 .google-drive-folder {
     
