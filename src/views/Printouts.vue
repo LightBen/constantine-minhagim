@@ -1,11 +1,14 @@
 <template>
     <div id="printouts">
-        <slot name="page-content">
+        <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title"></h1>
-                <div id="page-content"></div>
             </div>
-        </slot>
+        </div>
+        <div class="container">
+            <h1 id="page-title"></h1>
+            <div id="page-content"></div>
+        </div>
     </div>
 </template>
 
@@ -18,6 +21,12 @@
 <script>
 export default {
     name: 'Printouts',
+        mounted() {
+             this.$root.$on('langChanged', this.getContent);
+        },
+    created() {
+        this.getContent()
+    },
     methods: {
         getContent() {
             this.$flamelinkApp.content.get({
@@ -30,9 +39,6 @@ export default {
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }
-    },
-    created() {
-        setTimeout(this.getContent, 100)
     }
 };
 </script>

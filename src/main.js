@@ -118,62 +118,62 @@ if (currentTheme) {
 /* LANG CHECK */
 
 // Init check
-const langToggle = document.querySelector('.lang-toggle');
-if (document.documentElement.getAttribute('lang') != 'he') {
-    document.documentElement.setAttribute('lang', 'fr');
-    // Finally set the locale
-    Vue.flamelinkApp.settings.setLocale('fr')
-    // .then(locale => {
-    //     console.log(`Your locale is set as FR`)
-    // })
-    .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+// const langToggle = document.querySelector('.lang-toggle');
+// if (document.documentElement.getAttribute('lang') != 'he') {
+//     document.documentElement.setAttribute('lang', 'fr');
+//     // Finally set the locale
+//     Vue.flamelinkApp.settings.setLocale('fr')
+//     // .then(locale => {
+//     //     console.log(`Your locale is set as FR`)
+//     // })
+//     .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
 
-} else if (document.documentElement.getAttribute('lang') == 'he') {
-    document.documentElement.setAttribute('lang', 'he');
-    Vue.flamelinkApp.settings.setLocale('HE')
-    // .then(locale => {
-    //     console.log(`Your locale is set as HE`)
-    // })
-    .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
-}
+// } else if (document.documentElement.getAttribute('lang') == 'he') {
+//     document.documentElement.setAttribute('lang', 'he');
+//     Vue.flamelinkApp.settings.setLocale('he')
+//     // .then(locale => {
+//     //     console.log(`Your locale is set as HE`)
+//     // })
+//     .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+// }
 
-// Switch + set local storage
-langToggle.addEventListener('click', (event) => {
-    if (document.documentElement.getAttribute('lang') == 'he') {
-        document.documentElement.setAttribute('lang', 'fr');
-        localStorage.setItem('lang', 'fr');
-        Vue.flamelinkApp.settings.setLocale('fr')
-        // .then(locale => {
-        //     console.log(`Your locale is set as FR`)
-        // })
-        .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
-    } else if (document.documentElement.getAttribute('lang') == 'fr') {
-        document.documentElement.setAttribute('lang', 'he');
-        localStorage.setItem('lang', 'he');
-        Vue.flamelinkApp.settings.setLocale('he')
-        // .then(locale => {
-        //     console.log(`Your locale is set as HE`)
-        // })
-        .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
-    }
-    // document.getElementById('modalLang').classList.remove('modal-show')
-})
+// // Switch + set local storage
+// langToggle.addEventListener('click', (event) => {
+//     if (document.documentElement.getAttribute('lang') == 'he') {
+//         document.documentElement.setAttribute('lang', 'fr');
+//         localStorage.setItem('lang', 'fr');
+//         Vue.flamelinkApp.settings.setLocale('fr')
+//         // .then(locale => {
+//         //     console.log(`Your locale is set as FR`)
+//         // })
+//         .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+//     } else if (document.documentElement.getAttribute('lang') == 'fr') {
+//         document.documentElement.setAttribute('lang', 'he');
+//         localStorage.setItem('lang', 'he');
+//         Vue.flamelinkApp.settings.setLocale('he')
+//         // .then(locale => {
+//         //     console.log(`Your locale is set as HE`)
+//         // })
+//         .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+//     }
+//     // document.getElementById('modalLang').classList.remove('modal-show')
+// })
 
-// future check
-const currentLang = localStorage.getItem('lang') ? localStorage.getItem('lang') : null;
+// // future check
+// const currentLang = localStorage.getItem('lang') ? localStorage.getItem('lang') : null;
 
-if (currentLang) {
-    document.documentElement.setAttribute('lang', currentLang);
+// if (currentLang) {
+//     document.documentElement.setAttribute('lang', currentLang);
 
-    if (currentLang === 'he') {
-        document.documentElement.setAttribute('lang', 'he');
-        Vue.flamelinkApp.settings.setLocale('he')
-        // .then(locale => {
-        //     console.log(`Your locale is set as HE`)
-        // })
-        .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
-    }
-}
+//     if (currentLang === 'he') {
+//         document.documentElement.setAttribute('lang', 'he');
+//         Vue.flamelinkApp.settings.setLocale('he')
+//         // .then(locale => {
+//         //     console.log(`Your locale is set as HE`)
+//         // })
+//         .catch(error => console.error('Something went wrong while setting the locale. Details:', error));
+//     }
+// }
 /* END LANG CHECK */
 
 

@@ -2,7 +2,7 @@
 <aside class="mdc-drawer mdc-drawer--modal" id="mainNav">
     <div class="mdc-drawer__content">
         <nav class="mdc-list">
-            <router-link class="mdc-list-item mdc-list-item--activated drawer-toggle" :to="{ name: 'Home' }" aria-current="page">
+            <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Home' }" aria-current="page">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
                 <span class="mdc-list-item__text">Home</span>
             </router-link>
@@ -72,7 +72,6 @@ export default {
             }
 
             span {
-                line-height: 1;
                 color: #fff;
             }
         }
