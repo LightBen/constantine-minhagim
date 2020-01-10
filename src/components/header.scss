@@ -30,9 +30,27 @@ header {
             display: block;
         }
     }
+
+    .lang-name {
+        width: 20px; margin-inline-start: -10px;
+        &::after {
+            content: "FR"; 
+            color: #fff; opacity: 1; background-color: transparent; font-family: 'Roboto', sans-serif; font-size: 14px;
+            display: flex; align-items: center; justify-content: flex-start; padding-top: 11px; font-weight: 600;
+        }
+    }
 }
 .dark {
     header {
         background-color: #222;
+    }
+}
+html[lang="he"] {
+    header {
+        .lang-name {
+            &::after {
+                content: "ע"; font-size: 18px;
+            }
+        }
     }
 }

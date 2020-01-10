@@ -14,9 +14,11 @@
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Search">search</button> -->
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Donation">monetization_on</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Contact">email</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded theme-toggle" aria-label="Change Light Mode">wb_sunny</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle" aria-label="Change language" @click="changeLang">language</button>
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle lang-name" aria-label="Change language" @click="changeLang"></button>
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Choose language">g_translate</button> -->
         </section>
     </div>

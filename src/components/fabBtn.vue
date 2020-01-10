@@ -36,7 +36,7 @@ export default {
 
 .dark {
     #mainMenuFab {
-        background-color: var(--bgColor2);
+        background-color: var(--bgColor);
     }
 }
 
