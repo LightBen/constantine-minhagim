@@ -46,7 +46,7 @@ export default {
     mounted() {
         this.lang = localStorage.getItem('lang') || 'fr';
         this.getLang();
-        this.getSiteTitle();
+        this.getContent();
     },
     methods: {
         getContent() {
@@ -54,7 +54,7 @@ export default {
                 schemaKey: 'general',
             })
             .then(data => {
-                console.log('data: ', data);;
+                // console.log('data: ', data);
                 this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
                 this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
                 this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
