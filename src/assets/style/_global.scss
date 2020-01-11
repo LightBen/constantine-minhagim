@@ -34,6 +34,7 @@ h1 { margin: 0; padding: var(--spacing) 0; }
     &, p {
         text-align: justify;
     }
+    h2, h3, h4 { text-align: left; }
 }
 
 blockquote {
@@ -54,3 +55,9 @@ blockquote {
 
 figure { margin: 0; }
 figcaption { padding: 0; }
+
+html[lang="he"] {
+    #page-content {
+        h2, h3, h4 { text-align: right; }
+    }
+}
