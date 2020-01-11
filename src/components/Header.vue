@@ -5,11 +5,14 @@
             <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded drawer-toggle" id="mainMenuBtn">menu</button>
             <button class="mdc-icon-button" aria-label="Constantine Minhagim" @click="$router.push({ name: 'Home' })">
                 <svg class="icon-perso">
-                    <use xlink:href="#icon-logo-cm-fff" href="#icon-logo-cm-fff" />
+                    <use xlink:href="#icon-logo-cm" href="#icon-logo-cm" />
                 </svg>
             </button>
             <span class="mdc-top-app-bar__title">
-                <router-link to="/" v-html="siteTitle"></router-link>
+                <router-link to="/">
+                    <span id="siteTitle1" v-html="siteTitle1"></span>
+                    <span id="siteTitle2" v-html="siteTitle2"></span>
+                </router-link>
             </span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
@@ -35,7 +38,8 @@ export default {
     components: {},
     data() {
         return {
-            siteTitle: '',
+            siteTitle1: '',
+            siteTitle2: '',
             lang: ''
         }
     },
@@ -45,13 +49,15 @@ export default {
         this.getSiteTitle();
     },
     methods: {
-        getSiteTitle() {
+        getContent() {
             this.$flamelinkApp.content.get({
                 schemaKey: 'general',
-                entryId: '56Mopx0dRrhGql4KrFQX',
             })
-            .then(siteTitle => {
-                this.siteTitle = siteTitle.title;
+            .then(data => {
+                console.log('data: ', data);;
+                this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
+                this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
+                this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         },
@@ -59,7 +65,7 @@ export default {
             this.$flamelinkApp.settings.setLocale(this.lang)
                 .then(locale => {
                     document.documentElement.setAttribute('lang', locale);
-                    this.getSiteTitle();
+                    this.getContent();
                     this.$root.$emit('langChanged', locale);
                 })
                 .catch(error => console.error('Something went wrong while setting the locale. Details:', error));

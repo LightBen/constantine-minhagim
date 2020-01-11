@@ -2,11 +2,10 @@
 	background: no-repeat center/cover;
 	margin-bottom: 50px;
 	.container {
-		padding-top: 100px;
-		padding-bottom: 100px;
+		padding-top: 130px;
+		padding-bottom: 70px;
 	}
 	#page-title {
-		color: #fff;
-		line-height: 1.2;
+		color: #fff; line-height: 1.2; font-weight: 400; text-transform: uppercase; text-align: center; flex: 1;
 	}
 }
