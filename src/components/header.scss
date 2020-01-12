@@ -3,9 +3,18 @@ header {
     background-color: #fff;
     color: var(--logo-color-1);
     transition: all var(--transitionTime) var(--transitionEase);
+    box-shadow: var(--box-shadow);
 
     #siteTitle1 { color: var(--logo-color-1); margin-inline-end: 5px; }
     #siteTitle2 { color: var(--logo-color-2); }
+
+    .mdc-top-app-bar__section:first-child { padding-inline-start: 8px; }
+
+    .logo-icon-container { 
+        padding: 0; 
+
+        svg, i { width: 48px; height: 48px; }
+    }
 
     svg { 
         &, * {

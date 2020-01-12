@@ -1,7 +1,10 @@
 <template>
-<button class="mdc-fab drawer-toggle" aria-label="Menu" id="mainMenuFab">
-    <span class="mdc-fab__icon material-icons">apps</span>
-</button>
+    <div id="fab-menu">
+        <div id="fab-menu-speed-dial"></div>
+        <button class="mdc-fab" aria-label="Menu" id="mainMenuFab">
+            <span class="mdc-fab__icon material-icons">apps</span>
+        </button>
+    </div>
 </template>
 
 <script>
@@ -16,22 +19,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#mainMenuFab {
+#fab-menu {
     position: fixed;
-    opacity: 0;
+    bottom: calc(var(--footerHeight) + var(--spacing));
+    right: var(--spacing);
     animation-name: fabAppear;
     animation-duration: var(--transitionTime2);
     transition-timing-function: var(--transitionEase);
     animation-fill-mode: forwards;
-    bottom: calc(var(--footerHeight) + var(--spacing));
-    right: var(--spacing);
+    opacity: 0;
+}
+#mainMenuFab {
     color: var(--txtColor);
     background-color: var(--primaryColor);
     .material-icons { color: #fff; }
-
-    @media (min-width: $sm) {
-        display: none;
-    }
 }
 
 .dark {
@@ -41,7 +42,7 @@ export default {
 }
 
 .is-homepage {
-    #mainMenuFab {
+    #fab-menu {
         bottom: var(--spacing);
     }
 }

@@ -36,9 +36,9 @@
             bottom: calc(var(--footerHeight) * -1);             
         }
     }
-    #mainMenuFab { animation-name: fabDisappear; }
+    #fab-menu { animation-name: fabDisappear; }
 }
-#mainMenuBtn, #mainMenuFab > span { transition: all .2s ease-in-out; }
+#mainMenuBtn, #mainMenuFab > span { transition: var(--transitionAll); }
 .drawer-opened {
     #mainNav {
         left: 0;
@@ -131,12 +131,6 @@ html[lang="he"] {
     }
     .mdc-list-item__graphic {
         margin-right: 0;
-    }
-    .drawer-opened {
-        #mainNav {
-            left: auto;
-            right: 0;
-        }
     }
     #home #welcome .section-content h1 :first-child {
         font-size: 10vw;

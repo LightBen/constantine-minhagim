@@ -2,8 +2,8 @@
 <header id="header" class=" mdc-top-app-bar mdc-top-app-bar--fixed">
     <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded drawer-toggle" id="mainMenuBtn">menu</button>
-            <button class="mdc-icon-button" aria-label="Constantine Minhagim" @click="$router.push({ name: 'Home' })">
+            <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded drawer-toggle" id="mainMenuBtn">menu</button> -->
+            <button class="mdc-icon-button logo-icon-container" aria-label="Constantine Minhagim" @click="$router.push({ name: 'Home' })">
                 <svg class="icon-perso">
                     <use xlink:href="#icon-logo-cm" href="#icon-logo-cm" />
                 </svg>
@@ -23,6 +23,7 @@
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle" aria-label="Change language" @click="changeLang">language</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle lang-name" aria-label="Change language" @click="changeLang"></button>
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Choose language">g_translate</button> -->
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded drawer-toggle" id="mainMenuBtn">menu</button>
         </section>
     </div>
     <!-- <ModalLang /> -->

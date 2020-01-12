@@ -62,21 +62,21 @@ export default {
 <style src="./app.scss" lang="scss"></style>
 <style lang="scss">
     .page-title-container { 
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url(./assets/img/thumbnail-articles.jpg);
+        background-image: url(./assets/img/thumbnail-articles.jpg);
     }
-    div[id*="minhag"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px),  url('./assets/img/thumbnail-minhag.jpg'); }
-    div[id*="hazanout"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url('./assets/img/thumbnail-hazanout.jpg'); }
-    div[id*="cuisine"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url('./assets/img/thumbnail-cuisine.jpg'); }
-    div[id*="articles"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url('./assets/img/thumbnail-articles.jpg'); }
+    div[id*="minhag"] .page-title-container { background-image: url('./assets/img/thumbnail-minhag.jpg'); }
+    div[id*="hazanout"] .page-title-container { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
+    div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
+    div[id*="articles"] .page-title-container { background-image: url('./assets/img/thumbnail-articles.jpg'); }
 
     .dark {
         .page-title-container { 
             background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url(./assets/img/thumbnail-articles.jpg);
         }
-        div[id*="minhag"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url('./assets/img/thumbnail-minhag.jpg'); }
-        div[id*="hazanout"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url('./assets/img/thumbnail-hazanout.jpg'); }
-        div[id*="cuisine"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url('./assets/img/thumbnail-cuisine.jpg'); }
-        div[id*="articles"] .page-title-container { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 100px), url('./assets/img/thumbnail-articles.jpg'); }
+        div[id*="minhag"] .page-title-container { background-image: url('./assets/img/thumbnail-minhag.jpg'); }
+        div[id*="hazanout"] .page-title-container { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
+        div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
+        div[id*="articles"] .page-title-container { background-image: url('./assets/img/thumbnail-articles.jpg'); }
     }
 
     .card-img { background-image: url('./assets/img/thumbnail-articles.jpg'); }
