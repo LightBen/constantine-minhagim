@@ -1,5 +1,6 @@
 <template>
 <aside class="mdc-drawer mdc-drawer--modal" id="mainNav">
+    <div class="aside-close drawer-toggle"><i class="material-icons">close</i></div>
     <div class="mdc-drawer__content">
         <nav class="mdc-list">
             <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Home' }" aria-current="page">
@@ -48,31 +49,51 @@ export default {
 <style lang="scss">
 #mainNav {
     display: block;
-    left: -260px;
-    top: var(--headerHeight);
     opacity: 0;
-    transition: all var(--transitionTime) var(--transitionEase);
+    transition: all 0.4s ease;
     height: calc(100vh - var(--headerHeight));
     border: none;
-    background: linear-gradient(to bottom, rgba(var(--primaryColorTransRgb), 1), rgba(var(--primaryColorTransRgb), 0.67)), url(../assets/img/jlm-bg-1-sm.jpg) no-repeat center/cover;
+    background: #fff no-repeat center/cover;
+    width: 100vw;
+    height: 100vh;
+    top: 100vh;
+    left: 0;
+    visibility: hidden;
+
+    .aside-close { 
+        padding: var(--spacingSm); cursor: pointer; position: absolute; top: 0; right: 0;
+
+        i, svg { font-size: 50px; color: var(--primaryColor); }
+    }
+
+    .mdc-drawer__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .mdc-list {
         padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         a {
             margin: 0;
             border-radius: 0;
-            height: 60px;
-            padding-inline-start: var(--spacing);
+            min-height: 80px; width: 100%; text-align: center; display: flex; justify-content: center;
+            // padding-inline-start: var(--spacing);
 
             i, svg {
                 margin-inline-end: var(--spacing);
-                color: #fff;
-                fill: #fff;
+                color: var(--primaryColor);
+                fill: var(--primaryColor);
+                display: none;
             }
 
             span {
-                color: #fff;
+                color: var(--primaryColor); font-size: 30px; font-weight: 300; line-height: 1.4;
             }
         }
     }
@@ -80,14 +101,36 @@ export default {
 
 html[lang="he"] {
     #mainNav {
-        left: auto;
-        right: -260px;
+        .aside-close { right: auto; left: 0; }
     }
 }
 
 .dark {
     #mainNav {
-        background: linear-gradient(rgba(#111, 1), rgba(#111, 0.6)), url(../assets/img/jlm-night-sm.jpg) no-repeat center/cover;
+        background: rgba(#222, 0.6) no-repeat center/cover;
+
+        .mdc-list {
+            a {
+                i, svg {
+                    color: #fff;
+                    fill: #fff;
+                }
+
+                span {
+                    color: #fff; font-size: 20px; font-weight: 300;
+                }
+            }
+        }
+
     }
 }
+
+.drawer-opened {
+    height: 100vh; overflow: hidden;
+
+    #mainNav {
+        opacity: 1; visibility: visible; top: 0;
+    }
+}
+
 </style>

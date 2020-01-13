@@ -10,8 +10,8 @@
 
 
 
-.st0 { fill: #0B7EC2; }
-.st1 { fill: #0DB3E7; }
+.st0 { fill: var(--logo-color-2); }
+.st1 { fill: var(--logo-color-1); }
 
 
 
@@ -36,9 +36,9 @@
             bottom: calc(var(--footerHeight) * -1);             
         }
     }
-    #mainMenuFab { animation-name: fabDisappear; }
+    #fab-menu { animation-name: fabDisappear; }
 }
-#mainMenuBtn, #mainMenuFab > span { transition: all .2s ease-in-out; }
+#mainMenuBtn, #mainMenuFab > span { transition: var(--transitionAll); }
 .drawer-opened {
     #mainNav {
         left: 0;
@@ -99,6 +99,7 @@ iframe, .google-drive {
     height: 500px;
     max-height: calc(100vh - 200px);
     background-color: #fff;
+    border: 1px solid var(--txtColor);
 }
 .google-drive-folder {
     
@@ -131,12 +132,6 @@ html[lang="he"] {
     .mdc-list-item__graphic {
         margin-right: 0;
     }
-    .drawer-opened {
-        #mainNav {
-            left: auto;
-            right: 0;
-        }
-    }
     #home #welcome .section-content h1 :first-child {
         font-size: 10vw;
         padding-inline-start: 0;
@@ -150,4 +145,27 @@ html[lang="he"] {
 
 #english {
     direction: ltr;
+}
+
+#table-taamim-emeth {
+    border: 1px solid var(--txtColor);
+    border-collapse: collapse;
+    th, td {
+        border: 1px solid var(--txtColor);
+        padding: 4px 6px;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+.he-prayer {
+    direction: rtl;
+    text-align: right;
+    font-size: 30px;
+    line-height: 1.4;
+}
+.he-prayer-centered {
+    margin: 0 auto;
+    text-align: center !important;
+    max-width: 500px;
 }

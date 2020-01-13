@@ -1,7 +1,20 @@
 header {
     top: 0;
-    background-color: var(--primaryColor);
+    background-color: #fff;
+    color: var(--logo-color-1);
     transition: all var(--transitionTime) var(--transitionEase);
+    box-shadow: var(--box-shadow);
+
+    #siteTitle1 { color: var(--logo-color-1); margin-inline-end: 5px; }
+    #siteTitle2 { color: var(--logo-color-2); }
+
+    .mdc-top-app-bar__section:first-child { padding-inline-start: 8px; }
+
+    .logo-icon-container { 
+        padding: 0; 
+
+        svg, i { width: 48px; height: 48px; }
+    }
 
     svg { 
         &, * {
@@ -30,9 +43,29 @@ header {
             display: block;
         }
     }
+
+    .lang-name {
+        width: 20px; margin-inline-start: -10px;
+        &::after {
+            content: "FR"; 
+            color: var(--logo-color-2); opacity: 1; background-color: transparent; font-family: 'Roboto', sans-serif; font-size: 14px;
+            display: flex; align-items: center; justify-content: flex-start; padding-top: 11px; font-weight: 600;
+        }
+    }
 }
 .dark {
     header {
-        background-color: #222;
+        background-color: #222; color: #fff; 
+        #siteTitle1, #siteTitle2 { color: #fff; }
+        .st0, .st1 { color: #fff; fill: #fff; }
+    }
+}
+html[lang="he"] {
+    header {
+        .lang-name {
+            &::after {
+                content: "ע"; font-size: 18px;
+            }
+        }
     }
 }

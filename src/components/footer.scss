@@ -11,19 +11,21 @@ footer {
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        background-color: var(--primaryColor);
+        background-color: #fff;
         transition: var(--transitionAll);
+        box-shadow: 0 -1px 3px rgba(0,0,0,0.12), 0 -1px 2px rgba(0,0,0,0.24);
+        // border-top: 1px solid #ddd;
 
         .mdc-tab-bar {
             max-width: 600px;
-            .mdc-tab { flex: 1; height: auto; line-height: 1; padding: 10px 0; }
+            .mdc-tab { flex: 1; height: auto; line-height: 1; padding: 10px 0; font-weight: 400; }
             .mdc-tab:not(.mdc-tab--stacked) .mdc-tab__icon + .mdc-tab__text-label { padding-inline-start: 0; }
             .mdc-tab__icon { 
                 display: block; margin-bottom: 5px; 
-                img, svg, i { color: #fff;; }
+                img, svg, i { color: var(--logo-color-1); }
             }
             .mdc-tab__content { display: block; }
-            .mdc-tab__text-label { color: #fff; }
+            .mdc-tab__text-label { color: var(--logo-color-1); }
             .mdc-tab-indicator .mdc-tab-indicator__content--underline { border-color: transparent; }
         }
     }
@@ -34,6 +36,11 @@ footer {
     footer {
         #footerTabs {
             background-color: #222;
+            .mdc-tab-bar {
+                .mdc-tab__icon { 
+                    img, svg, i { color: #fff; }
+                }
+            }
         }
     }
 }
