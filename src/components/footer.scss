@@ -18,7 +18,7 @@ footer {
 
         .mdc-tab-bar {
             max-width: 600px;
-            .mdc-tab { flex: 1; height: auto; line-height: 1; padding: 10px 0; font-weight: 400; }
+            .mdc-tab { flex: 1; height: auto; line-height: 1; padding: 10px 0; font-family: var(--font-family); }
             .mdc-tab:not(.mdc-tab--stacked) .mdc-tab__icon + .mdc-tab__text-label { padding-inline-start: 0; }
             .mdc-tab__icon { 
                 display: block; margin-bottom: 5px; 
