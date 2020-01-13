@@ -29,10 +29,9 @@ footer {
             .mdc-tab-indicator .mdc-tab-indicator__content--underline { border-color: transparent; }
         }
     }
-
 }
 
-.dark {
+html[data-theme="dark"]{
     footer {
         #footerTabs {
             background-color: #222;
@@ -40,6 +39,7 @@ footer {
                 .mdc-tab__icon { 
                     img, svg, i { color: #fff; }
                 }
+            .mdc-tab__text-label { color: #fff; }
             }
         }
     }

@@ -31,13 +31,13 @@ export default {
 }
 #mainMenuFab {
     color: var(--txtColor);
-    background-color: var(--primaryColor);
+    background-color: var(--logo-color-1);
     .material-icons { color: #fff; }
 }
 
-.dark {
+html[data-theme="dark"]{
     #mainMenuFab {
-        background-color: var(--bgColor);
+        background-color: var(--logo-color-2);
     }
 }
 

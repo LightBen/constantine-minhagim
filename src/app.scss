@@ -107,7 +107,11 @@ iframe, .google-drive {
 .google-drive-file {
 
 }
-.dark {
+html[data-theme="light"] {
+    .dark-block { display: none; }
+}
+html[data-theme="dark"] {
+    .dark-block { display: none; }
     iframe, .google-drive {
         // background-color: #000;
         .flip-list-view .flip-entry:hover {

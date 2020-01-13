@@ -4,8 +4,11 @@
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded drawer-toggle" id="mainMenuBtn">menu</button> -->
             <button class="mdc-icon-button logo-icon-container" aria-label="Constantine Minhagim" @click="$router.push({ name: 'Home' })">
-                <svg class="icon-perso">
+                <svg class="icon-perso light-block">
                     <use xlink:href="#icon-logo-cm" href="#icon-logo-cm" />
+                </svg>
+                <svg class="icon-perso dark-block">
+                    <use xlink:href="#icon-logo-cm-fff" href="#icon-logo-cm-dark" />
                 </svg>
             </button>
             <span class="mdc-top-app-bar__title">

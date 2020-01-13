@@ -82,21 +82,16 @@ const superToggle = function(element, class0, class1) {
 const themeToggle = document.querySelector('.theme-toggle');
 if (document.documentElement.getAttribute('data-theme') != 'dark') {
     document.documentElement.setAttribute('data-theme', 'light');
-    bodyEl.classList.add('light');
 } else if (document.documentElement.getAttribute('data-theme') == 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    bodyEl.classList.add('dark');
 }
 
 // Switch + set local storage
 themeToggle.addEventListener('click', (event) => {
-    superToggle(bodyEl,'dark', 'light');
     if (document.documentElement.getAttribute('data-theme') == 'dark') {
         document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
     } else if (document.documentElement.getAttribute('data-theme') == 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
     }
 })
 
@@ -108,7 +103,6 @@ if (currentTheme) {
 
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        bodyEl.classList.add('dark');
     }
 }
 /* END THEME */

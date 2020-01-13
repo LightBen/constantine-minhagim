@@ -6,11 +6,11 @@
 	}
 	#page-title {
 		color: #fff; line-height: 1.2; font-weight: 400; text-transform: uppercase; text-align: center; display: inline-flex; padding: var(--spacingSm) var(--spacing);
-		background-color: var(--primaryColor);
+		background-color: var(--logo-color-2);
 	}
 }
 
-.dark {
+html[data-theme="dark"]{
 	.page-title-container {
 		#page-title {
 		}

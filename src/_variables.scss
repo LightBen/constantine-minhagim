@@ -27,11 +27,13 @@ $xl: 1920px;
     --transitionEase: ease-in-out;
     --transitionAll: all var(--transitionTime) var(--transitionEase);
 
-    --logo-color-1: #1e88e5; // 1b97d3
-    --logo-color-2: #191b44;
+    --logo-color-1: #2196f3;
+    --logo-color-2: #004ba0;
+    --logo-color-1-rgb: 33, 150, 243;
+    --logo-color-2-rgb: 0, 75, 160;
 
-    --primaryColor: #1e88e5;
-    --primaryColorBlue: #1e88e5;
+    --primaryColor: #2196f3;
+    --primaryColorBlue: #2196f3;
     --primaryColorRgb: 30, 136, 229;
     --primaryColorTrans: #1e88e5ab;
     --primaryColorTransRgb: 30, 136, 229;
@@ -41,6 +43,7 @@ $xl: 1920px;
     --bgColorInvert: #333;
     --txtColorInvert: #fff;
 
+    --font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
     --font-size: 20px;
     --font-weight: 400;
     --line-height: 32px;
@@ -59,10 +62,16 @@ $xl: 1920px;
     }
 }
 
-.dark {
+html[data-theme="dark"]{
     --primaryColor: #111;
     --bgColor: #111;
     --txtColor: #eee;
     --bgColorInvert: #fff;
     --txtColorInvert: #333;
+
+    --logo-color-1: #ff9800;
+    --logo-color-2: #bb4d00;
+    --logo-color-1-rgb: 255, 152, 0;
+    --logo-color-2-rgb: 187, 77, 0;
+
 }

@@ -69,7 +69,7 @@ export default {
     div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
     div[id*="articles"] .page-title-container { background-image: url('./assets/img/thumbnail-articles.jpg'); }
 
-    .dark {
+    html[data-theme="dark"]{
         .page-title-container { 
             background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url(./assets/img/thumbnail-articles.jpg);
         }

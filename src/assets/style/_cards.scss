@@ -24,7 +24,7 @@
         height: 86px;
 
         .card-title {
-            line-height: 1.4; width: 100%; text-align: center; font-weight: 300; font-size: 22px;
+            line-height: 1.4; width: 100%; text-align: center; font-weight: 300; font-size: 22px; font-family: var(--font-family);
         }
 
         .card-author {
@@ -55,7 +55,7 @@
     }
 }
 
-.dark {
+html[data-theme="dark"]{
     .card {
         .card-img {
             filter: saturate(0.3) sepia(0.5) contrast(120%) brightness(1);
@@ -66,7 +66,7 @@
             }
         }
         .card-text {
-            background-color: rgba(#333, 0.67);
+            background-color: rgba(var(--logo-color-2-rgb), 0.67);
         }
     }
 }

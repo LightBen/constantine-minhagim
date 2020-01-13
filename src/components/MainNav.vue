@@ -48,6 +48,7 @@ export default {
 
 <style lang="scss">
 #mainNav {
+    font-family: var(--font-family);
     display: block;
     opacity: 0;
     transition: all 0.4s ease;
@@ -96,6 +97,10 @@ export default {
                 color: var(--primaryColor); font-size: 30px; font-weight: 300; line-height: 1.4;
             }
         }
+
+        .mdc-list-item__text {
+            font-family: var(--font-family);
+        }
     }
 }
 
@@ -105,9 +110,13 @@ html[lang="he"] {
     }
 }
 
-.dark {
+html[data-theme="dark"] {
     #mainNav {
-        background: rgba(#222, 0.6) no-repeat center/cover;
+        background: #222 no-repeat center/cover;
+
+        .aside-close { 
+            i, svg { color: var(--logo-color-2); }
+        }
 
         .mdc-list {
             a {
