@@ -1,5 +1,5 @@
 .card {
-    cursor: pointer; position: relative; overflow: hidden; transition: var(--box-shadow-transition); box-shadow: var(--box-shadow);
+    cursor: pointer; position: relative; overflow: hidden; transition: var(--box-shadow-transition); box-shadow: var(--box-shadow); border: 10px solid #fff;
     .card-img {
         position: relative; background: rgba(#fff, 0.5) no-repeat center/cover; min-height: 200px; transition: all 0.35s;
         @media (min-width: $md) {
@@ -18,10 +18,13 @@
         position: absolute;
         bottom: 0;
         color: #fff;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 86px;
 
         .card-title {
-            line-height: 1.4;
-            min-height: 56px;
+            line-height: 1.4; width: 100%; text-align: center; font-weight: 300; font-size: 22px;
         }
 
         .card-author {
@@ -43,8 +46,9 @@
             }
         }
         .card-text {
-            transform: translate3d(0,100%,0);
+            height: 100%;
         }
+        .card-title { text-align: center; }
         .card-desc {
             opacity: 0; bottom: 250%; 
         }
@@ -54,11 +58,11 @@
 .dark {
     .card {
         .card-img {
-            filter: grayscale(1) saturate(1.5);
+            filter: saturate(0.3) sepia(0.5) contrast(120%) brightness(1);
         }
         &:hover {
             .card-img {
-                filter: grayscale(1) saturate(1.5) brightness(1.2);
+                filter: saturate(0.3) sepia(0.5) contrast(120%) brightness(1.2);
             }
         }
         .card-text {

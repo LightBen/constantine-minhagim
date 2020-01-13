@@ -11,7 +11,7 @@
                 <router-link :to="{ name: 'Hazanout' }" class="hazanout">'Hazanout</router-link>
                 <router-link :to="{ name: 'Cuisine' }" class="cuisine">Cuisine</router-link>
                 <router-link :to="{ name: 'Printouts' }" class="printouts">Fiches</router-link>
-                <router-link :to="{ name: 'Home' }" class="drive">Drive</router-link>
+                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">Drive</a>
             </div>
         </div>
     </section>

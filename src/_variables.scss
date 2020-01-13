@@ -21,17 +21,22 @@ $xl: 1920px;
     --xl: 1920px;
 
     --spacing: 15px;
+    --spacingSm: 7px;
     --transitionTime: .2s;
     --transitionTime2: .5s;
     --transitionEase: ease-in-out;
     --transitionAll: all var(--transitionTime) var(--transitionEase);
 
+    --logo-color-1: #1e88e5; // 1b97d3
+    --logo-color-2: #191b44;
+
     --primaryColor: #1e88e5;
+    --primaryColorBlue: #1e88e5;
     --primaryColorRgb: 30, 136, 229;
     --primaryColorTrans: #1e88e5ab;
     --primaryColorTransRgb: 30, 136, 229;
     --primaryColorTransRgba: 30, 136, 229, 0.67;
-    --bgColor: #fff;
+    --bgColor: #f4f4f4;
     --txtColor: #333;
     --bgColorInvert: #333;
     --txtColorInvert: #fff;
@@ -49,6 +54,7 @@ $xl: 1920px;
 
     @media (min-width: $sm) {
         --spacing: 30px;        
+        --spacingSm: 15px;
         // --headerHeight: 64px;
     }
 }
