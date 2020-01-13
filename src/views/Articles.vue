@@ -12,7 +12,7 @@
                         <div class="card-img"></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
-                            <div class="card-author">{{ element.author }}</div>
+                            <!-- <div class="card-author">{{ element.author }}</div> -->
                             <!-- <div class="card-desc">{{ element.description }}</div> -->
                             <div class="imageMain"></div>
                         </figcaption>
