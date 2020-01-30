@@ -126,10 +126,17 @@ html[data-theme="dark"] {
     }
 }
 
-
+html:not([lang="he"]) {
+    .he {
+        display: none;
+    }
+}
 /* RTL */
 html[lang="he"] {
     direction: rtl;
+    .fr {
+        display: none;
+    }
     .material-icons {
         direction: rtl;
     }
