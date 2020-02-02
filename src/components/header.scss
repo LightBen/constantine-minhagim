@@ -52,8 +52,13 @@ header {
             opacity: 1; background-color: transparent; font-family: 'Montserrat', sans-serif; font-size: 14px;
             display: flex; align-items: center; justify-content: flex-start; padding-top: 11px; font-weight: 600;
         }
+        &:hover, &:active, &:focus { 
+            &::before { content: none; }
+            &::after { color: var(--txtColor); opacity: 1; }
+        }
     }
 }
+
 html[data-theme="dark"]{
     header {
         background-color: #222; color: #fff; 

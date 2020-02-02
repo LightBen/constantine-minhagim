@@ -7,9 +7,9 @@
                 <svg class="icon-perso light-block">
                     <use xlink:href="#icon-logo-cm" href="#icon-logo-cm" />
                 </svg>
-                <svg class="icon-perso dark-block">
+                <!-- <svg class="icon-perso dark-block">
                     <use xlink:href="#icon-logo-cm-fff" href="#icon-logo-cm-dark" />
-                </svg>
+                </svg> -->
             </button>
             <span class="mdc-top-app-bar__title">
                 <router-link to="/">
@@ -24,7 +24,7 @@
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Contact">email</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded theme-toggle" aria-label="Change Light Mode">wb_sunny</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle" aria-label="Change language" @click="changeLang">language</button>
-            <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded lang-toggle lang-name" aria-label="Change language" @click="changeLang"></button>
+            <button class="mdc-icon-button lang-name" aria-label="Change language" @click="changeLang"></button>
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Choose language">g_translate</button> -->
             <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded drawer-toggle" id="mainMenuBtn">menu</button>
         </section>

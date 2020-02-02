@@ -27,17 +27,19 @@ $xl: 1920px;
     --transitionEase: ease-in-out;
     --transitionAll: all var(--transitionTime) var(--transitionEase);
 
-    --logo-color-1: #2196f3;
-    --logo-color-2: #004ba0;
-    --logo-color-1-rgb: 33, 150, 243;
+    --logo-color-1: #1294f6;
+    --logo-color-2: #0048a4;
+    --logo-color-1-rgb: 18, 148, 246;
     --logo-color-2-rgb: 0, 75, 160;
+    --logo-color-1-trans: #1294f6ab;
+    --logo-color-2-trans: #0048a4ab;
 
-    --primaryColor: #2196f3;
-    --primaryColorBlue: #2196f3;
-    --primaryColorRgb: 30, 136, 229;
-    --primaryColorTrans: #1e88e5ab;
-    --primaryColorTransRgb: 30, 136, 229;
-    --primaryColorTransRgba: 30, 136, 229, 0.67;
+    --primaryColor: #1294f6;
+    --primaryColorBlue: #1294f6;
+    --primaryColorRgb: 18, 148, 246;
+    --primaryColorTrans: #1294f6ab;
+    --primaryColorTransRgb: 18, 148, 246;
+    --primaryColorTransRgba: 18, 148, 246, 0.67;
     --bgColor: #f4f4f4;
     --txtColor: #333;
     --bgColorInvert: #333;
@@ -69,9 +71,9 @@ html[data-theme="dark"]{
     --bgColorInvert: #fff;
     --txtColorInvert: #333;
 
-    --logo-color-1: #ff9800;
-    --logo-color-2: #bb4d00;
-    --logo-color-1-rgb: 255, 152, 0;
-    --logo-color-2-rgb: 187, 77, 0;
+    // --logo-color-1: #ff9800;
+    // --logo-color-2: #bb4d00;
+    // --logo-color-1-rgb: 255, 152, 0;
+    // --logo-color-2-rgb: 187, 77, 0;
 
 }

@@ -2,16 +2,42 @@
 <div id="home">
     <section class="section-full full-img" id="welcome">
         <div class="section-content">
+            <div class="icon-home-main">
+                <svg>
+                    <use xlink:href="#icon-logo-cm-main" href="#icon-logo-cm-main" />
+                </svg>
+            </div>
             <h1>
                 <span id="siteTitle1" v-html="siteTitle1"></span>
                 <span id="siteTitle2" v-html="siteTitle2"></span>
             </h1>
             <div class="welcome-sections">
-                <router-link :to="{ name: 'Minhag' }" class="minhag">Minhag</router-link>
-                <router-link :to="{ name: 'Hazanout' }" class="hazanout">'Hazanout</router-link>
-                <router-link :to="{ name: 'Cuisine' }" class="cuisine">Cuisine</router-link>
-                <router-link :to="{ name: 'Printouts' }" class="printouts">Fiches</router-link>
-                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">Drive</a>
+                <router-link :to="{ name: 'Minhag' }" class="minhag">
+                    <svg class="icon-home-section">
+                        <use xlink:href="#icon-family" href="#icon-family" />
+                    </svg>
+                    <span class="home-section-title">Minhag</span>
+                </router-link>
+                <router-link :to="{ name: 'Hazanout' }" class="hazanout">
+                    <svg class="icon-home-section">
+                        <use xlink:href="#icon-music" href="#icon-music" />
+                    </svg>
+                    <span class="home-section-title">'Hazanout</span>
+                </router-link>
+                <router-link :to="{ name: 'Cuisine' }" class="cuisine">
+                    <svg class="icon-home-section">
+                        <use xlink:href="#icon-food-tray" href="#icon-food-tray" />
+                    </svg>
+                    <span class="home-section-title">Cuisine</span>
+                </router-link>
+                <router-link :to="{ name: 'Printouts' }" class="printouts">
+                    <i class="material-icons icon-home-section" aria-hidden="true">assignment</i>
+                    <span class="home-section-title">Fiches</span>
+                </router-link>
+                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
+                    <i class="material-icons icon-home-section" aria-hidden="true">storage</i>
+                    <span class="home-section-title">Drive</span>
+                </a>
             </div>
         </div>
     </section>

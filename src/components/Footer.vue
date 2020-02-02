@@ -8,7 +8,7 @@
                         <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" @click="$router.push({ name: 'Minhag' })">
                             <span class="mdc-tab__content">
                                 <span class="mdc-tab__icon" aria-hidden="true"><svg class="icon-perso">
-                                    <use xlink:href="#icon-book" href="#icon-family" />
+                                    <use xlink:href="#icon-family" href="#icon-family" />
                                 </svg></span>
                                 <span class="mdc-tab__text-label">Minhag</span>
                             </span>
