@@ -20,6 +20,26 @@
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
             <!-- <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Search">search</button> -->
+            <!-- <button class="mdc-icon-button" aria-label="Donations">
+                <svg class="icon-donation">
+                    <use xlink:href="#icon-donation" href="#icon-donation" />
+                </svg>
+            </button>
+            <button class="mdc-icon-button" aria-label="Contact">
+                <svg class="icon-contact">
+                    <use xlink:href="#icon-message" href="#icon-message" />
+                </svg>
+            </button>
+            <button class="mdc-icon-button theme-toggle" aria-label="Change theme">
+                <svg class="icon-theme">
+                    <use xlink:href="#icon-theme" href="#icon-theme" />
+                </svg>
+            </button>
+            <button class="mdc-icon-button lang-toggle" aria-label="Change language"  @click="changeLang">
+                <svg class="icon-contact">
+                    <use xlink:href="#icon-lang" href="#icon-lang" />
+                </svg>
+            </button> -->
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Donation">monetization_on</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Contact">email</button>
             <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded theme-toggle" aria-label="Change Light Mode">wb_sunny</button>

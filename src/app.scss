@@ -12,7 +12,7 @@
 
 .st0 { fill: var(--logo-color-2); }
 .st1 { fill: var(--logo-color-1); }
-
+.st2 { fill: #002A74; }
 
 
 @keyframes fabAppear {
@@ -142,15 +142,6 @@ html[lang="he"] {
     }
     .mdc-list-item__graphic {
         margin-right: 0;
-    }
-    #home #welcome .section-content h1 :first-child {
-        font-size: 10vw;
-        padding-inline-start: 0;
-        padding-inline-end: var(--titleSpacing);
-        line-height: 0.3;
-    }
-    #home #welcome .section-content h1 :last-child {
-        font-size: 18vw;
     }
 }
 

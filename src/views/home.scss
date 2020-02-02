@@ -124,10 +124,15 @@
 
 html[data-theme="dark"]{
     #home {
-            #welcome {
-                &.full-img {
-                    background-color: var(--primaryColor);
-                    filter: saturate(0.3) sepia(0.5) contrast(150%) brightness(1.2);
+        #welcome {
+            &.full-img {
+                background-color: var(--primaryColor);
+                &::after { background: linear-gradient(to top, #000 0%, #000 15%, #00000055 100%); }
+            }
+            .section-content {
+                h1, .icon-home-main, .welcome-sections {
+                    &:after { background-color: #333; }
+                }
             }
         }
     }

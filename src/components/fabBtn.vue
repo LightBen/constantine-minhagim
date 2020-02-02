@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 #fab-menu {
+    display: none;
     position: fixed;
     bottom: calc(var(--footerHeight) + var(--spacing));
     right: var(--spacing);

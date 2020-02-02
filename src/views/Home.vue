@@ -14,7 +14,7 @@
             <div class="welcome-sections">
                 <router-link :to="{ name: 'Minhag' }" class="minhag">
                     <svg class="icon-home-section">
-                        <use xlink:href="#icon-family" href="#icon-family" />
+                        <use xlink:href="#icon-star-david" href="#icon-star-david" />
                     </svg>
                     <span class="home-section-title">Minhag</span>
                 </router-link>
