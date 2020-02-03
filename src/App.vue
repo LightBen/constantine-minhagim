@@ -94,41 +94,6 @@ export default {
 <style src="./app.scss" lang="scss"></style>
 
 <style lang="scss">
-    #refresh-button { position: fixed; z-index: 100; width: 100vw; left: 0; top: var(--headerHeight); background: #388e3cee; color: #fff; padding: 10px 5px; border: none; box-shadow: none; transition: var(--transitionAll); text-align: center; }
-    .scrolling-down {
-        #refresh-button, #status { top: 0; }
-    }
-
-    #status { 
-        display: none; width: 100vw; position: fixed; top: var(--headerHeight); background-color: rgba(198, 40, 40, 0.95); line-height: 1.2; text-align: center; left: 0; padding: 10px; z-index: 200; color: #fff; transition: var(--transitionAll); direction: ltr;
-        &.offlineLoad { 
-            display: block; background-color: rgba(198, 40, 40, 0.95);
-        }
-        &.online { 
-            display: block; background-color: rgba(#388E3C, 0.95); opacity: 0;
-            animation-name: backOnline; animation-duration: 2s; animation-delay: 0; animation-fill-mode: forwards; ; 
-        }
-        &.offline { 
-            display: block; background-color: rgba(198, 40, 40, 0.95); opacity: 0;
-            animation-name: backOffline; animation-duration: 0.5s; animation-fill-mode: forwards; 
-        }
-    }
-    @keyframes backOnline {
-        0%   { opacity: 0; display: block; z-index: 1; }
-        20%   { opacity: 1; }
-        80%   { opacity: 1; }
-        99% { display: block; z-index: 1; }
-        100% { opacity: 0; display: none; z-index: -1; }
-    }
-    @keyframes onlineAppear {
-        0%   { opacity: 0; }
-        100% { opacity: 1; }
-    }
-    @keyframes backOffline {
-        0%   { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
     .page-title-container { 
         background-image: url(./assets/img/thumbnail-articles.jpg);
     }
@@ -152,9 +117,7 @@ export default {
     #hazanout .card-img { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
     #cuisine .card-img { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
     #articles .card-img { background-image: url('./assets/img/thumbnail-articles.jpg'); }
-</style>
 
-<style lang="scss">
     /* Hebrew fonts */
     @font-face {
         font-family: 'Taamey David';
@@ -167,7 +130,7 @@ export default {
         font-family: 'Taamey David';
         src: url(./assets/font/TaameyDavidCLM-MediumOblique.ttf);
         font-weight: normal;
-        font-style: italic;
+        font-style: oblique;
     }
 
     @font-face {
@@ -175,37 +138,5 @@ export default {
         src: url(./assets/font/TaameyDavidCLM-Bold.ttf);
         font-weight: bold;
         font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Taamey David';
-        src: url(./assets/font/TaameyDavidCLM-BoldOblique.ttf);
-        font-weight: bold;
-        font-style: italic;
-    }
-
-    html[lang="he"] {
-        .he-adjust, #page-title .lang, #page-title .lang-he, #mainNav .mdc-list a .lang-he {
-            position: relative; top: 3px;
-        }
-        #mainNav .mdc-list a:not(.char-latin) span {
-            font-size: 34px;
-        }
-        #home #welcome .section-content .welcome-sections > * .home-section-title { 
-            font-size: 20px; 
-            @media (min-width: $sm) {
-                font-size: 24px;
-            }
-            @media (min-width: $lg) {
-                font-size: 30px;
-            }
-        }
-
-        .card .card-text .card-title {
-            font-size: 26px;
-        }
-        footer .mdc-tab__text-label {
-            font-size: 18px;
-        }
     }
 </style>

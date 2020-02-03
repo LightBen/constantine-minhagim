@@ -56,7 +56,7 @@ header {
         }
         &:hover, &:active, &:focus { 
             &::before { content: none; }
-            &::after { color: var(--txtColor); opacity: 1; }
+            &::after { opacity: 1; }
         }
     }
 }

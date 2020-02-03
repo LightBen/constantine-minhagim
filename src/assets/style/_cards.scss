@@ -2,9 +2,9 @@
     cursor: pointer; position: relative; overflow: hidden; transition: var(--box-shadow-transition); box-shadow: var(--box-shadow); border: 10px solid #fff;
     .card-img {
         position: relative; background: rgba(#fff, 0.5) no-repeat center/cover; min-height: 200px; transition: all 0.35s;
-        @media (min-width: $md) {
-            min-height: 300px;
-        }
+        // @media (min-width: $md) {
+        //     min-height: 300px;
+        // }
         &:after {
             content: ""; position: absolute; background-color: rgba(#000, 0.5); opacity: 0; transition: all 0.35s; width: 100%; height: 100%; left: 0; top: 0;
         }
@@ -14,7 +14,7 @@
         width: 100%;
         transform: translate3d(0,0,0);
         transition: all 0.35s;
-        background-color: var(--primaryColorTrans);
+        background-color: var(--logo-color-2-trans);
         position: absolute;
         bottom: 0;
         color: #fff;
