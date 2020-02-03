@@ -131,7 +131,7 @@ html[data-theme="dark"] {
             }
             .section-content {
                 h1, .icon-home-main, .welcome-sections {
-                    &:after { background-color: #333; }
+                    &:after { background-color: transparent; }
                 }
                 h1 {
                     span {
