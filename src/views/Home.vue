@@ -16,27 +16,32 @@
                     <svg class="icon-home-section">
                         <use xlink:href="#icon-star-david" href="#icon-star-david" />
                     </svg>
-                    <span class="home-section-title">Minhag</span>
+                    <span class="home-section-title lang-fr">Minhag</span>
+                    <span class="home-section-title lang-he">מנהג</span>
                 </router-link>
                 <router-link :to="{ name: 'Hazanout' }" class="hazanout">
                     <svg class="icon-home-section">
                         <use xlink:href="#icon-music" href="#icon-music" />
                     </svg>
-                    <span class="home-section-title">'Hazanout</span>
+                    <span class="home-section-title lang-fr">'Hazanout</span>
+                    <span class="home-section-title lang-he">חזנות</span>
                 </router-link>
                 <router-link :to="{ name: 'Cuisine' }" class="cuisine">
                     <svg class="icon-home-section">
                         <use xlink:href="#icon-food-tray" href="#icon-food-tray" />
                     </svg>
-                    <span class="home-section-title">Cuisine</span>
+                    <span class="home-section-title lang-fr">Cuisine</span>
+                    <span class="home-section-title lang-he">מתכונים</span>
                 </router-link>
                 <router-link :to="{ name: 'Printouts' }" class="printouts">
                     <i class="material-icons icon-home-section" aria-hidden="true">assignment</i>
-                    <span class="home-section-title">Fiches</span>
+                    <span class="home-section-title lang-fr">Fiches</span>
+                    <span class="home-section-title lang-he">גליונות</span>
                 </router-link>
                 <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
                     <i class="material-icons icon-home-section" aria-hidden="true">storage</i>
-                    <span class="home-section-title">Drive</span>
+                    <span class="home-section-title lang-fr">Drive</span>
+                    <span class="home-section-title lang-he">דרייב</span>
                 </a>
             </div>
         </div>

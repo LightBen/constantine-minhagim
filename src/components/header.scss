@@ -25,7 +25,9 @@ header {
 
     .mdc-top-app-bar__title { 
         font-family: var(--font-family);
-        padding-inline-start: 10px; 
+        font-size: var(--font-size);
+        padding-inline-start: 10px;
+        letter-spacing: normal;
         a {
             text-transform: uppercase; color: #fff; text-decoration: none;
         }

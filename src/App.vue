@@ -5,8 +5,8 @@
             <Header />
             <div id="status"></div>
             <button id="refresh-button" v-if="updateExists" @click="refreshApp">
-                <span class="fr">Nouvelle version disponible, cliquer ici !</span>
-                <span class="he">גרסה חדשה זמינה, לחצו כאן!</span>
+                <span class="lang-fr">Nouvelle version disponible, cliquer ici !</span>
+                <span class="lang-he">גרסה חדשה זמינה, לחצו כאן!</span>
             </button>
             <main>
                 <div class="page-container">
@@ -92,6 +92,7 @@ export default {
 </script>
 
 <style src="./app.scss" lang="scss"></style>
+
 <style lang="scss">
     #refresh-button { position: fixed; z-index: 100; width: 100vw; left: 0; top: var(--headerHeight); background: #388e3cee; color: #fff; padding: 10px 5px; border: none; box-shadow: none; transition: var(--transitionAll); text-align: center; }
     .scrolling-down {
@@ -151,4 +152,60 @@ export default {
     #hazanout .card-img { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
     #cuisine .card-img { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
     #articles .card-img { background-image: url('./assets/img/thumbnail-articles.jpg'); }
+</style>
+
+<style lang="scss">
+    /* Hebrew fonts */
+    @font-face {
+        font-family: 'Taamey David';
+        src: url(./assets/font/TaameyDavidCLM-Medium.ttf);
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Taamey David';
+        src: url(./assets/font/TaameyDavidCLM-MediumOblique.ttf);
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Taamey David';
+        src: url(./assets/font/TaameyDavidCLM-Bold.ttf);
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Taamey David';
+        src: url(./assets/font/TaameyDavidCLM-BoldOblique.ttf);
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    html[lang="he"] {
+        .he-adjust, #page-title .lang, #page-title .lang-he, #mainNav .mdc-list a .lang-he {
+            position: relative; top: 3px;
+        }
+        #mainNav .mdc-list a:not(.char-latin) span {
+            font-size: 34px;
+        }
+        #home #welcome .section-content .welcome-sections > * .home-section-title { 
+            font-size: 20px; 
+            @media (min-width: $sm) {
+                font-size: 24px;
+            }
+            @media (min-width: $lg) {
+                font-size: 30px;
+            }
+        }
+
+        .card .card-text .card-title {
+            font-size: 26px;
+        }
+        footer .mdc-tab__text-label {
+            font-size: 18px;
+        }
+    }
 </style>

@@ -1,5 +1,4 @@
 *, *:before, *:after { box-sizing: border-box; }
-// html { font-family: 'Raleway', 'Roboto', 'Open Sans', sans-serif; }
 html { font-family: var(--font-family); }
 body { margin: 0; color: var(--txtColor); background-color: var(--bgColor); font-size: var(--font-size); font-weight: var(--font-weight); line-height: var(--line-height); }
 #app { height: 100vh; }
@@ -38,6 +37,10 @@ h1 { margin: 0; padding: var(--spacing) 0; }
 }
 
 blockquote {
+    --blockquote-before-horiz-pos: -20px;
+    --blockquote-before-vert-pos: 140px;
+    --blockquote-after-horiz-pos: 20px;
+    --blockquote-after-vert-pos: -70px;
     margin: 0;
     margin-inline-start: var(--spacing);
     padding-inline-start: var(--spacing);
@@ -45,6 +48,23 @@ blockquote {
     padding-block-end: var(--spacing);
     border-inline-start: 10px solid var(--primaryColorTrans);
     font-style: italic;
+    position: relative;
+
+    &::before, &::after {
+        position: absolute;
+        font-size: 400px;
+        color: #5cb3f555;
+    }
+    &::before {
+        content: "\0201C";
+        top: var(--blockquote-before-vert-pos);
+        left: var(--blockquote-before-horiz-pos);
+    }
+    &::after {
+        content: "\0201D";
+        bottom: var(--blockquote-after-vert-pos);
+        right: var(--blockquote-after-horiz-pos);
+    }
 }
 
 .grid-container {
@@ -59,5 +79,18 @@ figcaption { padding: 0; }
 html[lang="he"] {
     #page-content {
         h2, h3, h4 { text-align: right; }
+    }
+    blockquote {
+        &::before {
+            content: "\0201D";
+            top: 180px;
+            left: auto;
+            right: var(--blockquote-before-horiz-pos);
+        }
+        &::after {
+            content: "\0201C";
+            right: auto;
+            left: var(--blockquote-after-horiz-pos);
+        }
     }
 }

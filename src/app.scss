@@ -33,7 +33,7 @@
     }
     footer { 
         #footerTabs {
-            bottom: calc(var(--footerHeight) * -1);             
+            bottom: calc(var(--footerHeight) * -1 - 10px);
         }
     }
     #fab-menu { animation-name: fabDisappear; }
@@ -108,10 +108,10 @@ iframe, .google-drive {
 
 }
 html[data-theme="light"] {
-    .dark-block { display: none; }
+    .dark-block { display: none !important; }
 }
 html[data-theme="dark"] {
-    .dark-block { display: none; }
+    .dark-block { display: none !important; }
     iframe, .google-drive {
         // background-color: #000;
         .flip-list-view .flip-entry:hover {
@@ -127,15 +127,15 @@ html[data-theme="dark"] {
 }
 
 html:not([lang="he"]) {
-    .he {
-        display: none;
+    .lang-he {
+        display: none !important;
     }
 }
 /* RTL */
 html[lang="he"] {
     direction: rtl;
-    .fr {
-        display: none;
+    .lang-fr {
+        display: none !important;
     }
     .material-icons {
         direction: rtl;
@@ -143,10 +143,21 @@ html[lang="he"] {
     .mdc-list-item__graphic {
         margin-right: 0;
     }
+    em {
+        font-style: oblique;
+    }
 }
 
 #english {
-    direction: ltr;
+    &, * {
+        direction: ltr;
+        text-align: left !important;
+    }
+}
+.char-latin {
+    &, * {
+        font-family: 'Montserrat', sans-serif !important;
+    }
 }
 
 #table-taamim-emeth {
@@ -162,8 +173,8 @@ html[lang="he"] {
 
 .he-prayer {
     direction: rtl;
-    text-align: right;
-    font-size: 30px;
+    text-align: right !important;
+    font-size: 34px;
     line-height: 1.4;
 }
 .he-prayer-centered {

@@ -2,7 +2,10 @@
     <div id="hazanout">
         <div class="page-title-container">
             <div class="container">
-                <h1 id="page-title">'Hazanout</h1>
+                <h1 id="page-title">
+                    <span class="lang-fr">'Hazanout</span>
+                    <span class="lang-he">חזנות</span>
+                </h1>
             </div>
         </div>
         <div class="container">
