@@ -64,7 +64,7 @@ $xl: 1920px;
     }
 }
 
-html[data-theme="dark"]{
+html[data-theme="dark"] {
     --primaryColor: #111;
     --bgColor: #111;
     --txtColor: #eee;
@@ -76,4 +76,9 @@ html[data-theme="dark"]{
     // --logo-color-1-rgb: 255, 152, 0;
     // --logo-color-2-rgb: 187, 77, 0;
 
+}
+html[lang="he"] {
+    --font-family: 'Taamey David', 'Open Sans', sans-serif;
+    --font-size: 24px;
+    --font-weight: normal;
 }

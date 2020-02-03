@@ -2,7 +2,10 @@
     <div id="articles">
         <div class="page-title-container">
             <div class="container">
-                <h1 id="page-title">Articles</h1>
+                <h1 id="page-title">
+                    <span class="lang-fr">Articles</span>
+                    <span class="lang-he">מאמרים</span>
+                </h1>
             </div>
         </div>
         <div class="container">

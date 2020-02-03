@@ -2,7 +2,10 @@
     <div id="minhag">
         <div class="page-title-container">
             <div class="container">
-                <h1 id="page-title">Minhag</h1>
+                <h1 id="page-title">
+                    <span class="lang-fr">Minhag</span>
+                    <span class="lang-he">מנהג</span>
+                </h1>
             </div>
         </div>
         <div class="container">

@@ -5,27 +5,32 @@
         <nav class="mdc-list">
             <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Home' }" aria-current="page">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
-                <span class="mdc-list-item__text">Home</span>
+                <span class="mdc-list-item__text lang-fr">Accueil</span>
+                <span class="mdc-list-item__text lang-he">דף בית</span>
             </router-link>
             <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'About' }">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
-                <span class="mdc-list-item__text">À propos</span>
+                <span class="mdc-list-item__text lang-fr">À propos</span>
+                <span class="mdc-list-item__text lang-he">אודות</span>
             </router-link>
             <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Donate' }">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">credit_card</i>
-                <span class="mdc-list-item__text">Dons</span>
+                <span class="mdc-list-item__text lang-fr">Dons</span>
+                <span class="mdc-list-item__text lang-he">תרומות</span>
             </router-link>
             <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Articles' }">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">description</i>
-                <span class="mdc-list-item__text">Articles</span>
+                <span class="mdc-list-item__text lang-fr">Articles</span>
+                <span class="mdc-list-item__text lang-he">מאמרים</span>
             </router-link>
             <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'Rabbanim' }">
                 <svg class="icon-perso">
                     <use xlink:href="#icon-star-david" href="#icon-star-david" />
                 </svg>
-                <span class="mdc-list-item__text">Rabbins</span>
+                <span class="mdc-list-item__text lang-fr">Rabbins</span>
+                <span class="mdc-list-item__text lang-he">רבנים</span>
             </router-link>
-            <router-link class="mdc-list-item drawer-toggle" :to="{ name: 'English' }">
+            <router-link class="mdc-list-item drawer-toggle char-latin" :to="{ name: 'English' }">
                 <i class="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
                 <span class="mdc-list-item__text">English</span>
             </router-link>
@@ -81,6 +86,7 @@ export default {
         align-items: center;
 
         a {
+            font-family: var(--font-family);
             margin: 0;
             border-radius: 0;
             min-height: 80px; width: 100%; text-align: center; display: flex; justify-content: center;
@@ -115,7 +121,7 @@ html[data-theme="dark"] {
         background: #222 no-repeat center/cover;
 
         .aside-close { 
-            i, svg { color: var(--logo-color-2); }
+            i, svg { color: #fff; }
         }
 
         .mdc-list {
@@ -126,7 +132,7 @@ html[data-theme="dark"] {
                 }
 
                 span {
-                    color: #fff; font-size: 20px; font-weight: 300;
+                    color: #fff; font-weight: 300;
                 }
             }
         }

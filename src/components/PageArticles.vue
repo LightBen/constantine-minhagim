@@ -3,7 +3,9 @@
         <slot name="page-content">
             <div class="page-title-container">
                 <div class="container">
-                    <h1 id="page-title" v-html="pageTitle"></h1>
+                    <h1 id="page-title">
+                        <span class="lang" v-html="pageTitle"></span>
+                    </h1>
                 </div>
             </div>
             <div class="container">

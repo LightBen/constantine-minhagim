@@ -2,7 +2,10 @@
     <div id="cuisine">
         <div class="page-title-container">
             <div class="container">
-                <h1 id="page-title">Cuisine</h1>
+                <h1 id="page-title">
+                    <span class="lang-fr">Cuisine</span>
+                    <span class="lang-he">מתכונים</span>
+                </h1>
             </div>
         </div>
         <div class="container">
