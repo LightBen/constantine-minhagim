@@ -95,47 +95,67 @@ export default {
 
 <style lang="scss">
     .page-title-container { 
-        background-image: url(./assets/img/thumbnail-articles.jpg);
+        background-image: url(./assets/img/books-shelf.jpg);
     }
-    div[id*="minhag"] .page-title-container { background-image: url('./assets/img/thumbnail-minhag.jpg'); }
-    div[id*="hazanout"] .page-title-container { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
-    div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
-    div[id*="articles"] .page-title-container { background-image: url('./assets/img/thumbnail-articles.jpg'); }
+    div[id*="minhag"] .page-title-container { 
+        background-image: url('./assets/img/constantine-rabbins.jpg'); 
+        background-position: center 50px;
+        @media (min-width: $sm) {
+            background-position: center top;
+        }
+        @media (min-width: $md) {
+            background-position: center -30px;
+        }
+        @media (min-width: $lg) {
+            background-position: center -130px;
+        }
+    }
+    div[id*="hazanout"] .page-title-container { 
+    background-image: url('./assets/img/raymond.jpg'); background-position: center top; 
+        @media (min-width: $md) {
+            background-position: center -70px;
+        }
+        @media (min-width: $lg) {
+            background-position: center -100px;
+        }
+    }
+    div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/couscous.jpg'); }
+    div[id*="articles"] .page-title-container { background-image: url('./assets/img/books-shelf.jpg'); }
 
     html[data-theme="dark"]{
         .page-title-container { 
-            background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url(./assets/img/thumbnail-articles.jpg);
+            background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url('./assets/img/books-shelf.jpg');
         }
-        div[id*="minhag"] .page-title-container { background-image: url('./assets/img/thumbnail-minhag.jpg'); }
-        div[id*="hazanout"] .page-title-container { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
-        div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
-        div[id*="articles"] .page-title-container { background-image: url('./assets/img/thumbnail-articles.jpg'); }
+        div[id*="minhag"] .page-title-container { background-image: url('./assets/img/constantine-rabbins.jpg'); }
+        div[id*="hazanout"] .page-title-container { background-image: url('./assets/img/raymond.jpg'); }
+        div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/couscous.jpg'); }
+        div[id*="articles"] .page-title-container { background-image: url('./assets/img/books-shelf.jpg'); }
     }
 
-    .card-img { background-image: url('./assets/img/thumbnail-articles.jpg'); }
-    #minhag .card-img { background-image: url('./assets/img/thumbnail-minhag.jpg'); }
-    #hazanout .card-img { background-image: url('./assets/img/thumbnail-hazanout.jpg'); }
-    #cuisine .card-img { background-image: url('./assets/img/thumbnail-cuisine.jpg'); }
-    #articles .card-img { background-image: url('./assets/img/thumbnail-articles.jpg'); }
+    .card-img { background-image: url('./assets/img/books-shelf.jpg'); }
+    #minhag .card-img { background-image: url('./assets/img/constantine-rabbins.jpg'); }
+    #hazanout .card-img { background-image: url('./assets/img/raymond.jpg'); }
+    #cuisine .card-img { background-image: url('./assets/img/couscous.jpg'); }
+    #articles .card-img { background-image: url('./assets/img/books-shelf.jpg'); }
 
     /* Hebrew fonts */
     @font-face {
         font-family: 'Taamey David';
-        src: url(./assets/font/TaameyDavidCLM-Medium.ttf);
+        src: url('./assets/font/TaameyDavidCLM-Medium.ttf');
         font-weight: normal;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Taamey David';
-        src: url(./assets/font/TaameyDavidCLM-MediumOblique.ttf);
+        src: url('./assets/font/TaameyDavidCLM-MediumOblique.ttf');
         font-weight: normal;
         font-style: oblique;
     }
 
     @font-face {
         font-family: 'Taamey David';
-        src: url(./assets/font/TaameyDavidCLM-Bold.ttf);
+        src: url('./assets/font/TaameyDavidCLM-Bold.ttf');
         font-weight: bold;
         font-style: normal;
     }

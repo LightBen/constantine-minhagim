@@ -12,7 +12,7 @@
                 </svg> -->
             </button>
             <span class="mdc-top-app-bar__title">
-                <router-link to="/" class="he-adjust">
+                <router-link to="/" class="">
                     <span id="siteTitle1" v-html="siteTitle1"></span>
                     <span id="siteTitle2" v-html="siteTitle2"></span>
                 </router-link>

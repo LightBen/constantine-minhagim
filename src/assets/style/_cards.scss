@@ -40,7 +40,7 @@
 
         .card-img {
             // filter: blur(1px); transform: scale(1.05);
-            filter: brightness(1.2);
+            // filter: brightness(1.2);
             &:after {
                 opacity: 0;
             }
@@ -57,8 +57,9 @@
 
 html[data-theme="dark"]{
     .card {
+        border-color: #222;
         .card-img {
-            filter: saturate(0.3) sepia(0.5) contrast(120%) brightness(1);
+            // filter: saturate(0.3) sepia(0.5) contrast(120%) brightness(1);
         }
         &:hover {
             .card-img {
