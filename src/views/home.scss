@@ -21,7 +21,7 @@
         }
     }
     #welcome {
-        display: flex; align-items: center; justify-content: center; padding-top: var(--headerHeight); padding-bottom: 0 !important; text-transform: uppercase;
+        display: flex; align-items: center; justify-content: center; padding-top: calc(var(--headerHeight) + var(--spacing)); padding-bottom: 0 !important; text-transform: uppercase;
         &.full-img {
             background-image: url(../assets/img/constantine-bridge-sm.jpg);
             @media (min-width: $sm) {
@@ -35,7 +35,7 @@
             // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
             // font-size: calc(30px + 20 * ((100vw - 320px) / 1680));
             --titleSpacing: 1.5vw;
-            top: -15px; text-align: center; width: 100%;
+            text-align: center; width: 100%;
             .icon-home-main {
                 --iconMainSize: 150px; display: block; margin: 0 auto; position: relative; z-index: 1;
                 width: var(--iconMainSize); height: calc(var(--iconMainSize) - 60px);
@@ -51,26 +51,25 @@
                 }
             }
             h1 {
-                line-height: 1; text-align: center; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding: 30px 0;
+                line-height: 1; text-align: center; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; position: relative; margin: 0; padding: 15px 0 30px;
                 &:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; filter: blur(40px); }
                 span { 
-                    font-size: 37px; font-weight: 600; position: relative; z-index: 1; 
+                    font-size: 34px; font-weight: 600; position: relative; z-index: 1; 
                     &:first-child { color: var(--logo-color-1); }
-                    &:last-child { margin-inline-start: 10px; color: var(--logo-color-2); letter-spacing: 10px; }
-                }
-
-                @media (min-width: $sm) {
-                    padding: 15px 0 30px;
+                    &:last-child { margin-inline-start: 9px; color: var(--logo-color-2); letter-spacing: 9px; }
                 }
                 @media (min-width: $md) {
-                    flex-direction: row; padding: 0 0 50px;
+                    flex-direction: row;
                     span { 
                         font-size: 36px; 
                         &:last-child { letter-spacing: normal; }
                     }
                 }
+                @media (min-width: $lg) {
+                    padding: 0 0 50px; 
+                }
             }
-            .welcome-sections {
+            #welcome-sections {
                 display: flex; width: 100%; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; z-index: 1;
                 &::after {
                     content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; filter: blur(40px); z-index: 0;
@@ -97,9 +96,7 @@
                         --homeSectionSize: 230px; height: calc(var(--homeSectionSize) - 80px);
                     }
                     @media (min-width: $md) {
-                        --homeSectionSize: 180px; height: calc(var(--homeSectionSize) - 40px); border-width: 10px; 
                         &:hover {
-                            // width: calc(var(--homeSectionSize) + 20px); height: calc(var(--homeSectionSize) + 20px);
                             transform: scale(1.1);
                         }
                     }
@@ -115,7 +112,27 @@
                         background-color: var(--logo-color-1);
                         .icon-home-section { color: var(--logo-color-2); fill: var(--logo-color-2); }
                     }
+                }
 
+                .section-disabled {
+                    &:hover { transform: none; cursor: default; }
+                }
+
+                @media (min-width: $md) {
+                    max-width: 700px; margin: 0 auto;
+                }
+                @media (min-width: $lg) {
+                    max-width: 800px;
+                }
+                // @media (min-width: 1510px) {
+                //     max-width: 100%;
+                // }
+            }
+            #welcome-links {
+                a {
+                    display: inline-flex; align-items: center; text-decoration: none; padding-bottom: 2px; margin: 0 calc(var(--spacing) / 2); border-bottom: 2px solid #fff;
+                    i, svg { margin-inline-end: 5px; }
+                    span {  }
                 }
             }
         }
@@ -127,10 +144,10 @@ html[data-theme="dark"] {
         #welcome {
             &.full-img {
                 background-color: var(--primaryColor);
-                &::after { background: linear-gradient(to top, #000 0%, #000 15%, #00000055 100%); }
+                &::after { background: linear-gradient(to top, #000 0%, #000 15%, #00000055 67%); }
             }
             .section-content {
-                h1, .icon-home-main, .welcome-sections {
+                h1, .icon-home-main, #welcome-sections {
                     &:after { background-color: transparent; }
                 }
                 h1 {
@@ -170,6 +187,7 @@ html[lang="he"] {
 
 .is-homepage {
     header {
+        .mdc-top-app-bar__title { display: none; }
     }
     main {
         padding-bottom: 0;

@@ -66,6 +66,11 @@ export default new Router({
     }
   },
   {
+    path: "/siddour",
+    name: "Siddour",
+    component: () => import("./views/Siddour.vue")
+  },
+  {
     path: "/about",
     name: "About",
     component: () => import("./views/pages/About.vue"),
