@@ -44,7 +44,7 @@ html[data-theme="dark"] {
             background-color: #222;
             .mdc-tab-bar {
                 .mdc-tab__icon { 
-                    img, svg, i { color: #fff; }
+                    img, svg, i { color: #fff; fill: #fff; }
                 }
             .mdc-tab__text-label { color: #fff; }
             }
