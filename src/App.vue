@@ -19,7 +19,6 @@
             <Footer />
         </div>
         <div class="overlay drawer-toggle"></div>
-        <MainNav />
         <fabBtn />
         <Icons />
     <!-- </template>
@@ -35,7 +34,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FooterStatic from '@/components/FooterStatic'
-import MainNav from '@/components/MainNav'
 import fabBtn from '@/components/fabBtn'
 import Icons from '@/components/Icons'
 import {MDCRipple} from '@material/ripple';
@@ -46,7 +44,6 @@ export default {
         Header,
         Footer,
         FooterStatic,
-        MainNav,
         fabBtn,
         Icons
     },

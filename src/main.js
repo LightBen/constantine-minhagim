@@ -193,16 +193,16 @@ const menuIconFab = document.querySelector('#mainMenuFab > span');
 for (let i = 0; i < drawerToggle.length; i++) {
     drawerToggle[i].addEventListener('click', (event) => {
         bodyEl.classList.toggle('drawer-opened');
-        if (menuIconTop.innerHTML === "menu") {
-            menuIconTop.innerHTML = "close"
-        } else {
-            menuIconTop.innerHTML = "menu"
-        }
-        if (menuIconFab.innerHTML === "apps") {
-            menuIconFab.innerHTML = "close"
-        } else {
-            menuIconFab.innerHTML = "apps"
-        }
+        // if (menuIconTop.innerHTML === "menu") {
+        //     menuIconTop.innerHTML = "close"
+        // } else {
+        //     menuIconTop.innerHTML = "menu"
+        // }
+        // if (menuIconFab.innerHTML === "apps") {
+        //     menuIconFab.innerHTML = "close"
+        // } else {
+        //     menuIconFab.innerHTML = "apps"
+        // }
     });
 };
 /* END Open/Close Drawer */

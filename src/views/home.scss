@@ -21,7 +21,7 @@
         }
     }
     #welcome {
-        display: flex; align-items: center; justify-content: center; padding-top: calc(var(--headerHeight) + var(--spacing)); padding-bottom: 0 !important; text-transform: uppercase;
+        display: flex; align-items: center; justify-content: center; padding-top: 0; padding-bottom: 0 !important; text-transform: uppercase;
         &.full-img {
             background-image: url(../assets/img/constantine-bridge-sm.jpg);
             @media (min-width: $sm) {
@@ -86,11 +86,13 @@
                         width: var(--icon-home-section-size); height: var(--icon-home-section-size); font-size: var(--icon-home-section-size); transition: var(--transitionAll);
                     }
 
-                    .home-section-title { font-size: 16px; display: inline-block; line-height: 1; }
+                    .home-section-title, .home-section-title-icon { font-size: 16px; }
+                    .home-section-title { display: inline-block; line-height: 1; }
+                    .home-section-title-icon { margin-inline-start: 10px; position: relative; top: 4px; color: var(--logo-color-1); transition: var(--transitionAll); }
 
                     @media (min-width: $sm) {
                         --homeSectionSize: 180px;
-                        .home-section-title { font-size: 20px; }
+                        .home-section-title, .home-section-title-icon { font-size: 20px; }
                     }
                     @media (min-width: 780px) {
                         --homeSectionSize: 230px; height: calc(var(--homeSectionSize) - 80px);
@@ -103,7 +105,7 @@
                     @media (min-width: $lg) {
                         --homeSectionSize: 240px;
                         .icon-home-section { --icon-home-section-size: 50px; margin-bottom: 30px; }
-                        .home-section-title { font-size: 26px; }
+                        .home-section-title, .home-section-title-icon { font-size: 26px; }
                     }
                     @media (min-width: $xl) {
                     }
@@ -111,6 +113,7 @@
                     &:hover {
                         background-color: var(--logo-color-1);
                         .icon-home-section { color: var(--logo-color-2); fill: var(--logo-color-2); }
+                        .home-section-title-icon { color: #fff; }
                     }
                 }
 
@@ -186,9 +189,7 @@ html[lang="he"] {
 }
 
 .is-homepage {
-    header {
-        .mdc-top-app-bar__title { display: none; }
-    }
+    header { display: none; }
     main {
         padding-bottom: 0;
     }

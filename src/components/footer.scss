@@ -23,7 +23,7 @@ footer {
             .mdc-tab__content { display: block; }
             .mdc-tab__icon { 
                 display: block; margin-bottom: 5px; height: 26px;
-                img, svg, i { color: var(--logo-color-1); }
+                img, svg, i, .st0 { color: var(--logo-color-1); fill: var(--logo-color-1); }
             }
             .mdc-tab__text-label { color: var(--logo-color-1); }
             .mdc-tab-indicator .mdc-tab-indicator__content--underline { border-color: transparent; }

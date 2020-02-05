@@ -21,7 +21,7 @@
                 </router-link>
                 <router-link :to="{ name: 'Hazanout' }" class="hazanout">
                     <svg class="icon-home-section">
-                        <use xlink:href="#icon-music" href="#icon-music" />
+                        <use xlink:href="#icon-music-1" href="#icon-music-1" />
                     </svg>
                     <span class="home-section-title lang-fr">'Hazanout</span>
                     <span class="home-section-title lang-he">חזנות</span>
@@ -33,15 +33,18 @@
                     <span class="home-section-title lang-fr">Cuisine</span>
                     <span class="home-section-title lang-he">מתכונים</span>
                 </router-link>
-                <router-link :to="{ name: 'Printouts' }" class="printouts">
-                    <i class="material-icons icon-home-section" aria-hidden="true">assignment</i>
-                    <span class="home-section-title lang-fr">Fiches</span>
-                    <span class="home-section-title lang-he">גליונות</span>
+                <router-link :to="{ name: 'Articles' }" class="articles">
+                    <i class="material-icons icon-home-section" aria-hidden="true">description</i>
+                    <span class="home-section-title lang-fr">Articles</span>
+                    <span class="home-section-title lang-he">מאמרים</span>
                 </router-link>
                 <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
                     <i class="material-icons icon-home-section" aria-hidden="true">storage</i>
-                    <span class="home-section-title lang-fr">Drive</span>
-                    <span class="home-section-title lang-he">דרייב</span>
+                    <span class="home-section-title">
+                        <span class="lang-fr">Drive</span>
+                        <span class="lang-he">דרייב</span>
+                        <i class="material-icons home-section-title-icon" aria-hidden="true">open_in_new</i>
+                    </span>
                 </a>
                 <router-link :to="{ name: 'Home' }" class="siddour section-disabled">
                     <i class="material-icons icon-home-section" aria-hidden="true">menu_book</i>
