@@ -156,9 +156,8 @@ figcaption { padding: 0; }
 .scrolling-down, {
     #refresh-button, #status { top: 0; }
 }
-.is-homepage {
-    #refresh-button { top: 0; }
-    #status { top: auto; bottom: 0; }
+.is-homepage, .drawer-opened {
+    #status, #refresh-button { top: auto; bottom: 0; }
 }
 
 
@@ -189,7 +188,6 @@ figcaption { padding: 0; }
     #mainMenuBtn, #mainMenuFab > span {
         transform: rotate(45deg);
     }
-    #status { top: auto; bottom: 0; }
 }
 
 
