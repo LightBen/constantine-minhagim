@@ -28,7 +28,7 @@
 
             <aside class="mdc-drawer mdc-drawer--modal" id="mainNav">
                 <div id="menu-top-bar">
-                    <div id="menu-home" class="menu-top-icon">
+                    <div id="menu-home" class="menu-top-icon drawer-toggle" @click="$router.push({ name: 'Home' })">
                         <svg class="icon-perso">
                             <use xlink:href="#icon-logo-cm" href="#icon-logo-cm" />
                         </svg>

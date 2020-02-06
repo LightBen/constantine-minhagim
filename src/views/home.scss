@@ -144,7 +144,7 @@
 
 .is-homepage {
     header {
-        #headerMain { background-color: transparent; box-shadow: none; }
+        #headerMain { background-color: transparent !important; box-shadow: none; }
         #header-logo { display: none; }
         #mainMenuBtn {
             position: relative; padding: var(--spacing);
