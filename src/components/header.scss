@@ -137,21 +137,23 @@ header {
 
 html[data-theme="dark"] {
     header {
-        background-color: #222; color: #fff; 
-        #siteTitle1, #siteTitle2 { color: #fff; }
-        .st0, .st1 { color: #fff; fill: #fff; }
+        #headerMain {
+            background-color: #222; color: #fff; 
+            #siteTitle1, #siteTitle2 { color: #fff; }
+            .st0, .st1 { color: #fff; fill: #fff; }
 
-        #mainNav {
-            background: #222 no-repeat center/cover;
-            nav {
-                a {
-                    i, svg {
-                        color: #fff;
-                        fill: #fff;
-                    }
+            #mainNav {
+                background: #222 no-repeat center/cover;
+                nav {
+                    a {
+                        i, svg {
+                            color: #fff;
+                            fill: #fff;
+                        }
 
-                    span {
-                        color: #fff; font-weight: 300;
+                        span {
+                            color: #fff; font-weight: 300;
+                        }
                     }
                 }
             }

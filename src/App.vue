@@ -3,7 +3,7 @@
     <!-- <template v-if="!isProduction"> -->
         <div class="site-container">
             <Header />
-            <div id="status"></div>
+            <div id="status" class="char-latin"></div>
             <button id="refresh-button" v-if="updateExists" @click="refreshApp">
                 <span class="lang-fr">Nouvelle version disponible, cliquer ici !</span>
                 <span class="lang-he">גרסה חדשה זמינה, לחצו כאן!</span>
