@@ -3,9 +3,12 @@ import Vue from "vue"
 import App from "./App.vue"
 import router from "./router"
 import "./registerServiceWorker"
+
 import firebase from "firebase/app"
+import "firebase/storage"
 import "firebase/firestore"
-import FlamelinkPlugin from "./plugins/flamelink";
+
+import FlamelinkPlugin from "./plugins/flamelink"
 
 import PageMix from '@/components/PageMix.vue'
 Vue.component('page-mix', PageMix);
