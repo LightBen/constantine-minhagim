@@ -59,7 +59,7 @@ new Vue({
 /* Custom properties */
 let root = document.documentElement;
 let bodyEl = document.body;
-let headerHeight = document.querySelector('header').offsetHeight;
+let headerHeight = document.getElementById('headerMain').offsetHeight;
 let footerHeight = document.getElementById('footerTabs').offsetHeight;
 root.style.setProperty('--headerHeight', headerHeight + "px");
 root.style.setProperty('--footerHeight', footerHeight + "px");

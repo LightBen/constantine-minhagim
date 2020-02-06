@@ -162,7 +162,7 @@ figcaption { padding: 0; }
     header, footer, #mainMenuFab { background-color: transparent; }
 }
 .scrolling-down {
-    header { 
+    header .mdc-top-app-bar { 
         top: calc(var(--headerHeight) * -1); 
     }
     footer { 
@@ -179,7 +179,7 @@ figcaption { padding: 0; }
         opacity: 1;
         display: block;
     }
-    header { top: 0; }
+    header .mdc-top-app-bar { top: 0; }
     footer { bottom: 0; }
     #mainMenuBtn, #mainMenuFab > span {
         transform: rotate(45deg);
