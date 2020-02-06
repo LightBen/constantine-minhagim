@@ -1,12 +1,9 @@
 header {
-    top: 0;
-    background-color: #fff;
-    color: var(--logo-color-1);
-    transition: all var(--transitionTime) var(--transitionEase);
-    box-shadow: var(--box-shadow);
 
     #siteTitle1 { color: var(--logo-color-1); margin-inline-end: 5px; }
     #siteTitle2 { color: var(--logo-color-2); }
+
+    .mdc-top-app-bar { top: 0; background-color: #fff; color: var(--logo-color-1); transition: all var(--transitionTime) var(--transitionEase); box-shadow: var(--box-shadow); }
 
     .mdc-top-app-bar__section { padding: 0; }
 
@@ -136,26 +133,27 @@ header {
             }
         }
     } /* END menu */
-
 }
 
 html[data-theme="dark"] {
     header {
-        background-color: #222; color: #fff; 
-        #siteTitle1, #siteTitle2 { color: #fff; }
-        .st0, .st1 { color: #fff; fill: #fff; }
+        #headerMain {
+            background-color: #222; color: #fff; 
+            #siteTitle1, #siteTitle2 { color: #fff; }
+            .st0, .st1 { color: #fff; fill: #fff; }
 
-        #mainNav {
-            background: #222 no-repeat center/cover;
-            nav {
-                a {
-                    i, svg {
-                        color: #fff;
-                        fill: #fff;
-                    }
+            #mainNav {
+                background: #222 no-repeat center/cover;
+                nav {
+                    a {
+                        i, svg {
+                            color: #fff;
+                            fill: #fff;
+                        }
 
-                    span {
-                        color: #fff; font-weight: 300;
+                        span {
+                            color: #fff; font-weight: 300;
+                        }
                     }
                 }
             }
@@ -178,5 +176,11 @@ html[lang="he"] {
 
     #mainNav {
         opacity: 1; visibility: visible; top: 0;
+    }
+}
+
+.is-homepage {
+    #homepage-header {
+        display: flex;
     }
 }

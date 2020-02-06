@@ -1,5 +1,6 @@
 import flamelink from 'flamelink/app'
 import 'flamelink/content'
+import 'flamelink/storage'
 import 'flamelink/navigation'
 import 'flamelink/settings'
 

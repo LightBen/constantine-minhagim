@@ -52,18 +52,6 @@
                     <span class="home-section-title lang-he">בקרוב</span>
                 </router-link>
             </div>
-            <!-- <div id="welcome-links">
-                <router-link :to="{ name: 'Printouts' }" class="printouts">
-                    <i class="material-icons icon-home-section" aria-hidden="true">assignment</i>
-                    <span class="home-section-title lang-fr">Fiches</span>
-                    <span class="home-section-title lang-he">גליונות</span>
-                </router-link>
-                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
-                    <i class="material-icons icon-home-section" aria-hidden="true">storage</i>
-                    <span class="home-section-title lang-fr">Drive</span>
-                    <span class="home-section-title lang-he">דרייב</span>
-                </a>
-            </div> -->
         </div>
     </section>
 </div>
