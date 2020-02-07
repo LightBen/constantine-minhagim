@@ -2,6 +2,7 @@
     <div id="page-cuisine">
         <slot name="page-content">
             <div class="page-title-container">
+                <figure v-if="pageBanner" :style="{ 'background-image': 'url(' + pageBanner + ')' }"></figure>
                 <div class="container">
                     <h1 id="page-title">
                         <span class="lang" v-html="pageTitle"></span>
@@ -22,7 +23,8 @@ export default {
         return {
             dataEntryId:'',
             pageTitle: '',
-            pageContent: ''
+            pageContent: '',
+            pageBanner: ''
         }
     },
     props: ['entryId'],
@@ -38,11 +40,13 @@ export default {
         getContent() {
             this.$flamelinkApp.content.get({
                 schemaKey: 'cuisine',
-                entryId: this.dataEntryId
+                entryId: this.dataEntryId,
+                populate: ['mainImage']
             })
             .then(pageContent => {
                 this.pageTitle = pageContent.title;
                 this.pageContent = pageContent.content;
+                this.pageBanner = pageContent.mainImage[0].url;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }

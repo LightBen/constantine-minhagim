@@ -56,9 +56,10 @@ a {
 }
 
 .page-title-container {
-    background: no-repeat center/cover; margin-bottom: 50px;
+    position: relative; background: no-repeat center/cover; margin-bottom: 50px;
+    figure { display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: no-repeat center/cover; }
     .container {
-        padding-top: 130px; padding-bottom: 70px; display: flex; justify-content: center;
+        padding-top: 130px; padding-bottom: 70px; display: flex; justify-content: center; z-index: 1; position: relative;
     }
     // #page-title -> h1
     #page-title {

@@ -108,12 +108,15 @@ export default {
         }
     }
     div[id*="hazanout"] .page-title-container { 
-    background-image: url('./assets/img/raymond.jpg'); background-position: center top; 
+    background-image: url('./assets/img/constantine-orchestre.jpg'); background-position: center; 
         @media (min-width: $md) {
-            background-position: center -70px;
+            background-position: center -100px;
         }
         @media (min-width: $lg) {
-            background-position: center -100px;
+            background-position: center -200px;
+        }
+        @media (min-width: $xl) {
+            background-position: center -400px;
         }
     }
     div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/couscous.jpg'); }
@@ -129,10 +132,12 @@ export default {
         div[id*="articles"] .page-title-container { background-image: url('./assets/img/books-shelf.jpg'); }
     }
 
+
+    /* Default card images */
     .card-img { background-image: url('./assets/img/books-shelf.jpg'); }
     #minhag .card-img { background-image: url('./assets/img/constantine-rabbins.jpg'); }
-    #hazanout .card-img { background-image: url('./assets/img/raymond.jpg'); }
-    #cuisine .card-img { background-image: url('./assets/img/couscous.jpg'); }
+    #hazanout .card-img { background-image: url('./assets/img/constantine-orchestre.jpg'); }
+    #cuisine .card-img { background-image: url('./assets/img/default-thumbnail-logo.jpg'); }
     #articles .card-img { background-image: url('./assets/img/books-shelf.jpg'); }
 
     /* Hebrew fonts */

@@ -81,6 +81,12 @@
                             <span class="mdc-list-item__text lang-fr">Rabbins</span>
                             <span class="mdc-list-item__text lang-he">רבנים</span>
                         </router-link>
+                        <router-link class="nav-grid-item drawer-toggle" :to="{ name: 'English' }">
+                            <svg>
+                                <use xlink:href="#icon-uk" href="#icon-uk" />
+                            </svg>
+                            <span class="mdc-list-item__text">English</span>
+                        </router-link>
                         <router-link class="nav-grid-item drawer-toggle" :to="{ name: 'Printouts' }">
                             <svg>
                                 <use xlink:href="#icon-print" href="#icon-print" />
