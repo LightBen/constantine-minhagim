@@ -28,6 +28,8 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
 
+firebase.firestore().enablePersistence()
+
 Vue.use(FlamelinkPlugin, {
     firebaseApp,
     env: 'production',
