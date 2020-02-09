@@ -11,6 +11,10 @@
                 <span id="siteTitle1" v-html="siteTitle1"></span>
                 <span id="siteTitle2" v-html="siteTitle2"></span>
             </h1>
+            <div id="site-description">
+                <span class="lang-fr">Minhagim constantinois <br>et d'Afrique du Nord</span>
+                <span class="lang-he"></span>
+            </div>
             <div id="welcome-sections">
                 <router-link :to="{ name: 'Minhag' }" class="minhag">
                     <svg class="icon-home-section">

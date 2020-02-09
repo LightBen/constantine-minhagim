@@ -75,7 +75,7 @@
                             <span class="mdc-list-item__text lang-fr">Dons</span>
                             <span class="mdc-list-item__text lang-he">תרומות</span>
                         </router-link>
-                        <router-link class="nav-grid-item drawer-toggle" :to="{ name: 'Home' }">
+                        <router-link class="nav-grid-item drawer-toggle" :to="{ name: 'Contact' }">
                             <svg>
                                 <use xlink:href="#icon-contact" href="#icon-contact" />
                             </svg>

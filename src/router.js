@@ -66,6 +66,14 @@ export default new Router({
     }
   },
   {
+    path: "/contact",
+    name: "Contact",
+    component: () => import("./views/pages/Contact.vue"),
+    meta: {
+      entryId: 'gEyCCPwRxH7Me3OrQG4S'
+    }
+  },
+  {
     path: "/siddour",
     name: "Siddour",
     component: () => import("./views/Siddour.vue")
