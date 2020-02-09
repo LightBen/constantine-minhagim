@@ -3,9 +3,8 @@
 @import "@/assets/style/_cards";
 @import "@/assets/style/bootstrap-snippets";
 
-// @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,700&display=swap');
 
 
 .st0 { fill: var(--logo-color-2); }
@@ -71,6 +70,7 @@ a {
     }
 }
 #page-content {
+    a { word-break: break-all; }
     &, p {
         text-align: justify;
     }
@@ -319,8 +319,9 @@ html[lang="he"] {
         h2 { font-size: 34px; }
     }
     blockquote {
-        &::before { content: "\0201D"; top: 180px; left: auto; right: var(--blockquote-before-horiz-pos); }
-        &::after { content: "\0201C"; right: auto; left: var(--blockquote-after-horiz-pos); }
+        &::before, &::after { font-family: 'MontSerrat', sans-serif; }
+        &::before { content: "\0201D"; top: 140px; left: auto; right: 30px; }
+        &::after { content: "\0201C"; right: auto; left: -30px; }
     }
     .he-adjust, #page-title .lang, #page-title .lang-he, #mainNav .mdc-list a .lang-he {
         position: relative; top: 3px;

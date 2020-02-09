@@ -79,7 +79,7 @@ export default {
                 schemaKey: 'general',
             })
             .then(data => {
-                console.log('data: ', data);;
+                // console.log('data: ', data);;
                 this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
                 this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
                 this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
@@ -93,37 +93,5 @@ export default {
     beforeDestroy: function() {
         document.body.classList.remove('is-homepage');
     }
-    // created() {
-    //     this.$flamelinkApp.content.get({
-    //         schemaKey: 'general',
-    //         entryId: 'aXPyDwZ20JsSYROQtoc7'
-    //     })
-    //     .then(siteTitleEl => {
-    //         // this.pageTitle = homeData.title;
-    //         document.getElementById('siteTitle').innerText = siteTitleEl.content;
-    //         // console.log(siteTitleEl)
-    //     })
-    //     .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
-    // }
 };
-
-    // created() {
-    //     this.$flamelinkApp.content.subscribe({
-    //         schemaKey: 'homepageSingletons',
-    //         entryId: 'GuR67876KQ7wjTw2u7lH',
-    //         callback(error, homepageSingletons) {
-    //             if (error) {
-    //                 return console.error('Something went wrong while retrieving all the content. Details:', error)
-    //             }
-    //             console.log('All the blog posts:', homepageSingletons)
-    //         }
-    //     })
-    //     .then(siteTitleEl => {
-    //         // this.pageTitle = homeData.title;
-    //         document.getElementById('siteTitle').innerText = siteTitleEl.homepageSingletonContent;
-    //         // console.log(siteTitleEl)
-    //     })
-    //     .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
-    // }
-
 </script>

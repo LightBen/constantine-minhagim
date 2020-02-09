@@ -38,11 +38,19 @@
                             <svg class="icon-lang">
                                 <use xlink:href="#icon-lang" href="#icon-lang" />
                             </svg>
+                            <label>
+                                <span class="lang-fr">עברית</span>
+                                <span class="lang-he">Français</span>
+                            </label>
                         </div>
                         <div id="menu-theme" class="menu-top-icon theme-toggle">
                             <svg class="icon-theme">
                                 <use xlink:href="#icon-theme" href="#icon-theme" />
                             </svg>
+                            <label>
+                                <span class="lang-fr">Thème</span>
+                                <span class="lang-he">תֵמָה</span>
+                            </label>
                         </div>
                     </div>
                     <div id="menu-close" class="menu-top-icon drawer-toggle">

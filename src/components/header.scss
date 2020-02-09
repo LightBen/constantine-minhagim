@@ -68,19 +68,17 @@ header {
         visibility: hidden;
 
         #menu-top-bar { 
-            display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: var(--spacing);
+            display: flex; align-items: flex-start; justify-content: space-between; cursor: pointer; padding: var(--spacing);
             i, svg { 
                 --menu-top-icon-size: 50px; 
                 font-size: var(--menu-top-icon-size); color: #555; width: var(--menu-top-icon-size); height: 32px; 
             }
             #menu-top-middle { 
                 display: flex; align-items: center; justify-content: center; 
-                > * { margin: 0 5px; }
+                > * { margin: 0 5px; display: flex; flex-direction: column; min-width: 75px; }
+                label { font-size: var(--font-size-secondary); }
             }
             .menu-top-icon { display: flex; align-items: center; }
-            #menu-home {  }
-            #menu-lang {  }
-            #menu-theme {  }
             #menu-close { transform: rotate(45deg); }
 
         }

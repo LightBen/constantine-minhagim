@@ -21,7 +21,7 @@ export default {
     name: 'PageArticles',
     data() {
         return {
-            dataEntryId:'',
+            dataEntryId: '',
             pageTitle: '',
             pageContent: '',
             pageBanner: ''
