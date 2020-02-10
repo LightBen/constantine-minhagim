@@ -11,7 +11,7 @@
             </div>
             <div class="container">
                 <div id="page-author">
-                    <span class="lang-fr">Par : </span>
+                    <span class="lang-fr">Par </span>
                     <span class="lang-he">מ</span>
                     <span class="author-content" v-html="pageAuthor"></span>
                 </div>
