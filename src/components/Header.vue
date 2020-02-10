@@ -138,7 +138,7 @@ export default {
         }
     },
     mounted() {
-        this.lang = localStorage.getItem('lang') || 'fr';
+        this.lang = localStorage.getItem('lang');
         this.getLang();
         this.getContent();
     },
