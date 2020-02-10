@@ -3,7 +3,16 @@
     <!-- <template v-if="!isProduction"> -->
         <div class="site-container">
             <Header />
-            <div id="status" class="char-latin"></div>
+            <div id="status">
+                <div class="offline">
+                    <span class="lang-fr char-latin">Pas d'internet :(</span>
+                    <span class="lang-he">אין קליטה :(</span>
+                </div>
+                <div class="online">
+                    <span class="lang-fr char-latin">Online! Rafraichir la page :)</span>
+                    <span class="lang-he">יש קליטה! לרפרש :)</span>
+                </div>
+            </div>
             <button id="refresh-button" v-if="updateExists" @click="refreshApp">
                 <span class="lang-fr">Nouvelle version disponible, cliquer ici !</span>
                 <span class="lang-he">גרסה חדשה זמינה, לחצו כאן!</span>
@@ -47,12 +56,17 @@ export default {
         fabBtn,
         Icons
     },
+    metaInfo: {
+        titleTemplate: '%s | Constantine Minhagim'
+    },
     data () {
         return {
             isProduction: process.env.NODE_ENV === 'production',
             refreshing: false,
             registration: null,
-            updateExists: false
+            updateExists: false,
+            siteTitleHe: 'HE',
+            siteTitle: 'FR'
         }
     },
     methods: {

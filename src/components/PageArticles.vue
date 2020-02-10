@@ -19,6 +19,11 @@
 <script>
 export default {
     name: 'PageArticles',
+    metaInfo() {
+        return {
+            title: this.pageTitle            
+        }
+    },
     data() {
         return {
             dataEntryId: '',

@@ -33,8 +33,17 @@
 <script>
     export default {
         name: "Articles",
+        metaInfo() {
+            return {
+                title: this.pageTitle            
+            }
+        },
         data() {
-            return { elements: [] }
+            return { 
+                elements: [],
+                pageTitle: 'Articles',
+                pageTitleHe: 'מאמרים'
+            }
         },
         mounted() {
              this.$root.$on('langChanged', this.getContent);
@@ -53,7 +62,14 @@
                     this.elements = elements;
                     // console.log('All the elements:', elements);
                 })
-
+            },
+            setPageTitle() {
+                this.$flamelinkApp.settings.getLocale()
+                .then(locale => {
+                    if (locale === 'he') {
+                        this.pageTitle = this.pageTitleHe
+                    }
+                })
             }
         }
     };

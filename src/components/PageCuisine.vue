@@ -24,9 +24,14 @@
 <script>
 export default {
     name: 'PageCuisine',
+    metaInfo() {
+        return {
+            title: this.pageTitle            
+        }
+    },
     data() {
         return {
-            dataEntryId:'',
+            dataEntryId: '',
             pageTitle: '',
             pageAuthor: '',
             pageContent: '',

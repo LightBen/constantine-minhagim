@@ -19,6 +19,11 @@
 <script>
 export default {
     name: 'PageHazanout',
+    metaInfo() {
+        return {
+            title: this.pageTitle            
+        }
+    },
     data() {
         return {
             dataEntryId: '',

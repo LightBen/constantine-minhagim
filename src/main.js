@@ -3,6 +3,7 @@ import Vue from "vue"
 import App from "./App.vue"
 import router from "./router"
 import "./registerServiceWorker"
+import VueMeta from "vue-meta"
 
 import firebase from "firebase/app"
 import "firebase/storage"
@@ -28,7 +29,7 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
 
-firebase.firestore().enablePersistence()
+
 
 Vue.use(FlamelinkPlugin, {
     firebaseApp,
@@ -37,6 +38,18 @@ Vue.use(FlamelinkPlugin, {
     dbType: 'cf'
 })
 // console.log({firebaseConfig});
+Vue.use(VueMeta, {
+    refreshOnceOnNavigation: true
+})
+
+
+// OFFLINE PERSISTENCE
+firebase.firestore().enablePersistence()
+.catch(function(err) {
+    console.log(err);
+});
+// END OFFLINE PERSISTENCE
+
 
 
 Vue.config.productionTip = false;
@@ -243,17 +256,14 @@ window.addEventListener('load', function() {
     var condition = navigator.onLine ? "online" : "offline";
     if (condition === 'offline') {
         status.className = 'offline';
-        status.innerHTML = "Offline :(";
     }
 
     function updateOnlineStatus(event) {
     var condition = navigator.onLine ? "online" : "offline";
         if (condition === 'online') {
-            status.innerHTML = 'Online :) Refresh the page';
             status.classList.add('online');
             status.classList.remove('offline');
         } else if (condition === 'offline') {
-            status.innerHTML = "Offline :(";
             status.classList.add('offline');
             status.classList.remove('online');
         }

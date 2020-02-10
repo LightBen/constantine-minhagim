@@ -33,8 +33,17 @@
 <script>
     export default {
         name: "Minhag",
+        metaInfo() {
+            return {
+                title: this.pageTitle            
+            }
+        },
         data() {
-            return { elements: [] }
+            return { 
+                elements: [],
+                pageTitle: 'Minhag',
+                pageTitleHe: 'מנהג'
+            }
         },
         mounted() {
              this.$root.$on('langChanged', this.getContent);
@@ -45,15 +54,22 @@
         methods: {
             getContent() {
                 this.$flamelinkApp.content.get({
-                schemaKey: 'minhag',
-                fields: ['title', 'url', 'author', 'description', 'mainImage'],
-                populate: ['mainImage'],
-            })
-            .then(elements => {
-                this.elements = elements;
-                // console.log('All the elements:', elements);
-            })
-
+                    schemaKey: 'minhag',
+                    fields: ['title', 'url', 'author', 'description', 'mainImage'],
+                    populate: ['mainImage'],
+                })
+                .then(elements => {
+                    this.elements = elements;
+                    // console.log('All the elements:', elements);
+                })
+            },
+            setPageTitle() {
+                this.$flamelinkApp.settings.getLocale()
+                .then(locale => {
+                    if (locale === 'he') {
+                        this.pageTitle = this.pageTitleHe
+                    }
+                })
             }
         }
     };

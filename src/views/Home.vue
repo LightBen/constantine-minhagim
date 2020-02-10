@@ -66,10 +66,13 @@
 <script>
 export default {
     name: 'home',
+    metaInfo: {
+        title: 'Home'
+    },
     data() {
         return {
             siteTitle1: '',
-            siteTitle2: ''
+            siteTitle2: '',
         }
     },
     components: {},

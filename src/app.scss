@@ -134,6 +134,8 @@ figcaption { padding: 0; }
         display: block; background-color: rgba(198, 40, 40, 0.95); opacity: 0;
         animation-name: backOffline; animation-duration: 0.5s; animation-fill-mode: forwards; 
     }
+    .online, .offline { display: none; }
+    &.online .online, &.offline .offline { display: block; }
 }
 @keyframes backOnline {
     0%   { opacity: 0; display: block; z-index: 1; }

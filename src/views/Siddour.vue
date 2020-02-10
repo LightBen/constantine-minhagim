@@ -24,11 +24,24 @@
 <script>
 export default {
     name: 'Siddour',
-        mounted() {
-             this.$root.$on('langChanged', this.getContent);
-        },
+    metaInfo() {
+        return {
+            title: this.pageTitle            
+        }
+    },
+    data() {
+        return { 
+            elements: [],
+            pageTitle: 'Siddour',
+            pageTitleHe: 'סידור'
+        }
+    },
     created() {
         this.getContent()
+        this.setPageTitle()
+    },
+    mounted() {
+         this.$root.$on('langChanged', this.getContent);
     },
     methods: {
         getContent() {
@@ -41,6 +54,14 @@ export default {
                 document.getElementById('page-content').innerHTML = pageContent.content;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
+        },
+        setPageTitle() {
+            this.$flamelinkApp.settings.getLocale()
+            .then(locale => {
+                if (locale === 'he') {
+                    this.pageTitle = this.pageTitleHe
+                }
+            })
         }
     }
 };

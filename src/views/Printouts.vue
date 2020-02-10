@@ -24,11 +24,24 @@
 <script>
 export default {
     name: 'Printouts',
-        mounted() {
-             this.$root.$on('langChanged', this.getContent);
-        },
+    metaInfo() {
+        return {
+            title: this.pageTitle            
+        }
+    },
+    data() {
+        return { 
+            elements: [],
+            pageTitle: 'Fiches à Imprimer',
+            pageTitleHe: 'גליונות להדפסה'
+        }
+    },
     created() {
         this.getContent()
+        this.setPageTitle()
+    },
+    mounted() {
+         this.$root.$on('langChanged', this.getContent);
     },
     methods: {
         getContent() {
@@ -41,6 +54,14 @@ export default {
                 document.getElementById('page-content').innerHTML = pageContent.content;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
+        },
+        setPageTitle() {
+            this.$flamelinkApp.settings.getLocale()
+            .then(locale => {
+                if (locale === 'he') {
+                    this.pageTitle = this.pageTitleHe
+                }
+            })
         }
     }
 };
