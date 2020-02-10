@@ -12,13 +12,10 @@
             <div id="hazanoutContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'hazanout-url', params: {entryId: key, hazanout_url: key} }">
                     <figure class="card-content" tabindex="0">
-                        <div class="card-img" v-if="element.mainImage[0]" :style="{ 'background-image': 'url(' + element.mainImage[0].url + ')' }"></div>
+                        <div class="card-img" v-if="element.thumbnail" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
                         <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
-                            <!-- <div class="card-author">{{ element.author }}</div> -->
-                            <!-- <div class="card-desc">{{ element.description }}</div> -->
-                            <div class="imageMain"></div>
                         </figcaption>
                     </figure>
                 </router-link>
@@ -47,6 +44,7 @@
         },
         mounted() {
              this.$root.$on('langChanged', this.getContent);
+             this.setPageTitle();
         },
         created() {
             this.getContent()
@@ -55,8 +53,8 @@
             getContent() {
                 this.$flamelinkApp.content.get({
                     schemaKey: 'hazanout',
-                    fields: ['title', 'url', 'author', 'description', 'mainImage'],
-                    populate: ['mainImage'],
+                    fields: ['title', 'url', 'author', 'description', 'thumbnail'],
+                    populate: ['thumbnail'],
                 })
                 .then(elements => {
                     this.elements = elements;

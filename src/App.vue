@@ -104,10 +104,10 @@ export default {
 
 <style lang="scss">
     .page-title-container { 
-        background-image: url(./assets/img/books-shelf.jpg);
+        background-image: url('./assets/img/banner/books-shelf.jpg');
     }
     div[id*="minhag"] .page-title-container { 
-        background-image: url('./assets/img/constantine-rabbins.jpg'); 
+        background-image: url('./assets/img/banner/constantine-rabbins.jpg'); 
         background-position: center 50px;
         @media (min-width: $sm) {
             background-position: center top;
@@ -120,7 +120,7 @@ export default {
         }
     }
     div[id*="hazanout"] .page-title-container { 
-    background-image: url('./assets/img/constantine-orchestre.jpg'); background-position: center; 
+    background-image: url('./assets/img/banner/constantine-orchestre.jpg'); background-position: center; 
         @media (min-width: $md) {
             background-position: center -100px;
         }
@@ -131,26 +131,26 @@ export default {
             background-position: center -400px;
         }
     }
-    div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/couscous.jpg'); }
-    div[id*="articles"] .page-title-container { background-image: url('./assets/img/books-shelf.jpg'); }
+    div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/banner/couscous.jpg'); }
+    div[id*="articles"] .page-title-container { background-image: url('./assets/img/banner/books-shelf.jpg'); }
 
-    html[data-theme="dark"]{
-        .page-title-container { 
-            background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url('./assets/img/books-shelf.jpg');
-        }
-        div[id*="minhag"] .page-title-container { background-image: url('./assets/img/constantine-rabbins.jpg'); }
-        div[id*="hazanout"] .page-title-container { background-image: url('./assets/img/raymond.jpg'); }
-        div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/couscous.jpg'); }
-        div[id*="articles"] .page-title-container { background-image: url('./assets/img/books-shelf.jpg'); }
-    }
+    // html[data-theme="dark"]{
+    //     .page-title-container { 
+    //         background-image: linear-gradient(to bottom, rgba(#222, 1) 70px, rgba(#222, 0.67) 100%), url('./assets/img/books-shelf.jpg');
+    //     }
+    //     div[id*="minhag"] .page-title-container { background-image: url('./assets/img/constantine-rabbins.jpg'); }
+    //     div[id*="hazanout"] .page-title-container { background-image: url('./assets/img/raymond.jpg'); }
+    //     div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/couscous.jpg'); }
+    //     div[id*="articles"] .page-title-container { background-image: url('./assets/img/books-shelf.jpg'); }
+    // }
 
 
     /* Default card images */
-    .card-img { background-image: url('./assets/img/books-shelf.jpg'); }
-    #minhag .card-img { background-image: url('./assets/img/constantine-rabbins.jpg'); }
-    #hazanout .card-img { background-image: url('./assets/img/constantine-orchestre.jpg'); }
-    #cuisine .card-img { background-image: url('./assets/img/default-thumbnail-logo.jpg'); }
-    #articles .card-img { background-image: url('./assets/img/books-shelf.jpg'); }
+    .card-img { background-image: url('./assets/img/thumbnail/books-shelf.jpg'); }
+    #minhag .card-img { background-image: url('./assets/img/thumbnail/constantine-rabbins.jpg'); }
+    #hazanout .card-img { background-image: url('./assets/img/thumbnail/constantine-orchestre.jpg'); }
+    #cuisine .card-img { background-image: url('./assets/img/thumbnail/default-thumbnail-logo.jpg'); }
+    #articles .card-img { background-image: url('./assets/img/thumbnail/books-shelf.jpg'); }
 
     /* Hebrew fonts */
     @font-face {
