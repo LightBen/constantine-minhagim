@@ -12,7 +12,7 @@
             <div id="cuisineContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'cuisine-url', params: {entryId: key, cuisine_url: key} }">
                     <figure class="card-content" tabindex="0">
-                        <div class="card-img" v-if="element.mainImage[0]" :style="{ 'background-image': 'url(' + element.mainImage[0].url + ')' }"></div>
+                        <div class="card-img" v-if="element.thumbnail" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
                         <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
@@ -53,12 +53,12 @@
             getContent() {
                 this.$flamelinkApp.content.get({
                     schemaKey: 'cuisine',
-                    fields: ['title', 'url', 'author', 'description', 'thumbnail', 'mainImage'],
-                    populate: ['thumbnail', 'mainImage'],
+                    fields: ['title', 'url', 'author', 'description', 'thumbnail'],
+                    populate: ['thumbnail'],
                 })
                 .then(elements => {
                     this.elements = elements;
-                    // console.log('All the elements:', elements);
+                    console.log('All the elements:', elements);
                 })
             },
             setPageTitle() {
