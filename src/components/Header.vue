@@ -9,7 +9,7 @@
                         </svg>
                     </div>
                     <span class="mdc-top-app-bar__title">
-                        <router-link to="/" class="">
+                        <router-link to="/" class="link-design">
                             <span id="siteTitle1" v-html="siteTitle1"></span>
                             <span id="siteTitle2" v-html="siteTitle2"></span>
                         </router-link>
@@ -34,7 +34,7 @@
                         </svg>
                     </div>
                     <div id="menu-top-middle">
-                        <div id="menu-lang" class="menu-top-icon lang-toggle" @click="changeLang">
+                        <div id="menu-lang" class="menu-top-icon lang-toggle drawer-toggle" @click="changeLang">
                             <svg class="icon-lang">
                                 <use xlink:href="#icon-lang" href="#icon-lang" />
                             </svg>

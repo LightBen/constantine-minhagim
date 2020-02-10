@@ -66,10 +66,17 @@
 <script>
 export default {
     name: 'home',
+    metaInfo() {
+        return {
+            title: this.pageTitle,      
+            titleTemplate: '%s'
+        }
+    },
     data() {
         return {
             siteTitle1: '',
-            siteTitle2: ''
+            siteTitle2: '',
+            pageTitle: '',
         }
     },
     components: {},

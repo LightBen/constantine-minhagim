@@ -64,9 +64,7 @@ export default {
             isProduction: process.env.NODE_ENV === 'production',
             refreshing: false,
             registration: null,
-            updateExists: false,
-            siteTitleHe: 'HE',
-            siteTitle: 'FR'
+            updateExists: false
         }
     },
     methods: {

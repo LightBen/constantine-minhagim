@@ -78,7 +78,12 @@ header {
                 > * { margin: 0 5px; display: flex; flex-direction: column; min-width: 75px; }
                 label { font-size: var(--font-size-secondary); }
             }
-            .menu-top-icon { display: flex; align-items: center; }
+            .menu-top-icon { 
+                display: flex; align-items: center; 
+                &, label {
+                    cursor: pointer; 
+                }
+            }
             #menu-close { transform: rotate(45deg); }
 
         }

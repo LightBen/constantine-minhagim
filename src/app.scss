@@ -50,8 +50,21 @@ footer       { z-index: 8; }
   }
 
 .container { padding: 0 var(--spacing); }
-a {
-    color: var(--primaryColorBlue);
+a:not(.link-design):not(.nav-grid-item):not(.drive) {
+    color: var(--txtColor);
+    text-decoration: none;
+    background-image: linear-gradient(transparent 0%, transparent calc(50% - 6px), var(--logo-color-1-trans) calc(50% - 6px), var(--logo-color-1-trans) 100%);
+    transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
+    background-size: 100% 200%;
+    background-position: 0 0;
+
+    &:hover {
+        background-position: 0 100%;
+    }
+}
+
+a.link-design, .nav-grid-item, .drive, #welcome-sections > a {
+    background-image: none;
 }
 
 .page-title-container {
