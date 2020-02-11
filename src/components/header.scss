@@ -113,6 +113,10 @@ header {
                 span {
                     color: var(--primaryColor); font-size: 20px; font-weight: 300; line-height: 1.4;
                 }
+
+                &.nav-grid-item-disabled {
+                    opacity: .5; cursor: default;
+                }
             }
             // .menu-siddour { border-top: 2px solid var(--logo-color-2); }
 

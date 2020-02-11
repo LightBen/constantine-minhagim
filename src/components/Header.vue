@@ -109,7 +109,7 @@
                             <span class="mdc-list-item__text lang-fr">Drive</span>
                             <span class="mdc-list-item__text lang-he">דרייב</span>
                         </a>
-                        <router-link class="nav-grid-item drawer-toggle menu-siddour" :to="{ name: 'Home' }">
+                        <router-link class="nav-grid-item drawer-toggle menu-siddour nav-grid-item-disabled" :to="{ name: 'Home' }">
                             <svg>
                                 <use xlink:href="#icon-book" href="#icon-book" />
                             </svg>
