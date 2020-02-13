@@ -149,7 +149,7 @@ export default {
             })
             .then(data => {
                 // console.log('data: ', data);
-                this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
+                // this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
                 this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
                 this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
             })

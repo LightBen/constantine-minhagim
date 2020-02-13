@@ -68,7 +68,7 @@ export default {
     name: 'home',
     metaInfo() {
         return {
-            title: this.pageTitle,      
+            // title: this.pageTitle,      
             titleTemplate: '%s'
         }
     },
@@ -76,7 +76,7 @@ export default {
         return {
             siteTitle1: '',
             siteTitle2: '',
-            pageTitle: '',
+            // pageTitle: '',
         }
     },
     components: {},
@@ -91,7 +91,7 @@ export default {
             })
             .then(data => {
                 // console.log('data: ', data);;
-                this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
+                // this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
                 this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
                 this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
             })
