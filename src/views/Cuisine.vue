@@ -8,7 +8,11 @@
                 </h1>
             </div>
         </div>
-        <div class="container">
+        <div v-if="loading">
+            <!-- Of course, you can decide what content to show/hide based on your new loading value -->
+            <span>I AM LOADING CONTENT AT THE MOMENT</span>            
+        </div>
+        <div class="container" v-if="!loading">
             <div id="cuisineContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'cuisine-url', params: {entryId: key, cuisine_url: key} }">
                     <figure class="card-content" tabindex="0">
@@ -40,7 +44,8 @@
             return { 
                 elements: [],
                 pageTitle: 'Cuisine',
-                pageTitleHe: 'מתכונים'
+                pageTitleHe: 'מתכונים',
+                loading: true, //the component will be loading by default
             }
         },
         mounted() {
@@ -48,17 +53,37 @@
              this.setPageTitle();
         },
         created() {
+            //we can either handle the loading state at the time we call the getContent method, 
+            // or we can handle it inside of the acatual get content method, which is what i'll do here. 
+            //For illustration, i'll comment out the alternative way
             this.getContent()
+            
+            //Or use the promise where we call get content, 
+            // in case don dont want to always show the loading when getContent is called from other places
+            
+            this.loading = true //just make sure loading is set to true, even though we defaulted it to true in the data object
+            this.getContent().then((elements) => {
+                //when the "then" callback if fired, we know that the data has loaded
+                // since getContent now returns the promise with the `elements`, we can access it here, if we want.
+                this.loading = false
+            })
+            
         },
         methods: {
+            /**
+            * Make sure this returns the Promise object 
+            * so that callers of this method know when it's completed
+            * @returns Promise<void>
+            */
             getContent() {
-                this.$flamelinkApp.content.get({
+                return this.$flamelinkApp.content.get({
                     schemaKey: 'cuisine',
                     fields: ['title', 'url', 'author', 'description', 'thumbnail'],
                     populate: ['thumbnail'],
                 })
-                .then(elements => {
+                .then(elements => {                    
                     this.elements = elements;
+                    this.loading = false; //optional, since we are handling the loading state in the `onCreate` method above
                     console.log('All the elements:', elements);
                 })
             },
