@@ -1,5 +1,5 @@
 <template>
-    <div id="hazanout">
+    <div id="hazanout" class="page-category">
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title">
@@ -12,9 +12,8 @@
             <div id="hazanoutContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'hazanout-url', params: {entryId: key, hazanout_url: key} }">
                     <figure class="card-content" tabindex="0">
-                        <!--<div class="card-img" v-if="element.thumbnail" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
-                        <div class="card-img" v-else></div>-->
-                        <div class="card-img"></div>
+                        <div class="card-img" v-if="element.thumbnail && element.thumbnail.length && element.thumbnail[0].url" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
+                        <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
                         </figcaption>

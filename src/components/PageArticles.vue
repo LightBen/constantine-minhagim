@@ -1,5 +1,5 @@
 <template>
-    <div id="page-articles">
+    <div id="page-articles" class="page-page">
         <slot name="page-content">
             <div class="page-title-container">
                 <figure v-if="pageBanner" :style="{ 'background-image': 'url(' + pageBanner + ')' }"></figure>

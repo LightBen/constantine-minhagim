@@ -1,5 +1,5 @@
 <template>
-    <div class="page-mix">
+    <div class="page-mix page-page">
         <slot name="page-content">
             <div class="page-title-container">
                 <div class="container">

@@ -1,7 +1,12 @@
 <template>
-<div id="app">
+<div id="app" :class="{ 'loaded': !loading }">
     <!-- <template v-if="!isProduction"> -->
         <div class="site-container">
+            <div id="loading" v-if="loading">
+                <div id="loading-content">
+                    <div id="loading-symbol">Loading</div>
+                </div>
+            </div>
             <Header />
             <div id="status">
                 <div class="offline">
@@ -64,7 +69,8 @@ export default {
             isProduction: process.env.NODE_ENV === 'production',
             refreshing: false,
             registration: null,
-            updateExists: false
+            updateExists: false,
+            loading: true
         }
     },
     methods: {
@@ -95,44 +101,54 @@ export default {
             this.refreshing = true
             // Here the actual reload of the page occurs
             window.location.reload()
-        })
+        });
     },
+    mounted() {
+        this.$root.$on('loaded', this.loading = false);
+    }
 };
 </script>
 
 <style src="./app.scss" lang="scss"></style>
 
 <style lang="scss">
-    .page-title-container { 
-        background-image: url('./assets/img/banner/books-shelf.jpg');
+    .page-category {
+        .page-title-container { 
+                background-image: url('./assets/img/banner/books-shelf.jpg');
+            }
+        &[id*="minhag"] .page-title-container { 
+            background-image: url('./assets/img/banner/constantine-rabbins.jpg'); 
+            background-position: center 50px;
+            @media (min-width: $sm) {
+                background-position: center top;
+            }
+            @media (min-width: $md) {
+                background-position: center -30px;
+            }
+            @media (min-width: $lg) {
+                background-position: center -130px;
+            }
+        }
+        &[id*="hazanout"] .page-title-container { 
+        background-image: url('./assets/img/banner/constantine-orchestre.jpg'); background-position: center; 
+            @media (min-width: $md) {
+                background-position: center -100px;
+            }
+            @media (min-width: $lg) {
+                background-position: center -200px;
+            }
+            @media (min-width: $xl) {
+                background-position: center -400px;
+            }
+        }
+        &[id*="cuisine"] .page-title-container { background-image: url('./assets/img/banner/couscous.jpg'); }
+        &[id*="articles"] .page-title-container { background-image: url('./assets/img/banner/books-shelf.jpg'); }
     }
-    div[id*="minhag"] .page-title-container { 
-        background-image: url('./assets/img/banner/constantine-rabbins.jpg'); 
-        background-position: center 50px;
-        @media (min-width: $sm) {
-            background-position: center top;
-        }
-        @media (min-width: $md) {
-            background-position: center -30px;
-        }
-        @media (min-width: $lg) {
-            background-position: center -130px;
-        }
+
+    // Page "page" default before loading the banner
+    .page-page .page-title-container { 
+        background-image: url('./assets/img/banner/default-banner.jpg');
     }
-    div[id*="hazanout"] .page-title-container { 
-    background-image: url('./assets/img/banner/constantine-orchestre.jpg'); background-position: center; 
-        @media (min-width: $md) {
-            background-position: center -100px;
-        }
-        @media (min-width: $lg) {
-            background-position: center -200px;
-        }
-        @media (min-width: $xl) {
-            background-position: center -400px;
-        }
-    }
-    div[id*="cuisine"] .page-title-container { background-image: url('./assets/img/banner/couscous.jpg'); }
-    div[id*="articles"] .page-title-container { background-image: url('./assets/img/banner/books-shelf.jpg'); }
 
     // html[data-theme="dark"]{
     //     .page-title-container { 

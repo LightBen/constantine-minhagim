@@ -33,7 +33,8 @@ body { margin: 0; color: var(--txtColor); background-color: var(--bgColor); font
 #mainNav     { z-index: 20; }
 #mainMenuFab { z-index: 10; }
 header       { z-index: 9 !important; }
-footer       { z-index: 8; }
+footer       { z-index: 7; }
+#loading     { z-index: 5; }
 .overlay     { z-index: 3; }
 /* END Order */
 
@@ -41,6 +42,8 @@ footer       { z-index: 8; }
 .fade-enter, .fade-leave, .fade-leave-to, .fade-leave-active { opacity: 0; }
 
 .site-container { display: flex; flex-direction: column; align-items: stretch; min-height: 100%; color: var(--txtColor); background-color: var(--bgColor); transition: color var(--transitionTime) var(--transitionEase), background-color var(--transitionTime) var(--transitionEase); }
+
+#loading { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #00000088; display: flex; align-items: center; justify-content: center; color: #fff; }
 
 .overlay { position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; visibility: hidden; opacity: 0; transition: opacity var(--transitionTime) var(--transitionEase); background-color: rgba(#000, .33) }
 .drawer-opened .overlay { opacity: 1; visibility: visible; }
