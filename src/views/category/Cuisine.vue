@@ -1,5 +1,6 @@
 <template>
-    <div id="cuisine" class="page-category" :class="{ 'loaded-content': !ContentLoading }">
+    <div id="cuisine" class="page-category">
+        <Loading v-if="loading" />
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title">
@@ -28,8 +29,12 @@
 </style>
 
 <script>
+    import Loading from '@/components/Loading'
     export default {
         name: "Cuisine",
+        components: {
+            Loading
+        },
         metaInfo() {
             return {
                 title: this.pageTitle            
@@ -40,8 +45,7 @@
                 elements: [],
                 pageTitle: 'Cuisine',
                 pageTitleHe: 'מתכונים',
-                loading: true,
-                contentLoading: true
+                loading: true
             }
         },
         mounted() {
@@ -56,13 +60,12 @@
                 this.$flamelinkApp.content.get({
                     schemaKey: 'cuisine',
                     fields: ['title', 'url', 'author', 'description', 'thumbnail'],
-                    populate: ['thumbnail'],
+                    populate: ['thumbnail']
                 })
                 .then(elements => {
                     this.elements = elements;
-                    console.log('All the elements:', elements);
-                    this.contentLoading = false;
-                    this.$root.$emit('loaded');
+                    this.loading = false;
+                    // console.log('All the elements:', elements);
                 })
             },
             setPageTitle() {

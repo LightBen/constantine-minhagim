@@ -1,5 +1,6 @@
 <template>
     <div id="minhag" class="page-category">
+        <Loading v-if="loading" />
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title" v-if="!loading">
@@ -29,8 +30,12 @@
 </style>
 
 <script>
+    import Loading from '@/components/Loading'
     export default {
         name: "Minhag",
+        components: {
+            Loading
+        },
         metaInfo() {
             return {
                 title: this.pageTitle

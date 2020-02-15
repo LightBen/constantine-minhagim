@@ -43,7 +43,7 @@
                                 <span class="lang-he">Français</span>
                             </label>
                         </div>
-                        <div id="menu-theme" class="menu-top-icon theme-toggle">
+                        <div id="menu-theme" class="menu-top-icon theme-toggle drawer-toggle">
                             <svg class="icon-theme">
                                 <use xlink:href="#icon-theme" href="#icon-theme" />
                             </svg>

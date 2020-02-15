@@ -1,5 +1,6 @@
 <template>
     <div id="articles" class="page-category">
+        <Loading v-if="loading" />
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title">
@@ -28,8 +29,12 @@
 </style>
 
 <script>
+    import Loading from '@/components/Loading'
     export default {
         name: "Articles",
+        components: {
+            Loading
+        },
         metaInfo() {
             return {
                 title: this.pageTitle            
@@ -39,7 +44,8 @@
             return { 
                 elements: [],
                 pageTitle: 'Articles',
-                pageTitleHe: 'מאמרים'
+                pageTitleHe: 'מאמרים',
+                loading: true
             }
         },
         mounted() {
@@ -58,7 +64,8 @@
                 })
                 .then(elements => {
                     this.elements = elements;
-                    console.log('All the elements:', elements);
+                    this.loading = false;
+                    // console.log('All the elements:', elements);
                 })
             },
             setPageTitle() {

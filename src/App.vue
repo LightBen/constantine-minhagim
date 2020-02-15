@@ -2,11 +2,7 @@
 <div id="app" :class="{ 'loaded': !loading }">
     <!-- <template v-if="!isProduction"> -->
         <div class="site-container">
-            <div id="loading" v-if="loading">
-                <div id="loading-content">
-                    <div id="loading-symbol">Loading</div>
-                </div>
-            </div>
+            <Loading v-if="loading" />
             <Header />
             <div id="status">
                 <div class="offline">
@@ -45,6 +41,7 @@
 </template>
 
 <script>
+import Loading from '@/components/Loading'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FooterStatic from '@/components/FooterStatic'
@@ -55,6 +52,7 @@ import {MDCRipple} from '@material/ripple';
 export default {
     name: 'App',
     components: {
+        Loading,
         Header,
         Footer,
         FooterStatic,

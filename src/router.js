@@ -16,7 +16,7 @@ export default new Router({
   {
     path: "/minhag",
     name: "Minhag",
-    component: () => import("./views/Minhag.vue")
+    component: () => import("./views/category/Minhag.vue")
   },
   {
     path: '/minhag/:minhag_url',
@@ -27,7 +27,7 @@ export default new Router({
   {
     path: "/hazanout",
     name: "Hazanout",
-    component: () => import("./views/Hazanout.vue")
+    component: () => import("./views/category/Hazanout.vue")
   },
   {
     path: '/hazanout/:hazanout_url',
@@ -38,7 +38,7 @@ export default new Router({
   {
     path: "/cuisine",
     name: "Cuisine",
-    component: () => import("./views/Cuisine.vue")
+    component: () => import("./views/category/Cuisine.vue")
   },
   {
     path: '/cuisine/:cuisine_url',
@@ -49,7 +49,7 @@ export default new Router({
   {
     path: "/articles",
     name: "Articles",
-    component: () => import("./views/Articles.vue")
+    component: () => import("./views/category/Articles.vue")
   },
   {
     path: '/articles/:articles_url',
@@ -58,9 +58,14 @@ export default new Router({
     props: true
   },
   {
+    path: "/siddour",
+    name: "Siddour",
+    component: () => import("./views/siddur/Siddour.vue")
+  },
+  {
     path: "/print",
     name: "Printouts",
-    component: () => import("./views/Printouts.vue"),
+    component: () => import("./views/pages/Printouts.vue"),
     meta: {
       entryId: 'xTDjpC1FBEF5NUxHgVAs'
     }
@@ -72,11 +77,6 @@ export default new Router({
     meta: {
       entryId: 'gEyCCPwRxH7Me3OrQG4S'
     }
-  },
-  {
-    path: "/siddour",
-    name: "Siddour",
-    component: () => import("./views/Siddour.vue")
   },
   {
     path: "/about",
