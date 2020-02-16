@@ -26,7 +26,10 @@ export default {
     name: 'PageCuisine',
     metaInfo() {
         return {
-            title: this.pageTitle         
+            title: this.pageTitle,
+            meta: [
+                { property: 'og:title', content: this.pageTitle }
+            ]
         }
     },
     data() {

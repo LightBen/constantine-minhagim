@@ -345,7 +345,7 @@ html[lang="he"] {
     blockquote {
         &::before, &::after { font-family: 'MontSerrat', sans-serif; }
         &::before { content: "\0201D"; top: 140px; left: auto; right: 30px; }
-        &::after { content: "\0201C"; right: auto; left: -30px; }
+        &::after { content: "\0201C"; right: auto; left: -10px; }
     }
     .he-adjust, #page-title .lang, #page-title .lang-he, #mainNav .mdc-list a .lang-he {
         position: relative; top: 3px;

@@ -74,8 +74,11 @@ export default {
     name: 'home',
     metaInfo() {
         return {
-            title: this.pageTitle,      
-            titleTemplate: '%s'
+            title: this.pageTitle,
+            titleTemplate: '%s',
+            meta: [
+                { property: 'og:title', content: this.pageTitle }
+            ]
         }
     },
     data() {
