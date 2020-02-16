@@ -386,3 +386,41 @@ html[lang="he"] {
     }
 }
 
+// Fixes for mobile phones in landscape, from Pixel 2X and lower
+@media (max-width: 823px) and (orientation: landscape) {
+
+    // General
+    .container { max-width: 100% !important; }
+
+    // Home
+    #home #welcome .section-content .icon-home-main { --iconMainSize: 100px !important; margin-top: 0 !important; }
+    #home #welcome .section-content h1 { flex-direction: row !important; padding-top: 10px !important; }
+    html[lang="he"] #home #welcome .section-content h1 > span { font-size: 40px !important; }
+    html[lang="he"] #home #welcome .section-content h1 > span:last-child { margin: 0 !important; margin-inline-start: 9px !important; }
+    #home #welcome .section-content #site-description { 
+        padding: 0 0 10px !important; 
+        br { display: none; }
+    }
+
+    // Menu
+    header #mainNav nav { max-width: 568px !important; /* iphone 5 */ }
+    header #mainNav nav a { 
+        flex: 25% !important; height: 110px !important; padding: 5px !important; 
+        i, svg { margin-bottom: 0 !important; }
+    }
+
+    // Category
+    .page-title-container .container { padding-top: 100px; padding-bottom: 40px; }
+    .grid-container { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important; grid-gap: 15px !important; }
+    .card .card-img { min-height: 130px !important; }
+    .card .card-text { height: 60px !important; }
+    .card .card-text .card-title { line-height: 1 !important; font-size: 18px; }
+
+    // Footer
+    footer #footerTabs .mdc-tab-bar .mdc-tab__content { display: flex !important; }
+    footer #footerTabs .mdc-tab-bar .mdc-tab__icon { margin-bottom: 0 !important; margin-inline-end: 10px !important; }
+
+    html[lang="he"] {
+        .card .card-text .card-title { font-size: 22px !important; }
+    }
+}

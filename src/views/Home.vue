@@ -74,20 +74,22 @@ export default {
     name: 'home',
     metaInfo() {
         return {
-            // title: this.pageTitle,      
+            title: this.pageTitle,      
             titleTemplate: '%s'
         }
     },
     data() {
         return {
-            siteTitle1: '',
-            siteTitle2: '',
-            // pageTitle: '',
+            // siteTitle1: '',
+            // siteTitle2: '',
+            pageTitle: '',
         }
     },
     components: {},
-    mounted() {
+    created() {
         this.getContent();
+    },
+    mounted() {
         this.$root.$on('langChanged', this.getContent);
     },
     methods: {
@@ -97,9 +99,9 @@ export default {
             })
             .then(data => {
                 // console.log('data: ', data);;
-                // this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
-                this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
-                this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
+                this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
+                // this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
+                // this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }

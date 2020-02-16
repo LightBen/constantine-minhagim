@@ -90,8 +90,7 @@ header {
                     }
                 }
             }
-            #menu-close { transform: rotate(45deg); right: -10px; position: relative; }
-
+            #menu-close { transform: rotate(45deg); position: relative; right: -10px; }
         }
 
         .mdc-drawer__content {
@@ -193,6 +192,11 @@ html[data-theme="dark"] {
 
 html[lang="he"] {
     header {
+        #mainNav {
+            #menu-top-bar {
+                #menu-close { right: auto; left: -10px; }
+            }
+        }
         .lang-name {
             &::after {
                 content: "ע"; font-size: 18px;
