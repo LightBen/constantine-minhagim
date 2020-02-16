@@ -30,12 +30,14 @@ body { margin: 0; color: var(--txtColor); background-color: var(--bgColor); font
 #app { height: 100vh; }
 
 /* Order */
-#mainNav     { z-index: 20; }
-#mainMenuFab { z-index: 10; }
-header       { z-index: 9 !important; }
-footer       { z-index: 7; }
-#loading     { z-index: 5; }
-.overlay     { z-index: 3; }
+#status         { z-index: 200; }
+#refresh-button { z-index: 100; }
+#mainNav        { z-index: 20; }
+#mainMenuFab    { z-index: 10; }
+header          { z-index: 9 !important; }
+footer          { z-index: 7; }
+#loading        { z-index: 5; }
+.overlay        { z-index: 3; }
 /* END Order */
 
 .fade-enter-active, .fade-leave-active { transition: opacity .2s ease; }
@@ -142,7 +144,7 @@ figcaption { padding: 0; }
 
 
 #status { 
-    display: none; width: 100vw; position: fixed; top: var(--headerHeight); background-color: rgba(198, 40, 40, 0.95); line-height: 1.2; text-align: center !important; left: 0; padding: 10px; z-index: 200; color: #fff; transition: var(--transitionAll); direction: ltr; font-size: var(--font-size-secondary); font-weight: 300;
+    display: none; width: 100vw; position: fixed; top: var(--headerHeight); background-color: rgba(198, 40, 40, 0.95); line-height: 1.2; text-align: center !important; left: 0; padding: 10px; color: #fff; transition: var(--transitionAll); direction: ltr; font-size: var(--font-size-secondary); font-weight: 300;
     &.offlineLoad { 
         display: block; background-color: rgba(198, 40, 40, 0.95);
     }
@@ -175,7 +177,7 @@ figcaption { padding: 0; }
 
 
 
-#refresh-button { position: fixed; z-index: 100; width: 100vw; left: 0; top: var(--headerHeight); background: #388e3cee; color: #fff; padding: 10px 5px; border: none; box-shadow: none; transition: var(--transitionAll); text-align: center; }
+#refresh-button { position: fixed; width: 100vw; left: 0; top: var(--headerHeight); background: #388e3cee; color: #fff; padding: 10px 5px; border: none; box-shadow: none; transition: var(--transitionAll); text-align: center; }
 .scrolling-down, {
     #refresh-button, #status { top: 0; }
 }

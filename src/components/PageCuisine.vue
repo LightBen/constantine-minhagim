@@ -11,8 +11,8 @@
             </div>
             <div class="container">
                 <div id="page-author">
-                    <span class="lang-fr">Par </span>
-                    <span class="lang-he">מ</span>
+                    <span class="lang-fr">Auteur : </span>
+                    <span class="lang-he">המחבר: </span>
                     <span class="author-content" v-html="pageAuthor"></span>
                 </div>
                 <div id="page-content" v-html="pageContent"></div>

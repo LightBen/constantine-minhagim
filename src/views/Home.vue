@@ -8,8 +8,14 @@
                 </svg>
             </div>
             <h1>
-                <span id="siteTitle1" v-html="siteTitle1"></span>
-                <span id="siteTitle2" v-html="siteTitle2"></span>
+                <span id="siteTitle1">
+                    <span class="lang-fr">Constantine</span>
+                    <span class="lang-he">קונסטנטין</span>
+                </span>
+                <span id="siteTitle2">
+                    <span class="lang-fr">Minhagim</span>
+                    <span class="lang-he">מנהגים</span>
+                </span>
             </h1>
             <div id="site-description">
                 <span class="lang-fr">Minhagim constantinois <br>et d'Afrique du Nord</span>

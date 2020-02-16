@@ -18,9 +18,6 @@
     $offset: 187;
     $duration: 1.4s;
 
-    $offset: 187;
-    $duration: 1.4s;
-
     @keyframes rotator {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(270deg); }

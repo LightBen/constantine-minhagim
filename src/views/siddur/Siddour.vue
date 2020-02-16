@@ -1,5 +1,5 @@
 <template>
-    <div id="siddour">
+    <div id="siddour" class="page-page">
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title">
