@@ -10,6 +10,13 @@
                 </div>
             </div>
             <div class="container">
+                <div id="page-details">
+                    <div id="page-author">
+                        <span class="lang-fr">Auteur : </span>
+                        <span class="lang-he">המחבר: </span>
+                        <span class="author-content" v-html="pageAuthor"></span>
+                    </div>
+                </div>
                 <div id="page-content" v-html="pageContent"></div>
             </div>
         </slot>
@@ -31,6 +38,7 @@ export default {
         return {
             dataEntryId: '',
             pageTitle: '',
+            pageAuthor: '',
             pageContent: '',
             pageBanner: ''
         }
@@ -53,6 +61,7 @@ export default {
             })
             .then(pageContent => {
                 this.pageTitle = pageContent.title;
+                this.pageAuthor = pageContent.author;
                 this.pageContent = pageContent.content;
                 this.pageBanner = pageContent.mainImage[0].url;
             })
