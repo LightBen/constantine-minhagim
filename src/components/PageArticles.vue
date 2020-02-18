@@ -2,7 +2,7 @@
     <div id="page-articles" class="page-page">
         <slot name="page-content">
             <div class="page-title-container">
-                <figure v-if="pageBanner" :style="{ 'background-image': 'url(' + pageBanner + ')' }"></figure>
+                <figure v-if="pageContent.mainImage && pageContent.mainImage.length && pageContent.mainImage[0].url" :style="{ 'background-image': 'url(' + pageContent.mainImage[0].url + ')' }"></figure>
                 <div class="container">
                     <h1 id="page-title">
                         <span class="lang" v-html="pageTitle"></span>
@@ -29,9 +29,6 @@ export default {
     metaInfo() {
         return {
             title: this.pageTitle,
-            meta: [
-                { property: 'og:title', content: this.pageTitle }
-            ]
         }
     },
     data() {
@@ -63,7 +60,7 @@ export default {
                 this.pageTitle = pageContent.title;
                 this.pageAuthor = pageContent.author;
                 this.pageContent = pageContent.content;
-                this.pageBanner = pageContent.mainImage[0].url;
+                this.pageBanner = pageContent.mainImage[0];
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }

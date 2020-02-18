@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.8.3",
     "core-js": "^3.6.4",
     "firebase": "^6.5.0",
     "flamelink": "^1.0.0-alpha.25",
@@ -14,8 +15,7 @@
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-meta": "^2.3.2",
-    "vue-router": "^3.0.1",
-    "vuetify": "^1.0.19"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.2",

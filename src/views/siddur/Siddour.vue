@@ -26,7 +26,7 @@ export default {
     name: 'Siddour',
     metaInfo() {
         return {
-            title: this.pageTitle            
+            title: this.pageTitle,
         }
     },
     data() {

@@ -39,9 +39,6 @@
         metaInfo() {
             return {
                 title: this.pageTitle,
-                meta: [
-                    { property: 'og:title', content: this.pageTitle }
-                ]
             }
         },
         data() {
