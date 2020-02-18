@@ -11,8 +11,8 @@ module.exports = {
   },
   pwa: {
     name: 'Constantine Minhagim',
-    themeColor: '#3e7ab8',
-    msTileColor: '#ffffff',
+    themeColor: '#1294f6',
+    msTileColor: '#1294f6',
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
     workboxPluginMode: 'InjectManifest',

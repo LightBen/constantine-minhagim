@@ -8,8 +8,14 @@
                 </svg>
             </div>
             <h1>
-                <span id="siteTitle1" v-html="siteTitle1"></span>
-                <span id="siteTitle2" v-html="siteTitle2"></span>
+                <span id="siteTitle1">
+                    <span class="lang-fr">Constantine</span>
+                    <span class="lang-he">קונסטנטין</span>
+                </span>
+                <span id="siteTitle2">
+                    <span class="lang-fr">Minhagim</span>
+                    <span class="lang-he">מנהגים</span>
+                </span>
             </h1>
             <div id="site-description">
                 <span class="lang-fr">Minhagim constantinois <br>et d'Afrique du Nord</span>
@@ -68,20 +74,25 @@ export default {
     name: 'home',
     metaInfo() {
         return {
-            // title: this.pageTitle,      
-            titleTemplate: '%s'
+            title: this.pageTitle,
+            titleTemplate: '%s',
+            meta: [
+                { property: 'og:title', content: this.pageTitle }
+            ]
         }
     },
     data() {
         return {
-            siteTitle1: '',
-            siteTitle2: '',
-            // pageTitle: '',
+            // siteTitle1: '',
+            // siteTitle2: '',
+            pageTitle: '',
         }
     },
     components: {},
-    mounted() {
+    created() {
         this.getContent();
+    },
+    mounted() {
         this.$root.$on('langChanged', this.getContent);
     },
     methods: {
@@ -91,9 +102,9 @@ export default {
             })
             .then(data => {
                 // console.log('data: ', data);;
-                // this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
-                this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
-                this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
+                this.pageTitle = data['56Mopx0dRrhGql4KrFQX'].title;
+                // this.siteTitle1 = data['hWHhdCrUx34iDIsPZokP'].title;
+                // this.siteTitle2 = data['crXGbshLALxsrrmX0APz'].title;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }

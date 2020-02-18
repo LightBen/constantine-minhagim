@@ -8,6 +8,7 @@ import VueMeta from "vue-meta"
 import firebase from "firebase/app"
 import "firebase/storage"
 import "firebase/firestore"
+// import "firebase/messaging"
 
 import FlamelinkPlugin from "./plugins/flamelink"
 

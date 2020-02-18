@@ -21,7 +21,10 @@ export default {
     name: 'PageHazanout',
     metaInfo() {
         return {
-            title: this.pageTitle            
+            title: this.pageTitle,
+            meta: [
+                { property: 'og:title', content: this.pageTitle }
+            ]
         }
     },
     data() {

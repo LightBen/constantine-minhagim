@@ -46,18 +46,22 @@
                 svg, i {
                     z-index: 1; position: relative; width: 100%; height: 100%;
                 }
+
+                @media (max-height: 600px) {
+                    --iconMainSize: 120px; margin-top: 40px;
+                }
             }
             h1 {
                 line-height: 1; text-align: center; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; position: relative; margin: 0; padding: 15px 0 0;
                 &:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; filter: blur(40px); }
-                span { 
+                > span { 
                     font-size: 34px; font-weight: 600; position: relative; z-index: 1; 
                     &:first-child { color: var(--logo-color-1); }
                     &:last-child { margin-inline-start: 9px; color: var(--logo-color-2); letter-spacing: 9px; }
                 }
                 @media (min-width: $md) {
                     flex-direction: row;
-                    span { 
+                    > span { 
                         font-size: 36px; 
                         &:last-child { letter-spacing: normal; }
                     }
@@ -120,6 +124,11 @@
                         background-color: var(--logo-color-1);
                         .icon-home-section { color: var(--logo-color-2); fill: var(--logo-color-2); }
                         .home-section-title-icon { color: #fff; }
+                    }
+
+                    @media (max-height: 600px) {
+                        height: 90px;
+                        .icon-home-section { margin-bottom: 10px; }
                     }
                 }
 
@@ -212,7 +221,7 @@ html[lang="he"] {
         #welcome {
             .section-content {
                 h1 {
-                    span {
+                    > span {
                         font-size: 50px; font-weight: 400;
                         @media (min-width: $md) {
                             font-size: 50px; font-weight: 400;

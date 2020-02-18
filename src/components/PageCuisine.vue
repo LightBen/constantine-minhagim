@@ -10,10 +10,12 @@
                 </div>
             </div>
             <div class="container">
-                <div id="page-author">
-                    <span class="lang-fr">Par </span>
-                    <span class="lang-he">מ</span>
-                    <span class="author-content" v-html="pageAuthor"></span>
+                <div id="page-details">
+                    <div id="page-author">
+                        <span class="lang-fr">Auteur : </span>
+                        <span class="lang-he">המחבר: </span>
+                        <span class="author-content" v-html="pageAuthor"></span>
+                    </div>
                 </div>
                 <div id="page-content" v-html="pageContent"></div>
             </div>
@@ -26,7 +28,10 @@ export default {
     name: 'PageCuisine',
     metaInfo() {
         return {
-            title: this.pageTitle         
+            title: this.pageTitle,
+            meta: [
+                { property: 'og:title', content: this.pageTitle }
+            ]
         }
     },
     data() {
