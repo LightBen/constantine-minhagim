@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
+    "core-js": "^3.6.4",
     "firebase": "^6.5.0",
     "flamelink": "^1.0.0-alpha.25",
     "material-components-web": "^3.1.1",
@@ -18,9 +18,9 @@
     "vuetify": "^1.0.19"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-pwa": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
+    "@vue/cli-plugin-babel": "~4.2.2",
+    "@vue/cli-plugin-pwa": "~4.2.2",
+    "@vue/cli-service": "~4.2.2",
     "node-sass": "^4.13.1",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.17"
