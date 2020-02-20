@@ -47,7 +47,7 @@ import Footer from '@/components/Footer'
 import FooterStatic from '@/components/FooterStatic'
 import fabBtn from '@/components/fabBtn'
 import Icons from '@/components/Icons'
-import {MDCRipple} from '@material/ripple';
+// import {MDCRipple} from '@material/ripple';
 
 export default {
     name: 'App',
@@ -85,12 +85,23 @@ export default {
             // send message to SW to skip the waiting and activate the new SW
             this.registration.waiting.postMessage('skipWaiting')
         },
+        resClass() {
+            if (screen.width < 824) {
+                document.body.classList.add('mobile');
+                document.body.classList.remove('desktop');
+            } else {
+                document.body.classList.add('desktop');
+                document.body.classList.remove('mobile');
+            }
+        }
     },
     created() {
-        const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
-        const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
-          return new MDCRipple(el);
-        });
+        this.resClass();
+
+        // const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+        // const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+        //   return new MDCRipple(el);
+        // });
 
         // Custom code to let user update the app when a new service worker is available
         document.addEventListener('swUpdated', this.showRefreshUI, {once: true})
