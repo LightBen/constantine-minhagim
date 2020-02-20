@@ -1,6 +1,8 @@
 <template>
     <div id="cuisine" class="page-category">
-        <Loading v-if="loading" />
+        <transition name="fade">
+            <Loading v-if="loading" />
+        </transition>
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title">
@@ -75,7 +77,17 @@
                         this.pageTitle = this.pageTitleHe
                     }
                 })
-            }
+            }/*,
+            filteringResults(word) {
+                const filteredItems = document.querySelectorAll('#cuisineContent .grid-element');
+                filteredItems.forEach(function(item) {
+                    if (item.includes(word)) {
+                        item.classList.add('shown');
+                    } else {
+                        item.classList.remove('shown');
+                    }
+                });
+            }*/
         }
     };
 </script>

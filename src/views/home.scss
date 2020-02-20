@@ -165,11 +165,14 @@
     header {
         #headerMain { background-color: transparent !important; box-shadow: none; }
         #header-logo { display: none; }
-        #mainMenuBtn {
-            position: relative; padding: var(--spacing);
+        .header-btn {
+            position: relative;
             svg, i { position: relative; z-index: 1; }
             &::after {
-                content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: blur(30px); z-index: 0;
+                content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: blur(22px); z-index: 0;
+            }
+            &#header-donation {
+                margin-inline-end: auto; padding-inline-start: 15px;
             }
         }
     }
@@ -185,7 +188,7 @@
 html[data-theme="light"] {
     .is-homepage {
         header {
-            #mainMenuBtn {
+            .header-btn {
                 &::after {
                     background-color: #fff;
                 }

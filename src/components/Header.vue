@@ -22,7 +22,12 @@
                     </span>
                 </section>
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" id="header-menu">
-                    <div class="drawer-toggle" id="mainMenuBtn">
+                    <router-link class="header-btn" id="header-donation"  :to="{ name: 'Donate' }">
+                        <svg class="icon-menu">
+                            <use xlink:href="#icon-donate" href="#icon-donate" />
+                        </svg>
+                    </router-link>
+                    <div class="header-btn drawer-toggle" id="mainMenuBtn">
                         <svg class="icon-menu">
                             <use xlink:href="#icon-menu" href="#icon-menu" />
                         </svg>

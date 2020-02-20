@@ -1,6 +1,8 @@
 <template>
     <div id="hazanout" class="page-category">
-        <Loading v-if="loading" />
+        <transition name="fade">
+            <Loading v-if="loading" />
+        </transition>
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title">
