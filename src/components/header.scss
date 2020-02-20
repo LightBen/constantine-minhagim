@@ -26,13 +26,20 @@ header {
         }
     }
 
-    #mainMenuBtn {
-        padding: 0 calc(var(--spacing) - 5px); display: flex; align-items: center; justify-content: center; cursor: pointer;
+    .header-btn {
+        padding: 0 5px; display: flex; align-items: center; justify-content: center; cursor: pointer; background-image: none !important;
         i, svg {
             width: 32px; height: 32px; 
             &, * {
                 fill: var(--primaryColor); color: var(--primaryColor); 
             }
+        }
+        &#mainMenuBtn {
+            padding: 0 calc(var(--spacing) - 5px);
+        }
+        &#header-donation {
+            transition: transform .2s ease-in-out;
+            &:hover { transform: rotate(-5deg); }
         }
         // display: none;
         // @media (min-width: $sm) {

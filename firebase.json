@@ -4,8 +4,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html",
-        "function": "host"
+        "destination": "/index.html"
       }
     ],
     "ignore": [
