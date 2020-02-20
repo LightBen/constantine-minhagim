@@ -1,5 +1,8 @@
 <template>
     <div class="page-mix page-page">
+        <transition name="fade">
+            <Loading v-if="loading" />
+        </transition>
         <slot name="page-content">
             <div class="page-title-container">
                 <div class="container">
@@ -16,8 +19,12 @@
 </template>
 
 <script>
+import Loading from '@/components/Loading'
 export default {
     name: 'PageMix',
+    components: {
+        Loading
+    },
     metaInfo() {
         return {
             title: this.pageTitle,
@@ -27,7 +34,8 @@ export default {
         return {
             dataEntryId: '',
             pageTitle: '',
-            pageContent: ''
+            pageContent: '',
+            loading: true
         }
     },
     mounted() {
@@ -47,6 +55,7 @@ export default {
             .then(pageContent => {
                 this.pageTitle = pageContent.title;
                 this.pageContent = pageContent.content;
+                this.loading = false;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }

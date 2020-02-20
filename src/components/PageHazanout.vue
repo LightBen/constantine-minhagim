@@ -1,8 +1,11 @@
 <template>
     <div id="page-hazanout" class="page-page">
+        <transition name="fade">
+            <Loading v-if="loading" />
+        </transition>
         <slot name="page-content">
             <div class="page-title-container">
-                <figure v-if="pageContent.mainImage && pageContent.mainImage.length && pageContent.mainImage[0].url" :style="{ 'background-image': 'url(' + pageContent.mainImage[0].url + ')' }"></figure>
+                <figure v-if="pageBanner && pageBanner.length && pageBanner[0].url" :style="{ 'background-image': 'url(' + pageBanner[0].url + ')' }"></figure>
                 <div class="container">
                     <h1 id="page-title">
                         <span class="lang" v-html="pageTitle"></span>
@@ -17,8 +20,12 @@
 </template>
 
 <script>
+import Loading from '@/components/Loading'
 export default {
     name: 'PageHazanout',
+    components: {
+        Loading
+    },
     metaInfo() {
         return {
             title: this.pageTitle,
@@ -29,7 +36,8 @@ export default {
             dataEntryId: '',
             pageTitle: '',
             pageContent: '',
-            pageBanner: ''
+            pageBanner: '',
+            loading: true
         }
     },
     props: ['entryId'],
@@ -51,7 +59,8 @@ export default {
             .then(pageContent => {
                 this.pageTitle = pageContent.title;
                 this.pageContent = pageContent.content;
-                this.pageBanner = pageContent.mainImage[0];
+                this.pageBanner = pageContent.mainImage;
+                this.loading = false;
             })
             .catch(error => console.error('Something went wrong while retrieving the entry. Details:', error));
         }
