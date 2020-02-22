@@ -264,28 +264,3 @@ function dayTimeCss() {
 }
 dayTimeCss();
 /* END Changing design depending on day time */
-
-
-/* Network detection and notification */
-window.addEventListener('load', function() {
-    var status = document.getElementById("status");
-    
-    var condition = navigator.onLine ? "online" : "offline";
-    if (condition === 'offline') {
-        status.className = 'offline';
-    }
-
-    function updateOnlineStatus(event) {
-    var condition = navigator.onLine ? "online" : "offline";
-        if (condition === 'online') {
-            status.classList.add('online');
-            status.classList.remove('offline');
-        } else if (condition === 'offline') {
-            status.classList.add('offline');
-            status.classList.remove('online');
-        }
-    }
-
-    window.addEventListener('online',  updateOnlineStatus);
-    window.addEventListener('offline', updateOnlineStatus);
-});

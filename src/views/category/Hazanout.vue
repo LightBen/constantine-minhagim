@@ -1,5 +1,5 @@
 <template>
-    <div id="hazanout" class="page-category">
+    <div id="hazanout" class="page-category" :class="[ (this.grid) ? 'grid' : 'list' ]">
         <transition name="fade">
             <Loading v-if="loading" />
         </transition>
@@ -12,10 +12,16 @@
             </div>
         </div>
         <div class="container">
+            <div class="display-switch-container">
+                <div class="display-switch">
+                    <div class="display-choice display-grid" @click="grid = true">grid</div>
+                    <div class="display-choice display-list" @click="grid = false">list</div>
+                </div>
+            </div>
             <div id="hazanoutContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'hazanout-url', params: {entryId: key, hazanout_url: key} }">
                     <figure class="card-content" tabindex="0">
-                        <div class="card-img" v-if="element.thumbnail && element.thumbnail.length && element.thumbnail[0].url" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
+                        <div class="card-img" v-if="grid === true && element.thumbnail && element.thumbnail.length && element.thumbnail[0].url" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
                         <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
@@ -26,9 +32,6 @@
         </div>
     </div>
 </template>
-
-<style lang="scss">
-</style>
 
 <script>
     import Loading from '@/components/Loading'
@@ -47,7 +50,8 @@
                 elements: [],
                 pageTitle: '\'Hazanout',
                 pageTitleHe: 'חזנות',
-                loading: true
+                loading: true,
+                grid: false
             }
         },
         mounted() {
@@ -59,16 +63,28 @@
         },
         methods: {
             getContent() {
-                this.$flamelinkApp.content.get({
-                    schemaKey: 'hazanout',
-                    fields: ['title', 'url', 'author', 'description', 'thumbnail'],
-                    populate: ['thumbnail'],
-                })
-                .then(elements => {
-                    this.elements = elements;
-                    this.loading = false;
-                    // console.log('All the elements:', elements);
-                })
+                if (this.grid === true) {
+                    this.$flamelinkApp.content.get({
+                        schemaKey: 'hazanout',
+                        fields: ['title', 'url', 'author', 'description', 'thumbnail'],
+                        populate: ['thumbnail'],
+                    })
+                    .then(elements => {
+                        this.elements = elements;
+                        this.loading = false;
+                        // console.log('All the elements:', elements);
+                    })
+                } else {
+                    this.$flamelinkApp.content.get({
+                        schemaKey: 'hazanout',
+                        fields: ['title', 'url', 'author', 'description']
+                    })
+                    .then(elements => {
+                        this.elements = elements;
+                        this.loading = false;
+                        // console.log('All the elements:', elements);
+                    })
+                }
             },
             setPageTitle() {
                 this.$flamelinkApp.settings.getLocale()

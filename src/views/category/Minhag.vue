@@ -28,9 +28,6 @@
     </div>
 </template>
 
-<style lang="scss">
-</style>
-
 <script>
     import Loading from '@/components/Loading'
     export default {

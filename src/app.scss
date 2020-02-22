@@ -253,6 +253,15 @@ main {
             // }
         // }
     }
+    .display-switch-container {
+        display: flex; justify-content: flex-end; text-align: center;
+        .display-switch { display: inline-flex; justify-content: center; }
+        .display-choice { flex: 1; padding: var(--spacingSm) var(--spacingSm); }
+        svg, i {
+            fill: var(--txtColor); width: 40px; height: 40px; cursor: pointer;
+            &.icon-list { width: 60px; height: 60px; position: relative; top: -10px; }
+        }
+    }
 }
 
 #maintenance {

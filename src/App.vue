@@ -68,7 +68,8 @@ export default {
             refreshing: false,
             registration: null,
             updateExists: false,
-            loading: true
+            loading: true,
+            connection: 'online'
         }
     },
     methods: {
@@ -93,10 +94,39 @@ export default {
                 document.body.classList.add('desktop');
                 document.body.classList.remove('mobile');
             }
+        },
+        connectionDetection() {
+            /* Network detection and notification */
+            window.addEventListener('load', function() {
+                var status = document.getElementById("status");
+                
+                var condition = navigator.onLine ? "online" : "offline";
+                if (condition === 'offline') {
+                    status.className = 'offline';
+                    this.connection = 'offline';
+                }
+
+                function updateOnlineStatus(event) {
+                var condition = navigator.onLine ? "online" : "offline";
+                    if (condition === 'online') {
+                        status.classList.add('online');
+                        status.classList.remove('offline');
+                        this.connection = 'online';
+                    } else if (condition === 'offline') {
+                        status.classList.add('offline');
+                        status.classList.remove('online');
+                        this.connection = 'offline';
+                    }
+                }
+
+                window.addEventListener('online',  updateOnlineStatus);
+                window.addEventListener('offline', updateOnlineStatus);
+            });
         }
     },
     created() {
         this.resClass();
+        this.connectionDetection();
 
         // const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
         // const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
