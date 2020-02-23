@@ -1,5 +1,5 @@
 .card {
-    cursor: pointer; position: relative; overflow: hidden; transition: var(--transitionAll) !important; box-shadow: var(--box-shadow); border: 10px solid #fff;
+    cursor: pointer; position: relative; overflow: hidden; transition: var(--transition-all) !important; box-shadow: var(--box-shadow); border: 10px solid #fff;
     .card-img {
         position: relative; background: rgba(#fff, 0.5) no-repeat center/cover; transition: all 0.35s; min-height: 80px;
         &:after {

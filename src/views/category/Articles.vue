@@ -1,5 +1,27 @@
+<!-- <template>
+    <page-category 
+        :pageId="pageId" 
+        :pageTitle="pageTitle"
+    />
+</template>
+
+<script>
+    export default {
+        name: "Articles",
+        data() {
+            return {
+                pageId: "about",
+                pageTitle: "Articles",
+                pageTitleHe: "מאמרים",
+                urlName: "articles-url",
+                populate: ['thumbnail']
+            }
+        },
+    };
+</script> -->
+
 <template>
-    <div id="articles" class="page-category">
+    <div id="articles" class="page-category" :class="[ (this.grid) ? 'grid' : 'list' ]">
         <transition name="fade">
             <Loading v-if="loading" />
         </transition>
@@ -12,10 +34,37 @@
             </div>
         </div>
         <div class="container">
+            <div class="display-switch-container">
+                <div class="display-switch">
+                    <div class="display-choice display-grid" @click="grid = true">
+                        <svg class="icon-grid">
+                            <use xlink:href="#icon-grid" href="#icon-grid" />
+                        </svg>
+                        <div class="display-label">
+                            <span class="lang-fr">Grille</span>
+                            <span class="lang-he">רשת</span>
+                        </div>
+                    </div>
+                    <div class="display-choice display-list" @click="grid = false">
+                        <svg class="icon-list">
+                            <use xlink:href="#icon-list" href="#icon-list" />
+                        </svg>
+                        <div class="display-label">
+                            <span class="lang-fr">Liste</span>
+                            <span class="lang-he">רשימה</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search-filter">
+                <input type="text" required @input="filterSearch">
+                <label class="lang-fr">Rechercher</label>
+                <label class="lang-he">לחפש</label>
+            </div>
             <div id="articlesContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'articles-url', params: {entryId: key, articles_url: key} }">
                     <figure class="card-content" tabindex="0">
-                        <div class="card-img" v-if="element.thumbnail && element.thumbnail.length && element.thumbnail[0].url" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
+                        <div class="card-img" v-if="grid === true && element.thumbnail && element.thumbnail.length && element.thumbnail[0].url" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
                         <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
@@ -44,12 +93,14 @@
                 elements: [],
                 pageTitle: 'Articles',
                 pageTitleHe: 'מאמרים',
-                loading: true
+                loading: true,
+                grid: true,
+                entries: []
             }
         },
         mounted() {
-             this.$root.$on('langChanged', this.getContent);
-             this.setPageTitle();
+            this.$root.$on('langChanged', this.getContent);
+            this.setPageTitle();
         },
         created() {
             this.getContent()
@@ -64,7 +115,9 @@
                 .then(elements => {
                     this.elements = elements;
                     this.loading = false;
-                    // console.log('All the elements:', elements);
+                    setTimeout(() => {
+                        this.entries = document.querySelectorAll('.grid-element')
+                    }, 100);
                 })
             },
             setPageTitle() {
@@ -74,6 +127,14 @@
                         this.pageTitle = this.pageTitleHe
                     }
                 })
+            },
+            filterSearch(event) {
+                let value = event.target.value;
+                for (var i=0, l=this.entries.length; i<l; i++) {
+                    var entryText = this.entries[i].getElementsByClassName('card-title')[0].innerHTML;
+                    if (entryText.toLowerCase().indexOf(value.toLowerCase()) != -1) this.entries[i].style.display = "block"; // add toLowerCase method to ignore case
+                    else this.entries[i].style.display = "none";
+                }
             }
         }
     };

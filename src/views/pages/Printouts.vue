@@ -1,9 +1,15 @@
 <template>
-    <page-mix id="printouts"></page-mix>
+    <page-mix :pageId="pageId"></page-mix>
 </template>
 
 <script>
+
 export default {
-    name: 'Printouts'
+    name: "Printouts",
+    data() {
+    	return {
+    		pageId: "printouts"
+    	}
+    }
 };
 </script>

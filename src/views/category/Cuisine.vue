@@ -18,13 +18,26 @@
                         <svg class="icon-grid">
                             <use xlink:href="#icon-grid" href="#icon-grid" />
                         </svg>
+                        <div class="display-label">
+                            <span class="lang-fr">Grille</span>
+                            <span class="lang-he">רשת</span>
+                        </div>
                     </div>
                     <div class="display-choice display-list" @click="grid = false">
                         <svg class="icon-list">
                             <use xlink:href="#icon-list" href="#icon-list" />
                         </svg>
+                        <div class="display-label">
+                            <span class="lang-fr">Liste</span>
+                            <span class="lang-he">רשימה</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div id="search-filter">
+                <input type="text" required @input="filterSearch">
+                <label class="lang-fr">Rechercher</label>
+                <label class="lang-he">לחפש</label>
             </div>
             <div id="cuisineContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'cuisine-url', params: {entryId: key, cuisine_url: key} }">
@@ -59,7 +72,7 @@
                 pageTitle: 'Cuisine',
                 pageTitleHe: 'מתכונים',
                 loading: true,
-                grid: false
+                grid: true
             }
         },
         mounted() {
@@ -74,12 +87,14 @@
                 this.$flamelinkApp.content.get({
                     schemaKey: 'cuisine',
                     fields: ['title', 'url', 'author', 'description', 'thumbnail'],
-                    populate: ['thumbnail']
+                    populate: ['thumbnail'],
                 })
                 .then(elements => {
                     this.elements = elements;
                     this.loading = false;
-                    // console.log('All the elements:', elements);
+                    setTimeout(() => {
+                        this.entries = document.querySelectorAll('.grid-element')
+                    }, 100);
                 })
             },
             setPageTitle() {
@@ -89,17 +104,15 @@
                         this.pageTitle = this.pageTitleHe
                     }
                 })
-            }/*,
-            filteringResults(word) {
-                const filteredItems = document.querySelectorAll('#cuisineContent .grid-element');
-                filteredItems.forEach(function(item) {
-                    if (item.includes(word)) {
-                        item.classList.add('shown');
-                    } else {
-                        item.classList.remove('shown');
-                    }
-                });
-            }*/
+            },
+            filterSearch(event) {
+                let value = event.target.value;
+                for (var i=0, l=this.entries.length; i<l; i++) {
+                    var entryText = this.entries[i].getElementsByClassName('card-title')[0].innerHTML;
+                    if (entryText.toLowerCase().indexOf(value.toLowerCase()) != -1) this.entries[i].style.display = "block"; // add toLowerCase method to ignore case
+                    else this.entries[i].style.display = "none";
+                }
+            }
         }
     };
 </script>

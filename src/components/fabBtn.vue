@@ -25,13 +25,13 @@ export default {
     bottom: calc(var(--footerHeight) + var(--spacing));
     right: var(--spacing);
     animation-name: fabAppear;
-    animation-duration: var(--transitionTime2);
-    transition-timing-function: var(--transitionEase);
+    animation-duration: var(--transition-time2);
+    transition-timing-function: var(--transition-ease);
     animation-fill-mode: forwards;
     opacity: 0;
 }
 #mainMenuFab {
-    color: var(--txtColor);
+    color: var(--color-font);
     background-color: var(--logo-color-1);
     .material-icons { color: #fff; }
 }

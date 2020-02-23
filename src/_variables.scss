@@ -22,10 +22,10 @@ $xl: 1920px;
 
     --spacing: 15px;
     --spacingSm: 7px;
-    --transitionTime: .2s;
-    --transitionTime2: .5s;
-    --transitionEase: ease-in-out;
-    --transitionAll: all var(--transitionTime) var(--transitionEase);
+    --transition-time: .2s;
+    --transition-time2: .5s;
+    --transition-ease: ease-in-out;
+    --transition-all: all var(--transition-time) var(--transition-ease);
 
     --logo-color-1: #1294f6;
     --logo-color-2: #0048a4;
@@ -34,16 +34,13 @@ $xl: 1920px;
     --logo-color-1-trans: #1294f6ab;
     --logo-color-2-trans: #0048a4ab;
 
-    --primaryColor: #1294f6;
-    --primaryColorBlue: #1294f6;
-    --primaryColorRgb: 18, 148, 246;
-    --primaryColorTrans: #1294f6ab;
-    --primaryColorTransRgb: 18, 148, 246;
-    --primaryColorTransRgba: 18, 148, 246, 0.67;
-    --bgColor: #f4f4f4;
-    --txtColor: #333;
-    --bgColorInvert: #333;
-    --txtColorInvert: #fff;
+    --color-primary: #1294f6;
+    --color-primary-rgb: 18, 148, 246;
+    --color-primaryTrans: #1294f6ab;
+    --color-primaryTransRgb: 18, 148, 246;
+    --color-primaryTransRgba: 18, 148, 246, 0.67;
+    --color-bg: #f4f4f4;
+    --color-font: #333;
 
     --font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
     --font-size: 20px;
@@ -66,11 +63,9 @@ $xl: 1920px;
 }
 
 html[data-theme="dark"] {
-    --primaryColor: #111;
-    --bgColor: #111;
-    --txtColor: #eee;
-    --bgColorInvert: #fff;
-    --txtColorInvert: #333;
+    --color-primary: #111;
+    --color-bg: #111;
+    --color-font: #eee;
 
     // --logo-color-1: #ff9800;
     // --logo-color-2: #bb4d00;

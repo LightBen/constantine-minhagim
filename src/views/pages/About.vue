@@ -1,10 +1,15 @@
 <template>
-    <page-mix id="about"></page-mix>
+    <page-mix :pageId="pageId"></page-mix>
 </template>
 
 <script>
 
 export default {
-    name: "About"
+    name: "About",
+    data() {
+    	return {
+    		pageId: "about"
+    	}
+    }
 };
 </script>

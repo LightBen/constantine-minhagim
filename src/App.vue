@@ -207,6 +207,8 @@ export default {
     #cuisine .card-img { background-image: url('./assets/img/thumbnail/default-thumbnail-logo.jpg'); }
     #articles .card-img { background-image: url('./assets/img/thumbnail/books-shelf.jpg'); }
 
+    .list .card-img { background-image: url('./assets/img/thumbnail/default-thumbnail-logo.jpg') !important; }
+
     /* Hebrew fonts */
     @font-face {
         font-family: 'Taamey David';

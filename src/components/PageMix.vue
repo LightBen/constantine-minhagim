@@ -1,5 +1,5 @@
 <template>
-    <div class="page-mix page-page">
+    <div class="page-mix page-page" :id="pageId">
         <transition name="fade">
             <Loading v-if="loading" />
         </transition>
@@ -36,6 +36,11 @@ export default {
             pageTitle: '',
             pageContent: '',
             loading: true
+        }
+    },
+    props: {
+        pageId: {
+            type: String
         }
     },
     mounted() {

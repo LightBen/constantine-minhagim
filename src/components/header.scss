@@ -3,7 +3,7 @@ header {
     #siteTitle1 { color: var(--logo-color-1); margin-inline-end: 5px; }
     #siteTitle2 { color: var(--logo-color-2); }
 
-    .mdc-top-app-bar { top: 0; background-color: #fff; color: var(--logo-color-1); transition: all var(--transitionTime) var(--transitionEase); box-shadow: var(--box-shadow); }
+    .mdc-top-app-bar { top: 0; background-color: #fff; color: var(--logo-color-1); transition: all var(--transition-time) var(--transition-ease); box-shadow: var(--box-shadow); }
 
     .mdc-top-app-bar__section { padding: 0; }
 
@@ -31,7 +31,7 @@ header {
         i, svg {
             width: 32px; height: 32px; 
             &, * {
-                fill: var(--primaryColor); color: var(--primaryColor); 
+                fill: var(--color-primary); color: var(--color-primary); 
             }
         }
         &#mainMenuBtn {
@@ -78,7 +78,7 @@ header {
             display: flex; align-items: flex-start; justify-content: space-between; cursor: pointer; padding: var(--spacing);
             i, svg { 
                 --menu-top-icon-size: 50px; 
-                font-size: var(--menu-top-icon-size); color: #555; width: var(--menu-top-icon-size); height: 32px; transition: var(--transitionAll);
+                font-size: var(--menu-top-icon-size); color: #555; width: var(--menu-top-icon-size); height: 32px; transition: var(--transition-all);
             }
             #menu-top-middle { 
                 display: flex; align-items: center; justify-content: center; 
@@ -118,13 +118,13 @@ header {
                     --icon-size: 32px;
                     font-size: var(--icon-size); width: var(--icon-size); height: var(--icon-size);
                     margin: 0 0 10px;
-                    color: var(--primaryColor);
-                    fill: var(--primaryColor);
+                    color: var(--color-primary);
+                    fill: var(--color-primary);
                     transition: all .2s ease-in-out;
                 }
 
                 span {
-                    color: var(--primaryColor); font-size: 20px; font-weight: 300; line-height: 1.4;
+                    color: var(--color-primary); font-size: 20px; font-weight: 300; line-height: 1.4;
                 }
 
                 &.nav-grid-item-disabled {

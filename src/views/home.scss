@@ -10,10 +10,10 @@
         padding-inline-end: var(--spacing);
         &.full-img {
             background: no-repeat center/cover fixed; color: #fff;
-            transition: all var(--transitionTime) var(--transitionEase);
+            transition: all var(--transition-time) var(--transition-ease);
             &:after { 
                 content: ""; display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;
-                transition: all var(--transitionTime) var(--transitionEase);
+                transition: all var(--transition-time) var(--transition-ease);
             }
         }
     }
@@ -87,18 +87,18 @@
 
                 > * {
                     padding: 10px; text-align: center; color: #fff; text-decoration: none; background-color: var(--logo-color-2);
-                    transition: all var(--transitionTime) var(--transitionEase); position: relative; z-index: 1; border: 7px solid transparent; background-clip: padding-box; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; z-index: 2;
+                    transition: all var(--transition-time) var(--transition-ease); position: relative; z-index: 1; border: 7px solid transparent; background-clip: padding-box; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; z-index: 2;
                     --homeSectionSize: 145px;
                     width: var(--homeSectionSize); height: calc(var(--homeSectionSize) - 40px);
 
                     .icon-home-section {
                         --icon-home-section-size: 30px; margin-bottom: 15px; color: var(--logo-color-1); fill: var(--logo-color-1);
-                        width: var(--icon-home-section-size); height: var(--icon-home-section-size); font-size: var(--icon-home-section-size); transition: var(--transitionAll);
+                        width: var(--icon-home-section-size); height: var(--icon-home-section-size); font-size: var(--icon-home-section-size); transition: var(--transition-all);
                     }
 
                     .home-section-title, .home-section-title-icon { font-size: 16px; }
                     .home-section-title { display: inline-block; line-height: 1; }
-                    .home-section-title-icon { margin-inline-start: 10px; position: relative; top: 4px; color: var(--logo-color-1); transition: var(--transitionAll); }
+                    .home-section-title-icon { margin-inline-start: 10px; position: relative; top: 4px; color: var(--logo-color-1); transition: var(--transition-all); }
 
                     @media (min-width: $sm) {
                         --homeSectionSize: 180px;
@@ -201,7 +201,7 @@ html[data-theme="dark"] {
     #home {
         #welcome {
             &.full-img {
-                background-color: var(--primaryColor);
+                background-color: var(--color-primary);
                 &::after { background: linear-gradient(to top, #000 0%, #000 15%, #00000055 67%); }
             }
             .section-content {

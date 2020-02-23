@@ -50,7 +50,7 @@
     }
     .modal {
         position: relative; z-index: 1;
-        background-color: rgba(var(--primaryColorRgb), 0.8);
+        background-color: rgba(var(--color-primary-rgb), 0.8);
         width: 100vw;
         max-width: 500px;
         padding: var(--spacing);

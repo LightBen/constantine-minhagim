@@ -14,9 +14,30 @@
         <div class="container">
             <div class="display-switch-container">
                 <div class="display-switch">
-                    <div class="display-choice display-grid" @click="grid = true">grid</div>
-                    <div class="display-choice display-list" @click="grid = false">list</div>
+                    <div class="display-choice display-grid" @click="grid = true">
+                        <svg class="icon-grid">
+                            <use xlink:href="#icon-grid" href="#icon-grid" />
+                        </svg>
+                        <div class="display-label">
+                            <span class="lang-fr">Grille</span>
+                            <span class="lang-he">רשת</span>
+                        </div>
+                    </div>
+                    <div class="display-choice display-list" @click="grid = false">
+                        <svg class="icon-list">
+                            <use xlink:href="#icon-list" href="#icon-list" />
+                        </svg>
+                        <div class="display-label">
+                            <span class="lang-fr">Liste</span>
+                            <span class="lang-he">רשימה</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div id="search-filter">
+                <input type="text" required @input="filterSearch">
+                <label class="lang-fr">Rechercher</label>
+                <label class="lang-he">לחפש</label>
             </div>
             <div id="hazanoutContent" class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'hazanout-url', params: {entryId: key, hazanout_url: key} }">
@@ -51,7 +72,7 @@
                 pageTitle: '\'Hazanout',
                 pageTitleHe: 'חזנות',
                 loading: true,
-                grid: false
+                grid: true
             }
         },
         mounted() {
@@ -63,28 +84,18 @@
         },
         methods: {
             getContent() {
-                if (this.grid === true) {
-                    this.$flamelinkApp.content.get({
-                        schemaKey: 'hazanout',
-                        fields: ['title', 'url', 'author', 'description', 'thumbnail'],
-                        populate: ['thumbnail'],
-                    })
-                    .then(elements => {
-                        this.elements = elements;
-                        this.loading = false;
-                        // console.log('All the elements:', elements);
-                    })
-                } else {
-                    this.$flamelinkApp.content.get({
-                        schemaKey: 'hazanout',
-                        fields: ['title', 'url', 'author', 'description']
-                    })
-                    .then(elements => {
-                        this.elements = elements;
-                        this.loading = false;
-                        // console.log('All the elements:', elements);
-                    })
-                }
+                this.$flamelinkApp.content.get({
+                    schemaKey: 'hazanout',
+                    fields: ['title', 'url', 'author', 'description', 'thumbnail'],
+                    populate: ['thumbnail'],
+                })
+                .then(elements => {
+                    this.elements = elements;
+                    this.loading = false;
+                    setTimeout(() => {
+                        this.entries = document.querySelectorAll('.grid-element')
+                    }, 100);
+                })
             },
             setPageTitle() {
                 this.$flamelinkApp.settings.getLocale()
@@ -93,6 +104,14 @@
                         this.pageTitle = this.pageTitleHe
                     }
                 })
+            },
+            filterSearch(event) {
+                let value = event.target.value;
+                for (var i=0, l=this.entries.length; i<l; i++) {
+                    var entryText = this.entries[i].getElementsByClassName('card-title')[0].innerHTML;
+                    if (entryText.toLowerCase().indexOf(value.toLowerCase()) != -1) this.entries[i].style.display = "block"; // add toLowerCase method to ignore case
+                    else this.entries[i].style.display = "none";
+                }
             }
         }
     };
