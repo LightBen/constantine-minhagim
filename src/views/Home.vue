@@ -8,11 +8,11 @@
                 </svg>
             </div>
             <h1>
-                <span id="siteTitle1">
+                <span id="siteTitle1Home">
                     <span class="lang-fr">Constantine</span>
                     <span class="lang-he">קונסטנטין</span>
                 </span>
-                <span id="siteTitle2">
+                <span id="siteTitle2Home">
                     <span class="lang-fr">Minhagim</span>
                     <span class="lang-he">מנהגים</span>
                 </span>
@@ -50,7 +50,7 @@
                     <span class="home-section-title lang-fr">Articles</span>
                     <span class="home-section-title lang-he">מאמרים</span>
                 </router-link>
-                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
+                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" rel="noopener" class="drive">
                     <svg class="icon-home-section">
                         <use href="#icon-storage" />
                     </svg>
