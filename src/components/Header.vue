@@ -1,7 +1,7 @@
 <template>
     <header id="header">
         <div class="mdc-top-app-bar mdc-top-app-bar--fixed" id="headerMain">
-            <div class="mdc-top-app-bar__row">
+            <div class="mdc-top-app-bar__row d-flex">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" id="header-logo">
                     <div class="logo-icon-container" aria-label="Constantine Minhagim" @click="$router.push({ name: 'Home' })">
                         <svg class="icon-perso">

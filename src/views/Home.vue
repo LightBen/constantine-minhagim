@@ -4,7 +4,7 @@
         <div class="section-content">
             <div class="icon-home-main">
                 <svg>
-                    <use xlink:href="#icon-logo-cm-main" href="#icon-logo-cm-main" />
+                    <use href="#icon-logo-cm-main" />
                 </svg>
             </div>
             <h1>
@@ -24,40 +24,48 @@
             <div id="welcome-sections">
                 <router-link :to="{ name: 'Minhag' }" class="minhag">
                     <svg class="icon-home-section">
-                        <use xlink:href="#icon-star-david" href="#icon-star-david" />
+                        <use href="#icon-star-david" />
                     </svg>
                     <span class="home-section-title lang-fr">Minhag</span>
                     <span class="home-section-title lang-he">מנהג</span>
                 </router-link>
                 <router-link :to="{ name: 'Hazanout' }" class="hazanout">
                     <svg class="icon-home-section">
-                        <use xlink:href="#icon-music-1" href="#icon-music-1" />
+                        <use href="#icon-music-1" />
                     </svg>
                     <span class="home-section-title lang-fr">'Hazanout</span>
                     <span class="home-section-title lang-he">חזנות</span>
                 </router-link>
                 <router-link :to="{ name: 'Cuisine' }" class="cuisine">
                     <svg class="icon-home-section">
-                        <use xlink:href="#icon-food-tray" href="#icon-food-tray" />
+                        <use href="#icon-food-tray" />
                     </svg>
                     <span class="home-section-title lang-fr">Cuisine</span>
                     <span class="home-section-title lang-he">מתכונים</span>
                 </router-link>
                 <router-link :to="{ name: 'Articles' }" class="articles">
-                    <i class="material-icons icon-home-section" aria-hidden="true">description</i>
+                    <svg class="icon-home-section">
+                        <use href="#icon-document" />
+                    </svg>
                     <span class="home-section-title lang-fr">Articles</span>
                     <span class="home-section-title lang-he">מאמרים</span>
                 </router-link>
                 <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
-                    <i class="material-icons icon-home-section" aria-hidden="true">storage</i>
+                    <svg class="icon-home-section">
+                        <use href="#icon-storage" />
+                    </svg>
                     <span class="home-section-title">
                         <span class="lang-fr">Drive</span>
                         <span class="lang-he">דרייב</span>
-                        <i class="material-icons home-section-title-icon" aria-hidden="true">open_in_new</i>
+                        <svg class="icon-label">
+                            <use href="#icon-external" />
+                        </svg>
                     </span>
                 </a>
                 <router-link :to="{ name: 'Home' }" class="siddour section-disabled">
-                    <i class="material-icons icon-home-section" aria-hidden="true">menu_book</i>
+                    <svg class="icon-home-section">
+                        <use href="#icon-book-fill" />
+                    </svg>
                     <span class="home-section-title lang-fr">Bientôt...</span>
                     <span class="home-section-title lang-he">בקרוב</span>
                 </router-link>

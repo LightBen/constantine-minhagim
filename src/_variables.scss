@@ -43,7 +43,7 @@ $xl: 1920px;
     --color-font: #333;
 
     --font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
-    --font-size: 20px;
+    --font-size-primary: 20px;
     --font-size-secondary: 16px;
     --font-weight: 400;
     --line-height: 32px;
@@ -76,7 +76,7 @@ html[data-theme="dark"] {
 html[lang="he"] {
     --font-family: 'Assistant', 'Roboto', sans-serif;
     --font-family-title: 'Taamey David', 'Roboto', sans-serif;
-    --font-size: 24px;
+    --font-size-primary: 24px;
     --font-weight: normal;
     --font-size-secondary: 20px;
 }
