@@ -40,6 +40,8 @@ footer          { z-index: 7; }
 .overlay        { z-index: 3; }
 /* END Order */
 
+.d-none { display: none !important; }
+
 .fade-enter-active, .fade-leave-active { transition: opacity .2s ease; }
 .fade-enter, .fade-leave, .fade-leave-to, .fade-leave-active { opacity: 0; }
 

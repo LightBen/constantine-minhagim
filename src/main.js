@@ -46,7 +46,7 @@ Vue.use(VueMeta, {
 
 
 // OFFLINE PERSISTENCE
-firebase.firestore().enablePersistence()
+firebase.firestore().enablePersistence({synchronizeTabs:true})
 .catch(function(err) {
     console.log(err);
 });

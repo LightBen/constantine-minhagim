@@ -22,7 +22,7 @@
                     </span>
                 </section>
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" id="header-menu">
-                    <router-link class="header-btn" id="header-donation"  :to="{ name: 'Donate' }">
+                    <router-link class="header-btn" id="header-donation" :to="{ name: 'Donate' }" aria-label="Donations">
                         <svg class="icon-menu">
                             <use xlink:href="#icon-donate" href="#icon-donate" />
                         </svg>
@@ -113,7 +113,7 @@
                             <span class="mdc-list-item__text lang-fr">Affiches</span>
                             <span class="mdc-list-item__text lang-he">גליונות</span>
                         </router-link>
-                        <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
+                        <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive" rel="noopener">
                             <svg>
                                 <use xlink:href="#icon-drive" href="#icon-drive" />
                             </svg>
