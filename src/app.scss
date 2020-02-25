@@ -289,13 +289,14 @@ main {
         display: flex; justify-content: center; text-align: center; margin-top: var(--spacingSm);
         .display-switch { display: flex; justify-content: center; flex: 1; overflow: hidden; }
         .display-choice { 
-            flex: 1; padding: var(--spacingSm) var(--spacingSm); border-bottom: 10px solid var(--logo-color-2-trans); transition: var(--transition-all); cursor: pointer;
+            flex: 1; border-bottom: 10px solid var(--logo-color-2-trans); transition: var(--transition-all); cursor: pointer; display: flex; align-items: center; justify-content: center; min-height: 70px; min-width: 60px;
             &:first-child { margin-inline-end: var(--spacingSm); }
             &:last-child { margin-inline-start: var(--spacingSm); }
             &:hover { 
                 border-bottom-color: var(--logo-color-2);
             }
         }
+        .display-label { position: relative; top: 5px; }
         svg, i {
             display: none;
             fill: var(--color-font); width: 40px; height: 40px; cursor: pointer;
