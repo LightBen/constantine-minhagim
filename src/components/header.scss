@@ -88,8 +88,17 @@ header {
             }
             #menu-top-middle { 
                 display: flex; align-items: center; justify-content: center; 
-                > * { margin: 0 5px; display: flex; flex-direction: column; min-width: 75px; }
-                label { font-size: var(--font-size-secondary); }
+                > * { margin: 0 5px; display: flex; flex-direction: column; min-width: 60px; }
+                label { 
+                    height: 24px; font-size: 14px; display: flex; align-items: flex-end; 
+                    span { display: flex; align-items: flex-end; height: 100%; }
+                }
+                #menu-lang label {
+                    .lang-fr { font-size: 16px; }
+                }
+                @media (min-width: $sm) {
+                    > * { min-width: 75px; }
+                }
             }
             .menu-top-icon { 
                 display: flex; align-items: center; 
@@ -206,6 +215,12 @@ html[lang="he"] {
         #mainNav {
             #menu-top-bar {
                 #menu-close { right: auto; left: -10px; }
+                #menu-top-middle { 
+                    label { font-size: 18px; }
+                    #menu-lang label {
+                        .lang-he { font-size: 16px; }
+                    }
+                }
             }
         }
         .lang-name {

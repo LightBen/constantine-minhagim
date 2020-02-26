@@ -83,7 +83,7 @@ a.link-design, .nav-grid-item, .drive, #welcome-sections > a {
 }
 
 .page-title-container {
-    position: relative; background: no-repeat center/cover; margin-bottom: var(--spacingSm);
+    position: relative; background: no-repeat center/cover; margin-bottom: 50px;
     figure { display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: no-repeat center/cover; }
     .container {
         padding-top: 130px; padding-bottom: 70px; display: flex; justify-content: center; z-index: 1; position: relative;
@@ -101,6 +101,10 @@ a.link-design, .nav-grid-item, .drive, #welcome-sections > a {
     }
 }
 
+.page-category {
+    .page-title-container { margin-bottom: var(--spacingSm); }
+}
+
 #page-details {
     padding-inline-start: 10px;
     border-inline-start: 10px solid var(--logo-color-1-trans);
@@ -111,7 +115,7 @@ a.link-design, .nav-grid-item, .drive, #welcome-sections > a {
 #page-author { font-style: italic; }
 
 #page-content {
-    a { word-break: break-all; }
+    // a { word-break: break-all; hyphens: auto; }
     &, p {
         text-align: justify;
     }
@@ -122,6 +126,11 @@ a.link-design, .nav-grid-item, .drive, #welcome-sections > a {
             text-align: start;
         }
     }
+}
+
+// Paypal?
+form input[type="image"] {
+    margin-top: 15px;
 }
 
 blockquote {
@@ -205,7 +214,7 @@ figcaption { padding: 0; }
 
 
 
-#refresh-button { position: fixed; width: 100vw; left: 0; top: var(--headerHeight); background: #388e3cee; color: #fff; padding: 10px 5px; border: none; box-shadow: none; transition: var(--transition-all); text-align: center; }
+#refresh-button { position: fixed; width: 100vw; left: 0; top: var(--headerHeight); background: #388e3cee; color: #fff; padding: 10px 5px; border: none; box-shadow: none; transition: var(--transition-all); text-align: center; cursor: pointer; }
 .scrolling-down, {
     #refresh-button, #status { top: 0; }
 }
@@ -469,14 +478,13 @@ html[lang="he"] {
 
 // Fixes for mobile phones in landscape, from Pixel 2X and lower
 @media (max-width: 823px) and (orientation: landscape) {
-
     // General
     .container { max-width: 100% !important; }
 
     // Home
-    .is-homepage header #header-logo { display: inline-flex !important; }
     #home #welcome .section-content .icon-home-main { display: none !important; --iconMainSize: 100px !important; margin-top: 0 !important; }
     #home #welcome .section-content h1 { flex-direction: row !important; padding-top: 10px !important; }
+    #home #welcome .section-content h1 > span:last-child { letter-spacing: normal !important; }
     html[lang="he"] #home #welcome .section-content h1 > span { font-size: 40px !important; }
     html[lang="he"] #home #welcome .section-content h1 > span:last-child { margin: 0 !important; margin-inline-start: 9px !important; }
     #home #welcome .section-content #site-description { 
@@ -490,6 +498,7 @@ html[lang="he"] {
         flex: 25% !important; height: 110px !important; padding: 5px !important; 
         i, svg { margin-bottom: 0 !important; }
     }
+    .is-homepage header .mdc-top-app-bar__title { display: none !important; }
 
     // Category
     .page-title-container .container { padding-top: 100px; padding-bottom: 40px; }
@@ -501,10 +510,11 @@ html[lang="he"] {
     .list .card .card-img { min-height: 80px !important; }
 
     // Footer
-    footer #footerTabs .mdc-tab-bar .mdc-tab__content { display: flex !important; }
+    footer #footerTabs .mdc-tab-bar .mdc-tab__content { display: flex !important; align-items: center; justify-content: center; }
     footer #footerTabs .mdc-tab-bar .mdc-tab__icon { margin-bottom: 0 !important; margin-inline-end: 10px !important; }
 
     html[lang="he"] {
         .card .card-text .card-title { font-size: 22px !important; }
+        footer #footerTabs .mdc-tab-bar .mdc-tab__text-label { font-size: var(--font-size-secondary) !important; top: 0px !important; }
     }
 }
