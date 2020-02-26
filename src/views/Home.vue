@@ -50,15 +50,10 @@
                     <span class="home-section-title lang-fr">Articles</span>
                     <span class="home-section-title lang-he">מאמרים</span>
                 </router-link>
-<<<<<<< HEAD
                 <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive" rel="noopener">
-                    <i class="material-icons icon-home-section" aria-hidden="true">storage</i>
-=======
-                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive">
                     <svg class="icon-home-section">
                         <use href="#icon-storage" />
                     </svg>
->>>>>>> 3262ca3e37e6ddd9ebbc5031b828e93bbe5ba1a1
                     <span class="home-section-title">
                         <span class="lang-fr">Drive</span>
                         <span class="lang-he">דרייב</span>
