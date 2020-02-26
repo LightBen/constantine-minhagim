@@ -201,11 +201,11 @@ export default {
 
 
     /* Default card images */
-    .card-img { background-image: url('./assets/img/thumbnail/books-shelf.jpg'); }
-    #minhag .card-img { background-image: url('./assets/img/thumbnail/constantine-rabbins.jpg'); }
-    #hazanout .card-img { background-image: url('./assets/img/thumbnail/constantine-orchestre.jpg'); }
-    #cuisine .card-img { background-image: url('./assets/img/thumbnail/default-thumbnail-logo.jpg'); }
-    #articles .card-img { background-image: url('./assets/img/thumbnail/books-shelf.jpg'); }
+    .card-img { background-image: url('./assets/img/thumbnail/default-thumbnail-logo.jpg'); }
+    // #minhag .card-img { background-image: url('./assets/img/thumbnail/constantine-rabbins.jpg'); }
+    // #hazanout .card-img { background-image: url('./assets/img/thumbnail/constantine-orchestre.jpg'); }
+    // #cuisine .card-img { background-image: url('./assets/img/thumbnail/default-thumbnail-logo.jpg'); }
+    // #articles .card-img { background-image: url('./assets/img/thumbnail/books-shelf.jpg'); }
 
     .list .card-img { background-image: url('./assets/img/thumbnail/default-thumbnail-logo.jpg') !important; }
 

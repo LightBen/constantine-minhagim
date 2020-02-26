@@ -3,9 +3,18 @@ header {
     #siteTitle1 { color: var(--logo-color-1); margin-inline-end: 5px; }
     #siteTitle2 { color: var(--logo-color-2); }
 
-    .mdc-top-app-bar { top: 0; background-color: #fff; color: var(--logo-color-1); transition: all var(--transition-time) var(--transition-ease); box-shadow: var(--box-shadow); }
+    .mdc-top-app-bar { display: flex; position: fixed; top: 0; background-color: #fff; color: var(--logo-color-1); transition: all var(--transition-time) var(--transition-ease); box-shadow: var(--box-shadow); flex-direction: column; justify-content: space-between; width: 100%; }
 
-    .mdc-top-app-bar__section { padding: 0; }
+    .mdc-top-app-bar__row { 
+        height: 56px; width: 100%; position: relative; 
+        @media (min-width: 600px) {
+            height: 64px;
+        }
+    }
+    .mdc-top-app-bar__section--align-start { justify-content: flex-start; }
+    .mdc-top-app-bar__section--align-end { justify-content: flex-end; }
+
+    .mdc-top-app-bar__section { padding: 0; display: inline-flex; flex: 1 1 auto; align-items: center; min-width: 0; z-index: 1; }
 
     .logo-icon-container { 
         padding: 0; padding-inline-start: var(--spacingSm); height: 32px; cursor: pointer;
@@ -13,11 +22,7 @@ header {
     }
 
     .mdc-top-app-bar__title { 
-        display: none;
-        font-family: var(--font-family);
-        font-size: var(--font-size);
-        padding-inline-start: 10px;
-        letter-spacing: normal;
+        display: none; font-family: var(--font-family); font-size: var(--font-size-primary); padding-inline-start: 10px; letter-spacing: normal; font-weight: 500; -webkit-font-smoothing: antialiased;
         @media (min-width: $sm) {
             display: block;
         }
@@ -62,6 +67,7 @@ header {
 
     #mainNav {
         font-family: var(--font-family);
+        position: fixed;
         display: block;
         opacity: 0;
         transition: all 0.4s ease;
@@ -101,9 +107,7 @@ header {
         }
 
         .mdc-drawer__content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; justify-content: center; align-items: center; height: 100%; overflow-y: auto;
         }
 
         nav {

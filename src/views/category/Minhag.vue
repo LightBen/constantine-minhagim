@@ -12,32 +12,34 @@
             </div>
         </div>
         <div class="container">
-            <div class="display-switch-container">
-                <div class="display-switch">
-                    <div class="display-choice display-grid" @click="grid = true">
-                        <svg class="icon-grid">
-                            <use xlink:href="#icon-grid" href="#icon-grid" />
-                        </svg>
-                        <div class="display-label">
-                            <span class="lang-fr">Grille</span>
-                            <span class="lang-he">רשת</span>
+            <div id="search-container">
+                <div id="search-filter">
+                    <input type="text" required @input="filterSearch">
+                    <label class="lang-fr">Rechercher</label>
+                    <label class="lang-he">לחפש</label>
+                </div>
+                <div class="display-switch-container">
+                    <div class="display-switch">
+                        <div class="display-choice display-grid" @click="grid = true">
+                            <svg class="icon-grid">
+                                <use xlink:href="#icon-grid" href="#icon-grid" />
+                            </svg>
+                            <div class="display-label">
+                                <span class="lang-fr">Grille</span>
+                                <span class="lang-he">רשת</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="display-choice display-list" @click="grid = false">
-                        <svg class="icon-list">
-                            <use xlink:href="#icon-list" href="#icon-list" />
-                        </svg>
-                        <div class="display-label">
-                            <span class="lang-fr">Liste</span>
-                            <span class="lang-he">רשימה</span>
+                        <div class="display-choice display-list" @click="grid = false">
+                            <svg class="icon-list">
+                                <use xlink:href="#icon-list" href="#icon-list" />
+                            </svg>
+                            <div class="display-label">
+                                <span class="lang-fr">Liste</span>
+                                <span class="lang-he">רשימה</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="search-filter">
-                <input type="text" required @input="filterSearch">
-                <label class="lang-fr">Rechercher</label>
-                <label class="lang-he">לחפש</label>
             </div>
             <div id="minhagContent" class="grid-container" v-if="!loading">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'minhag-url', params: {entryId: key, minhag_url: key} }">
