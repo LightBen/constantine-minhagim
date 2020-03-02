@@ -44,7 +44,7 @@
             <div id="minhagContent" class="grid-container" v-if="!loading">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'minhag-url', params: {entryId: key, minhag_url: key} }">
                     <figure class="card-content" tabindex="0">
-                        <div class="card-img" v-if="grid === true && element.thumbnail && element.thumbnail.length && element.thumbnail[0].url" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
+                        <div class="card-img" v-if="grid === true && element.thumbnail && element.thumbnail.length" :style="{ 'background-image': 'url(' + element.thumbnail + ')' }"></div>
                         <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
@@ -89,8 +89,7 @@
             getContent() {
                 this.$flamelinkApp.content.get({
                     schemaKey: 'minhag',
-                    fields: ['title', 'url', 'author', 'description', 'thumbnail'],
-                    populate: ['thumbnail'],
+                    fields: ['title', 'url', 'author', 'description', 'thumbnail']
                 })
                 .then(elements => {
                     this.elements = elements;
@@ -98,6 +97,7 @@
                     setTimeout(() => {
                         this.entries = document.querySelectorAll('.grid-element')
                     }, 100);
+                    console.log(elements);
                 })
             },
             setPageTitle() {
@@ -112,8 +112,8 @@
                 let value = event.target.value;
                 for (var i=0, l=this.entries.length; i<l; i++) {
                     var entryText = this.entries[i].getElementsByClassName('card-title')[0].innerHTML;
-                    if (entryText.toLowerCase().indexOf(value.toLowerCase()) != -1) this.entries[i].style.display = "block"; // add toLowerCase method to ignore case
-                    else this.entries[i].style.display = "none";
+                    if (entryText.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(value.toLowerCase()) != -1) this.entries[i].classList.remove("card-hidden"); // add toLowerCase method to ignore case
+                    else this.entries[i].classList.add("card-hidden");
                 }
             }
         }

@@ -15,7 +15,7 @@
             <div class="grid-container">
                 <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: urlName, params: {entryId: key, urlName: key} }">
                     <figure class="card-content" tabindex="0">
-                        <div class="card-img" v-if="element.thumbnail && element.thumbnail.length && element.thumbnail[0].url" :style="{ 'background-image': 'url(' + element.thumbnail[0].url + ')' }"></div>
+                        <div class="card-img" v-if="element.thumbnail && element.thumbnail.length" :style="{ 'background-image': 'url(' + element.thumbnail + ')' }"></div>
                         <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
