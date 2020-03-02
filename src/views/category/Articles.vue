@@ -70,6 +70,7 @@
                         <div class="card-img" v-else></div>
                         <figcaption class="card-text">
                             <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
+                            <div class="card-tags d-none">{{ element.tags }}</div>
                         </figcaption>
                     </figure>
                 </router-link>
@@ -132,8 +133,10 @@
             filterSearch(event) {
                 let value = event.target.value;
                 for (var i=0, l=this.entries.length; i<l; i++) {
-                    var entryText = this.entries[i].getElementsByClassName('card-title')[0].innerHTML;
-                    if (entryText.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(value.toLowerCase()) != -1) this.entries[i].classList.remove("card-hidden"); // add toLowerCase method to ignore case
+                    var entryText = this.entries[i].getElementsByClassName('card-text')[0].innerHTML;
+                    if (entryText.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(value.toLowerCase()) != -1) {
+                        this.entries[i].classList.remove("card-hidden");
+                    }
                     else this.entries[i].classList.add("card-hidden");
                 }
             }
