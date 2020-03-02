@@ -112,7 +112,7 @@
             getContent() {
                 this.$flamelinkApp.content.get({
                     schemaKey: 'articles',
-                    fields: ['title', 'url', 'author', 'description', 'thumbnail']
+                    fields: ['title', 'url', 'author', 'description', 'thumbnail', 'tags']
                 })
                 .then(elements => {
                     this.elements = elements;

@@ -89,7 +89,7 @@
             getContent() {
                 this.$flamelinkApp.content.get({
                     schemaKey: 'cuisine',
-                    fields: ['title', 'url', 'author', 'description', 'thumbnail']
+                    fields: ['title', 'url', 'author', 'description', 'thumbnail', 'tags']
                 })
                 .then(elements => {
                     this.elements = elements;
@@ -97,6 +97,7 @@
                     setTimeout(() => {
                         this.entries = document.querySelectorAll('.grid-element')
                     }, 100);
+                    console.log(elements);
                 })
             },
             setPageTitle() {
