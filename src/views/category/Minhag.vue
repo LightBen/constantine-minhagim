@@ -97,7 +97,6 @@
                     setTimeout(() => {
                         this.entries = document.querySelectorAll('.grid-element')
                     }, 100);
-                    console.log(elements);
                 })
             },
             setPageTitle() {
