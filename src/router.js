@@ -58,9 +58,12 @@ export default new Router({
     props: true
   },
   {
-    path: "/siddour",
+    path: "/siddur",
     name: "Siddour",
-    component: () => import("./views/siddur/Siddour.vue")
+    component: () => import("./views/pages/Siddour.vue"),
+    meta: {
+      entryId: 'VIao92utBqXEIf5BJ7v3'
+    }
   },
   {
     path: "/print",
