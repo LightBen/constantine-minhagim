@@ -14,14 +14,14 @@ export default new Router({
     alias: '/'
   },
   {
-    path: "/minhag",
-    name: "Minhag",
-    component: () => import("./views/category/Minhag.vue")
+    path: "/halakha",
+    name: "Halakha",
+    component: () => import("./views/category/Halakha.vue")
   },
   {
-    path: '/minhag/:minhag_url',
-    name: 'minhag-url',
-    component: () => import("./components/PageMinhag.vue"),
+    path: '/halakha/:halakha_url',
+    name: 'halakha-url',
+    component: () => import("./components/PageHalakha.vue"),
     props: true
   },
   {

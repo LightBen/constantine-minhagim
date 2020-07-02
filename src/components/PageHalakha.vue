@@ -1,5 +1,5 @@
 <template>
-    <div id="page-minhag" class="page-page">
+    <div id="page-halakha" class="page-page">
         <transition name="fade">
             <Loading v-if="loading" />
         </transition>
@@ -22,7 +22,7 @@
 <script>
 import Loading from '@/components/Loading'
 export default {
-    name: 'PageMinhag',
+    name: 'PageHalakha',
     components: {
         Loading
     },
@@ -44,7 +44,7 @@ export default {
     mounted() {
         this.dataEntryId = this.entryId;
         if (!this.dataEntryId) {
-            this.dataEntryId = this.$route.params.minhag_url
+            this.dataEntryId = this.$route.params.halakha_url
         }
         this.getContent();
         this.$root.$on('langChanged', this.getContent);

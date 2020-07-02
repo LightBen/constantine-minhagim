@@ -1,13 +1,13 @@
 <template>
-    <div id="minhag" class="page-category" :class="[ (this.grid) ? 'grid' : 'list' ]">
+    <div id="halakha" class="page-category" :class="[ (this.grid) ? 'grid' : 'list' ]">
         <transition name="fade">
             <Loading v-if="loading" />
         </transition>
         <div class="page-title-container">
             <div class="container">
                 <h1 id="page-title" v-if="!loading">
-                    <span class="lang-fr">Minhag</span>
-                    <span class="lang-he">מנהג</span>
+                    <span class="lang-fr">Halakha</span>
+                    <span class="lang-he">הלכה</span>
                 </h1>
             </div>
         </div>
@@ -41,8 +41,8 @@
                     </div>
                 </div>
             </div>
-            <div id="minhagContent" class="grid-container" v-if="!loading">
-                <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'minhag-url', params: {entryId: key, minhag_url: key} }">
+            <div id="halakhaContent" class="grid-container" v-if="!loading">
+                <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'halakha-url', params: {entryId: key, halakha_url: key} }">
                     <figure class="card-content" tabindex="0">
                         <div class="card-img" v-if="grid === true && element.thumbnail && element.thumbnail.length" :style="{ 'background-image': 'url(' + element.thumbnail + ')' }"></div>
                         <div class="card-img" v-else></div>
@@ -60,7 +60,7 @@
 <script>
     import Loading from '@/components/Loading'
     export default {
-        name: "Minhag",
+        name: "Halakha",
         components: {
             Loading
         },
@@ -72,8 +72,8 @@
         data() {
             return { 
                 elements: [],
-                pageTitle: 'Minhag',
-                pageTitleHe: 'מנהג',
+                pageTitle: 'Halakha',
+                pageTitleHe: 'הלכה',
                 loading: true,
                 grid: true
             }

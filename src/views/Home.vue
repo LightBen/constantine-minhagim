@@ -22,12 +22,12 @@
                 <span class="lang-he">מנהגי קונסטנטין <br>וצפון אפריקה</span>
             </div>
             <div id="welcome-sections">
-                <router-link :to="{ name: 'Minhag' }" class="minhag">
+                <router-link :to="{ name: 'Halakha' }" class="halakha">
                     <svg class="icon-home-section">
                         <use href="#icon-star-david" />
                     </svg>
-                    <span class="home-section-title lang-fr">Minhag</span>
-                    <span class="home-section-title lang-he">מנהג</span>
+                    <span class="home-section-title lang-fr">Halakha</span>
+                    <span class="home-section-title lang-he">הלכה</span>
                 </router-link>
                 <router-link :to="{ name: 'Hazanout' }" class="hazanout">
                     <svg class="icon-home-section">
