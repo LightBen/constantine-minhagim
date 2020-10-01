@@ -22,12 +22,16 @@
                     </span>
                 </section>
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" id="header-menu">
-                    <router-link class="header-btn" id="header-donation" :to="{ name: 'Donate' }" aria-label="Donations">
+                    <!-- <router-link class="header-btn" id="header-donation" :to="{ name: 'Donate' }" aria-label="Donations">
                         <svg class="icon-menu">
                             <use xlink:href="#icon-donate" href="#icon-donate" />
                         </svg>
-                    </router-link>
+                    </router-link> -->
                     <div class="header-btn drawer-toggle" id="mainMenuBtn">
+                        <div class="menu-label">
+                            <span class="lang-fr">Menu</span>
+                            <span class="lang-he">תפריט</span>
+                        </div>
                         <svg class="icon-menu">
                             <use xlink:href="#icon-menu" href="#icon-menu" />
                         </svg>
@@ -36,7 +40,6 @@
             </div>
 
             <!-- <ModalLang /> -->
-
             <aside class="mdc-drawer mdc-drawer--modal" id="mainNav">
                 <div id="menu-top-bar">
                     <div id="menu-home" class="menu-top-icon drawer-toggle" @click="$router.push({ name: 'Home' })">

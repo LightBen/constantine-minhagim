@@ -1,7 +1,7 @@
 // @import "~material-components-web/material-components-web";
 
-@import "@/assets/style/_cards";
-@import "@/assets/style/bootstrap-snippets";
+@import "./assets/style/_cards";
+@import "./assets/style/bootstrap-snippets";
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Assistant:300,400,700&display=swap');
@@ -238,7 +238,8 @@ figcaption { padding: 0; }
     }
     #fab-menu { animation-name: fabDisappear; }
 }
-#mainMenuBtn, #mainMenuFab > span { transition: var(--transition-all); }
+#mainMenuBtn .icon-menu, #mainMenuFab > span { transition: var(--transition-all); }
+#mainMenuBtn .menu-label { margin-inline-end: var(--spacingSm); }
 .drawer-opened {
     #mainNav {
         left: 0;
@@ -247,7 +248,7 @@ figcaption { padding: 0; }
     }
     // header .mdc-top-app-bar { top: 0; }
     footer { bottom: 0; }
-    #mainMenuBtn, #mainMenuFab > span {
+    #mainMenuBtn .icon-menu, #mainMenuFab > span {
         transform: rotate(45deg);
     }
 }

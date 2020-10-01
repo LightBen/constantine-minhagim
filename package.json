@@ -7,24 +7,23 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.10.4",
     "core-js": "^3.6.5",
-    "firebase": "^7.15.5",
-    "flamelink": "^1.0.0-alpha.30",
+    "firebase": "^7.21.1",
+    "flamelink": "^1.0.0-alpha.32",
     "material-components-web": "^3.1.1",
     "register-service-worker": "^1.7.1",
-    "vue": "^2.5.17",
+    "vue": "^2.6.12",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.3.4",
+    "vue-router": "^3.4.5",
     "vueisotope": "^3.1.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.3",
-    "@vue/cli-plugin-pwa": "^4.2.3",
-    "@vue/cli-service": "^4.2.3",
+    "@vue/cli-plugin-babel": "^4.5.6",
+    "@vue/cli-plugin-pwa": "^4.5.6",
+    "@vue/cli-service": "^4.5.6",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.6.12"
   },
   "postcss": {
     "plugins": {
