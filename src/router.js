@@ -58,7 +58,7 @@ export default new Router({
     props: true
   },
   {
-    path: "/siddur",
+    path: "/siddour",
     name: "Siddour",
     component: () => import("./views/pages/Siddour.vue"),
     meta: {
