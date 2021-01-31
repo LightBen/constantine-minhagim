@@ -52,6 +52,23 @@ header {
         // }
     }
 
+    #menu-lang {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        i, svg { 
+            --menu-top-icon-size: 50px; 
+            font-size: var(--menu-top-icon-size); color: #555; width: var(--menu-top-icon-size); height: 32px; transition: var(--transition-all);
+        }
+        label {
+            line-height: 0.5;
+            cursor: pointer;
+            .lang-fr { font-size: 16px; }
+        }
+    }
+
     .lang-name {
         width: 20px; margin-inline-start: -10px;
         &::after {
@@ -92,9 +109,6 @@ header {
                 label { 
                     height: 24px; font-size: 14px; display: flex; align-items: flex-end; 
                     span { display: flex; align-items: flex-end; height: 100%; }
-                }
-                #menu-lang label {
-                    .lang-fr { font-size: 16px; }
                 }
                 @media (min-width: $sm) {
                     > * { min-width: 75px; }
@@ -217,11 +231,11 @@ html[lang="he"] {
                 #menu-close { right: auto; left: -10px; }
                 #menu-top-middle { 
                     label { font-size: 18px; }
-                    #menu-lang label {
-                        .lang-he { font-size: 16px; }
-                    }
                 }
             }
+        }
+        #menu-lang label {
+            .lang-he { font-size: 16px; }
         }
         .lang-name {
             &::after {

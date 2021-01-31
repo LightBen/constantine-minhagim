@@ -131,7 +131,7 @@ if (currentTheme) {
 // If nothing in local storage, set the lang local storage to he if user uses Hebrew otherwise french
 const lang = localStorage.getItem('lang');
 if (typeof lang === 'undefined' || lang === null) {
-    if (navigator.language === 'fr') {
+    if (navigator.language === 'fr' || navigator.language === 'fr-FR' || navigator.language === 'fra' || navigator.language === 'fre') {
         localStorage.setItem('lang', 'fr');
         Vue.flamelinkApp.settings.setLocale('fr')
         .then(locale => {

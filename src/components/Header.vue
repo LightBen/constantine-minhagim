@@ -27,6 +27,15 @@
                             <use xlink:href="#icon-donate" href="#icon-donate" />
                         </svg>
                     </router-link> -->
+                    <div id="menu-lang" class="menu-top-icon lang-toggle drawer-toggle" @click="changeLang">
+                        <svg class="icon-lang">
+                            <use xlink:href="#icon-lang" href="#icon-lang" />
+                        </svg>
+                        <label>
+                            <span class="lang-fr">עברית</span>
+                            <span class="lang-he">Français</span>
+                        </label>
+                    </div>
                     <div class="header-btn drawer-toggle" id="mainMenuBtn">
                         <div class="menu-label">
                             <span class="lang-fr">Menu</span>
@@ -48,7 +57,7 @@
                         </svg>
                     </div>
                     <div id="menu-top-middle">
-                        <div id="menu-lang" class="menu-top-icon lang-toggle drawer-toggle" @click="changeLang">
+                        <!-- <div id="menu-lang" class="menu-top-icon lang-toggle drawer-toggle" @click="changeLang">
                             <svg class="icon-lang">
                                 <use xlink:href="#icon-lang" href="#icon-lang" />
                             </svg>
@@ -56,7 +65,7 @@
                                 <span class="lang-fr">עברית</span>
                                 <span class="lang-he">Français</span>
                             </label>
-                        </div>
+                        </div> -->
                         <div id="menu-theme" class="menu-top-icon theme-toggle drawer-toggle">
                             <svg class="icon-theme">
                                 <use xlink:href="#icon-theme" href="#icon-theme" />
