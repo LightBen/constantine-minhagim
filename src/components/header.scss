@@ -59,8 +59,11 @@ header {
         align-items: center;
         cursor: pointer;
         i, svg { 
-            --menu-top-icon-size: 50px; 
-            font-size: var(--menu-top-icon-size); color: #555; width: var(--menu-top-icon-size); height: 32px; transition: var(--transition-all);
+            --menu-top-icon-size: 30px; 
+            font-size: var(--menu-top-icon-size); color: #555; width: var(--menu-top-icon-size); height: var(--menu-top-icon-size); transition: var(--transition-all);
+            @media (max-width: 992px) {
+                --menu-top-icon-size: 25px;
+            }
         }
         label {
             line-height: 0.5;
