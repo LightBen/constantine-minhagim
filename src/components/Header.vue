@@ -27,7 +27,7 @@
                             <use xlink:href="#icon-donate" href="#icon-donate" />
                         </svg>
                     </router-link> -->
-                    <div id="menu-lang" class="menu-top-icon lang-toggle drawer-toggle" @click="changeLang">
+                    <div id="menu-lang" class="menu-top-icon lang-toggle" @click="changeLang">
                         <svg class="icon-lang">
                             <use xlink:href="#icon-lang" href="#icon-lang" />
                         </svg>
