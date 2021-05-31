@@ -11,6 +11,7 @@ module.exports = {
   },
   pwa: {
     name: 'Constantine Minhagim',
+    display: 'fullscreen',
     themeColor: '#1294f6',
     msTileColor: '#1294f6',
     appleMobileWebAppCapable: 'yes',
