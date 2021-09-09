@@ -122,7 +122,7 @@
                             <svg>
                                 <use xlink:href="#icon-print" href="#icon-print" />
                             </svg>
-                            <span class="mdc-list-item__text lang-fr">Affiches</span>
+                            <span class="mdc-list-item__text lang-fr">Livrets</span>
                             <span class="mdc-list-item__text lang-he">גליונות</span>
                         </router-link>
                         <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive" rel="noopener">
