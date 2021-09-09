@@ -66,9 +66,17 @@ input {
 .illustration {
     display: block;
     width: 100%;
-    max-width: 600px;
+    max-width: 100px;
     max-height: 300px;
     margin: 0 auto var(--spacing);
+}
+
+.page-illustration {
+    margin: 0 auto var(--spacing);
+    text-align: center;
+    > img {
+        max-height: 300px;
+    }
 }
 
 p, li, #page-content {
