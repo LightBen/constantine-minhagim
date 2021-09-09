@@ -50,19 +50,31 @@
                     <span class="home-section-title lang-fr">Articles</span>
                     <span class="home-section-title lang-he">מאמרים</span>
                 </router-link>
-                <a href="https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE?usp=sharing" target="_blank" class="drive" rel="noopener">
+                <a href="https://www.youtube.com/channel/UCuZ5tVv28xXn6kQcv_u5ufg" target="_blank" class="drive" rel="noopener">
                     <svg class="icon-home-section">
-                        <use href="#icon-storage" />
+                        <use href="#icon-youtube" />
                     </svg>
                     <span class="home-section-title">
-                        <span class="lang-fr">Drive</span>
-                        <span class="lang-he">דרייב</span>
-                        <svg class="icon-label">
+                        <span class="lang-fr">YouTube</span>
+                        <span class="lang-he">יוטוב</span>
+                        <svg class="icon-label d-none">
                             <use href="#icon-external" />
                         </svg>
                     </span>
                 </a>
-                <router-link :to="{ name: 'Home' }" class="siddour section-disabled">
+                <a href="https://www.facebook.com/groups/185262976153983" target="_blank" class="drive" rel="noopener">
+                    <svg class="icon-home-section">
+                        <use href="#icon-fb" />
+                    </svg>
+                    <span class="home-section-title">
+                        <span class="lang-fr">Facebook</span>
+                        <span class="lang-he">פייסבוק</span>
+                        <svg class="icon-label d-none">
+                            <use href="#icon-external" />
+                        </svg>
+                    </span>
+                </a>
+                <router-link :to="{ name: 'Home' }" class="siddour section-disabled d-none">
                     <svg class="icon-home-section">
                         <use href="#icon-book-fill" />
                     </svg>
