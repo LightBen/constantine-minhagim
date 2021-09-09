@@ -21,7 +21,7 @@
             <span class="author-content" v-html="pageAuthor"></span>
           </div>
         </div>
-        <div class="page-illustration">
+        <div class="page-illustration" v-if="pageBanner && pageBanner.length">
           <img :src="pageBanner" alt="Illustration" class="" />
         </div>
         <div id="page-content" v-html="pageContent"></div>
