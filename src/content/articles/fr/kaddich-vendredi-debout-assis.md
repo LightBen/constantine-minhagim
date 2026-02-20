@@ -1,0 +1,33 @@
+---
+title: "Kaddich du vendredi soir: debout ou assis ?"
+locale: "fr"
+flamelinkId: "hivGIes6p0tzVWgdaTzG"
+date: "2019-12-31T16:19:59.000Z"
+updatedDate: "2020-03-03T18:25:11.000Z"
+author: "Nathaniel Zerbib"
+description: ""
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258717/articles/articles-banners/help_tgl8mw.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258727/articles/articles-thumbnails/help_t5bdn4.jpg"
+tags: ["kadich", "qaddich"]
+videoUrl: ""
+---
+
+<p>Comme chacun le sait, les Sefaradim n&#39;ont pas l&#39;usage de se tenir debout pendant que le Chalia&#39;h &Ccedil;ibour (ministre officiant) r&eacute;cite le Kaddich. Cependant, on constate derni&egrave;rement un ph&eacute;nom&egrave;ne selon lequel certains ont pris l&#39;habitude de se lever pendant le Kaddich introduisant la pri&egrave;re d&#39;Arbith du vendredi soir. Quelle est l&#39;origine de ce ph&eacute;nom&egrave;ne ? Correspond-il aux traditions ancestrales des juifs originaires d&#39;Afrique du Nord ?</p>
+
+<p>Selon le Rema (Ribbi Moche Isserl&egrave;s &ndash; Cracovie 1520-1572, auteur des notes (haga ou mapa, la &quot;nappe&quot;) sur le Choulkhan Aroukh, ayant force de loi pour les communaut&eacute;s achk&eacute;nazes) tout membre de l&#39;assembl&eacute;e doit se lever pour chaque kaddich prononc&eacute; durant toute pri&egrave;re (Ora&#39;h Hayim, 56,1). Il s&#39;appuie sur les propos du Mordekhi (Harav Mordekhai Ben Hillel HaCohen,- Nurembeg 1250-1298 qui fut assassin&eacute; en sanctifiant le nom de D. lors du pogrom de Rindfleisch) au nom du Talmud de J&eacute;rusalem qui rapporte le r&eacute;cit suivant (tir&eacute; du livre des Juges 3,20) : lorsqu&#39;Ehoud ben Gera entra dans la pi&egrave;ce dans laquelle se trouvait Eglon, roi de Moav avant de le tuer, il lui dit : &quot;C&#39;est une mission de Dieu que j&#39;ai pour toi!&quot; .A l&#39;&eacute;coute de ses paroles, le roi Eglon se leva imm&eacute;diatement de son si&egrave;ge. De cet &eacute;pisode lors duquel un non-juif se tint debout en l&#39;honneur du nom de D., Ribbi El&#39;azar (sage du Talmud) en d&eacute;duit qu&#39;a plus forte raison, il a y lieu de se lever pour chaque kaddich o&ugrave; le nom de D. y est clam&eacute;. De nombreux autres d&eacute;cisionnaires, tels que Ribbi Menahem Azaria de Fano (Fano 1548-Mantoue 1620, talmudiste et kabbaliste italien) sont du m&ecirc;me avis (Yonat Ilem, 99).</p>
+
+<p>Cependant, Ribbi &#39;Haim Vital (Safed 1542-Damas 1620, kabbaliste et plus fid&egrave;le disciple de Ribbi Its&#39;hak Louria Achkenazi, dit &quot;Ari zal&quot;) t&eacute;moigne que son maitre ne se tenait pas debout durant le kaddich et que la source du Talmud de J&eacute;rusalem cit&eacute;e ci-dessus est erron&eacute;e et a &eacute;t&eacute; imprim&eacute;e par erreur. Seulement dans un cas o&ugrave; il &eacute;tait d&eacute;j&agrave; debout au d&eacute;but du kaddich, il attendait que le chalia&#39;h tsibour ait fini pour s&#39;asseoir. Toutes les communaut&eacute;s s&eacute;farades d&#39;Afrique du Nord et celles du Moyen Orient ont adopt&eacute; cet usage et ne se l&egrave;vent &agrave; aucun kaddich contrairement &agrave; l&#39;&eacute;crasante majorit&eacute; des communaut&eacute;s ashk&eacute;nazes qui ont l&#39;habitude de le faire.</p>
+
+<p>D&#39;o&ugrave; vient alors cette exception selon laquelle certaines communaut&eacute;s non-ashk&eacute;nazes se l&egrave;vent sp&eacute;cifiquement pour le kaddich pr&eacute;c&eacute;dant la pri&egrave;re du vendredi soir ?</p>
+
+<p>A la question : &quot;l&#39;assembl&eacute;e doit elle se lever lorsqu&#39;elle entend le kaddich et barekhou r&eacute;cit&eacute;s par le chalia&#39;h tsibour&quot; le Rav Ovadia Yossef zatsal, dans son Responsa Ye&#39;have Da&#39;at) Tome 3, O.H 4) reprend les arguments cit&eacute;s pr&eacute;c&eacute;demment et am&egrave;ne d&#39;autres nombreuses sources pour finalement trancher qu&#39;il n&#39;y a aucune obligation pour les sefaradim et communaut&eacute;s du Moyen-Orient. N&eacute;anmoins, en toute fin de r&eacute;ponse il &eacute;crit : &quot;(Cependant) le vendredi soir, on a l&#39;habitude de se lever pendant le kaddich et barekhou qui pr&eacute;c&egrave;dent la priere d&#39;Arvit, afin de recevoir le suppl&eacute;ment de saintet&eacute; du Chabat, comme l&#39;&eacute;crit Ribbi &#39;Haim Vital dans son siddour&quot;. Ces propos sont repris par son fils, le Rav Its&#39;hak Yossef chlita, dans le Yalkout Yossef (O.H 56,11), en prenant soin de stipuler qu&#39;il s&#39;agit d&#39;un usage kabbalistique.</p>
+
+<p>Bien que les communaut&eacute;s d&#39;Afrique du Nord suivent dans divers cas les enseignements kabbalistiques du Ari zal, elles ne le font pas de mani&egrave;re syst&eacute;matique et n&#39;ont en aucune fa&ccedil;on adopt&eacute; cet usage sp&eacute;cifique. Ainsi en t&eacute;moigne Ribbi Chalom Messas zatsal (Meknes 1909- Jerusalem 2003, Grand Rabbin de Casablanca, du Maroc puis de J&eacute;rusalem) :</p>
+
+<p>&quot;Concernant le fait de se tenir debout pendant le kaddich du vendredi soir : nous les sefaradim, ne nous sommes jamais lev&eacute; a aucun kaddich, le Chabat comme les jours de la semaine. Ainsi &eacute;tait l&#39;usage au Maroc dans ma ville natale Meknes, et seulement derni&egrave;rement certains (sefaradim) ont appris de l&#39;usage des achkenazim de se tenir debout&quot; (Chemech Oumagen Tome 3 O.H 78).</p>
+
+<p>&quot;On n&#39;a pas l&#39;habitude de se lever au moment o&ugrave; l&#39;on r&eacute;pond barekhou (le vendredi soir) mais tout se fait en restant assis, le kaddich comme barekhou&quot; (ibid 60).</p>
+
+<p>Je me permettrais d&#39;ajouter que dans toute ma jeunesse pass&eacute;e a Paris, cette coutume de ne pas se lever a &eacute;t&eacute; conserv&eacute;e et je n&#39;ai jamais vu l&#39;assembl&eacute;e se lever le vendredi soir au moment du kaddich dans aucune communaut&eacute; s&eacute;farade, qu&#39;elle eut &eacute;t&eacute; marocaine, tunisienne ou alg&eacute;rienne.</p>
+
+<p><strong>En r&eacute;sum&eacute; : contrairement aux achkenazim, les sefaradim et communaut&eacute;s du Moyen-Orient n&#39;ont aucune obligation de se lever pendant la r&eacute;citation du kaddich par le chalia&#39;h tsibour, sauf si l&#39;on se trouve d&eacute;j&agrave; debout, auquel cas il faudra attendre la fin du kaddich pour se rasseoir. Pour les communaut&eacute;s d&#39;Afrique du Nord, il n&#39;y a pas d&#39;exception &agrave; la r&egrave;gle et l&#39;usage est de rester assis &eacute;galement pendant le kaddich pr&eacute;c&eacute;dent l&#39;office du vendredi soir.</strong></p>

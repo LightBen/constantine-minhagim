@@ -1,0 +1,216 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BottomNav from "../../components/BottomNav.astro";
+import PageHero from "../../components/PageHero.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export function getStaticPaths() {
+    return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
+}
+
+const { locale } = Astro.params;
+const t = useTranslations(locale as "fr" | "he");
+import imgRabbins from "../../assets/rabbins.png";
+---
+
+<BaseLayout
+    title={`${t("nav.rabbanim")} - ${t("site.title.1")}`}
+    description={t("hero.subtitle")}
+>
+    <Header />
+
+    <main class="flex-1 pb-20 md:pb-8">
+        <PageHero title={t("nav.rabbanim")} image={imgRabbins} />
+
+        <div
+            class="container mx-auto px-4 prose prose-lg dark:prose-invert max-w-4xl"
+        >
+            {
+                locale === "fr" ? (
+                    <>
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-serif text-brand-blue dark:text-brand-gold mb-6">
+                                Rav Yaacov Guedj
+                            </h2>
+                            <div class="bg-white dark:bg-brand-navy/50 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-800">
+                                <p>
+                                    Le but de ce site n’est pas de faire l’éloge
+                                    de Constantine mais de mettre en valeur, en
+                                    dépit de notre déracinement, le respect que
+                                    nous avions tous sur nos traditions
+                                    ancestrales. Le décret divin qui nous a
+                                    conduits jusqu’à Constantine ne nous empêcha
+                                    pas d’en tirer les meilleures étincelles au
+                                    prix même des paysages que nous avons
+                                    savourés et qui marquent encore jusqu’à
+                                    aujourd’hui notre mémoire.
+                                </p>
+                                <p>
+                                    C’est dans cet esprit que je voudrais
+                                    adresser tous mes compliments les plus
+                                    sincères à Benjamin Meir Khalifa qui a pris
+                                    sur lui de mettre en valeur ce passé qui
+                                    nous marque profondément et qui a décidé de
+                                    construire également notre avenir en Erets
+                                    Israël. Il est vrai que nous avions accroché
+                                    les espoirs les plus grands et nous les
+                                    avons suspendus dans ce pont du Rhummel que
+                                    l’on peut relier avec le pont du gecher
+                                    hamétarim. Si je t’oublie Constantine que ma
+                                    gauche m’oublie, si je t’oublie Jérusalem, Ô
+                                    pont de Jérusalem, que ma droite m’oublie.
+                                    En prenant sur lui ce devoir archéologique
+                                    de grande valeur, Benjamin nous fait
+                                    partager les émotions qu’il ressent jusqu’à
+                                    aujourd’hui dans le respect qu’il doit à ses
+                                    parents dans les émotions les sensations de
+                                    la manière dont nous exprimions notre
+                                    spiritualité au travers de notre liturgie,
+                                    de notre gastronomie, de notre histoire
+                                    sociologique et surtout du respect que nous
+                                    avions vis à vis de nos maîtres et nos
+                                    rabbins qui étaient marqués surtout par une
+                                    très grande humilité.
+                                </p>
+                                <p>
+                                    La communauté constantinoise d’ailleurs, au
+                                    même titre que d’autres communautés
+                                    séfarades d’Afrique du Nord, n’a pas connu
+                                    les dissensions bibliques et les divisions
+                                    inutiles politiques. Il y a des divergences
+                                    d’ordre communautaire, idéologique. Elle a
+                                    connu une unité parfaite dans un respect
+                                    profond que nous devons à nos talmidei
+                                    hakhamim. Benjamin est doué d’un humour qui
+                                    nous rassasie, même au niveau gastronomique,
+                                    en rappelant les plats que nos mamans
+                                    confectionnaient avec tant d’amour pour
+                                    marquer nos fêtes.
+                                </p>
+                                <p>
+                                    L’arrivée de Pessa’h avec la rénovation de
+                                    nos habitations dont les meubles exposés à
+                                    l’extérieur prouvaient l’ardeur que nous
+                                    mettions à entrer dans une nouvelle année de
+                                    libération. Malgré la servitude qu’elle
+                                    entraînait, sous le regard fougueux de nos
+                                    femmes et de nos mères. Chavouoth qui
+                                    attirait le plus grand public à l’audition
+                                    du gala annuel, les Assereth haDibouroth,
+                                    les Assereth Kelmat chantés par les ténors
+                                    les plus merveilleux de Constantine. Les
+                                    trois semaines de deuil, dès notre enfance
+                                    nous asseyions par terre en entendant les
+                                    pleurs liturgiques dans la voix de notre
+                                    regretté rabbi Ssione Choukroune. Nous
+                                    faisions tous une tête de hagay. Roch
+                                    Hachana et Kippour marqués par les mélodies
+                                    les plus prenantes et surtout compensait ce
+                                    jeune du grand pardon avec nos clous de
+                                    girofle plantés sur nos coins les plus
+                                    profonds de notre cœur. Souccoth où tous les
+                                    enfants traînaient, les branches de palmier
+                                    dans les rues de Kachara et surtout la place
+                                    de la brèche. ‘Hannouka, où nous attendions
+                                    avec impatience l’allumage de nos
+                                    ‘hannoukioth accrochées sur les murs dans
+                                    l’espoir de manger nos soufganiyot
+                                    -c’est-à-dire les sfinges- traditionnels.
+                                    Pourim enfin, où nous sortions dans les rues
+                                    les plateaux des gâteaux que nos mamans
+                                    apportaient au four du coin, au boulanger du
+                                    coin, au milieu des enfants qui jouaient les
+                                    dés avec des hurlements et de la joie,
+                                    parfois de la tristesse d’avoir perdu devant
+                                    celui qui nous apporte la guigne. Mon
+                                    souvenir le plus vivace se trouve à
+                                    l’intérieur de cette étrange synagogue qui
+                                    s’appelait Slath Rabbi Mass’oud où tous les
+                                    samedis après midi, j’écoutais les voix les
+                                    plus chaudes chanter les Téhilim sous la
+                                    conduite de M. Barkat. En buvant le coco
+                                    manille et en attendant la dracha émouvante
+                                    du plus grand de nos dayanim Sidi Fredj
+                                    ‘Halimi qui évoquait souvent celui que
+                                    j’aime et que j’étudie chaque semaine, le
+                                    Zera Emeth de Rabbi Messaoud El’habib
+                                    Zerbib.
+                                </p>
+                                <p>
+                                    Je voudrais rendre hommage à tous mes
+                                    maîtres, à nos rabbanim dont je sens encore
+                                    la chaleur de main que j’embrassais, Rabbi
+                                    Yossef Ghenassia, Rabbi Cherbit, Rabbi Sion,
+                                    Rabbi Aaron Ghozland, Rabi ‘Halimi et tant
+                                    d’autres aussi, Rabbi Laline, Rabbi Baroukh
+                                    Guedj, sans oublier Bébère, le ptit rabbin
+                                    de Shakay.
+                                </p>
+                                <p>
+                                    Benjamin, je t’embrasse de tout cœur et je
+                                    te souhaite de mener à bien cet oeuvre que
+                                    tu as entreprise pour raviver et faire
+                                    renaître toutes les émotions et les mettre
+                                    en valeur ici encore à Yérouchalayim et en
+                                    Israël jusqu’à la reconstruction du Beith
+                                    Hamikdach bimhéra béyaménou, amen.
+                                </p>
+                                <p class="font-bold mt-4">
+                                    Chers auditeurs, vos réactions seront les
+                                    bienvenues pour agrémenter et enrichir ce
+                                    site qui est le votre.
+                                </p>
+                                <p class="text-sm italic text-gray-500 mt-2">
+                                    Vous pouvez retrouver le Rav Yaacov Guedj
+                                    sur son site web ou sur Constantine Minhagim
+                                    avec ses enregistrements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-serif text-brand-blue dark:text-brand-gold mb-6">
+                                Grand Rabbin René Guedj
+                            </h2>
+                            <div class="bg-white dark:bg-brand-navy/50 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-800">
+                                <p>
+                                    Très bon travail de ce site géré par
+                                    Binyamine depuis 2015 et qui fait preuve
+                                    d’endurance et de persévérance pour
+                                    maintenir et récupérer pour les pérenniser
+                                    toutes nos belles traditions et nos
+                                    merveilleux Minhagim qui ont fait la fierté
+                                    et la richesse de notre judaïsme que nos
+                                    parents ont préservé depuis les temps
+                                    immémoriaux et qui ont fait la réputation de
+                                    Constantine, "la petite Jérusalem", un site
+                                    à qui je souhaite une parfaite réussite à
+                                    l’équipe qui l’anime et une pleine audience.
+                                </p>
+                                <p class="mt-4">
+                                    Le "GRG" est toujours là pour répondre aux
+                                    questions et aider à mener à bien ce site
+                                    pour que le contenu soit continuellement
+                                    correct.
+                                </p>
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <h3>רבנינו</h3>
+                        <p>
+                            חלק זה בבנייה. בקרוב תמצאו כאן את הביוגרפיות של רבני
+                            קונסטנטין.
+                        </p>
+                    </>
+                )
+            }
+        </div>
+    </main>
+
+    <Footer />
+    <BottomNav />
+</BaseLayout>

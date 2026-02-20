@@ -1,0 +1,102 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { Image } from 'astro:assets';
+
+// Import images
+import imgHalakha from '../assets/rabbins.png';
+import imgHazanout from '../assets/hazane.png';
+import imgCuisine from '../assets/meal.png';
+import imgArticles from '../assets/people-parchment.png';
+import imgOrHaZeev from '../assets/oh-family.png';
+import imgCommunity from '../assets/connected.png';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const tiles = [
+  { 
+    id: 'halakha',
+    title: t('nav.halakha'),
+    href: `/${lang}/halakha`,
+    image: imgHalakha,
+    alt: 'Rabbins',
+  },
+  { 
+    id: 'hazanout',
+    title: t('nav.hazanout'),
+    href: `/${lang}/hazanout`,
+    image: imgHazanout,
+    alt: 'Hazanout',
+  },
+  { 
+    id: 'cuisine',
+    title: t('nav.cuisine'),
+    href: `/${lang}/cuisine`,
+    image: imgCuisine,
+    alt: 'Cuisine',
+  },
+  { 
+    id: 'articles',
+    title: t('nav.articles'),
+    href: `/${lang}/articles`,
+    image: imgArticles,
+    alt: 'Articles',
+  },
+  {
+    id: 'community',
+    title: t('nav.community'),
+    href: `/${lang}/community`,
+    image: imgCommunity,
+    alt: 'Community',
+  },
+  {
+    id: 'orhazeev',
+    title: lang === 'fr' ? 'Bientot...' : 'בקרוב',
+    // title: lang === 'fr' ? 'Or HaZeev' : 'אור הזיו',
+    href: '#',
+    // href: 'https://orhazeev.com',
+    target: '_blank',
+    image: imgOrHaZeev,
+    // alt: 'Or HaZeev',
+    alt: 'Bientot...',
+    isExternal: true,
+  }
+];
+---
+
+<section class="max-w-7xl mx-auto px-4 pt-16 relative z-20 pb-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {tiles.map((tile) => (
+      <a 
+        href={tile.href} 
+        target={tile.target} 
+        class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 aspect-[4/3] flex items-end p-6"
+      >
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+          <Image 
+            src={tile.image} 
+            alt={tile.alt}
+            width={600}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        </div>
+
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-500 z-10"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+          <h3 class="font-serif text-2xl md:text-3xl font-bold text-white mb-2 drop-shadow-md flex items-center gap-2">
+            {tile.title}
+            {tile.isExternal && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            )}
+          </h3>
+          
+          <div class="h-1 w-12 bg-brand-gold rounded-full transition-all duration-500 group-hover:w-20"></div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

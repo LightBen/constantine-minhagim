@@ -1,0 +1,82 @@
+$mdc-theme-primary: #1e88e5;
+// $mdc-theme-on-primary: #0d47a1;
+// $mdc-theme-secondary: #E65100;
+// $mdc-theme-on-secondary: #442C2E;
+// $mdc-theme-surface: #FFFBFA;
+// $mdc-theme-on-surface: #442C2E;
+// $mdc-theme-background: #FFFFFF;
+// $mdc-theme-on-background: #442C2E;
+
+$xs: 0;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+
+:root {
+    --xs: 0;
+    --sm: 600px;
+    --md: 960px;
+    --lg: 1280px;
+    --xl: 1920px;
+
+    --spacing: 15px;
+    --spacingSm: 7px;
+    --transition-time: .2s;
+    --transition-time2: .5s;
+    --transition-ease: ease-in-out;
+    --transition-all: all var(--transition-time) var(--transition-ease);
+
+    --logo-color-1: #1294f6;
+    --logo-color-2: #0048a4;
+    --logo-color-1-rgb: 18, 148, 246;
+    --logo-color-2-rgb: 0, 75, 160;
+    --logo-color-1-trans: #1294f6ab;
+    --logo-color-2-trans: #0048a4ab;
+
+    --color-primary: #1294f6;
+    --color-primary-rgb: 18, 148, 246;
+    --color-primaryTrans: #1294f6ab;
+    --color-primaryTransRgb: 18, 148, 246;
+    --color-primaryTransRgba: 18, 148, 246, 0.67;
+    --color-bg: #f4f4f4;
+    --color-font: #333;
+
+    --font-family: 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
+    --font-size-primary: 20px;
+    --font-size-secondary: 16px;
+    --font-weight: 400;
+    --line-height: 32px;
+
+    --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --box-shadow-hover: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    --box-shadow-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    // --headerHeight: 60px;
+    // --footerHeight: 70px;
+
+    @media (min-width: $sm) {
+        --spacing: 30px;        
+        --spacingSm: 15px;
+        // --headerHeight: 64px;
+    }
+}
+
+html[data-theme="dark"] {
+    --color-primary: #111;
+    --color-bg: #111;
+    --color-font: #eee;
+
+    // --logo-color-1: #ff9800;
+    // --logo-color-2: #bb4d00;
+    // --logo-color-1-rgb: 255, 152, 0;
+    // --logo-color-2-rgb: 187, 77, 0;
+
+}
+html[lang="he"] {
+    --font-family: 'Assistant', 'Roboto', sans-serif;
+    --font-family-title: 'Taamey David', 'Roboto', sans-serif;
+    --font-size-primary: 24px;
+    --font-weight: normal;
+    --font-size-secondary: 20px;
+}

@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-height: 64px;
+    --footer-height: 60px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-slate-50 text-gray-900 font-sans antialiased;
+  }
+
+  /* Dark mode overrides */
+  html.dark body {
+    @apply bg-brand-navy text-gray-100;
+  }
+
+  /* Typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-bold mb-4 text-brand-blue dark:text-gold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl mt-8 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl mt-6 mb-3;
+  }
+
+  p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  ul {
+    @apply list-disc list-inside mb-4 pl-4;
+  }
+
+  ol {
+    @apply list-decimal list-inside mb-4 pl-4;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    text-align: right;
+  }
+
+  [dir="ltr"] {
+    text-align: left;
+  }
+}
+
+/* Hebrew Font Override */
+/* Hebrew Font Override */
+html[lang="he"] body {
+  @apply font-hebrew;
+}
+
+html[lang="he"] h1,
+html[lang="he"] h2,
+html[lang="he"] h3,
+html[lang="he"] h4,
+html[lang="he"] h5,
+html[lang="he"] h6,
+html[lang="he"] .font-serif,
+html[lang="he"] [class*="font-serif"] {
+  font-family: "Shofar", serif;
+}
+
+/* Prose overrides for Static Pages */
+.prose h2 {
+  @apply text-2xl md:text-3xl mt-8 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2 font-serif font-bold text-brand-blue dark:text-gold;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed text-gray-800 dark:text-gray-200;
+}
+
+.prose iframe {
+  @apply w-full aspect-video mx-auto block rounded-lg shadow-md my-8 dark:bg-gray-200;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-brand-blue hover:bg-brand-blue-mid text-white font-bold py-2 px-4 rounded transition-colors duration-200;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Custom Link Hover Animation */
+  /* Custom Link Hover Animation for Prose */
+  .prose p a {
+    @apply relative text-brand-blue dark:text-gold transition-all duration-300 no-underline font-medium;
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 6px),
+      rgba(26, 74, 138, 0.2) calc(50% - 6px), /* brand-blue with opacity */
+      rgba(26, 74, 138, 0.2) 100%
+    );
+    background-size: 100% 200%;
+    background-position: 0 0;
+  }
+
+  .dark .prose p a {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent calc(50% - 6px),
+      rgba(212, 175, 55, 0.3) calc(50% - 6px), /* brand-gold with opacity */
+      rgba(212, 175, 55, 0.3) 100%
+    );
+  }
+
+  .prose p a:hover {
+    background-position: 0 100%;
+  }
+
+  .dark .prose p a:hover {
+    background-position: 0 100%;
+  }
+}
+/* Custom Fonts */
+/* Custom Fonts */
+@font-face {
+  font-family: 'Shofar';
+  src: url('/fonts/ShofarRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shofar';
+  src: url('/fonts/ShofarRegularOblique.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shofar';
+  src: url('/fonts/ShofarDemi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shofar';
+  src: url('/fonts/ShofarDemi-BoldOblique.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IM Fell English';
+  src: url('/fonts/IMFellEnglishSC-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Page Transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}

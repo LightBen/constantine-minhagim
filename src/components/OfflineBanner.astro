@@ -1,0 +1,71 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+    id="offline-banner"
+    class="fixed bottom-20 md:bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 translate-y-20 opacity-0 pointer-events-none"
+>
+    <div
+        class="bg-gray-900/90 dark:bg-white/90 text-white dark:text-gray-900 px-6 py-3 rounded-full shadow-xl flex items-center gap-3 backdrop-blur-sm"
+    >
+        <div
+            class="w-2 h-2 rounded-full bg-red-500 animate-pulse"
+            id="status-dot"
+        >
+        </div>
+        <span class="font-medium text-sm" id="status-text"
+            >{lang === "fr" ? "Vous êtes hors ligne" : "אתה לא מחובר"}</span
+        >
+    </div>
+</div>
+
+<script>
+    const banner = document.getElementById("offline-banner");
+    const dot = document.getElementById("status-dot");
+    const text = document.getElementById("status-text");
+
+    function updateStatus(online) {
+        if (!banner || !dot || !text) return;
+
+        if (!online) {
+            // Offline
+            banner.classList.remove(
+                "translate-y-20",
+                "opacity-0",
+                "pointer-events-none",
+            );
+            dot.classList.remove("bg-green-500");
+            dot.classList.add("bg-red-500");
+            text.textContent =
+                document.documentElement.lang === "he"
+                    ? "אתה לא מחובר"
+                    : "Vous êtes hors ligne";
+        } else {
+            // Back Online
+            dot.classList.remove("bg-red-500");
+            dot.classList.add("bg-green-500");
+            text.textContent =
+                document.documentElement.lang === "he"
+                    ? "שוב מחובר"
+                    : "De retour en ligne";
+
+            // Hide after 3s
+            setTimeout(() => {
+                banner.classList.add(
+                    "translate-y-20",
+                    "opacity-0",
+                    "pointer-events-none",
+                );
+            }, 3000);
+        }
+    }
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("online", () => updateStatus(true));
+        window.addEventListener("offline", () => updateStatus(false));
+    }
+</script>

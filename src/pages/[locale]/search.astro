@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BottomNav from "../../components/BottomNav.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export function getStaticPaths() {
+    return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
+}
+
+const { locale } = Astro.params;
+const t = useTranslations(locale as "fr" | "he");
+---
+
+<BaseLayout
+    title={`${t("hero.search")} - ${t("site.title.1")}`}
+    description={t("hero.subtitle")}
+>
+    <Header />
+
+    <main class="flex-1 container-custom py-12 pb-20 md:pb-12">
+        <div class="max-w-4xl mx-auto">
+            <h1
+                class="text-3xl md:text-5xl font-serif font-bold text-brand-blue dark:text-brand-gold mb-8 text-center"
+            >
+                {t("hero.search")}
+            </h1>
+
+            <div
+                class="bg-white dark:bg-brand-navy p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 min-h-[400px]"
+            >
+                <div id="search" class="w-full"></div>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+    <BottomNav />
+</BaseLayout>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script src="/pagefind/pagefind-ui.js" is:inline></script>
+<script define:vars={{ locale }}>
+    window.addEventListener("DOMContentLoaded", () => {
+        new PagefindUI({
+            element: "#search",
+            showSubResults: true,
+            translations: {
+                placeholder: locale === "fr" ? "Rechercher..." : "חפש...",
+                clear_search: locale === "fr" ? "Effacer" : "נקה",
+                load_more:
+                    locale === "fr"
+                        ? "Voir plus de résultats"
+                        : "טען עוד תוצאות",
+                search_label: locale === "fr" ? "Recherche" : "חיפוש",
+                filters_label: locale === "fr" ? "Filtres" : "מסננים",
+                zero_results:
+                    locale === "fr"
+                        ? 'Aucun résultat pour "[SEARCH_TERM]"'
+                        : 'אין תוצאות עבור "[SEARCH_TERM]"',
+                many_results:
+                    locale === "fr"
+                        ? '[COUNT] résultats pour "[SEARCH_TERM]"'
+                        : '[COUNT] תוצאות עבור "[SEARCH_TERM]"',
+                one_result:
+                    locale === "fr"
+                        ? '[COUNT] résultat pour "[SEARCH_TERM]"'
+                        : '[COUNT] תוצאה עבור "[SEARCH_TERM]"',
+                alt_search:
+                    locale === "fr"
+                        ? 'Aucun résultat pour "[SEARCH_TERM]". Essayez l\'une des requêtes suivantes :'
+                        : 'אין תוצאות עבור "[SEARCH_TERM]". נסה אחת מהשאילתות הבאות:',
+                search_suggestion:
+                    locale === "fr"
+                        ? 'Recherchez "[SEARCH_TERM]" à la place'
+                        : 'חפש את "[SEARCH_TERM]" במקום זאת',
+                searching:
+                    locale === "fr"
+                        ? 'Recherche en cours pour "[SEARCH_TERM]"...'
+                        : 'מחפש את "[SEARCH_TERM]"...',
+            },
+        });
+
+        // Custom styling adjustments for Dark Mode support
+        const observer = new MutationObserver((mutations) => {
+            // logic to update styles if needed
+        });
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["class", "data-theme"],
+        });
+    });
+</script>
+
+<style is:global>
+    /* Pagefind Overrides for Tailwind/Dark Mode compatibility */
+    :root {
+        --pagefind-ui-scale: 1;
+        --pagefind-ui-primary: #1a4a8a;
+        --pagefind-ui-text: #393939;
+        --pagefind-ui-background: #ffffff;
+        --pagefind-ui-border: #eeeeee;
+        --pagefind-ui-tag: #eeeeee;
+        --pagefind-ui-border-width: 2px;
+        --pagefind-ui-border-radius: 8px;
+        --pagefind-ui-image-border-radius: 8px;
+        --pagefind-ui-image-box-ratio: 3 / 2;
+        --pagefind-ui-font: sans-serif;
+    }
+
+    [data-theme="dark"] {
+        --pagefind-ui-primary: #c9a94a;
+        --pagefind-ui-text: #eeeeee;
+        --pagefind-ui-background: #0d1b2a;
+        --pagefind-ui-border: #1f3f5b;
+        --pagefind-ui-tag: #1f3f5b;
+    }
+
+    /* RTL specific overrides handled by pagefind automatically? Need to check. */
+    html[dir="rtl"] .pagefind-ui__result-thumb {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+</style>

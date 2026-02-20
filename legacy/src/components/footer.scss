@@ -1,0 +1,79 @@
+footer {
+
+    opacity: 1;
+    visibility: visible;
+
+    #footerTabs {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #fff;
+        transition: var(--transition-all);
+        box-shadow: 0 -1px 3px rgba(0,0,0,0.12), 0 -1px 2px rgba(0,0,0,0.24);
+        // border-top: 1px solid #ddd;
+
+        .mdc-tab-bar {
+            width: 100%; max-width: 600px; display: flex; flex: 1 0 auto;
+            .mdc-tab {
+                flex: 1; height: auto; line-height: 1; padding: 10px 0; font-family: var(--font-family); background-image: none; background-color: transparent; border: none; cursor: pointer; transition: var(--transition-all); font-size: 14px; 
+                &:hover { background-color: #f6fafe; }
+                &:focus { outline: none; background-color: #e5f1fc; }
+                @media (min-width: $sm) {
+                    font-size: var(--font-size-secondary);
+                }
+            }
+            .mdc-tab:not(.mdc-tab--stacked) .mdc-tab__icon + .mdc-tab__text-label { padding: 0; letter-spacing: normal; }
+            .mdc-tab__content { display: block; }
+            .mdc-tab__icon { 
+                display: block; margin-bottom: 5px; height: 26px;
+                img, svg, i, .st0 { color: var(--logo-color-1); fill: var(--logo-color-1); }
+            }
+            .mdc-tab__text-label { color: var(--logo-color-1); position: relative; }
+            .mdc-tab-indicator .mdc-tab-indicator__content--underline { border-color: transparent; }
+
+            @media (min-width: $sm) {
+                .mdc-tab { padding: 15px 0; }
+                .mdc-tab__content { display: flex; align-items: center; justify-content: center; }
+                .mdc-tab__icon {  margin-bottom: 0;  margin-inline-end: 10px; }
+            }
+
+        }
+    }
+}
+
+html[data-theme="dark"] {
+    footer {
+        #footerTabs {
+            background-color: #222;
+            .mdc-tab-bar {
+                .mdc-tab {
+                    &:hover { background-color: #22262a; }
+                    &:focus { outline: none; background-color: #222e39; }
+                }
+                .mdc-tab__icon { 
+                    img, svg, i { color: #fff; fill: #fff; }
+                }
+                .mdc-tab__text-label { color: #fff; }
+            }
+        }
+    }
+}
+
+html[lang="he"] {
+    footer {
+        #footerTabs {
+            .mdc-tab-bar {
+                .mdc-tab__text-label { 
+                    font-size: 16px; top: 4px; 
+                    @media (min-width: $sm) {
+                        font-size: 20px; top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

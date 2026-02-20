@@ -1,0 +1,122 @@
+<template>
+    <div id="halakha" class="page-category" :class="[ (this.grid) ? 'grid' : 'list' ]">
+        <transition name="fade">
+            <Loading v-if="loading" />
+        </transition>
+        <div class="page-title-container">
+            <div class="container">
+                <h1 id="page-title" v-if="!loading">
+                    <span class="lang-fr">Halakha</span>
+                    <span class="lang-he">הלכה</span>
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+            <div id="search-container">
+                <div id="search-filter">
+                    <input type="text" required @input="filterSearch">
+                    <label class="lang-fr">Rechercher</label>
+                    <label class="lang-he">לחפש</label>
+                </div>
+                <div class="display-switch-container">
+                    <div class="display-switch">
+                        <div class="display-choice display-grid" @click="grid = true">
+                            <svg class="icon-grid">
+                                <use xlink:href="#icon-grid" href="#icon-grid" />
+                            </svg>
+                            <div class="display-label">
+                                <span class="lang-fr">Grille</span>
+                                <span class="lang-he">רשת</span>
+                            </div>
+                        </div>
+                        <div class="display-choice display-list" @click="grid = false">
+                            <svg class="icon-list">
+                                <use xlink:href="#icon-list" href="#icon-list" />
+                            </svg>
+                            <div class="display-label">
+                                <span class="lang-fr">Liste</span>
+                                <span class="lang-he">רשימה</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="halakhaContent" class="grid-container" v-if="!loading">
+                <router-link class="grid-element card" v-for="(element, key) in elements" :key="key" :to="{ name: 'halakha-url', params: {entryId: key, halakha_url: key} }">
+                    <figure class="card-content" tabindex="0">
+                        <div class="card-img" v-if="grid === true && element.thumbnail && element.thumbnail.length" :style="{ 'background-image': 'url(' + element.thumbnail + ')' }"></div>
+                        <div class="card-img" v-else></div>
+                        <figcaption class="card-text">
+                            <div class="card-title mdc-typography mdc-typography--headline6">{{ element.title }}</div>
+                            <div class="card-tags d-none">{{ element.tags }}</div>
+                        </figcaption>
+                    </figure>
+                </router-link>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import Loading from '@/components/Loading'
+    export default {
+        name: "Halakha",
+        components: {
+            Loading
+        },
+        metaInfo() {
+            return {
+                title: this.pageTitle,
+            }
+        },
+        data() {
+            return { 
+                elements: [],
+                pageTitle: 'Halakha',
+                pageTitleHe: 'הלכה',
+                loading: true,
+                grid: true
+            }
+        },
+        mounted() {
+             this.$root.$on('langChanged', this.getContent);
+             this.setPageTitle();
+        },
+        created() {
+            this.getContent()
+        },
+        methods: {
+            getContent() {
+                this.$flamelinkApp.content.get({
+                    schemaKey: 'minhag',
+                    fields: ['title', 'url', 'author', 'description', 'thumbnail', 'tags']
+                })
+                .then(elements => {
+                    this.elements = elements;
+                    this.loading = false;
+                    setTimeout(() => {
+                        this.entries = document.querySelectorAll('.grid-element')
+                    }, 100);
+                })
+            },
+            setPageTitle() {
+                this.$flamelinkApp.settings.getLocale()
+                .then(locale => {
+                    if (locale === 'he') {
+                        this.pageTitle = this.pageTitleHe
+                    }
+                })
+            },
+            filterSearch(event) {
+                let value = event.target.value;
+                for (var i=0, l=this.entries.length; i<l; i++) {
+                    var entryText = this.entries[i].getElementsByClassName('card-text')[0].innerHTML;
+                    if (entryText.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().indexOf(value.toLowerCase()) != -1) {
+                        this.entries[i].classList.remove("card-hidden");
+                    }
+                    else this.entries[i].classList.add("card-hidden");
+                }
+            }
+        }
+    };
+</script>

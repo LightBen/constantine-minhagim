@@ -1,0 +1,98 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+    id="install-prompt"
+    class="fixed bottom-0 left-0 w-full z-50 transform translate-y-full transition-transform duration-500 hidden md:hidden"
+>
+    <div
+        class="bg-white dark:bg-brand-navy border-t border-gray-200 dark:border-gray-800 p-4 shadow-2xl flex items-center justify-between"
+    >
+        <div class="flex items-center gap-4">
+            <div
+                class="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center p-2 shadow-sm"
+            >
+                <img
+                    src="/cm-logo-icon.svg"
+                    alt="App Icon"
+                    class="filter brightness-0 invert"
+                />
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-900 dark:text-white">
+                    Constantine Minhagim
+                </h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                    {
+                        lang === "fr"
+                            ? "Installez l'application pour un accès hors ligne."
+                            : "התקן את האפליקציה לגישה לא מקוונת."
+                    }
+                </p>
+            </div>
+        </div>
+        <div class="flex gap-2">
+            <button
+                id="install-dismiss"
+                class="text-gray-400 hover:text-gray-600 p-2"
+            >
+                <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <button
+                id="install-confirm"
+                class="bg-brand-blue text-white px-4 py-2 rounded-lg font-bold text-sm shadow-md"
+            >
+                {lang === "fr" ? "Installer" : "התקן"}
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let deferredPrompt;
+    const promptElement = document.getElementById("install-prompt");
+    const installBtn = document.getElementById("install-confirm");
+    const dismissBtn = document.getElementById("install-dismiss");
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+
+        // Show the prompts after a delay (e.g., 10 seconds)
+        setTimeout(() => {
+            promptElement?.classList.remove("hidden");
+            // Force reflow
+            void promptElement?.offsetWidth;
+            promptElement?.classList.remove("translate-y-full");
+        }, 10000);
+    });
+
+    installBtn?.addEventListener("click", async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        promptElement?.classList.add("translate-y-full");
+    });
+
+    dismissBtn?.addEventListener("click", () => {
+        promptElement?.classList.add("translate-y-full");
+    });
+</script>

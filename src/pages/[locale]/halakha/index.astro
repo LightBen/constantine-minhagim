@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import BottomNav from "../../../components/BottomNav.astro";
+import SearchFilter from "../../../components/SearchFilter.astro";
+import ArticleCard from "../../../components/ArticleCard.astro";
+import PageHero from "../../../components/PageHero.astro";
+import { useTranslations } from "../../../i18n/utils";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
+}
+
+const { locale } = Astro.params;
+const t = useTranslations(locale as "fr" | "he");
+
+const posts = await getCollection("halakha", ({ data }) => {
+    return data.locale === locale;
+});
+
+// Sort by date desc
+posts.sort(
+    (a, b) =>
+        new Date(b.data.date || 0).getTime() -
+        new Date(a.data.date || 0).getTime(),
+);
+---
+
+<BaseLayout
+    title={`${t("nav.halakha")} - ${t("site.title.1")}`}
+    description={t("hero.subtitle")}
+>
+    <Header />
+
+    <main class="flex-1 pb-20 md:pb-8">
+        <PageHero title={t("nav.halakha")} image="/img/rabbins.png" />
+
+        <div class="container-custom mx-auto px-4 pb-16">
+            <SearchFilter targetSelector=".filterable-item" />
+
+            {
+                posts.length > 0 ? (
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {posts.map((post) => (
+                            <div
+                                class="filterable-item transition-all duration-300 ease-in-out"
+                                data-filter-content={`${post.data.title} ${post.data.tags?.join(" ")}`}
+                            >
+                                <ArticleCard
+                                    title={post.data.title}
+                                    date={post.data.date}
+                                    slug={post.slug}
+                                    collection="halakha"
+                                    thumbnail={post.data.thumbnail}
+                                    description={post.data.description}
+                                    tags={post.data.tags}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div class="text-center py-20 text-gray-500">
+                        <p>
+                            {locale === "fr"
+                                ? "Aucun article trouvé."
+                                : "לא נמצאו מאמרים."}
+                        </p>
+                    </div>
+                )
+            }
+        </div>
+
+        <Footer />
+        <BottomNav />
+    </main>
+</BaseLayout>

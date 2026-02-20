@@ -1,0 +1,94 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { title, date, slug, collection, thumbnail, description, tags } =
+    Astro.props;
+
+import { Image } from "astro:assets";
+import defaultImage from "../assets/constantine-jlm.png";
+import imgHalakha from "../assets/rabbins.png";
+import imgHazanout from "../assets/hazane.png";
+import imgCuisine from "../assets/meal.png";
+import imgArticles from "../assets/people-parchment.png";
+
+const cleanSlug = slug.split("/").pop();
+const href = `/${lang}/${collection}/${cleanSlug}`;
+const displayDate = new Date(date).toLocaleDateString(
+    lang === "fr" ? "fr-FR" : "he-IL",
+    {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    },
+);
+
+let fallbackImage = defaultImage;
+if (collection === "halakha") fallbackImage = imgHalakha;
+if (collection === "hazanout") fallbackImage = imgHazanout;
+if (collection === "cuisine") fallbackImage = imgCuisine;
+if (collection === "articles") fallbackImage = imgArticles;
+---
+
+<a
+    href={href}
+    class="bg-white dark:bg-[#1e293b] border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group h-full"
+>
+    <!-- Thumbnail -->
+    <div class="relative h-48 overflow-hidden bg-gray-200 dark:bg-gray-800">
+        {
+            thumbnail ? (
+                <img
+                    src={thumbnail}
+                    alt={title}
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                />
+            ) : (
+                <Image
+                    src={fallbackImage}
+                    alt={title}
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 opacity-80"
+                />
+            )
+        }
+        }
+    </div>
+
+    <!-- Content -->
+    <div class="p-5 flex flex-col flex-1">
+        <div class="text-xs text-gray-500 dark:text-gray-400 mb-2 font-medium">
+            {displayDate}
+        </div>
+        <h3
+            class="text-xl font-serif font-bold text-gray-900 dark:text-white mb-2 leading-tight group-hover:text-brand-blue dark:group-hover:text-brand-blue-light transition-colors"
+        >
+            {title}
+        </h3>
+        <p
+            class="text-sm text-gray-600 dark:text-gray-300 line-clamp-3 mb-4 flex-1"
+        >
+            {description}
+        </p>
+
+        <div
+            class="text-brand-blue dark:text-brand-blue-light text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
+        >
+            {lang === "fr" ? "Lire la suite" : "קרא עוד"}
+            <svg
+                class="w-4 h-4 rtl:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+        </div>
+    </div>
+</a>

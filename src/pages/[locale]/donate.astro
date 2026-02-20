@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BottomNav from "../../components/BottomNav.astro";
+import PageHero from "../../components/PageHero.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export function getStaticPaths() {
+    return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
+}
+
+const { locale } = Astro.params;
+const t = useTranslations(locale as "fr" | "he");
+import imgDefault from "../../assets/constantine-jlm.png";
+---
+
+<BaseLayout
+    title={`${t("nav.donate")} - ${t("site.title.1")}`}
+    description={t("hero.subtitle")}
+>
+    <Header />
+
+    <main class="flex-1 pb-20 md:pb-8">
+        <PageHero title={t("nav.donate")} image={imgDefault} />
+
+        <div class="container mx-auto px-4 py-8 md:py-12 text-center">
+            <div
+                class="max-w-3xl mx-auto bg-white dark:bg-brand-navy p-8 md:p-12 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800"
+            >
+                <div
+                    class="w-20 h-20 bg-brand-gold/20 text-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-4xl"
+                >
+                    ❤
+                </div>
+
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                    {
+                        locale === "fr" ? (
+                            <>
+                                Dons via l'organisation{" "}
+                                <strong>'Hai Bahem</strong>.
+                                <br />
+                                <span class="text-sm">
+                                    (Précisez "Constantine Minhagim")
+                                </span>
+                                <br />
+                                <br />
+                                Dons déductibles des impôts en France (60%) et
+                                en Israël (35%).
+                            </>
+                        ) : (
+                            <>
+                                תרומות דרך ארגון <strong>'חי בהם'</strong>.
+                                <br />
+                                <span class="text-sm">
+                                    (נא לציין "Constantine Minhagim")
+                                </span>
+                                <br />
+                                <br />
+                                התרומות מוכרות לצרכי מס בצרפת (60%) ובישראל
+                                (35%).
+                            </>
+                        )
+                    }
+                </p>
+
+                <div class="bg-gray-50 dark:bg-black/20 p-8 rounded-xl">
+                    <h2 class="text-xl font-bold mb-6">
+                        {locale === "fr" ? "Faire un don" : "לתרום"}
+                    </h2>
+
+                    <a
+                        href={locale === "fr"
+                            ? "https://haibahem.org/don/"
+                            : "https://haibahem.org/donate/?lang=he"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-[#E63946] text-white px-8 py-3 rounded-full font-bold hover:bg-[#d62828] transition-colors shadow-md inline-flex items-center gap-2"
+                    >
+                        {
+                            locale === "fr"
+                                ? "Donner via 'Hai Bahem"
+                                : "תרומה דרך 'חי בהם'"
+                        }
+                        <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            ><path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            ></path></svg
+                        >
+                    </a>
+
+                    <p class="text-sm text-gray-500 mt-6">
+                        {
+                            locale === "fr" ? (
+                                <>
+                                    Si vous rencontrez des problèmes pour
+                                    effectuer un don ou désirez faire un don via
+                                    d'autres méthodes, veuillez nous contacter à{" "}
+                                    <a
+                                        href="mailto:contact@constantine-minhagim.com"
+                                        class="text-brand-blue hover:underline"
+                                    >
+                                        contact@constantine-minhagim.com
+                                    </a>
+                                </>
+                            ) : (
+                                <>
+                                    אם אתם נתקלים בבעיות בביצוע התרומה או
+                                    מעוניינים לתרום בדרכים אחרות, אנא צרו איתנו
+                                    קשר בכתובת{" "}
+                                    <a
+                                        href="mailto:contact@constantine-minhagim.com"
+                                        class="text-brand-blue hover:underline"
+                                    >
+                                        contact@constantine-minhagim.com
+                                    </a>
+                                </>
+                            )
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+    <BottomNav />
+</BaseLayout>

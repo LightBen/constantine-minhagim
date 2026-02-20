@@ -1,0 +1,71 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { title, subtitle } = Astro.props;
+
+import { getImage } from "astro:assets";
+import heroImage from "../assets/constantine-jlm.png";
+import heroImageSm from "../assets/constantine-jlm-sm.png";
+
+const optimizedHero = await getImage({ src: heroImage, format: "webp" });
+const optimizedHeroSm = await getImage({ src: heroImageSm, format: "webp" });
+---
+
+<section
+    class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-brand-navy"
+>
+    <!-- Background Image with Parallax-like fixed attachment or absolute -->
+    <div class="absolute inset-0 z-0">
+        <picture>
+            <source media="(max-width: 640px)" srcset={optimizedHeroSm.src} />
+            <img
+                src={optimizedHero.src}
+                alt="Constantine Bridge"
+                class="w-full h-full object-cover"
+                width="1920"
+                height="1080"
+            />
+        </picture>
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-brand-navy/90"
+        >
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div
+        class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center"
+    >
+        <!-- Logo Icon (Large) -->
+        <div
+            class="mb-6 animate-fade-in opacity-0"
+            style="animation-delay: 0.2s; animation-fill-mode: forwards;"
+        >
+            <img
+                src="/cm-logo-icon.svg"
+                alt="Logo"
+                class="w-20 h-20 md:w-28 md:h-28 filter brightness-0 invert drop-shadow-xl"
+            />
+        </div>
+
+        <!-- Title -->
+        <h1
+            class="text-3xl md:text-5xl font-serif font-bold text-white mb-4 drop-shadow-lg tracking-wide uppercase animate-slide-up opacity-0"
+            style="animation-delay: 0.4s; animation-fill-mode: forwards;"
+        >
+            <span class="text-white">{t("site.title.1")}</span>
+            <span class="text-white">{t("site.title.2")}</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p
+            class="text-base md:text-xl text-gray-200 font-light max-w-2xl mx-auto mb-8 drop-shadow-md animate-slide-up opacity-0"
+            style="animation-delay: 0.6s; animation-fill-mode: forwards;"
+        >
+            {t("hero.subtitle")}
+        </p>
+    </div>
+</section>

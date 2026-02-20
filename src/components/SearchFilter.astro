@@ -1,0 +1,63 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { targetSelector = ".filterable-item" } = Astro.props;
+---
+
+<div class="mb-8 max-w-lg mx-auto relative animate-fade-in">
+    <input
+        type="text"
+        id="client-search-filter"
+        data-target-selector={targetSelector}
+        placeholder={t("hero.search")}
+        class="w-full px-5 py-3 pl-12 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-brand-navy/50 backdrop-blur-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue dark:focus:ring-brand-gold focus:border-transparent outline-none transition-all shadow-sm"
+    />
+    <svg
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+    </svg>
+</div>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const input = document.getElementById("client-search-filter");
+        if (input) {
+            const targetSelector =
+                input.dataset.targetSelector || ".filterable-item";
+            input.addEventListener("input", (e) => {
+                const term = e.target.value.toLowerCase().trim();
+                const items = document.querySelectorAll(targetSelector);
+
+                items.forEach((item) => {
+                    const text =
+                        item.dataset.filterContent?.toLowerCase() || "";
+                    if (text.includes(term)) {
+                        item.classList.remove("hidden");
+                        setTimeout(() => {
+                            item.classList.remove("opacity-0", "scale-95");
+                            item.classList.add("opacity-100", "scale-100");
+                        }, 50);
+                    } else {
+                        item.classList.remove("opacity-100", "scale-100");
+                        item.classList.add("opacity-0", "scale-95");
+                        setTimeout(() => {
+                            if (item.classList.contains("opacity-0")) {
+                                item.classList.add("hidden");
+                            }
+                        }, 300); // Wait for transition
+                    }
+                });
+            });
+        }
+    });
+</script>

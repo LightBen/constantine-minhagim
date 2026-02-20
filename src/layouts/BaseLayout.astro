@@ -1,0 +1,111 @@
+---
+import { getLangFromUrl } from "../i18n/utils";
+import { ViewTransitions } from "astro:transitions";
+import "../styles/global.css";
+import InstallPrompt from "../components/InstallPrompt.astro";
+import DrawerMenu from "../components/DrawerMenu.astro";
+
+const lang = getLangFromUrl(new URL(Astro.request.url));
+const dir = lang === "he" ? "rtl" : "ltr";
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  alternatePath?: string;
+}
+
+const {
+  title,
+  description = "Minhague Constantine",
+  image = "/img/hero.jpg",
+  alternatePath,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} dir={dir} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#1A4A8A" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Hebrew:wght@400;500;700&family=Heebo:wght@400;500;700&family=IM+Fell+English:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Global Scripts (Theme) -->
+    <script is:inline>
+      const getTheme = () => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      };
+
+      const applyTheme = () => {
+        const theme = getTheme();
+        if (theme === "light") {
+          document.documentElement.classList.remove("dark");
+          document.documentElement.setAttribute("data-theme", "light");
+        } else {
+          document.documentElement.classList.add("dark");
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+        window.localStorage.setItem("theme", theme);
+      };
+
+      // Apply on initial load
+      applyTheme();
+
+      // Apply on navigation (ViewTransitions)
+      document.addEventListener("astro:after-swap", applyTheme);
+    </script>
+  </head>
+  <body
+    class="flex flex-col min-h-screen bg-gray-100 dark:bg-brand-navy dark:text-brand-white transition-colors duration-300 pt-16"
+  >
+    <slot />
+    <InstallPrompt />
+    <DrawerMenu />
+
+    <script>
+      // Service Worker Registration
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js");
+        });
+      }
+    </script>
+  </body>
+</html>

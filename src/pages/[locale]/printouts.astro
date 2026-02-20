@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BottomNav from "../../components/BottomNav.astro";
+import PageHero from "../../components/PageHero.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export function getStaticPaths() {
+    return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
+}
+
+const { locale } = Astro.params;
+const t = useTranslations(locale as "fr" | "he");
+import imgDefault from "../../assets/constantine-jlm.png";
+---
+
+<BaseLayout
+    title={`${t("nav.printouts")} - ${t("site.title.1")}`}
+    description={t("hero.subtitle")}
+>
+    <Header />
+
+    <main class="flex-1 pb-20 md:pb-8">
+        <PageHero title={t("nav.printouts")} image={imgDefault} />
+
+        <div
+            class="container mx-auto px-4 prose prose-lg dark:prose-invert max-w-4xl"
+        >
+            <div
+                class="container mx-auto px-4 prose prose-lg dark:prose-invert max-w-4xl"
+            >
+                <h3>
+                    {
+                        locale === "fr"
+                            ? "Feuillets à imprimer"
+                            : "דפי לימוד להדפסה"
+                    }
+                </h3>
+                {
+                    locale === "fr" ? (
+                        <>
+                            <p>
+                                Nous vous invitons à consulter notre Google
+                                Drive. Il contient des dossiers en A5 qui
+                                peuvent être imprimés gratuitement par soi-même,
+                                ainsi que multiples feuillets A4 à imprimer. Les
+                                pages du site contiennent les fichiers
+                                pertinents à la page.
+                            </p>
+                            <p>
+                                Parmi les livrets, une Haggada de Pessa'h, un
+                                guide de Tichri, un ouvrage sur la Brith Mila,
+                                un livret sur les Kiddouch de l'année avec aussi
+                                Birkath Hamazone, et bien d'autres à venir...
+                            </p>
+                            <p>
+                                Parmi les posters, un dossier sur le deuil en
+                                cas d'urgence, une Birkath Halebana, un Seder de
+                                Rosh Hashana, et bien d'autres encore.
+                            </p>
+                            <div class="not-prose mt-8 flex justify-center">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1yCA8q-wOqX84tW5i07C8a8vI6zDbaM0d"
+                                    target="_blank"
+                                    class="inline-flex items-center gap-2 bg-[#0F9D58] hover:bg-[#0F9D58]/90 text-white font-bold py-3 px-6 rounded-full transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                >
+                                    <svg
+                                        class="w-6 h-6 fill-current"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M12.01 1.485c2.082 0 3.754.025 4.843.073 1.182.052 2.37.247 3.285 1.162.915.915 1.11 2.103 1.162 3.285.048 1.09.073 2.761.073 4.843s-.025 3.754-.073 4.843c-.052 1.182-.247 2.37-1.162 3.285-.915.915-2.103 1.11-3.285 1.162-1.09.048-2.761.073-4.843.073s-3.754-.025-4.843-.073c-1.182-.052-2.37-.247-3.285-1.162-.915-.915-1.11-2.103-1.162-3.285C2.673 14.6 2.648 12.93 2.648 10.847s.025-3.754.073-4.843c.052-1.182.247-2.37 1.162-3.285.915-.915 2.103-1.11 3.285-1.162 1.09-.048 2.761-.073 4.843-.073zM7.674 6.74l3.052 5.286h6.104L13.78 6.74H7.674zm-2.43 1.403L8.3 13.43l3.053-5.287H5.244zm11.238 2.508l-3.053 5.287h6.104l-3.051-5.287z" />
+                                    </svg>
+                                    Accéder au Google Drive
+                                </a>
+                            </div>
+                        </>
+                    ) : (
+                        <p>כאן תמצאו דפי פרשת שבוע ומסמכים נוספים להדפסה.</p>
+                    )
+                }
+            </div>
+        </div>
+
+        <Footer />
+        <BottomNav />
+    </main>
+</BaseLayout>

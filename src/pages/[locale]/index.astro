@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import WelcomeGrid from "../../components/WelcomeGrid.astro";
+import OfflineBanner from "../../components/OfflineBanner.astro";
+import BottomNav from "../../components/BottomNav.astro";
+import { useTranslations } from "../../i18n/utils";
+
+export function getStaticPaths() {
+    return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
+}
+
+const { locale } = Astro.params;
+const t = useTranslations(locale as "fr" | "he");
+---
+
+<BaseLayout
+    title={`${t("site.title.1")} ${t("site.title.2")} - ${t("hero.subtitle")}`}
+    description={t("hero.subtitle")}
+>
+    <Header />
+
+    <main class="flex-1 pb-16 md:pb-0">
+        <HeroSection />
+
+        <WelcomeGrid />
+    </main>
+
+    <Footer />
+    <BottomNav />
+    <OfflineBanner />
+</BaseLayout>

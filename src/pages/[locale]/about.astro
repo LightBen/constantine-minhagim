@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BottomNav from "../../components/BottomNav.astro";
+import PageHero from "../../components/PageHero.astro";
+import { useTranslations } from "../../i18n/utils";
+import { getCollection } from "astro:content";
+
+export function getStaticPaths() {
+    return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
+}
+
+const { locale } = Astro.params;
+const t = useTranslations(locale as "fr" | "he");
+
+// Try to find an 'about' page in content loaded from CMS, or fallback to hardcoded
+const pages = await getCollection("pages");
+const aboutPage =
+    pages.find((p) => p.slug.includes("about") && p.data.locale === locale) ||
+    pages.find((p) => p.slug.includes("propos") && p.data.locale === locale);
+
+let Content;
+if (aboutPage) {
+    const renderResult = await aboutPage.render();
+    Content = renderResult.Content;
+}
+import imgDefault from "../../assets/constantine-jlm.png";
+---
+
+<BaseLayout
+    title={`${t("nav.about")} - ${t("site.title.1")}`}
+    description={t("hero.subtitle")}
+>
+    <Header />
+
+    <main class="flex-1 pb-20 md:pb-8">
+        <PageHero title={t("nav.about")} image={imgDefault} />
+
+        <div class="container mx-auto px-4 py-8 md:py-12">
+            <div
+                class="max-w-4xl mx-auto bg-white dark:bg-brand-navy p-8 md:p-12 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800"
+            >
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    {
+                        Content ? (
+                            <Content />
+                        ) : (
+                            <div class="text-center text-gray-500 italic py-12">
+                                <p>
+                                    {locale === "fr"
+                                        ? "Contenu à venir..."
+                                        : "תוכן בקרוב..."}
+                                </p>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+    <BottomNav />
+</BaseLayout>
