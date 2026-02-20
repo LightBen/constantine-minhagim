@@ -1,6 +1,5 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -30,30 +29,30 @@ const { alternatePath } = Astro.props;
     class="fixed w-full top-0 z-50 bg-white/90 dark:bg-brand-navy/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300 h-16 flex items-center shadow-sm transform"
 >
     <div
-        class="container mx-auto px-4 w-full flex justify-between items-center"
+        class="w-full sm:container mx-auto px-4 flex justify-between items-center"
     >
         <!-- Logo & Title -->
         <a
             href={`/${lang}/`}
-            class="header-brand flex items-center gap-3 group"
+            class="header-brand flex items-center gap-2 md:gap-3 group"
         >
             <div
-                class="w-14 h-14 flex items-center justify-center p-1 transition-transform group-hover:scale-105"
+                class="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center p-1 transition-transform group-hover:scale-105"
             >
                 <img
                     src="/img/cm-logo-icon.png"
                     alt="Logo"
-                    class="w-12 h-12 dark:filter dark:brightness-0 dark:invert"
+                    class="w-full h-full object-contain dark:filter dark:brightness-0 dark:invert"
                 />
             </div>
             <div class="sitename flex flex-col relative top-[2px]">
                 <span
-                    class="text-lg md:text-lg font-serif text-brand-blue dark:text-white uppercase tracking-wide leading-[1.2]"
+                    class={`${lang === "he" ? "text-lg" : "text-sm"} md:text-lg font-serif text-brand-blue dark:text-white uppercase tracking-wide leading-[1.0] md:leading-[1.2]`}
                 >
                     {t("site.title.1")}
                 </span>
                 <span
-                    class="text-lg md:text-lg font-serif text-brand-blue-light dark:text-white uppercase tracking-wide leading-[1.2]"
+                    class={`${lang === "he" ? "text-lg" : "text-sm"} md:text-lg font-serif text-brand-blue-light dark:text-white uppercase tracking-wide leading-[1.0] md:leading-[1.2]`}
                 >
                     {t("site.title.2")}
                 </span>
@@ -110,7 +109,7 @@ const { alternatePath } = Astro.props;
         </nav>
 
         <!-- Right Controls -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 md:gap-3">
             <!-- Language Switcher -->
             {
                 (() => {

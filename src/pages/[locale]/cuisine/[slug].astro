@@ -66,13 +66,13 @@ const badges = [
 
 const alternatePath = alternateSlug
     ? `/${locale === "fr" ? "he" : "fr"}/cuisine/${alternateSlug}`
-    : null;
+    : undefined;
 ---
 
 <BaseLayout
     title={`${post.data.title} - ${t("nav.cuisine")}`}
     description={post.data.description || undefined}
-    image={post.data.banner || post.data.thumbnail || "/img/meal.png"}
+    image={post.data.banner || post.data.thumbnail || "/img/meal-social.jpg"}
     alternatePath={alternatePath}
 >
     <Header alternatePath={alternatePath} />

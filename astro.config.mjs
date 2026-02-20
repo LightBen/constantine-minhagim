@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
+  site: 'https://constantine-minhagim.web.app',
   integrations: [tailwind()],
   output: 'static',
   prefetch: true,

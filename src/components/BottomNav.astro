@@ -18,8 +18,8 @@ const navItems = [
     {
         href: `/${lang}/cuisine`,
         label: t("nav.cuisine"),
-        icon: "M12 2a4 4 0 00-4 4v14a1 1 0 001 1h6a1 1 0 001-1V6a4 4 0 00-4-4z",
-    }, // placeholder chef hat like
+        icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+    },
     {
         href: `/${lang}/articles`,
         label: t("nav.articles"),
@@ -57,26 +57,5 @@ const navItems = [
                 </a>
             ))
         }
-
-        <!-- Search Trigger (Optional, maybe opens modal) -->
-        <button
-            class="flex flex-col items-center justify-center w-full h-full text-gray-500 dark:text-gray-400 hover:text-brand-blue dark:hover:text-brand-blue-light transition-colors"
-        >
-            <svg
-                class="w-6 h-6 mb-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            <span class="text-[10px] font-medium uppercase tracking-wide"
-                >Search</span
-            >
-        </button>
     </div>
 </nav>

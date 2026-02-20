@@ -17,8 +17,8 @@ interface Props {
 
 const {
   title,
-  description = "Minhague Constantine",
-  image = "/img/hero.jpg",
+  description = "Constantine Minhagim",
+  image = "/img/constantine-jlm-social.jpg",
   alternatePath,
 } = Astro.props;
 ---
@@ -42,7 +42,9 @@ const {
       gtag("config", "G-Y2V9JBDVXG");
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
@@ -62,8 +64,12 @@ const {
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
     <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#1A4A8A" />
+    <meta name="application-name" content="Constantine Minhagim" />
+    <meta name="apple-mobile-web-app-title" content="Constantine Minhagim" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <!-- Fonts -->
     <link

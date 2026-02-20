@@ -5,6 +5,9 @@ import Footer from "../../components/Footer.astro";
 import BottomNav from "../../components/BottomNav.astro";
 import PageHero from "../../components/PageHero.astro";
 import { useTranslations } from "../../i18n/utils";
+import { Image } from "astro:assets";
+import imgCommunity from "../../assets/connected.png";
+import imgOrHazeev from "../../assets/orhazeevlogo-hd.png";
 
 export function getStaticPaths() {
     return [{ params: { locale: "fr" } }, { params: { locale: "he" } }];
@@ -62,10 +65,19 @@ const links = [
                 : "גישה למשאבים המשותפים שלנו",
         icon: '<path d="M12.01 1.485c2.082 0 3.754.025 4.843.073 1.182.052 2.37.247 3.285 1.162.915.915 1.11 2.103 1.162 3.285.048 1.09.073 2.761.073 4.843s-.025 3.754-.073 4.843c-.052 1.182-.247 2.37-1.162 3.285-.915.915-2.103 1.11-3.285 1.162-1.09.048-2.761.073-4.843.073s-3.754-.025-4.843-.073c-1.182-.052-2.37-.247-3.285-1.162-.915-.915-1.11-2.103-1.162-3.285C2.673 14.6 2.648 12.93 2.648 10.847s.025-3.754.073-4.843c.052-1.182.247-2.37 1.162-3.285.915-.915 2.103-1.11 3.285-1.162 1.09-.048 2.761-.073 4.843-.073zM7.674 6.74l3.052 5.286h6.104L13.78 6.74H7.674zm-2.43 1.403L8.3 13.43l3.053-5.287H5.244zm11.238 2.508l-3.053 5.287h6.104l-3.051-5.287z" />',
         color: "bg-[#0F9D58]",
-        href: "https://drive.google.com/drive/folders/1yCA8q-wOqX84tW5i07C8a8vI6zDbaM0d",
+        href: "https://drive.google.com/drive/folders/0BzlEWQTUwxa6YnRYYkJFU0NWalE",
+    },
+    {
+        title: locale === "fr" ? "Or HaZeev" : "אור הזיו",
+        desc:
+            locale === "fr"
+                ? "Découvrez le projet Or HaZeev"
+                : "גלה את פרויקט אור הזיו",
+        image: imgOrHazeev,
+        color: "bg-white border-2 border-brand-gold",
+        href: "https://orhazeev.com",
     },
 ];
-import imgCommunity from "../../assets/connected.png";
 ---
 
 <BaseLayout
@@ -100,13 +112,21 @@ import imgCommunity from "../../assets/connected.png";
                             class="group relative overflow-hidden bg-white dark:bg-brand-navy rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 p-8 flex items-center gap-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                         >
                             <div
-                                class={`w-16 h-16 rounded-full ${link.color} flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-md`}
+                                class={`w-16 h-16 rounded-full ${link.color} flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-md overflow-hidden`}
                             >
-                                <svg
-                                    class="w-8 h-8 fill-current"
-                                    viewBox="0 0 24 24"
-                                    set:html={link.icon}
-                                />
+                                {link.image ? (
+                                    <Image
+                                        src={link.image}
+                                        alt={link.title}
+                                        class="w-full h-full object-contain p-2"
+                                    />
+                                ) : (
+                                    <svg
+                                        class="w-8 h-8 fill-current"
+                                        viewBox="0 0 24 24"
+                                        set:html={link.icon}
+                                    />
+                                )}
                             </div>
                             <div class="text-left rtl:text-right">
                                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-brand-blue dark:group-hover:text-brand-blue-light transition-colors">

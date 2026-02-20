@@ -1,12 +1,12 @@
-const CACHE_NAME = 'cm-minhagim-v1';
+const CACHE_NAME = 'cm-minhagim-v2';
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
-    '/manifest.webmanifest',
+    '/manifest.json',
     '/cm-logo-icon.svg',
     '/favicon.ico',
-    '/img/constantine-bridge-sm.jpg',
-    '/img/constantine-bridge-lg.jpg'
+    '/img/constantine-jlm-sm.png',
+    '/img/constantine-jlm.png'
 ];
 
 // Install Event
