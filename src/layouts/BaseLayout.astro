@@ -28,6 +28,19 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2V9JBDVXG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(..._args: any[]) {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Y2V9JBDVXG");
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
