@@ -1,4 +1,5 @@
 ---
+import imgConstantineJlmSocial from "../assets/img/constantine-jlm-social.jpg";
 import { getLangFromUrl } from "../i18n/utils";
 import { ViewTransitions } from "astro:transitions";
 import "../styles/global.css";
@@ -18,7 +19,7 @@ interface Props {
 const {
   title,
   description = "Constantine Minhagim",
-  image = "/img/constantine-jlm-social.jpg",
+  image = imgConstantineJlmSocial.src,
   alternatePath,
 } = Astro.props;
 ---

@@ -1,4 +1,6 @@
 ---
+import imgHazane from "../../../assets/img/hazane.png";
+import imgHazaneSocial from "../../../assets/img/hazane-social.jpg";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
@@ -27,16 +29,17 @@ posts.sort(
         new Date(a.data.date || 0).getTime(),
 );
 ---
+import imgHazane from "../../../assets/img/hazane.png";
 
 <BaseLayout
     title={`${t("nav.hazanout")} - ${t("site.title.1")}`}
     description={t("hero.subtitle")}
-    image="/img/hazane-social.jpg"
+    image=imgHazaneSocial.src
 >
     <Header />
 
     <main class="flex-1 pb-20 md:pb-8">
-        <PageHero title={t("nav.hazanout")} image="/img/hazane.png" />
+        <PageHero title={t("nav.hazanout")} image=imgHazane.src />
 
         <div class="container-custom mx-auto px-4 pb-16">
             <SearchFilter targetSelector=".filterable-item" />

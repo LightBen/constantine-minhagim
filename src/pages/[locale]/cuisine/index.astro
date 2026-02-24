@@ -1,4 +1,6 @@
 ---
+import imgMeal from "../../../assets/img/meal.png";
+import imgMealSocial from "../../../assets/img/meal-social.jpg";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
@@ -31,16 +33,17 @@ posts.sort(
 // In a real implementation, we'd use client-side filtering or static paths for categories.
 // For now, let's just list them all.
 ---
+import imgMeal from "../../../assets/img/meal.png";
 
 <BaseLayout
     title={`${t("nav.cuisine")} - ${t("site.title.1")}`}
     description={t("hero.subtitle")}
-    image="/img/meal-social.jpg"
+    image=imgMealSocial.src
 >
     <Header />
 
     <main class="flex-1 pb-20 md:pb-8">
-        <PageHero title={t("nav.cuisine")} image="/img/meal.png" />
+        <PageHero title={t("nav.cuisine")} image=imgMeal.src />
 
         <div class="container-custom mx-auto px-4 pb-16">
             <SearchFilter targetSelector=".filterable-item" />

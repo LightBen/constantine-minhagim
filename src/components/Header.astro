@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import cmLogoIcon from "../assets/img/cm-logo-icon.png";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -40,7 +41,7 @@ const { alternatePath } = Astro.props;
                 class="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center p-1 transition-transform group-hover:scale-105"
             >
                 <img
-                    src="/img/cm-logo-icon.png"
+                    src={cmLogoIcon.src}
                     alt="Logo"
                     class="w-full h-full object-contain dark:filter dark:brightness-0 dark:invert"
                 />

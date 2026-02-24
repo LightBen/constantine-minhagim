@@ -1,4 +1,6 @@
 ---
+import imgPeople from "../../../assets/img/people-parchment.png";
+import imgPeopleSocial from "../../../assets/img/people-parchment-social.jpg";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
@@ -27,16 +29,17 @@ posts.sort(
         new Date(a.data.date || 0).getTime(),
 );
 ---
+import imgPeople from "../../../assets/img/people-parchment.png";
 
 <BaseLayout
     title={`${t("nav.articles")} - ${t("site.title.1")}`}
     description={t("hero.subtitle")}
-    image="/img/people-parchment-social.jpg"
+    image=imgPeopleSocial.src
 >
     <Header />
 
     <main class="flex-1 pb-20 md:pb-8">
-        <PageHero title={t("nav.articles")} image="/img/people-parchment.png" />
+        <PageHero title={t("nav.articles")} image=imgPeople.src />
 
         <div class="container-custom mx-auto px-4 pb-16">
             <SearchFilter targetSelector=".filterable-item" />

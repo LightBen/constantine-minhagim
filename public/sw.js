@@ -4,9 +4,7 @@ const ASSETS_TO_CACHE = [
     '/index.html',
     '/manifest.json',
     '/cm-logo-icon.svg',
-    '/favicon.ico',
-    '/img/constantine-jlm-sm.png',
-    '/img/constantine-jlm.png'
+    '/favicon.ico'
 ];
 
 // Install Event

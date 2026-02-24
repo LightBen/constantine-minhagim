@@ -7,11 +7,37 @@ const t = useTranslations(lang);
 const { title, subtitle } = Astro.props;
 
 import { getImage } from "astro:assets";
-import heroImage from "../assets/constantine-jlm.png";
-import heroImageSm from "../assets/constantine-jlm-sm.png";
 
-const optimizedHero = await getImage({ src: heroImage, format: "webp" });
-const optimizedHeroSm = await getImage({ src: heroImageSm, format: "webp" });
+import bgArt from "../assets/img/bg-home/jlm-const-bg-art.webp";
+import bgArtSm from "../assets/img/bg-home/jlm-const-bg-art-sm.webp";
+import bgMorning from "../assets/img/bg-home/jlm-const-bg-morning.webp";
+import bgMorningSm from "../assets/img/bg-home/jlm-const-bg-morning-sm.webp";
+import bgDay from "../assets/img/bg-home/jlm-const-bg-day.webp";
+import bgDaySm from "../assets/img/bg-home/jlm-const-bg-day-sm.webp";
+import bgEve from "../assets/img/bg-home/jlm-const-bg-eve.webp";
+import bgEveSm from "../assets/img/bg-home/jlm-const-bg-eve-sm.webp";
+import bgNight from "../assets/img/bg-home/jlm-const-bg-night.webp";
+import bgNightSm from "../assets/img/bg-home/jlm-const-bg-night-sm.webp";
+
+// Optimize all images
+const optArt = await getImage({ src: bgArt, format: "webp" });
+const optArtSm = await getImage({ src: bgArtSm, format: "webp" });
+const optMorning = await getImage({ src: bgMorning, format: "webp" });
+const optMorningSm = await getImage({ src: bgMorningSm, format: "webp" });
+const optDay = await getImage({ src: bgDay, format: "webp" });
+const optDaySm = await getImage({ src: bgDaySm, format: "webp" });
+const optEve = await getImage({ src: bgEve, format: "webp" });
+const optEveSm = await getImage({ src: bgEveSm, format: "webp" });
+const optNight = await getImage({ src: bgNight, format: "webp" });
+const optNightSm = await getImage({ src: bgNightSm, format: "webp" });
+
+const backgrounds = {
+    morning: { lg: optMorning.src, sm: optMorningSm.src },
+    day: { lg: optDay.src, sm: optDaySm.src },
+    evening: { lg: optEve.src, sm: optEveSm.src },
+    night: { lg: optNight.src, sm: optNightSm.src },
+    art: { lg: optArt.src, sm: optArtSm.src },
+};
 ---
 
 <section
@@ -19,10 +45,15 @@ const optimizedHeroSm = await getImage({ src: heroImageSm, format: "webp" });
 >
     <!-- Background Image with Parallax-like fixed attachment or absolute -->
     <div class="absolute inset-0 z-0">
-        <picture>
-            <source media="(max-width: 640px)" srcset={optimizedHeroSm.src} />
+        <picture id="hero-bg-picture" class="transition-opacity duration-1000">
+            <source
+                id="hero-bg-source"
+                media="(max-width: 640px)"
+                srcset={optArtSm.src}
+            />
             <img
-                src={optimizedHero.src}
+                id="hero-bg-img"
+                src={optArt.src}
                 alt="Constantine Bridge"
                 class="w-full h-full object-cover"
                 width="1920"
@@ -68,4 +99,30 @@ const optimizedHeroSm = await getImage({ src: heroImageSm, format: "webp" });
             {t("hero.subtitle")}
         </p>
     </div>
+
+    <!-- Client-side logic for dynamic background -->
+    <script define:vars={{ backgrounds }} is:inline>
+        document.addEventListener("astro:page-load", () => {
+            const hour = new Date().getHours();
+            let phase = "art";
+
+            if (hour >= 6 && hour < 11) {
+                phase = "morning";
+            } else if (hour >= 11 && hour < 17) {
+                phase = "day";
+            } else if (hour >= 17 && hour < 20) {
+                phase = "evening";
+            } else {
+                phase = "night";
+            }
+
+            const picSource = document.getElementById("hero-bg-source");
+            const picImg = document.getElementById("hero-bg-img");
+
+            if (picSource && picImg && backgrounds[phase]) {
+                picSource.srcset = backgrounds[phase].sm;
+                picImg.src = backgrounds[phase].lg;
+            }
+        });
+    </script>
 </section>

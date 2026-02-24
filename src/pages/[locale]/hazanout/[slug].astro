@@ -1,4 +1,6 @@
 ---
+import imgHazane from "../../../assets/img/hazane.png";
+import imgHazaneSocial from "../../../assets/img/hazane-social.jpg";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
@@ -61,11 +63,12 @@ const alternatePath = alternateSlug
     ? `/${locale === "fr" ? "he" : "fr"}/hazanout/${alternateSlug}`
     : null;
 ---
+import imgHazane from "../../../assets/img/hazane.png";
 
 <BaseLayout
     title={`${post.data.title} - ${t("nav.hazanout")}`}
     description={post.data.description || undefined}
-    image={post.data.banner || post.data.thumbnail || "/img/hazane-social.jpg"}
+    image={post.data.banner || post.data.thumbnail || imgHazaneSocial.src}
     alternatePath={alternatePath}
 >
     <Header alternatePath={alternatePath} />
@@ -77,7 +80,7 @@ const alternatePath = alternateSlug
                 <img
                     src={post.data.banner ||
                         post.data.thumbnail ||
-                        "/img/hazane.png"}
+                        imgHazane.src}
                     alt={post.data.title}
                     class="w-full h-full object-cover"
                 />
