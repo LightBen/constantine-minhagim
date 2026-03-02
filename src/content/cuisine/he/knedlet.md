@@ -6,8 +6,8 @@ date: "2020-01-06T16:14:50.000Z"
 updatedDate: "2020-03-03T18:43:44.000Z"
 author: "קורלי כהן אוואט"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258791/cuisine/cuisine-banners/knedlettes_y5ibhm.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258750/cuisine/cuisine-thumbnails/knedlettes_ktcrf2.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258791/cuisine/cuisine-banners/knedlettes_y5ibhm.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258750/cuisine/cuisine-thumbnails/knedlettes_ktcrf2.jpg"
 tags: []
 videoUrl: ""
 foodType: []

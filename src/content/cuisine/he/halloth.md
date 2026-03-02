@@ -6,8 +6,8 @@ date: "2020-01-06T12:32:38.000Z"
 updatedDate: "2020-03-03T18:43:30.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258791/cuisine/cuisine-banners/hallot3_ub9g8h.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258750/cuisine/cuisine-thumbnails/hallot3_jg5qxx.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258791/cuisine/cuisine-banners/hallot3_ub9g8h.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258750/cuisine/cuisine-thumbnails/hallot3_jg5qxx.jpg"
 tags: []
 videoUrl: ""
 foodType: []

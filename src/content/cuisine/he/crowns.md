@@ -6,8 +6,8 @@ date: "2020-01-06T16:27:58.000Z"
 updatedDate: "2021-07-18T14:49:30.000Z"
 author: "קורלי כהן אוואט"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258785/cuisine/cuisine-banners/couronnes2_fwmxhu.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258747/cuisine/cuisine-thumbnails/couronnes3_w2rd6d.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258785/cuisine/cuisine-banners/couronnes2_fwmxhu.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258747/cuisine/cuisine-thumbnails/couronnes3_w2rd6d.jpg"
 tags: []
 videoUrl: ""
 foodType: []

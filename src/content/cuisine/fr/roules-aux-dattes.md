@@ -6,8 +6,8 @@ date: "2020-01-06T16:38:44.000Z"
 updatedDate: "2020-03-03T18:37:47.000Z"
 author: "Coralie Cohen Aouate"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258794/cuisine/cuisine-banners/roules-sdattes_rwmlh2.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258752/cuisine/cuisine-thumbnails/roules-sdattes_mkzazw.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258794/cuisine/cuisine-banners/roules-sdattes_rwmlh2.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258752/cuisine/cuisine-thumbnails/roules-sdattes_mkzazw.jpg"
 tags: []
 videoUrl: ""
 foodType: []

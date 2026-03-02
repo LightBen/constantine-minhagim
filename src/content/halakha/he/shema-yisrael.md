@@ -6,8 +6,8 @@ date: "2020-01-06T11:18:06.000Z"
 updatedDate: "2020-03-02T22:35:49.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170197/minhag/minhag-banners/shema-israel_ysqbfa.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170177/minhag/minhag-thumbnails/shema-israel_ualppn.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170197/minhag/minhag-banners/shema-israel_ysqbfa.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170177/minhag/minhag-thumbnails/shema-israel_ualppn.jpg"
 tags: []
 videoUrl: ""
 ---

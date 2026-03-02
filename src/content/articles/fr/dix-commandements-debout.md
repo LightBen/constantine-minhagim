@@ -6,8 +6,8 @@ date: "2019-12-31T16:19:59.000Z"
 updatedDate: "2023-02-08T08:49:14.000Z"
 author: "Nathaniel Zerbib"
 description: "Rappel du Mont Sinai"
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258717/articles/articles-banners/opening-sea_clcimz.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258726/articles/articles-thumbnails/opening-sea_bqduqm.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258717/articles/articles-banners/opening-sea_clcimz.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258726/articles/articles-thumbnails/opening-sea_bqduqm.jpg"
 tags: []
 videoUrl: ""
 ---

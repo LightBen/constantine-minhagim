@@ -6,8 +6,8 @@ date: "2020-01-06T13:33:11.000Z"
 updatedDate: "2020-03-03T18:40:37.000Z"
 author: "קורלי כהן אוואט"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258782/cuisine/cuisine-banners/boulettes-petitspois-langues2_tf7zlc.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258745/cuisine/cuisine-thumbnails/boulettes-petitspois-langues2_lror6x.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258782/cuisine/cuisine-banners/boulettes-petitspois-langues2_tf7zlc.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258745/cuisine/cuisine-thumbnails/boulettes-petitspois-langues2_lror6x.jpg"
 tags: []
 videoUrl: ""
 foodType: ["bassari"]

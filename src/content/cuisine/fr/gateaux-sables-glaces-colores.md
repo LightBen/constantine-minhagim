@@ -6,8 +6,8 @@ date: "2020-01-06T16:24:22.000Z"
 updatedDate: "2020-03-03T18:31:38.000Z"
 author: "Valerie Courcelle"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258783/cuisine/cuisine-banners/colores_qavk2x.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258745/cuisine/cuisine-thumbnails/colores_kuwejl.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258783/cuisine/cuisine-banners/colores_qavk2x.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258745/cuisine/cuisine-thumbnails/colores_kuwejl.jpg"
 tags: ["blancs"]
 videoUrl: ""
 foodType: []

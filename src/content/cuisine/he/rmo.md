@@ -6,8 +6,8 @@ date: "2020-01-06T13:17:36.000Z"
 updatedDate: "2020-03-03T18:42:56.000Z"
 author: "משפחת כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258793/cuisine/cuisine-banners/rmo_ovmylw.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258752/cuisine/cuisine-thumbnails/rmo_paazqa.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258793/cuisine/cuisine-banners/rmo_ovmylw.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258752/cuisine/cuisine-thumbnails/rmo_paazqa.jpg"
 tags: []
 videoUrl: ""
 foodType: ["bassari"]

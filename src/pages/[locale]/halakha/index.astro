@@ -1,6 +1,10 @@
 ---
-import imgRabbins from "../../../assets/img/rabbins.png";
-import imgRabbinsSocial from "../../../assets/img/rabbins-social.jpg";
+const imgRabbins = {
+    src: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1772112945/minhag/rabbins.png",
+};
+const imgRabbinsSocial = {
+    src: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,w_1200,h_630,c_fill,dpr_auto/v1772112945/minhag/rabbins.png",
+};
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
@@ -29,17 +33,16 @@ posts.sort(
         new Date(a.data.date || 0).getTime(),
 );
 ---
-import imgRabbins from "../../../assets/img/rabbins.png";
 
 <BaseLayout
     title={`${t("nav.halakha")} - ${t("site.title.1")}`}
     description={t("hero.subtitle")}
-    image=imgRabbinsSocial.src
+    image={imgRabbinsSocial.src}
 >
     <Header />
 
     <main class="flex-1 pb-20 md:pb-8">
-        <PageHero title={t("nav.halakha")} image=imgRabbins.src />
+        <PageHero title={t("nav.halakha")} image={imgRabbins.src} />
 
         <div class="container-custom mx-auto px-4 pb-16">
             <SearchFilter targetSelector=".filterable-item" />

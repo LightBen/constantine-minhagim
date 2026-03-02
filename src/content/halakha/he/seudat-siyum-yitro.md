@@ -6,8 +6,8 @@ date: "2021-01-24T15:25:39.000Z"
 updatedDate: "2025-02-06T13:45:59.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1612099097/cuisine/cuisine-banners/seoudat-siyoum1_ozkbut.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1612099068/cuisine/cuisine-thumbnails/seoudat-siyoum1_ecfgzg.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1612099097/cuisine/cuisine-banners/seoudat-siyoum1_ozkbut.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1612099068/cuisine/cuisine-thumbnails/seoudat-siyoum1_ecfgzg.jpg"
 tags: ["סעודה", "סעודת", "יתרו", "סיום", "גרים"]
 videoUrl: ""
 ---

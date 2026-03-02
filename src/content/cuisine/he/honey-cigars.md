@@ -6,8 +6,8 @@ date: "2020-01-06T16:13:33.000Z"
 updatedDate: "2020-03-03T18:42:44.000Z"
 author: "ולרי קורסל"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258783/cuisine/cuisine-banners/cigares_k6r4ay.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258744/cuisine/cuisine-thumbnails/cigares_xmsxcw.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258783/cuisine/cuisine-banners/cigares_k6r4ay.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258744/cuisine/cuisine-thumbnails/cigares_xmsxcw.jpg"
 tags: []
 videoUrl: ""
 foodType: []

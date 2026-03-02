@@ -6,8 +6,8 @@ date: "2020-01-06T09:01:51.000Z"
 updatedDate: "2020-03-02T22:43:00.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170197/minhag/minhag-banners/talith_eqil3p.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170177/minhag/minhag-thumbnails/talith_hopinw.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170197/minhag/minhag-banners/talith_eqil3p.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170177/minhag/minhag-thumbnails/talith_hopinw.jpg"
 tags: []
 videoUrl: ""
 ---

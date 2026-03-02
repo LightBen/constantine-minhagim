@@ -6,8 +6,8 @@ date: "2020-01-06T11:26:32.000Z"
 updatedDate: "2021-02-15T13:55:36.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170197/minhag/minhag-banners/mossi_uu5ouq.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170176/minhag/minhag-thumbnails/mossi_iz6pdn.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170197/minhag/minhag-banners/mossi_uu5ouq.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170176/minhag/minhag-thumbnails/mossi_iz6pdn.jpg"
 tags: []
 videoUrl: ""
 ---

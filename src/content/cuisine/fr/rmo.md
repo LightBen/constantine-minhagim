@@ -6,8 +6,8 @@ date: "2020-01-06T13:17:04.000Z"
 updatedDate: "2022-04-07T08:08:47.000Z"
 author: "Famille Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258793/cuisine/cuisine-banners/rmo_ovmylw.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258752/cuisine/cuisine-thumbnails/rmo_paazqa.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258793/cuisine/cuisine-banners/rmo_ovmylw.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258752/cuisine/cuisine-thumbnails/rmo_paazqa.jpg"
 tags: ["remo", "romo", "ermo"]
 videoUrl: ""
 foodType: []

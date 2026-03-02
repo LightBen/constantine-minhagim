@@ -6,8 +6,8 @@ date: "2019-12-31T16:19:59.000Z"
 updatedDate: "2023-02-02T16:18:21.000Z"
 author: "Binyamin Meir Khalifa"
 description: "A 6000km de l'Espagne..."
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170198/minhag/minhag-banners/rav-ovadia_ngdcix.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170177/minhag/minhag-thumbnails/rav-ovadia_hv738y.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170198/minhag/minhag-banners/rav-ovadia_ngdcix.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170177/minhag/minhag-thumbnails/rav-ovadia_hv738y.jpg"
 tags: []
 videoUrl: ""
 ---

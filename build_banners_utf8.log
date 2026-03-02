@@ -1,0 +1,103 @@
+﻿
+> constantine-minhagim@1.0.0 build
+> astro build && npx pagefind --site dist
+
+21:21:47 [types] Generated 1.45s
+21:21:47 [build] output: "static"
+21:21:47 [build] directory: C:\Users\Benjamin Meir\Desktop\PROJECTS local\Constantine Minhagim website\constantine-minhagim\dist\
+21:21:47 [build] Collecting build info...
+21:21:47 [build] Γ£ô Completed in 1.59s.
+21:21:51 [build] Building static entrypoints...
+21:22:09 [vite] [32mΓ£ô built in 17.26s[39m
+21:22:09 [build] Γ£ô Completed in 18.21s.
+
+ building client (vite) 
+21:22:09 [vite] transforming...
+21:22:10 [vite] [32mΓ£ô[39m 23 modules transformed.
+21:22:10 [vite] rendering chunks...
+21:22:10 [vite] computing gzip size...
+21:22:10 [vite] [2mdist/[22m[36m_astro/page.CPvyyiTs.js     [39m[1m[2m 0.04 kB[22m[1m[22m[2m Γöé gzip: 0.06 kB[22m
+21:22:10 [vite] [2mdist/[22m[36m_astro/hoisted.CmWQ3Ktt.js  [39m[1m[2m 0.71 kB[22m[1m[22m[2m Γöé gzip: 0.38 kB[22m
+21:22:10 [vite] [2mdist/[22m[36m_astro/hoisted.BGub_0HT.js  [39m[1m[2m 0.80 kB[22m[1m[22m[2m Γöé gzip: 0.42 kB[22m
+21:22:10 [vite] [2mdist/[22m[36m_astro/index.U3IA9L3b.js    [39m[1m[2m 2.21 kB[22m[1m[22m[2m Γöé gzip: 0.99 kB[22m
+21:22:10 [vite] [2mdist/[22m[36m_astro/hoisted.slMLmlRD.js  [39m[1m[2m14.53 kB[22m[1m[22m[2m Γöé gzip: 4.88 kB[22m
+21:22:10 [vite] [32mΓ£ô built in 1.07s[39m
+
+ generating static routes 
+21:22:14 Γû╢ src/pages/404.astro
+21:22:14   ΓööΓöÇ /404.html (+42ms)
+21:22:14 Γû╢ src/pages/[locale]/about.astro
+21:22:14   Γö£ΓöÇ /fr/about/index.html (+43ms)
+21:22:14   ΓööΓöÇ /he/about/index.html (+38ms)
+21:22:14 Γû╢ src/pages/[locale]/articles/[slug].astro
+21:22:14   Γö£ΓöÇ /fr/articles/auteur/index.html (+18ms)
+21:22:14   Γö£ΓöÇ /fr/articles/birkath-halebana-date/index.html (+23ms)
+node.exe : imgPeople 
+is not defined
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Users\Benjamin 
+Meir\AppData\ ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (imgPeople is    
+ not defined:String    
+) [], RemoteExcept    
+ion
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+  Stack trace:
+    at Object.default (
+file:///C:/Users/Benjam
+in%20Meir/Desktop/PROJE
+CTS%20local/Constantine
+%20Minhagim%20website/c
+onstantine-minhagim/dis
+t/pages/_locale_/articl
+es/_slug_.astro.mjs?tim
+e=1771960934186:60:673)
+    at createAstroCompo
+nentInstance (file:///C
+:/Users/Benjamin%20Meir
+/Desktop/PROJECTS%20loc
+al/Constantine%20Minhag
+im%20website/constantin
+e-minhagim/dist/chunks/
+astro/server_D0kxlqqj.m
+js:1164:20)
+    at renderComponent 
+(file:///C:/Users/Benja
+min%20Meir/Desktop/PROJ
+ECTS%20local/Constantin
+e%20Minhagim%20website/
+constantine-minhagim/di
+st/chunks/astro/server_
+D0kxlqqj.mjs:1653:12)
+    at async callCompon
+entAsTemplateResultOrRe
+sponse (file:///C:/User
+s/Benjamin%20Meir/Deskt
+op/PROJECTS%20local/Con
+stantine%20Minhagim%20w
+ebsite/constantine-minh
+agim/node_modules/astro
+/dist/runtime/server/re
+nder/astro/render.js:90
+:25)
+    at async 
+renderPage (file:///C:/
+Users/Benjamin%20Meir/D
+esktop/PROJECTS%20local
+/Constantine%20Minhagim
+%20website/constantine-
+minhagim/node_modules/a
+stro/dist/runtime/serve
+r/render/page.js:44:12)
+21:22:14   Γö£ΓöÇ /fr/articles/choix-siddour/index.html

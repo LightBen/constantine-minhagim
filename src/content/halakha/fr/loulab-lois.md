@@ -6,8 +6,8 @@ date: "2020-01-06T11:42:16.000Z"
 updatedDate: "2021-09-20T09:16:59.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170190/minhag/minhag-banners/etrog_ge5ytv.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170174/minhag/minhag-thumbnails/etrog_nxb4ef.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170190/minhag/minhag-banners/etrog_ge5ytv.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170174/minhag/minhag-thumbnails/etrog_nxb4ef.jpg"
 tags: ["souccah", "souccoth", "soukkah", "soukkoth", "loulav", "etrog", "arbath", "haminim", "minim", "arbaath"]
 videoUrl: ""
 ---

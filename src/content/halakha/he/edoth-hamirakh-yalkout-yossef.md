@@ -6,8 +6,8 @@ date: "2020-01-03T07:19:23.000Z"
 updatedDate: "2020-03-02T22:41:45.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170198/minhag/minhag-banners/rav-ovadia_ngdcix.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170177/minhag/minhag-thumbnails/rav-ovadia_hv738y.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170198/minhag/minhag-banners/rav-ovadia_ngdcix.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170177/minhag/minhag-thumbnails/rav-ovadia_hv738y.jpg"
 tags: []
 videoUrl: ""
 ---

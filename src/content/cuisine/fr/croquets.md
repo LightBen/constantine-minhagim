@@ -6,8 +6,8 @@ date: "2020-01-06T16:28:43.000Z"
 updatedDate: "2020-03-03T18:32:43.000Z"
 author: "Coralie Cohen Aouate"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258789/cuisine/cuisine-banners/croquets_yzxo8p.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258749/cuisine/cuisine-thumbnails/croquets_okdxma.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258789/cuisine/cuisine-banners/croquets_yzxo8p.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258749/cuisine/cuisine-thumbnails/croquets_okdxma.jpg"
 tags: []
 videoUrl: ""
 foodType: []

@@ -6,8 +6,8 @@ date: "2020-01-06T13:36:40.000Z"
 updatedDate: "2020-03-03T18:45:07.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258795/cuisine/cuisine-banners/tfina2_u1yddp.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258754/cuisine/cuisine-thumbnails/tfina2_p7lqh4.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258795/cuisine/cuisine-banners/tfina2_u1yddp.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258754/cuisine/cuisine-thumbnails/tfina2_p7lqh4.jpg"
 tags: []
 videoUrl: ""
 foodType: []

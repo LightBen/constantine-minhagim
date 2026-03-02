@@ -6,8 +6,8 @@ date: "2020-01-06T16:29:57.000Z"
 updatedDate: "2020-03-03T18:38:46.000Z"
 author: "Coralie Cohen Aouate"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258788/cuisine/cuisine-banners/galettes_ggkmbg.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258749/cuisine/cuisine-thumbnails/galettes_txytun.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258788/cuisine/cuisine-banners/galettes_ggkmbg.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258749/cuisine/cuisine-thumbnails/galettes_txytun.jpg"
 tags: []
 videoUrl: ""
 foodType: []

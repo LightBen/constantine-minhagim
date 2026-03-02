@@ -6,8 +6,8 @@ date: "2020-01-06T14:35:09.000Z"
 updatedDate: "2020-03-03T18:43:20.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258794/cuisine/cuisine-banners/semoule2_efs9ak.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258753/cuisine/cuisine-thumbnails/semoule2_joyetq.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258794/cuisine/cuisine-banners/semoule2_efs9ak.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258753/cuisine/cuisine-thumbnails/semoule2_joyetq.jpg"
 tags: []
 videoUrl: ""
 foodType: []

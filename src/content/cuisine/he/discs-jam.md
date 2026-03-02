@@ -6,8 +6,8 @@ date: "2020-03-09T09:52:38.000Z"
 updatedDate: "2020-03-09T09:52:38.000Z"
 author: "קורלי כהן אווט"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583747092/cuisine/cuisine-banners/ronds-confiture_wifyen.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583747166/cuisine/cuisine-thumbnails/ronds-confiture-sm_1_yzr0xf.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583747092/cuisine/cuisine-banners/ronds-confiture_wifyen.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583747166/cuisine/cuisine-thumbnails/ronds-confiture-sm_1_yzr0xf.jpg"
 tags: ["pourim", "gateau"]
 videoUrl: ""
 foodType: []

@@ -6,8 +6,8 @@ date: "2020-01-06T11:26:06.000Z"
 updatedDate: "2021-08-18T10:35:56.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170197/minhag/minhag-banners/mossi_uu5ouq.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170176/minhag/minhag-thumbnails/mossi_iz6pdn.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170197/minhag/minhag-banners/mossi_uu5ouq.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170176/minhag/minhag-thumbnails/mossi_iz6pdn.jpg"
 tags: []
 videoUrl: ""
 ---

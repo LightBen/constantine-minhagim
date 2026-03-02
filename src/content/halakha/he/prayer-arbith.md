@@ -6,8 +6,8 @@ date: "2020-01-06T11:32:39.000Z"
 updatedDate: "2020-03-02T22:44:46.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170192/minhag/minhag-banners/jerusalem-night_paohmv.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170175/minhag/minhag-thumbnails/jerusalem-night_xsb8vn.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170192/minhag/minhag-banners/jerusalem-night_paohmv.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170175/minhag/minhag-thumbnails/jerusalem-night_xsb8vn.jpg"
 tags: []
 videoUrl: ""
 ---

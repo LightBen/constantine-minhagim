@@ -6,8 +6,8 @@ date: "2021-01-24T10:59:30.000Z"
 updatedDate: "2023-02-09T09:29:08.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1612099097/cuisine/cuisine-banners/seoudat-siyoum1_ozkbut.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1612099068/cuisine/cuisine-thumbnails/seoudat-siyoum1_ecfgzg.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1612099097/cuisine/cuisine-banners/seoudat-siyoum1_ozkbut.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1612099068/cuisine/cuisine-thumbnails/seoudat-siyoum1_ecfgzg.jpg"
 tags: ["seoudat", "yitro", "siyoum", "tunisie"]
 videoUrl: ""
 ---

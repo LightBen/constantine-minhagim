@@ -6,8 +6,8 @@ date: "2020-01-06T16:41:14.000Z"
 updatedDate: "2020-03-03T18:44:36.000Z"
 author: "פראנק כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258783/cuisine/cuisine-banners/confiture-coings4_f3rsth.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258745/cuisine/cuisine-thumbnails/confiture-coings4_uelzte.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258783/cuisine/cuisine-banners/confiture-coings4_f3rsth.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258745/cuisine/cuisine-thumbnails/confiture-coings4_uelzte.jpg"
 tags: []
 videoUrl: ""
 foodType: []

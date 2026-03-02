@@ -6,8 +6,8 @@ date: "2020-01-06T14:36:01.000Z"
 updatedDate: "2020-03-03T18:28:58.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258789/cuisine/cuisine-banners/halla1_g8m0ep.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258750/cuisine/cuisine-thumbnails/hallot1_zhd6a7.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258789/cuisine/cuisine-banners/halla1_g8m0ep.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258750/cuisine/cuisine-thumbnails/hallot1_zhd6a7.jpg"
 tags: ["halla"]
 videoUrl: ""
 foodType: []

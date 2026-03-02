@@ -6,8 +6,8 @@ date: "2020-01-06T16:32:49.000Z"
 updatedDate: "2020-03-03T18:41:34.000Z"
 author: "קורלי כהן אוואט"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258789/cuisine/cuisine-banners/makroud_gw91xj.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258750/cuisine/cuisine-thumbnails/makroud_fsdzdk.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258789/cuisine/cuisine-banners/makroud_gw91xj.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258750/cuisine/cuisine-thumbnails/makroud_fsdzdk.jpg"
 tags: []
 videoUrl: ""
 foodType: []

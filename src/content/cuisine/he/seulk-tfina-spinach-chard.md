@@ -6,8 +6,8 @@ date: "2020-01-06T14:33:05.000Z"
 updatedDate: "2020-03-03T18:39:40.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258795/cuisine/cuisine-banners/tfina1_bah3jx.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258754/cuisine/cuisine-thumbnails/tfina1_aeg80s.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258795/cuisine/cuisine-banners/tfina1_bah3jx.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258754/cuisine/cuisine-thumbnails/tfina1_aeg80s.jpg"
 tags: []
 videoUrl: ""
 foodType: ["bassari"]

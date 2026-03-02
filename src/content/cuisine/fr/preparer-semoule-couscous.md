@@ -6,8 +6,8 @@ date: "2020-01-06T14:34:17.000Z"
 updatedDate: "2022-04-07T08:12:56.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258794/cuisine/cuisine-banners/semoule2_efs9ak.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258753/cuisine/cuisine-thumbnails/semoule2_joyetq.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258794/cuisine/cuisine-banners/semoule2_efs9ak.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258753/cuisine/cuisine-thumbnails/semoule2_joyetq.jpg"
 tags: []
 videoUrl: ""
 foodType: []

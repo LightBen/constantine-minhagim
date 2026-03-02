@@ -6,8 +6,8 @@ date: "2020-01-06T11:18:52.000Z"
 updatedDate: "2020-03-02T23:11:05.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170192/minhag/minhag-banners/amida_pgjqxq.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170177/minhag/minhag-thumbnails/amida_ybmmad.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170192/minhag/minhag-banners/amida_pgjqxq.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170177/minhag/minhag-thumbnails/amida_ybmmad.jpg"
 tags: ["chmonei essrei"]
 videoUrl: ""
 ---

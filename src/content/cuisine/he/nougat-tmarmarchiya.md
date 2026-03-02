@@ -6,8 +6,8 @@ date: "2020-01-06T16:36:20.000Z"
 updatedDate: "2020-03-09T09:47:16.000Z"
 author: "קורלי כהן אוואט"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258792/cuisine/cuisine-banners/nougat_e8wvth.jpg"
-thumbnail: "d497VY31cwQqVrCDDeAR https://res.cloudinary.com/constantineminhagim/image/upload/v1583258752/cuisine/cuisine-thumbnails/nougat_oew5w6.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258792/cuisine/cuisine-banners/nougat_e8wvth.jpg"
+thumbnail: "d497VY31cwQqVrCDDeAR https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258752/cuisine/cuisine-thumbnails/nougat_oew5w6.jpg"
 tags: []
 videoUrl: ""
 foodType: []

@@ -6,8 +6,8 @@ date: "2020-01-06T12:36:02.000Z"
 updatedDate: "2022-04-07T08:10:46.000Z"
 author: "Frank Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258787/cuisine/cuisine-banners/couscous1_igfabx.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258749/cuisine/cuisine-thumbnails/couscous1_njf8tl.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258787/cuisine/cuisine-banners/couscous1_igfabx.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258749/cuisine/cuisine-thumbnails/couscous1_njf8tl.jpg"
 tags: []
 videoUrl: ""
 foodType: ["bassari"]

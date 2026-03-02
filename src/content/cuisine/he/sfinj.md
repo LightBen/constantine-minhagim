@@ -6,8 +6,8 @@ date: "2020-01-06T16:09:15.000Z"
 updatedDate: "2021-11-28T15:52:55.000Z"
 author: "קורלי כהן אוואט"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258794/cuisine/cuisine-banners/sfinj_h9z58n.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258753/cuisine/cuisine-thumbnails/sfinj_korlm4.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258794/cuisine/cuisine-banners/sfinj_h9z58n.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258753/cuisine/cuisine-thumbnails/sfinj_korlm4.jpg"
 tags: []
 videoUrl: ""
 foodType: ["parve"]

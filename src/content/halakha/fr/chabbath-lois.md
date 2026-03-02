@@ -6,8 +6,8 @@ date: "2020-01-06T11:44:25.000Z"
 updatedDate: "2023-02-02T16:31:55.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170196/minhag/minhag-banners/shabbath-table1_jrfqu8.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170179/minhag/minhag-thumbnails/shabbath-table1_lkyeea.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170196/minhag/minhag-banners/shabbath-table1_jrfqu8.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170179/minhag/minhag-thumbnails/shabbath-table1_lkyeea.jpg"
 tags: ["chabath", "shabbath", "shabath"]
 videoUrl: ""
 ---

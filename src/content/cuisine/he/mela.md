@@ -6,8 +6,8 @@ date: "2020-01-06T16:18:19.000Z"
 updatedDate: "2020-03-03T18:41:04.000Z"
 author: "ניקול סמק"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258791/cuisine/cuisine-banners/mela_p87uyx.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258752/cuisine/cuisine-thumbnails/mela_zxta6n.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258791/cuisine/cuisine-banners/mela_p87uyx.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258752/cuisine/cuisine-thumbnails/mela_zxta6n.jpg"
 tags: []
 videoUrl: ""
 foodType: []

@@ -6,8 +6,8 @@ date: "2020-01-06T12:25:15.000Z"
 updatedDate: "2023-02-02T17:25:25.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170196/minhag/minhag-banners/purim_yf7kr7.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170176/minhag/minhag-thumbnails/purim_tcxgac.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170196/minhag/minhag-banners/purim_yf7kr7.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170176/minhag/minhag-thumbnails/purim_tcxgac.jpg"
 tags: []
 videoUrl: ""
 ---

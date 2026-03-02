@@ -6,8 +6,8 @@ date: "2021-01-24T10:26:13.000Z"
 updatedDate: "2023-02-01T20:27:38.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170199/minhag/minhag-banners/tu-bishvat_cuoeof.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170178/minhag/minhag-thumbnails/tu-bishvat_ezzypv.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170199/minhag/minhag-banners/tu-bishvat_cuoeof.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170178/minhag/minhag-thumbnails/tu-bishvat_ezzypv.jpg"
 tags: ["tou", "bi", "chvath", "shvath", "fruits", "seder"]
 videoUrl: ""
 ---

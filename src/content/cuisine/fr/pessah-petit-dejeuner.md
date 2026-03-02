@@ -6,8 +6,8 @@ date: "2021-03-16T15:23:56.000Z"
 updatedDate: "2021-03-16T15:39:57.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1615908917/cuisine/cuisine-banners/matsa-lait-2_bgk4em.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1615908910/cuisine/cuisine-thumbnails/matsa-lait-1_jtoazk.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1615908917/cuisine/cuisine-banners/matsa-lait-2_bgk4em.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1615908910/cuisine/cuisine-thumbnails/matsa-lait-1_jtoazk.jpg"
 tags: ["pessah", "matsa", "petit", "dejeuner", "lait", "sucre", "enfants"]
 videoUrl: ""
 foodType: []

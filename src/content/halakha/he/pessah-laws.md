@@ -6,8 +6,8 @@ date: "2020-01-06T12:12:24.000Z"
 updatedDate: "2022-04-05T10:56:56.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170193/minhag/minhag-banners/massa_veog0g.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170175/minhag/minhag-thumbnails/massa_lvzcfv.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170193/minhag/minhag-banners/massa_veog0g.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170175/minhag/minhag-thumbnails/massa_lvzcfv.jpg"
 tags: []
 videoUrl: ""
 ---

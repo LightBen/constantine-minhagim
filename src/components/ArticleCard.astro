@@ -11,7 +11,9 @@ import { Image } from "astro:assets";
 import defaultImage from "../assets/constantine-jlm.png";
 import imgHalakha from "../assets/rabbins.png";
 import imgHazanout from "../assets/hazane.png";
-import imgCuisine from "../assets/meal.png";
+const imgCuisine = {
+    src: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1772112640/cuisine/meal.png",
+};
 import imgArticles from "../assets/people-parchment.png";
 
 const cleanSlug = slug.split("/").pop();
@@ -25,10 +27,10 @@ const displayDate = new Date(date).toLocaleDateString(
     },
 );
 
-let fallbackImage = defaultImage;
+let fallbackImage: any = defaultImage;
 if (collection === "halakha") fallbackImage = imgHalakha;
 if (collection === "hazanout") fallbackImage = imgHazanout;
-if (collection === "cuisine") fallbackImage = imgCuisine;
+if (collection === "cuisine") fallbackImage = imgCuisine.src;
 if (collection === "articles") fallbackImage = imgArticles;
 ---
 
@@ -46,14 +48,19 @@ if (collection === "articles") fallbackImage = imgArticles;
                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                 />
-            ) : (
-                <Image
+            ) : typeof fallbackImage === "string" ? (
+                <img
                     src={fallbackImage}
                     alt={title}
                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 opacity-80"
                 />
+            ) : (
+                <Image
+                    src={fallbackImage as any}
+                    alt={title}
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 opacity-80"
+                />
             )
-        }
         }
     </div>
 

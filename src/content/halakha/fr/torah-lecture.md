@@ -6,8 +6,8 @@ date: "2020-01-06T11:21:01.000Z"
 updatedDate: "2020-03-02T23:09:05.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170200/minhag/minhag-banners/torah_msr9fl.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170178/minhag/minhag-thumbnails/torah_nm14zk.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170200/minhag/minhag-banners/torah_msr9fl.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170178/minhag/minhag-thumbnails/torah_nm14zk.jpg"
 tags: ["paracha", "haftara"]
 videoUrl: ""
 ---

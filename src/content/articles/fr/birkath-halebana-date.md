@@ -6,8 +6,8 @@ date: "2019-12-31T16:19:59.000Z"
 updatedDate: "2020-03-03T18:25:22.000Z"
 author: "Nathaniel Zerbib"
 description: "3 ou 7 jours ?"
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258717/articles/articles-banners/moon_zbstvx.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258727/articles/articles-thumbnails/moon_yska2o.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258717/articles/articles-banners/moon_zbstvx.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258727/articles/articles-thumbnails/moon_yska2o.jpg"
 tags: ["birkath halevana", "lune"]
 videoUrl: ""
 ---

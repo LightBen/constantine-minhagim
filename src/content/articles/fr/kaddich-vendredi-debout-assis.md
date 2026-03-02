@@ -6,8 +6,8 @@ date: "2019-12-31T16:19:59.000Z"
 updatedDate: "2020-03-03T18:25:11.000Z"
 author: "Nathaniel Zerbib"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258717/articles/articles-banners/help_tgl8mw.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258727/articles/articles-thumbnails/help_t5bdn4.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258717/articles/articles-banners/help_tgl8mw.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258727/articles/articles-thumbnails/help_t5bdn4.jpg"
 tags: ["kadich", "qaddich"]
 videoUrl: ""
 ---

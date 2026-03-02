@@ -6,8 +6,8 @@ date: "2020-01-06T16:25:52.000Z"
 updatedDate: "2020-03-03T18:44:53.000Z"
 author: "ולרי קורסל"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258783/cuisine/cuisine-banners/colores_qavk2x.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258745/cuisine/cuisine-thumbnails/colores_kuwejl.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258783/cuisine/cuisine-banners/colores_qavk2x.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258745/cuisine/cuisine-thumbnails/colores_kuwejl.jpg"
 tags: []
 videoUrl: ""
 foodType: []

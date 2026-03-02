@@ -6,8 +6,8 @@ date: "2020-01-05T21:05:37.000Z"
 updatedDate: "2020-03-03T18:26:40.000Z"
 author: "נתניאל זרביב"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258717/articles/articles-banners/help_tgl8mw.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258727/articles/articles-thumbnails/help_t5bdn4.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258717/articles/articles-banners/help_tgl8mw.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258727/articles/articles-thumbnails/help_t5bdn4.jpg"
 tags: []
 videoUrl: ""
 ---

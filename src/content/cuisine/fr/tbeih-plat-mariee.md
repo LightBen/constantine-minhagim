@@ -6,8 +6,8 @@ date: "2020-01-06T13:18:59.000Z"
 updatedDate: "2020-03-03T18:30:09.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258794/cuisine/cuisine-banners/tbeih1_bi9zo4.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258780/cuisine/cuisine-thumbnails/tbeih2_fap5ls.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258794/cuisine/cuisine-banners/tbeih1_bi9zo4.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258780/cuisine/cuisine-thumbnails/tbeih2_fap5ls.jpg"
 tags: ["tbih", "tbeikh", "tbikh", "tebih"]
 videoUrl: ""
 foodType: []

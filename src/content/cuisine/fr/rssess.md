@@ -6,8 +6,8 @@ date: "2019-12-31T16:19:59.000Z"
 updatedDate: "2020-04-05T07:00:43.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258793/cuisine/cuisine-banners/rssess_qhewuo.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258753/cuisine/cuisine-thumbnails/rssess_fp2x2d.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258793/cuisine/cuisine-banners/rssess_qhewuo.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258753/cuisine/cuisine-thumbnails/rssess_fp2x2d.jpg"
 tags: ["ressess"]
 videoUrl: ""
 foodType: ["parve"]

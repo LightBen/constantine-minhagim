@@ -6,8 +6,8 @@ date: "2020-01-06T12:21:39.000Z"
 updatedDate: "2021-09-09T15:57:11.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170190/minhag/minhag-banners/apple-honey_hvglku.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170174/minhag/minhag-thumbnails/apple-honey_qfum8b.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170190/minhag/minhag-banners/apple-honey_hvglku.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170174/minhag/minhag-thumbnails/apple-honey_qfum8b.jpg"
 tags: []
 videoUrl: ""
 ---

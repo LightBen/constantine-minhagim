@@ -6,8 +6,8 @@ date: "2020-01-06T15:55:22.000Z"
 updatedDate: "2020-03-03T18:36:27.000Z"
 author: "Frank Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258791/cuisine/cuisine-banners/mekbouba1_bco4zr.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258751/cuisine/cuisine-thumbnails/mekbouba1_yypnjy.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258791/cuisine/cuisine-banners/mekbouba1_bco4zr.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258751/cuisine/cuisine-thumbnails/mekbouba1_yypnjy.jpg"
 tags: []
 videoUrl: ""
 foodType: []

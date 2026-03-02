@@ -6,8 +6,8 @@ date: "2020-01-06T16:35:26.000Z"
 updatedDate: "2020-03-03T18:39:17.000Z"
 author: "Coralie Cohen Aouate"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258792/cuisine/cuisine-banners/nougat_e8wvth.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258752/cuisine/cuisine-thumbnails/nougat_oew5w6.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258792/cuisine/cuisine-banners/nougat_e8wvth.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258752/cuisine/cuisine-thumbnails/nougat_oew5w6.jpg"
 tags: []
 videoUrl: ""
 foodType: []

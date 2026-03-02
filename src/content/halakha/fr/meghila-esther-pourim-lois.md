@@ -6,8 +6,8 @@ date: "2020-01-06T12:24:49.000Z"
 updatedDate: "2023-02-02T17:25:48.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170196/minhag/minhag-banners/purim_yf7kr7.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170176/minhag/minhag-thumbnails/purim_tcxgac.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170196/minhag/minhag-banners/purim_yf7kr7.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170176/minhag/minhag-thumbnails/purim_tcxgac.jpg"
 tags: ["meguila", "megila", "esther"]
 videoUrl: ""
 ---

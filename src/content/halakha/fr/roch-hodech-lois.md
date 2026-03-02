@@ -6,8 +6,8 @@ date: "2020-01-06T12:08:24.000Z"
 updatedDate: "2020-03-02T23:06:40.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170195/minhag/minhag-banners/moon_bmtyhc.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170178/minhag/minhag-thumbnails/moon_wcr8oe.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170195/minhag/minhag-banners/moon_bmtyhc.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170178/minhag/minhag-thumbnails/moon_wcr8oe.jpg"
 tags: ["rosh hodesh"]
 videoUrl: ""
 ---

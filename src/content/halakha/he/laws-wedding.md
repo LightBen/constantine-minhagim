@@ -6,8 +6,8 @@ date: "2020-01-05T22:41:06.000Z"
 updatedDate: "2023-02-02T19:27:24.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170192/minhag/minhag-banners/huppa_ietsu5.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170174/minhag/minhag-thumbnails/huppa_eoapwd.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170192/minhag/minhag-banners/huppa_ietsu5.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170174/minhag/minhag-thumbnails/huppa_eoapwd.jpg"
 tags: ["חתונה"]
 videoUrl: ""
 ---

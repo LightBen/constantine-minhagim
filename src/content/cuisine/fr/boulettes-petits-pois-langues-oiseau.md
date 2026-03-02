@@ -6,8 +6,8 @@ date: "2020-01-06T13:29:27.000Z"
 updatedDate: "2020-03-03T18:32:25.000Z"
 author: "Coralie Cohen Aouate"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258782/cuisine/cuisine-banners/boulettes-petitspois-langues2_tf7zlc.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258745/cuisine/cuisine-thumbnails/boulettes-petitspois-langues2_lror6x.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258782/cuisine/cuisine-banners/boulettes-petitspois-langues2_tf7zlc.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258745/cuisine/cuisine-thumbnails/boulettes-petitspois-langues2_lror6x.jpg"
 tags: []
 videoUrl: ""
 foodType: []

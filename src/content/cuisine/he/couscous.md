@@ -6,8 +6,8 @@ date: "2020-01-06T12:36:28.000Z"
 updatedDate: "2020-03-03T18:43:09.000Z"
 author: "פראנק כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258787/cuisine/cuisine-banners/couscous1_igfabx.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258749/cuisine/cuisine-thumbnails/couscous1_njf8tl.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258787/cuisine/cuisine-banners/couscous1_igfabx.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258749/cuisine/cuisine-thumbnails/couscous1_njf8tl.jpg"
 tags: []
 videoUrl: ""
 foodType: []

@@ -6,8 +6,8 @@ date: "2020-01-06T12:23:28.000Z"
 updatedDate: "2023-02-02T19:14:02.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258717/articles/articles-banners/hannoukah_mec5gc.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258726/articles/articles-thumbnails/hannoukah_vzopef.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258717/articles/articles-banners/hannoukah_mec5gc.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583258726/articles/articles-thumbnails/hannoukah_vzopef.jpg"
 tags: ["hanouka", "hannoukah"]
 videoUrl: ""
 ---

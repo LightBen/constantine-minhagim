@@ -6,8 +6,8 @@ date: "2020-01-06T16:27:15.000Z"
 updatedDate: "2020-03-03T18:38:31.000Z"
 author: "Coralie Cohen Aouate"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258785/cuisine/cuisine-banners/couronnes2_fwmxhu.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583258747/cuisine/cuisine-thumbnails/couronnes3_w2rd6d.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1772112195/cuisine/cuisine-banners/couronnes.png"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1772112195/cuisine/cuisine-banners/couronnes.png"
 tags: []
 videoUrl: ""
 foodType: []

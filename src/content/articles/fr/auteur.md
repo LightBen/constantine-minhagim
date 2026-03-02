@@ -6,8 +6,8 @@ date: "2021-10-18T12:19:37.000Z"
 updatedDate: "2021-11-17T12:42:21.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1634550953/articles/articles-banners/bmk-avatar-2021_vxsplq.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1634550941/articles/articles-thumbnails/bmk-avatar-2021_cyj2ll.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1634550953/articles/articles-banners/bmk-avatar-2021_vxsplq.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1634550941/articles/articles-thumbnails/bmk-avatar-2021_cyj2ll.jpg"
 tags: ["binyamin", "benjamin", "khalifa", "kalifa"]
 videoUrl: ""
 ---

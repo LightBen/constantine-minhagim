@@ -6,8 +6,8 @@ date: "2020-01-05T22:40:36.000Z"
 updatedDate: "2023-02-02T19:28:14.000Z"
 author: "Binyamin Meir Khalifa"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170192/minhag/minhag-banners/huppa_ietsu5.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170174/minhag/minhag-thumbnails/huppa_eoapwd.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170192/minhag/minhag-banners/huppa_ietsu5.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170174/minhag/minhag-thumbnails/huppa_eoapwd.jpg"
 tags: ["houppa", "houpa", "kidouchin", "kiddouchin"]
 videoUrl: ""
 ---

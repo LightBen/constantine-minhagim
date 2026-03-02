@@ -6,8 +6,8 @@ date: "2020-01-06T12:22:55.000Z"
 updatedDate: "2021-08-18T11:01:17.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170199/minhag/minhag-banners/sukkah_ywhvro.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170177/minhag/minhag-thumbnails/sukkah_gidmbo.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170199/minhag/minhag-banners/sukkah_ywhvro.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170177/minhag/minhag-thumbnails/sukkah_gidmbo.jpg"
 tags: []
 videoUrl: ""
 ---

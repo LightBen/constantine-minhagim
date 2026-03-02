@@ -6,8 +6,8 @@ date: "2020-01-06T11:46:56.000Z"
 updatedDate: "2023-02-02T16:35:41.000Z"
 author: "בנימין מאיר כליפה"
 description: ""
-banner: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170196/minhag/minhag-banners/shabbath-table1_jrfqu8.jpg"
-thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/v1583170179/minhag/minhag-thumbnails/shabbath-table1_lkyeea.jpg"
+banner: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170196/minhag/minhag-banners/shabbath-table1_jrfqu8.jpg"
+thumbnail: "https://res.cloudinary.com/constantineminhagim/image/upload/f_auto,q_auto,dpr_auto/v1583170179/minhag/minhag-thumbnails/shabbath-table1_lkyeea.jpg"
 tags: []
 videoUrl: ""
 ---
